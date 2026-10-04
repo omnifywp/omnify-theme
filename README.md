@@ -71,7 +71,7 @@ omnify/
 
 ## 🔗 Useful Links
 
-- **WordPress.org Plugin:** [https://wordpress.org/plugins/omnifywp-ecommerce/](https://wordpress.org/plugins/omnifywp-ecommerce/)
+- **wp.org Plugin:** [https://wordpress.org/plugins/omnifywp-ecommerce/](https://wordpress.org/plugins/omnifywp-ecommerce/)
 - **Live Demo Playground:** [Launch Instant Demo](https://playground.wordpress.net/?blueprint-url=https%3A%2F%2Fraw.githubusercontent.com%2Fomnifywp%2Fomnifywp-ecommerce%2Fmain%2Fblueprint.json)
 - **Documentation:** [https://omnifywp.com/doc/](https://omnifywp.com/doc/)
 - **Core Plugin Repository:** [https://github.com/omnifywp/omnifywp-ecommerce](https://github.com/omnifywp/omnifywp-ecommerce)

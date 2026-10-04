@@ -77,27 +77,28 @@ defined( 'ABSPATH' ) || exit;
 				</div>
 
 				<!-- Wizard UI Simulator -->
-				<div style="background:#FAFDFB;padding:22px;font-family:var(--om-font-body);">
-					<!-- Wizard Steps -->
+				<!-- Wizard UI Simulator -->
+				<div style="background:#FAFDFB;padding:22px;font-family:var(--om-font-body);" id="om-catalog-wizard">
+					<!-- Wizard Steps Header -->
 					<div style="display:flex;align-items:center;justify-content:space-between;background:#FFFFFF;border:1px solid #E2E8F0;padding:10px 16px;border-radius:10px;margin-bottom:18px;">
-						<div style="display:flex;align-items:center;gap:6px;color:#18794E;font-weight:700;font-size:0.8rem;">
-							<span style="width:20px;height:20px;border-radius:50%;background:#18794E;color:#fff;display:inline-flex;align-items:center;justify-content:center;font-size:0.7rem;">1</span>
+						<button type="button" class="om-wizard-step-btn is-active" data-step="1" style="display:flex;align-items:center;gap:6px;color:#18794E;font-weight:700;font-size:0.8rem;background:none;border:none;cursor:pointer;">
+							<span style="width:22px;height:22px;border-radius:50%;background:#18794E;color:#fff;display:inline-flex;align-items:center;justify-content:center;font-size:0.75rem;font-weight:700;">1</span>
 							Basics
-						</div>
+						</button>
 						<span style="color:#CBD5E1;">&rarr;</span>
-						<div style="display:flex;align-items:center;gap:6px;color:#64748B;font-weight:600;font-size:0.8rem;">
-							<span style="width:20px;height:20px;border-radius:50%;background:#E2E8F0;color:#64748B;display:inline-flex;align-items:center;justify-content:center;font-size:0.7rem;">2</span>
+						<button type="button" class="om-wizard-step-btn" data-step="2" style="display:flex;align-items:center;gap:6px;color:#64748B;font-weight:600;font-size:0.8rem;background:none;border:none;cursor:pointer;">
+							<span style="width:22px;height:22px;border-radius:50%;background:#E2E8F0;color:#64748B;display:inline-flex;align-items:center;justify-content:center;font-size:0.75rem;font-weight:700;">2</span>
 							Pricing
-						</div>
+						</button>
 						<span style="color:#CBD5E1;">&rarr;</span>
-						<div style="display:flex;align-items:center;gap:6px;color:#64748B;font-weight:600;font-size:0.8rem;">
-							<span style="width:20px;height:20px;border-radius:50%;background:#E2E8F0;color:#64748B;display:inline-flex;align-items:center;justify-content:center;font-size:0.7rem;">3</span>
-							Content &amp; Files
-						</div>
+						<button type="button" class="om-wizard-step-btn" data-step="3" style="display:flex;align-items:center;gap:6px;color:#64748B;font-weight:600;font-size:0.8rem;background:none;border:none;cursor:pointer;">
+							<span style="width:22px;height:22px;border-radius:50%;background:#E2E8F0;color:#64748B;display:inline-flex;align-items:center;justify-content:center;font-size:0.75rem;font-weight:700;">3</span>
+							Files &amp; Keys
+						</button>
 					</div>
 
-					<!-- Wizard Form Box -->
-					<div style="background:#FFFFFF;border:1px solid #E2E8F0;border-radius:12px;padding:18px;margin-bottom:16px;">
+					<!-- Wizard Form Step 1: Basics -->
+					<div class="om-wizard-panel is-active" id="om-wizard-panel-1" style="background:#FFFFFF;border:1px solid #E2E8F0;border-radius:12px;padding:18px;margin-bottom:16px;">
 						<div style="margin-bottom:12px;">
 							<label style="display:block;font-size:0.75rem;font-weight:700;color:#475569;margin-bottom:5px;text-transform:uppercase;">Product Title *</label>
 							<div style="background:#F8FAFC;border:1.5px solid #CBD5E1;border-radius:6px;padding:8px 12px;font-size:0.875rem;font-weight:600;color:#0F172A;">
@@ -135,11 +136,47 @@ defined( 'ABSPATH' ) || exit;
 						</div>
 					</div>
 
+					<!-- Wizard Form Step 2: Pricing -->
+					<div class="om-wizard-panel" id="om-wizard-panel-2" style="display:none;background:#FFFFFF;border:1px solid #E2E8F0;border-radius:12px;padding:18px;margin-bottom:16px;">
+						<div style="display:grid;grid-template-columns:1fr 1fr;gap:12px;margin-bottom:12px;">
+							<div>
+								<label style="display:block;font-size:0.75rem;font-weight:700;color:#475569;margin-bottom:5px;text-transform:uppercase;">Regular Price ($)</label>
+								<div style="background:#F8FAFC;border:1.5px solid #CBD5E1;border-radius:6px;padding:8px 12px;font-size:0.875rem;font-weight:700;color:#0F172A;">$89.00</div>
+							</div>
+							<div>
+								<label style="display:block;font-size:0.75rem;font-weight:700;color:#475569;margin-bottom:5px;text-transform:uppercase;">Sale Price (Optional)</label>
+								<div style="background:#F8FAFC;border:1.5px solid #CBD5E1;border-radius:6px;padding:8px 12px;font-size:0.875rem;font-weight:700;color:#18794E;">$69.00 (Save $20)</div>
+							</div>
+						</div>
+						<div style="background:#F8FAFC;border:1px solid #E2E8F0;border-radius:8px;padding:12px;margin-bottom:10px;">
+							<div style="display:flex;justify-content:space-between;align-items:center;font-size:0.8rem;font-weight:700;color:#0F172A;">
+								<span>Tiered License Pricing</span>
+								<span style="color:#10B981;">✓ Multi-Seat Enabled</span>
+							</div>
+							<div style="font-size:0.72rem;color:#64748B;margin-top:4px;">Single ($89) • Team 5-Seat ($199) • Unlimited ($499)</div>
+						</div>
+					</div>
+
+					<!-- Wizard Form Step 3: Files & Security -->
+					<div class="om-wizard-panel" id="om-wizard-panel-3" style="display:none;background:#FFFFFF;border:1px solid #E2E8F0;border-radius:12px;padding:18px;margin-bottom:16px;">
+						<div style="background:#F0FDF4;border:1px solid #BBF7D0;border-radius:8px;padding:14px;margin-bottom:12px;">
+							<div style="font-size:0.8rem;font-weight:700;color:#166534;margin-bottom:6px;">HMAC Digital Vault Parameters</div>
+							<div style="display:grid;grid-template-columns:1fr 1fr;gap:8px;font-size:0.75rem;color:#15803D;">
+								<div>⏱ <strong>Token Expiry:</strong> 48 Hours</div>
+								<div>🔢 <strong>Download Cap:</strong> 5 Attempts</div>
+								<div>🛡 <strong>IP Lockout:</strong> Enabled</div>
+								<div>☁️ <strong>Storage:</strong> S3 / Local Protected</div>
+							</div>
+						</div>
+						<div style="font-size:0.75rem;color:#64748B;">Automated customer portal delivery link generated on webhook verification.</div>
+					</div>
+
+					<!-- Navigation Buttons -->
 					<div style="display:flex;justify-content:space-between;align-items:center;">
-						<span style="font-size:0.75rem;color:#64748B;">Step 1 of 4 &bull; Autosaved</span>
+						<span id="om-wizard-step-label" style="font-size:0.75rem;color:#64748B;">Step 1 of 3 &bull; Autosaved</span>
 						<div style="display:flex;gap:8px;">
-							<button type="button" style="background:#E2E8F0;border:none;padding:6px 12px;border-radius:6px;font-size:0.8rem;font-weight:600;color:#475569;">Cancel</button>
-							<button type="button" style="background:#18794E;border:none;padding:6px 16px;border-radius:6px;font-size:0.8rem;font-weight:700;color:#FFFFFF;cursor:pointer;">Next: Pricing &rarr;</button>
+							<button type="button" id="om-wizard-prev-btn" style="display:none;background:#E2E8F0;border:none;padding:6px 14px;border-radius:6px;font-size:0.8rem;font-weight:600;color:#475569;cursor:pointer;">&larr; Back</button>
+							<button type="button" id="om-wizard-next-btn" style="background:#18794E;border:none;padding:6px 16px;border-radius:6px;font-size:0.8rem;font-weight:700;color:#FFFFFF;cursor:pointer;">Next: Pricing &rarr;</button>
 						</div>
 					</div>
 				</div>

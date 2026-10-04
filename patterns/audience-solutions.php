@@ -36,6 +36,7 @@ defined( 'ABSPATH' ) || exit;
 		<!-- Column 1: Digital Creators -->
 		<!-- wp:column {"className":"om-solution-card"} -->
 		<div class="wp-block-column om-solution-card">
+			<div class="om-solution-icon">💾</div>
 			<!-- wp:paragraph {"className":"om-solution-badge"} -->
 			<p class="om-solution-badge">For Digital Creators</p>
 			<!-- /wp:paragraph -->
@@ -75,6 +76,7 @@ defined( 'ABSPATH' ) || exit;
 		<!-- Column 2: Physical Merchants -->
 		<!-- wp:column {"className":"om-solution-card"} -->
 		<div class="wp-block-column om-solution-card">
+			<div class="om-solution-icon">📦</div>
 			<!-- wp:paragraph {"className":"om-solution-badge"} -->
 			<p class="om-solution-badge">For Physical Merchants</p>
 			<!-- /wp:paragraph -->
@@ -114,6 +116,7 @@ defined( 'ABSPATH' ) || exit;
 		<!-- Column 3: Agencies & Developers -->
 		<!-- wp:column {"className":"om-solution-card"} -->
 		<div class="wp-block-column om-solution-card">
+			<div class="om-solution-icon">💻</div>
 			<!-- wp:paragraph {"className":"om-solution-badge"} -->
 			<p class="om-solution-badge">For Agencies &amp; Developers</p>
 			<!-- /wp:paragraph -->

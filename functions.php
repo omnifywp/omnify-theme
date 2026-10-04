@@ -17,6 +17,12 @@ function omnify_marketing_setup(): void {
     add_theme_support( 'wp-block-styles' );
     add_theme_support( 'editor-styles' );
     add_theme_support( 'responsive-embeds' );
+    add_theme_support( 'custom-logo', [
+        'height'      => 36,
+        'width'       => 170,
+        'flex-width'  => true,
+        'flex-height' => true,
+    ] );
     add_theme_support( 'html5', [
         'search-form', 'comment-form', 'comment-list', 'gallery', 'caption', 'style', 'script',
     ] );
@@ -32,6 +38,18 @@ function omnify_marketing_setup(): void {
     load_theme_textdomain( 'omnifywp-marketing', get_template_directory() . '/languages' );
 }
 add_action( 'after_setup_theme', 'omnify_marketing_setup' );
+
+/**
+ * Fallback SVG Site Icon / Favicon
+ */
+function omnify_marketing_favicon(): void {
+    if ( ! has_site_icon() ) {
+        $icon_url = get_template_directory_uri() . '/assets/images/logo-icon.svg';
+        echo '<link rel="icon" type="image/svg+xml" href="' . esc_url( $icon_url ) . '">' . "\n";
+    }
+}
+add_action( 'wp_head', 'omnify_marketing_favicon', 2 );
+add_action( 'login_head', 'omnify_marketing_favicon', 2 );
 
 /* ============================================================
  * Enqueue Google Fonts (display=swap, preconnect)
@@ -62,12 +80,12 @@ add_action( 'wp_enqueue_scripts', 'omnify_marketing_google_fonts' );
  * Enqueue Theme Scripts & Styles
  * ============================================================ */
 function omnify_marketing_assets(): void {
-    // Theme stylesheet (style.css)
+    // Theme stylesheet (style.css with auto cache-busting)
     wp_enqueue_style(
         'omnify-marketing-style',
         get_stylesheet_uri(),
         [],
-        wp_get_theme()->get( 'Version' )
+        (string) filemtime( get_stylesheet_directory() . '/style.css' )
     );
 
     // Theme JS (navigation, FAQ accordion, screenshot gallery, theme toggle)
@@ -100,7 +118,32 @@ function omnify_marketing_pattern_categories(): void {
 }
 add_action( 'init', 'omnify_marketing_pattern_categories' );
 
-/* Block patterns inside /patterns are auto-registered by WordPress Core in block themes */
+/**
+ * Ensure all theme patterns are dynamically registered
+ */
+function omnify_marketing_register_patterns(): void {
+    $pattern_dir = get_template_directory() . '/patterns/';
+    if ( is_dir( $pattern_dir ) ) {
+        foreach ( glob( $pattern_dir . '*.php' ) as $file ) {
+            $data = get_file_data( $file, [
+                'title'      => 'Title',
+                'slug'       => 'Slug',
+                'categories' => 'Categories',
+            ] );
+            if ( ! empty( $data['slug'] ) && ! WP_Block_Patterns_Registry::get_instance()->is_registered( $data['slug'] ) ) {
+                ob_start();
+                include $file;
+                $content = ob_get_clean();
+                register_block_pattern( $data['slug'], [
+                    'title'      => $data['title'] ?: basename( $file, '.php' ),
+                    'content'    => $content,
+                    'categories' => ! empty( $data['categories'] ) ? array_map( 'trim', explode( ',', $data['categories'] ) ) : [ 'omnify-features' ],
+                ] );
+            }
+        }
+    }
+}
+add_action( 'init', 'omnify_marketing_register_patterns', 15 );
 
 /* ============================================================
  * Body Classes

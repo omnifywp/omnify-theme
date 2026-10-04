@@ -36,10 +36,11 @@ defined( 'ABSPATH' ) || exit;
 
 				<!-- Analytics Dashboard Simulator -->
 				<div style="background:#FAFDFB;padding:22px;font-family:var(--om-font-body);">
-					<div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:18px;">
-						<div style="display:flex;gap:8px;">
-							<span style="font-size:0.75rem;font-weight:700;color:#0B5135;background:#EFF8F2;padding:4px 10px;border-radius:6px;border:1px solid #D4E8DC;">Date: Last 30 Days</span>
-							<span style="font-size:0.75rem;font-weight:600;color:#64748B;background:#FFFFFF;padding:4px 10px;border-radius:6px;border:1px solid #E2E8F0;">Channel: All</span>
+					<div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:18px;flex-wrap:wrap;gap:8px;">
+						<div class="om-split-analytics-pills" style="display:flex;gap:6px;">
+							<button type="button" class="om-split-tf-btn is-active" data-period="30d" style="font-size:0.75rem;font-weight:700;color:#0B5135;background:#EFF8F2;padding:4px 10px;border-radius:6px;border:1px solid #D4E8DC;cursor:pointer;">30 Days</button>
+							<button type="button" class="om-split-tf-btn" data-period="7d" style="font-size:0.75rem;font-weight:600;color:#64748B;background:#FFFFFF;padding:4px 10px;border-radius:6px;border:1px solid #E2E8F0;cursor:pointer;">7 Days</button>
+							<button type="button" class="om-split-tf-btn" data-period="today" style="font-size:0.75rem;font-weight:600;color:#64748B;background:#FFFFFF;padding:4px 10px;border-radius:6px;border:1px solid #E2E8F0;cursor:pointer;">Today</button>
 						</div>
 						<span style="font-size:0.75rem;color:#18794E;font-weight:700;cursor:pointer;">↓ Export CSV</span>
 					</div>
@@ -47,12 +48,12 @@ defined( 'ABSPATH' ) || exit;
 					<div style="display:grid;grid-template-columns:1fr 1fr;gap:12px;margin-bottom:16px;">
 						<div style="background:#FFFFFF;border:1px solid #E2E8F0;border-radius:10px;padding:14px;">
 							<span style="font-size:0.72rem;font-weight:700;color:#64748B;text-transform:uppercase;">Net After Refunds</span>
-							<div style="font-size:1.45rem;font-weight:800;color:#0F172A;margin-top:4px;">$12,480.00</div>
-							<span style="font-size:0.7rem;color:#10B981;font-weight:700;">↑ 22.4% conversion</span>
+							<div id="om-split-net-sales" style="font-size:1.45rem;font-weight:800;color:#0F172A;margin-top:4px;transition:all 0.2s ease;">$12,480.00</div>
+							<span id="om-split-net-rate" style="font-size:0.7rem;color:#10B981;font-weight:700;">↑ 22.4% conversion</span>
 						</div>
 						<div style="background:#FFFFFF;border:1px solid #E2E8F0;border-radius:10px;padding:14px;">
 							<span style="font-size:0.72rem;font-weight:700;color:#64748B;text-transform:uppercase;">Refund Rate</span>
-							<div style="font-size:1.45rem;font-weight:800;color:#0F172A;margin-top:4px;">0.4%</div>
+							<div id="om-split-refund-val" style="font-size:1.45rem;font-weight:800;color:#0F172A;margin-top:4px;transition:all 0.2s ease;">0.4%</div>
 							<span style="font-size:0.7rem;color:#10B981;font-weight:700;">Ultra-low friction</span>
 						</div>
 					</div>
