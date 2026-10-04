@@ -132,24 +132,169 @@ add_action( 'after_setup_theme', function(): void {
 } );
 
 /* ============================================================
- * Schema: JSON-LD Organization markup on front page
+ * SEO, AIO & GEO Meta Tags + JSON-LD Structured Data
  * ============================================================ */
-function omnify_marketing_json_ld(): void {
-    if ( ! is_front_page() ) {
-        return;
+function omnify_marketing_seo_aio_geo_head(): void {
+    // 1. Robots directive optimized for Google AI Overviews & SearchGPT
+    echo '<meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1">' . "\n";
+    echo '<meta name="geo.region" content="US-CA">' . "\n";
+    echo '<meta name="geo.placename" content="San Francisco">' . "\n";
+    echo '<meta name="rating" content="General">' . "\n";
+
+    // 2. Open Graph & Twitter Cards + Schema for Single Posts
+    if ( is_singular( 'post' ) ) {
+        global $post;
+        $title       = get_the_title( $post );
+        $desc        = has_excerpt( $post ) ? get_the_excerpt( $post ) : wp_trim_words( strip_shortcodes( $post->post_content ), 28 );
+        $url         = get_permalink( $post );
+        $img_url     = has_post_thumbnail( $post ) ? get_the_post_thumbnail_url( $post, 'large' ) : get_template_directory_uri() . '/assets/images/mockup-dashboard.png';
+        $author_name = get_the_author_meta( 'display_name', $post->post_author );
+        $pub_date    = get_the_date( 'c', $post );
+        $mod_date    = get_the_modified_date( 'c', $post );
+
+        echo '<meta property="og:type" content="article">' . "\n";
+        echo '<meta property="og:title" content="' . esc_attr( $title ) . '">' . "\n";
+        echo '<meta property="og:description" content="' . esc_attr( $desc ) . '">' . "\n";
+        echo '<meta property="og:url" content="' . esc_url( $url ) . '">' . "\n";
+        echo '<meta property="og:image" content="' . esc_url( $img_url ) . '">' . "\n";
+        echo '<meta property="article:published_time" content="' . esc_attr( $pub_date ) . '">' . "\n";
+        echo '<meta property="article:modified_time" content="' . esc_attr( $mod_date ) . '">' . "\n";
+        echo '<meta property="article:author" content="' . esc_attr( $author_name ) . '">' . "\n";
+        echo '<meta name="twitter:card" content="summary_large_image">' . "\n";
+        echo '<meta name="twitter:title" content="' . esc_attr( $title ) . '">' . "\n";
+        echo '<meta name="twitter:description" content="' . esc_attr( $desc ) . '">' . "\n";
+        echo '<meta name="twitter:image" content="' . esc_url( $img_url ) . '">' . "\n";
+
+        // JSON-LD for Single Blog Post (BlogPosting + BreadcrumbList)
+        $categories  = get_the_category( $post->ID );
+        $cat_name    = ! empty( $categories ) ? $categories[0]->name : 'Engineering';
+        $cat_url     = ! empty( $categories ) ? get_category_link( $categories[0]->term_id ) : home_url( '/blog/' );
+        $word_count  = str_word_count( strip_tags( $post->post_content ) );
+        $read_mins   = max( 1, (int) ceil( $word_count / 200 ) );
+
+        $schema = [
+            '@context' => 'https://schema.org',
+            '@graph'   => [
+                [
+                    '@type'            => 'BlogPosting',
+                    '@id'              => esc_url( $url ) . '#article',
+                    'isPartOf'         => [
+                        '@type' => 'Blog',
+                        '@id'   => home_url( '/blog/#blog' ),
+                        'name'  => 'OmnifyWP Engineering Blog',
+                    ],
+                    'headline'         => $title,
+                    'description'      => $desc,
+                    'inLanguage'       => get_locale(),
+                    'mainEntityOfPage' => esc_url( $url ),
+                    'datePublished'    => $pub_date,
+                    'dateModified'     => $mod_date,
+                    'articleSection'   => $cat_name,
+                    'wordCount'        => $word_count,
+                    'timeRequired'     => 'PT' . $read_mins . 'M',
+                    'author'           => [
+                        '@type'     => 'Person',
+                        'name'      => $author_name,
+                        'jobTitle'  => 'Senior WordPress Architect',
+                        'url'       => get_author_posts_url( $post->post_author ),
+                    ],
+                    'publisher'        => [
+                        '@type' => 'Organization',
+                        'name'  => 'OmnifyWP',
+                        'url'   => home_url(),
+                        'logo'  => [
+                            '@type' => 'ImageObject',
+                            'url'   => get_template_directory_uri() . '/assets/images/mockup-dashboard.png',
+                        ],
+                    ],
+                    'image'            => [
+                        '@type' => 'ImageObject',
+                        'url'   => $img_url,
+                    ],
+                    'speakable'        => [
+                        '@type'       => 'SpeakableSpecification',
+                        'cssSelector' => [ '.om-ai-summary', '.om-single-title' ],
+                    ],
+                ],
+                [
+                    '@type'           => 'BreadcrumbList',
+                    '@id'             => esc_url( $url ) . '#breadcrumb',
+                    'itemListElement' => [
+                        [
+                            '@type'    => 'ListItem',
+                            'position' => 1,
+                            'name'     => 'Home',
+                            'item'     => home_url( '/' ),
+                        ],
+                        [
+                            '@type'    => 'ListItem',
+                            'position' => 2,
+                            'name'     => 'Blog',
+                            'item'     => home_url( '/blog/' ),
+                        ],
+                        [
+                            '@type'    => 'ListItem',
+                            'position' => 3,
+                            'name'     => $cat_name,
+                            'item'     => esc_url( $cat_url ),
+                        ],
+                        [
+                            '@type'    => 'ListItem',
+                            'position' => 4,
+                            'name'     => $title,
+                            'item'     => esc_url( $url ),
+                        ],
+                    ],
+                ],
+            ],
+        ];
+
+        echo '<script type="application/ld+json">' . wp_json_encode( $schema, JSON_UNESCAPED_SLASHES | JSON_PRETTY_PRINT ) . '</script>' . "\n";
+    } elseif ( is_home() || is_archive() ) {
+        // Archive / Blog Index Schema
+        $blog_schema = [
+            '@context'    => 'https://schema.org',
+            '@type'       => 'CollectionPage',
+            'name'        => is_archive() ? get_the_archive_title() : 'OmnifyWP Engineering & eCommerce Blog',
+            'description' => 'In-depth architectural guides, conversion benchmarks, and security teardowns for modern WordPress store owners and developers.',
+            'url'         => is_archive() ? get_permalink() : home_url( '/blog/' ),
+            'publisher'   => [
+                '@type' => 'Organization',
+                'name'  => 'OmnifyWP',
+                'url'   => home_url(),
+            ],
+        ];
+        echo '<script type="application/ld+json">' . wp_json_encode( $blog_schema, JSON_UNESCAPED_SLASHES | JSON_PRETTY_PRINT ) . '</script>' . "\n";
+    } elseif ( is_front_page() ) {
+        $data = [
+            '@context'            => 'https://schema.org',
+            '@type'               => 'SoftwareApplication',
+            'name'                => 'OmnifyWP eCommerce',
+            'applicationCategory' => 'BusinessApplication',
+            'operatingSystem'     => 'WordPress 6.5+',
+            'url'                 => home_url(),
+            'description'         => 'A high-performance eCommerce plugin for WordPress with purpose-built SQL tables, digital asset delivery, and a complete store management suite.',
+        ];
+        echo '<script type="application/ld+json">' . wp_json_encode( $data, JSON_UNESCAPED_SLASHES | JSON_PRETTY_PRINT ) . '</script>' . "\n";
     }
-    $data = [
-        '@context'    => 'https://schema.org',
-        '@type'       => 'SoftwareApplication',
-        'name'        => 'OmnifyWP eCommerce',
-        'applicationCategory' => 'BusinessApplication',
-        'operatingSystem'     => 'WordPress 6.5+',
-        'url'                 => home_url(),
-        'description'         => 'A high-performance eCommerce plugin for WordPress with purpose-built SQL tables, digital asset delivery, and a complete store management suite.',
-    ];
-    echo '<script type="application/ld+json">' . wp_json_encode( $data, JSON_UNESCAPED_SLASHES | JSON_PRETTY_PRINT ) . '</script>' . "\n";
 }
-add_action( 'wp_head', 'omnify_marketing_json_ld' );
+add_action( 'wp_head', 'omnify_marketing_seo_aio_geo_head' );
+
+/* ============================================================
+ * Helper: Dynamic Reading Time
+ * ============================================================ */
+function omnify_reading_time_string( int $post_id = 0 ): string {
+    $post = get_post( $post_id );
+    if ( ! $post ) {
+        return '4 min read';
+    }
+    $words = str_word_count( strip_tags( $post->post_content ) );
+    $mins  = max( 1, (int) ceil( $words / 200 ) );
+    return $mins . ' min read';
+}
+add_shortcode( 'omnify_reading_time', function() {
+    return omnify_reading_time_string();
+} );
 
 /* ============================================================
  * Helper: Safe screenshot URL with fallback

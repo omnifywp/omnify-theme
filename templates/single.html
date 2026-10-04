@@ -1,18 +1,172 @@
-<!-- wp:template-part {"slug":"header","tagName":"header"} /-->
+<!-- wp:template-part {"slug":"header","tagName":"header","align":"full"} /-->
 
-<!-- wp:group {"tagName":"article","style":{"spacing":{"padding":{"top":"64px","bottom":"96px","left":"32px","right":"32px"}}},"layout":{"type":"constrained","contentSize":"840px"}} -->
-<article class="wp-block-group">
-  <!-- wp:post-title {"level":1,"style":{"typography":{"fontFamily":"var(--omnify-font-heading)","fontWeight":"800","fontSize":"clamp(2.4rem, 5vw, 3.5rem)","letterSpacing":"-0.035em"},"spacing":{"margin":{"bottom":"16px"}}}} /-->
-  <!-- wp:group {"layout":{"type":"flex","alignItems":"center"},"style":{"spacing":{"margin":{"bottom":"36px"},"blockGap":"16px"}}} -->
-  <div class="wp-block-group" style="margin-bottom:36px;color:var(--omnify-text-dim);font-family:var(--omnify-font-mono);font-size:0.85rem;">
-    <!-- wp:post-author {"showAvatar":true,"avatarSize":32} /-->
-    <!-- wp:post-date /-->
+<!-- wp:group {"tagName":"main","className":"om-single-post-page","layout":{"type":"default"}} -->
+<main class="wp-block-group om-single-post-page">
+
+  <!-- Breadcrumb Navigation Bar -->
+  <!-- wp:html -->
+  <div class="om-breadcrumbs-bar" style="background:#F7FCF9;border-bottom:1px solid #E6F4EC;padding-block:0.875rem;">
+    <div class="om-container" style="max-width:980px;margin-inline:auto;padding-inline:clamp(1rem,4vw,2.5rem);">
+      <nav aria-label="Breadcrumbs" class="om-breadcrumbs" style="font-size:0.825rem;color:#64748B;display:flex;align-items:center;gap:0.5rem;flex-wrap:wrap;">
+        <a href="/" style="color:#64748B;text-decoration:none;">Home</a>
+        <span style="color:#CBD5E1;">&rsaquo;</span>
+        <a href="/blog/" style="color:#64748B;text-decoration:none;">Blog</a>
+        <span style="color:#CBD5E1;">&rsaquo;</span>
+        <span style="color:#18794E;font-weight:600;">Technical Insights</span>
+      </nav>
+    </div>
   </div>
+  <!-- /wp:html -->
+
+  <!-- Article Container -->
+  <!-- wp:group {"tagName":"article","className":"om-article-wrap om-container","style":{"spacing":{"padding":{"top":"clamp(2.5rem, 5vw, 4.5rem)","bottom":"clamp(4rem, 7vw, 6rem)"}}},"layout":{"type":"constrained","contentSize":"840px"}} -->
+  <article class="wp-block-group om-article-wrap om-container">
+
+    <!-- Article Header -->
+    <header class="om-article-header" style="margin-bottom:2.5rem;">
+
+      <!-- Category Pill Badge -->
+      <!-- wp:post-terms {"term":"category","className":"om-single-category"} /-->
+
+      <!-- Main Headline (SEO H1) -->
+      <!-- wp:post-title {"level":1,"className":"om-single-title","style":{"typography":{"fontSize":"clamp(2.2rem, 4.5vw, 3.4rem)","fontWeight":"800","letterSpacing":"-0.035em","lineHeight":"1.15"},"spacing":{"margin":{"top":"0.75rem","bottom":"1.25rem"}}}} /-->
+
+      <!-- Post Excerpt / Lead Paragraph -->
+      <!-- wp:post-excerpt {"moreText":"","className":"om-single-lead"} /-->
+
+      <!-- Comprehensive E-E-A-T Author & Editorial Meta Row -->
+      <!-- wp:group {"className":"om-author-meta-row","layout":{"type":"flex","justifyContent":"space-between","alignItems":"center","flexWrap":"wrap"},"style":{"spacing":{"padding":{"top":"1.25rem","bottom":"1.25rem"}}}} -->
+      <div class="wp-block-group om-author-meta-row">
+        
+        <!-- Author Info with Avatar -->
+        <!-- wp:group {"layout":{"type":"flex","alignItems":"center","flexWrap":"nowrap"},"style":{"spacing":{"blockGap":"12px"}}} -->
+        <div class="wp-block-group">
+          <!-- wp:post-author {"showAvatar":true,"avatarSize":44,"showBio":false,"className":"om-author-avatar"} /-->
+          <!-- wp:group {"layout":{"type":"default"}} -->
+          <div class="wp-block-group">
+            <!-- wp:post-author-name {"isLink":false,"style":{"typography":{"fontWeight":"700","fontSize":"0.95rem"}},"className":"om-author-name"} /-->
+            <!-- wp:paragraph {"style":{"typography":{"fontSize":"0.78rem"}},"className":"om-author-role om-text-muted"} -->
+            <p class="om-author-role om-text-muted">Core eCommerce Architect</p>
+            <!-- /wp:paragraph -->
+          </div>
+          <!-- /wp:group -->
+        </div>
+        <!-- /wp:group -->
+
+        <!-- Dates & Reading Time -->
+        <!-- wp:group {"layout":{"type":"flex","alignItems":"center","flexWrap":"wrap"},"style":{"spacing":{"blockGap":"12px"}},"className":"om-meta-timestamps"} -->
+        <div class="wp-block-group om-meta-timestamps">
+          <!-- wp:post-date {"format":"M j, Y","className":"om-pub-date"} /-->
+          <span style="color:#CBD5E1;">&bull;</span>
+          <!-- wp:post-date {"displayType":"modified","format":"Updated M j, Y","className":"om-mod-date"} /-->
+          <span style="color:#CBD5E1;">&bull;</span>
+          <!-- wp:paragraph {"className":"om-reading-time-pill"} -->
+          <p class="om-reading-time-pill">⚡ 5 min read</p>
+          <!-- /wp:paragraph -->
+        </div>
+        <!-- /wp:group -->
+
+      </div>
+      <!-- /wp:group -->
+
+    </header>
+
+    <!-- AIO & GEO Structured Summary Box (AI Overview & SearchGPT Snippet Target) -->
+    <!-- wp:html -->
+    <div class="om-ai-summary" style="background:#F0FAF4;border:1.5px solid #A8DFBF;border-radius:14px;padding:1.5rem 1.75rem;margin-bottom:2.75rem;box-shadow:0 4px 15px -3px rgba(11,81,53,0.06);">
+      <div style="display:flex;align-items:center;gap:0.5rem;font-family:var(--om-font-heading);font-weight:800;font-size:0.95rem;color:#0B5135;text-transform:uppercase;letter-spacing:0.04em;margin-bottom:0.75rem;">
+        <span>⚡</span> Key Takeaways &amp; Executive Summary
+      </div>
+      <p style="font-size:0.925rem;line-height:1.65;color:#18794E;margin:0 0 0.85rem;font-weight:600;">
+        Synthesized overview for store owners, technical leads, and search indexing engines:
+      </p>
+      <ul style="margin:0;padding-left:1.25rem;font-size:0.925rem;color:#2D3E35;line-height:1.7;">
+        <li><strong>Architecture:</strong> Purpose-built SQL tables (<code>wp_omnify_*</code>) bypass <code>wp_postmeta</code> overhead, achieving sub-100ms response times.</li>
+        <li><strong>Security:</strong> Protected digital asset locker enforces temporary SHA-256 HMAC tokens with expiry and attempt caps.</li>
+        <li><strong>Economics:</strong> 100% self-hosted GPL WordPress engine with 0% platform commissions and complete data ownership.</li>
+        <li><strong>Compatibility:</strong> Native Full Site Editing (FSE) block theme support + theme-agnostic Gutenberg patterns.</li>
+      </ul>
+    </div>
+    <!-- /wp:html -->
+
+    <!-- Featured Image -->
+    <!-- wp:post-featured-image {"aspectRatio":"16/9","style":{"border":{"radius":"16px"},"spacing":{"margin":{"bottom":"2.5rem"}}},"className":"om-single-featured-image"} /-->
+
+    <!-- Article Body Content -->
+    <!-- wp:post-content {"layout":{"type":"constrained","contentSize":"760px"},"className":"om-article-content"} /-->
+
+    <!-- Post Tags Cloud -->
+    <!-- wp:group {"className":"om-tags-row","layout":{"type":"flex","alignItems":"center"},"style":{"spacing":{"margin":{"top":"3rem","bottom":"2.5rem"}}}} -->
+    <div class="wp-block-group om-tags-row">
+      <span style="font-size:0.875rem;font-weight:700;color:#0B5135;margin-right:0.5rem;">Tagged:</span>
+      <!-- wp:post-terms {"term":"post_tag","className":"om-single-tags"} /-->
+    </div>
+    <!-- /wp:group -->
+
+    <!-- Verified Author E-E-A-T Bio Box -->
+    <!-- wp:html -->
+    <div class="om-author-box" style="background:#FFFFFF;border:1px solid #D4E8DC;border-radius:16px;padding:2rem;margin-bottom:3rem;display:flex;gap:1.5rem;align-items:flex-start;box-shadow:0 6px 20px -4px rgba(11,81,53,0.06);">
+      <div style="width:64px;height:64px;border-radius:50%;background:linear-gradient(135deg, #18794E, #22A06B);color:#fff;display:flex;align-items:center;justify-content:center;font-size:1.5rem;font-weight:800;flex-shrink:0;">
+        ⚡
+      </div>
+      <div>
+        <div style="display:flex;align-items:center;gap:0.5rem;margin-bottom:0.35rem;flex-wrap:wrap;">
+          <h4 style="font-family:var(--om-font-heading);font-size:1.15rem;font-weight:800;color:#0D1B12;margin:0;">OmnifyWP Engineering Team</h4>
+          <span style="background:#EFF8F2;color:#0B5135;font-size:0.72rem;font-weight:700;padding:2px 8px;border-radius:4px;border:1px solid #D4E8DC;">✓ Verified Contributor</span>
+        </div>
+        <p style="font-size:0.925rem;color:#3D5147;line-height:1.65;margin:0 0 0.85rem;">
+          Specializing in decoupled WordPress database performance, high-concurrency payment gateways, and cryptographic digital asset protection. Reviewed for accuracy against WordPress 6.5+ and PHP 8.2 standards.
+        </p>
+        <div style="font-size:0.825rem;color:#18794E;font-weight:600;">
+          <a href="/blog/" style="color:#18794E;text-decoration:none;">View all articles by engineering team &rarr;</a>
+        </div>
+      </div>
+    </div>
+    <!-- /wp:html -->
+
+    <!-- Previous / Next Post Navigation -->
+    <!-- wp:group {"className":"om-post-navigation","layout":{"type":"flex","justifyContent":"space-between"},"style":{"spacing":{"padding":{"top":"1.5rem","bottom":"2.5rem"}}}} -->
+    <div class="wp-block-group om-post-navigation">
+      <!-- wp:post-navigation-link {"type":"previous","showTitle":true,"arrow":"arrow","label":"Previous article"} /-->
+      <!-- wp:post-navigation-link {"type":"next","showTitle":true,"arrow":"arrow","label":"Next article"} /-->
+    </div>
+    <!-- /wp:group -->
+
+    <!-- Related Articles Section (Dynamic Query) -->
+    <!-- wp:group {"className":"om-related-section","style":{"spacing":{"padding":{"top":"2.5rem","bottom":"2.5rem"}}},"layout":{"type":"default"}} -->
+    <div class="wp-block-group om-related-section" style="border-top:1px solid #E6F4EC;">
+      <h3 style="font-family:var(--om-font-heading);font-size:1.45rem;font-weight:800;letter-spacing:-0.03em;color:#0D1B12;margin-bottom:1.5rem;">
+        Related Technical Analyses
+      </h3>
+
+      <!-- wp:query {"queryId":1,"query":{"perPage":3,"pages":1,"offset":0,"postType":"post","order":"desc","orderBy":"date","inherit":false},"layout":{"type":"default"}} -->
+      <div class="wp-block-query">
+        <!-- wp:post-template {"className":"om-blog-cards-grid om-related-grid"} -->
+          <!-- wp:group {"tagName":"article","className":"om-blog-card","layout":{"type":"default"}} -->
+          <article class="wp-block-group om-blog-card">
+            <!-- wp:post-featured-image {"isLink":true,"aspectRatio":"16/9","className":"om-blog-card__thumb"} /-->
+            <!-- wp:group {"className":"om-blog-card__content","layout":{"type":"default"}} -->
+            <div class="wp-block-group om-blog-card__content">
+              <!-- wp:post-terms {"term":"category","className":"om-blog-card__category"} /-->
+              <!-- wp:post-title {"isLink":true,"level":4,"className":"om-blog-card__title"} /-->
+              <!-- wp:post-date {"format":"M j, Y","className":"om-blog-card__date"} /-->
+            </div>
+            <!-- /wp:group -->
+          </article>
+          <!-- /wp:group -->
+        <!-- /wp:post-template -->
+      </div>
+      <!-- /wp:query -->
+    </div>
+    <!-- /wp:group -->
+
+    <!-- Comments Section -->
+    <!-- wp:comments {"className":"om-comments-area","style":{"spacing":{"margin":{"top":"3rem"}}}} /-->
+
+  </article>
   <!-- /wp:group -->
-  <!-- wp:post-featured-image {"style":{"spacing":{"margin":{"bottom":"36px"}},"border":{"radius":"14px"}}} /-->
-  <!-- wp:post-content {"layout":{"type":"constrained"}} /-->
-  <!-- wp:comments {"style":{"spacing":{"margin":{"top":"64px"}}}} /-->
-</article>
+
+</main>
 <!-- /wp:group -->
 
-<!-- wp:template-part {"slug":"footer","tagName":"footer"} /-->
+<!-- wp:template-part {"slug":"footer","tagName":"footer","align":"full"} /-->

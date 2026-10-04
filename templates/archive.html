@@ -3,7 +3,7 @@
 <!-- wp:group {"tagName":"main","className":"om-blog-page","layout":{"type":"default"}} -->
 <main class="wp-block-group om-blog-page">
 
-  <!-- Blog Hero Header Section -->
+  <!-- Archive Hero Header Section -->
   <!-- wp:html -->
   <section class="om-blog-hero" style="position:relative;background:linear-gradient(180deg, #F0FAF4 0%, #FFFFFF 100%);padding-top:clamp(4rem, 7vw, 6rem);padding-bottom:clamp(3rem, 5vw, 4.5rem);border-bottom:1px solid #E6F4EC;overflow:hidden;">
     <div style="position:absolute;top:-10%;left:50%;transform:translateX(-50%);width:900px;height:450px;background:radial-gradient(50% 50% at 50% 0%, rgba(34,160,107,0.14) 0%, transparent 100%);pointer-events:none;z-index:0;"></div>
@@ -11,19 +11,18 @@
     <div class="om-container om-text-center" style="position:relative;z-index:1;max-width:960px;margin-inline:auto;padding-inline:clamp(1rem,4vw,2.5rem);">
       <div style="display:inline-flex;align-items:center;gap:0.5rem;padding:0.4rem 1rem;background:rgba(34,160,107,0.1);border:1px solid rgba(34,160,107,0.25);border-radius:9999px;font-size:0.8125rem;font-weight:700;letter-spacing:0.04em;text-transform:uppercase;color:#0B5135;margin-bottom:1.25rem;">
         <span style="display:inline-block;width:7px;height:7px;border-radius:50%;background:#22A06B;"></span>
-        Engineering &amp; eCommerce Knowledge Base
+        Curated Topic Archive
       </div>
+  <!-- /wp:html -->
 
-      <h1 style="font-family:var(--om-font-heading);font-size:clamp(2.4rem, 5vw, 3.8rem);font-weight:800;letter-spacing:-0.035em;color:#0D1B12;line-height:1.15;margin:0 0 1.25rem;text-wrap:balance;">
-        Insights, Architecture &amp; Growth
-      </h1>
-      <p style="font-family:var(--om-font-body);font-size:clamp(1.05rem, 1.8vw, 1.25rem);line-height:1.65;color:#3D5147;max-width:720px;margin-inline:auto;margin-bottom:2.25rem;">
-        In-depth technical guides, conversion benchmarks, and security teardowns for modern WordPress store owners and developers.
-      </p>
+      <!-- wp:query-title {"type":"archive","level":1,"style":{"typography":{"fontSize":"clamp(2.4rem, 5vw, 3.8rem)","fontWeight":"800","letterSpacing":"-0.035em","lineHeight":"1.15"},"spacing":{"margin":{"bottom":"1rem"}}},"className":"om-archive-title"} /-->
 
+      <!-- wp:term-description {"className":"om-text-muted om-archive-desc","style":{"typography":{"fontSize":"1.125rem"}}} /-->
+
+  <!-- wp:html -->
       <!-- Category Filter Pills Bar -->
-      <nav class="om-blog-filter-bar" aria-label="Blog categories" style="display:flex;justify-content:center;gap:0.75rem;flex-wrap:wrap;">
-        <a href="/blog/" class="om-blog-filter-pill is-active" style="padding:0.5rem 1.15rem;border-radius:9999px;font-size:0.875rem;font-weight:700;text-decoration:none;background:#0B5135;color:#FFFFFF;box-shadow:0 2px 8px rgba(11,81,53,0.2);">All Posts</a>
+      <nav class="om-blog-filter-bar" aria-label="Blog categories" style="display:flex;justify-content:center;gap:0.75rem;flex-wrap:wrap;margin-top:2rem;">
+        <a href="/blog/" class="om-blog-filter-pill" style="padding:0.5rem 1.15rem;border-radius:9999px;font-size:0.875rem;font-weight:600;text-decoration:none;background:#FFFFFF;color:#3D5147;border:1px solid #D4E8DC;">All Posts</a>
         <a href="/category/architecture/" class="om-blog-filter-pill" style="padding:0.5rem 1.15rem;border-radius:9999px;font-size:0.875rem;font-weight:600;text-decoration:none;background:#FFFFFF;color:#3D5147;border:1px solid #D4E8DC;">⚡ Architecture</a>
         <a href="/category/security/" class="om-blog-filter-pill" style="padding:0.5rem 1.15rem;border-radius:9999px;font-size:0.875rem;font-weight:600;text-decoration:none;background:#FFFFFF;color:#3D5147;border:1px solid #D4E8DC;">🔒 Security</a>
         <a href="/category/tutorials/" class="om-blog-filter-pill" style="padding:0.5rem 1.15rem;border-radius:9999px;font-size:0.875rem;font-weight:600;text-decoration:none;background:#FFFFFF;color:#3D5147;border:1px solid #D4E8DC;">📦 Tutorials</a>
@@ -95,10 +94,10 @@
         <!-- wp:group {"className":"om-no-results om-text-center","style":{"spacing":{"padding":{"top":"4rem","bottom":"4rem"}}},"layout":{"type":"constrained"}} -->
         <div class="wp-block-group om-no-results om-text-center">
           <!-- wp:paragraph {"style":{"typography":{"fontSize":"1.25rem","fontWeight":"700"}}} -->
-          <p style="font-size:1.25rem;font-weight:700;color:var(--om-ink)">No articles found</p>
+          <p style="font-size:1.25rem;font-weight:700;color:var(--om-ink)">No articles found in this category</p>
           <!-- /wp:paragraph -->
           <!-- wp:paragraph {"className":"om-text-muted"} -->
-          <p class="om-text-muted">We haven't published anything in this section yet. Check back soon for technical insights.</p>
+          <p class="om-text-muted">Explore other categories or view all posts on our blog.</p>
           <!-- /wp:paragraph -->
         </div>
         <!-- /wp:group -->
