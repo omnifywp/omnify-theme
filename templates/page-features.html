@@ -1,0 +1,78 @@
+<!-- wp:template-part {"slug":"header","tagName":"header"} /-->
+
+<!-- wp:group {"tagName":"main","className":"om-features-page","layout":{"type":"default"}} -->
+<main class="wp-block-group om-features-page">
+
+  <!-- wp:html -->
+  <section class="om-hero" style="padding-block: clamp(3rem, 6vw, 5rem);">
+    <div class="om-container om-text-center">
+      <span class="om-hero__eyebrow" style="background:rgba(255,255,255,0.15);border-color:rgba(255,255,255,0.25);">Plugin Capabilities</span>
+      <h1 class="om-hero__headline" style="font-size:clamp(2rem,4vw,3.2rem);margin-bottom:1rem;">Every feature your store needs</h1>
+      <p class="om-hero__subhead" style="margin-inline:auto;max-width:680px;">
+        Explore the complete architectural toolset powering OmnifyWP eCommerce. From high-speed catalog browsing to cryptographic download protection, manage everything without SaaS overhead.
+      </p>
+    </div>
+  </section>
+  <!-- /wp:html -->
+
+  <!-- wp:pattern {"slug":"omnify/features-grid"} /-->
+  <!-- wp:pattern {"slug":"omnify/feature-split-catalog"} /-->
+  <!-- wp:pattern {"slug":"omnify/feature-split-analytics"} /-->
+
+  <!-- wp:html -->
+  <section class="om-section" style="background:var(--om-mint-pale);">
+    <div class="om-container">
+      <div class="om-text-center" style="margin-bottom:3rem;">
+        <span class="om-eyebrow">Store Operations</span>
+        <h2 style="font-size:clamp(1.75rem,3vw,2.5rem);font-weight:800;color:var(--om-ink);letter-spacing:-0.03em;">
+          Manage orders, customers, and store settings
+        </h2>
+        <p style="font-size:1.05rem;color:var(--om-slate);max-width:620px;margin-inline:auto;">
+          A dedicated administrative suite built directly into WordPress wp-admin.
+        </p>
+      </div>
+
+      <div class="om-card-grid">
+        <div class="om-card">
+          <div class="om-card__icon">📦</div>
+          <h3 class="om-card__title">Orders &amp; Instant Refunds</h3>
+          <p class="om-card__body">
+            Track transactions with instant filtering by status, payment gateway, date, or customer. Issue refunds directly from wp-admin.
+          </p>
+        </div>
+
+        <div class="om-card">
+          <div class="om-card__icon">👥</div>
+          <h3 class="om-card__title">Customer Profiles &amp; History</h3>
+          <p class="om-card__body">
+            Keep full customer records with order frequencies, lifetime value calculation, address books, and registered user profiles.
+          </p>
+        </div>
+
+        <div class="om-card">
+          <div class="om-card__icon">💳</div>
+          <h3 class="om-card__title">Stripe, PayPal &amp; Offline</h3>
+          <p class="om-card__body">
+            Configure payment methods through the dedicated settings panel. Supports webhook-verified transactions and manual payment terms.
+          </p>
+        </div>
+
+        <div class="om-card">
+          <div class="om-card__icon">🛠️</div>
+          <h3 class="om-card__title">Developer Diagnostics &amp; APIs</h3>
+          <p class="om-card__body">
+            Generate granular REST API keys with Read/Write access, inspect transaction audit logs, and export reports directly to CSV.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+  <!-- /wp:html -->
+
+  <!-- wp:pattern {"slug":"omnify/workflow-steps"} /-->
+  <!-- wp:pattern {"slug":"omnify/cta-band"} /-->
+
+</main>
+<!-- /wp:group -->
+
+<!-- wp:template-part {"slug":"footer","tagName":"footer"} /-->

@@ -1,0 +1,221 @@
+<!-- wp:template-part {"slug":"header","tagName":"header"} /-->
+
+<!-- wp:group {"tagName":"main","className":"om-compare-page","layout":{"type":"default"}} -->
+<main class="wp-block-group om-compare-page">
+
+  <!-- Hero Header -->
+  <!-- wp:html -->
+  <section class="om-hero" style="background:linear-gradient(180deg, #F0FAF4 0%, #FFFFFF 100%);padding-top:clamp(4rem, 7vw, 6.5rem);padding-bottom:clamp(3rem, 6vw, 4.5rem);border-bottom:1px solid #E6F4EC;">
+    <div class="om-container om-text-center" style="max-width:960px;margin-inline:auto;">
+      <span class="om-eyebrow" style="background:rgba(34,160,107,0.1);border-color:rgba(34,160,107,0.25);color:#0B5135;">Architecture &amp; Feature Comparison</span>
+      <h1 style="font-family:var(--om-font-heading);font-size:clamp(2.4rem, 5vw, 3.8rem);font-weight:800;letter-spacing:-0.035em;color:#0D1B12;line-height:1.15;margin-top:0.75rem;margin-bottom:1.25rem;">
+        How OmnifyWP compares to other WordPress eCommerce solutions.
+      </h1>
+      <p style="font-family:var(--om-font-body);font-size:clamp(1.05rem, 1.8vw, 1.25rem);line-height:1.65;color:#3D5147;max-width:740px;margin-inline:auto;">
+        Discover why store owners and developers choose a modern, decoupled SQL architecture over legacy postmeta-heavy engines or expensive SaaS-locked checkouts.
+      </p>
+    </div>
+  </section>
+  <!-- /wp:html -->
+
+  <!-- Comparison Matrix Table Section -->
+  <!-- wp:html -->
+  <section class="om-section" style="background:#FFFFFF;padding-top:clamp(3.5rem, 6vw, 5rem);padding-bottom:clamp(4rem, 7vw, 6rem);">
+    <div class="om-container" style="max-width:1200px;margin-inline:auto;padding-inline:clamp(1rem,4vw,2.5rem);">
+
+      <!-- Comparison Matrix Card -->
+      <div style="background:#FFFFFF;border:1px solid #D4E8DC;border-radius:20px;box-shadow:0 15px 40px -10px rgba(11,81,53,0.08);overflow:hidden;margin-bottom:3.5rem;">
+        <div style="overflow-x:auto;">
+          <table style="width:100%;border-collapse:collapse;font-size:0.95rem;text-align:left;">
+            <thead>
+              <tr style="background:#F7FCF9;border-bottom:2px solid #D4E8DC;">
+                <th style="padding:22px 24px;font-family:var(--om-font-heading);font-size:1.1rem;font-weight:800;color:#0F172A;width:34%;">Feature / Capability</th>
+                <th style="padding:22px 20px;font-family:var(--om-font-heading);font-size:1.15rem;font-weight:800;color:#0B5135;background:#EFF8F2;text-align:center;width:22%;border-left:2px solid #22A06B;border-right:2px solid #22A06B;">
+                  <div style="display:inline-flex;align-items:center;gap:6px;">
+                    <span>⚡ OmnifyWP</span>
+                  </div>
+                  <div style="font-size:0.75rem;font-weight:600;color:#18794E;text-transform:uppercase;letter-spacing:0.04em;margin-top:4px;">Native Modern</div>
+                </th>
+                <th style="padding:22px 20px;font-family:var(--om-font-heading);font-size:1rem;font-weight:700;color:#475569;text-align:center;width:22%;">
+                  WooCommerce
+                  <div style="font-size:0.72rem;font-weight:500;color:#94A3B8;margin-top:4px;">Legacy Standard</div>
+                </th>
+                <th style="padding:22px 20px;font-family:var(--om-font-heading);font-size:1rem;font-weight:700;color:#475569;text-align:center;width:22%;">
+                  SureCart / External SaaS
+                  <div style="font-size:0.72rem;font-weight:500;color:#94A3B8;margin-top:4px;">Decoupled Cloud</div>
+                </th>
+              </tr>
+            </thead>
+            <tbody>
+              <!-- Row 1: Database Architecture -->
+              <tr style="border-bottom:1px solid #EBF5EE;">
+                <td style="padding:18px 24px;">
+                  <strong style="color:#0F172A;display:block;">Database Architecture</strong>
+                  <span style="font-size:0.825rem;color:#64748B;">How orders, inventory, and transactions are stored.</span>
+                </td>
+                <td style="padding:18px 20px;background:#FAFDFB;border-left:2px solid #22A06B;border-right:2px solid #22A06B;text-align:center;">
+                  <span style="display:inline-block;padding:4px 10px;background:#DCFCE7;color:#166534;border-radius:6px;font-weight:700;font-size:0.85rem;">Dedicated Custom Tables</span>
+                  <div style="font-size:0.75rem;color:#15803D;margin-top:4px;">Zero postmeta bloat</div>
+                </td>
+                <td style="padding:18px 20px;text-align:center;color:#64748B;">
+                  <span style="font-size:0.85rem;">wp_posts &amp; wp_postmeta</span>
+                  <div style="font-size:0.75rem;color:#EF4444;margin-top:4px;">High query overhead</div>
+                </td>
+                <td style="padding:18px 20px;text-align:center;color:#64748B;">
+                  <span style="font-size:0.85rem;">External Cloud DB</span>
+                  <div style="font-size:0.75rem;color:#F59E0B;margin-top:4px;">Third-party server dependency</div>
+                </td>
+              </tr>
+
+              <!-- Row 2: Digital Asset Security -->
+              <tr style="border-bottom:1px solid #EBF5EE;">
+                <td style="padding:18px 24px;">
+                  <strong style="color:#0F172A;display:block;">Digital File Locker</strong>
+                  <span style="font-size:0.825rem;color:#64748B;">Protection against unauthorized downloads and link sharing.</span>
+                </td>
+                <td style="padding:18px 20px;background:#FAFDFB;border-left:2px solid #22A06B;border-right:2px solid #22A06B;text-align:center;">
+                  <span style="display:inline-block;padding:4px 10px;background:#DCFCE7;color:#166534;border-radius:6px;font-weight:700;font-size:0.85rem;">HMAC Cryptographic Tokens</span>
+                  <div style="font-size:0.75rem;color:#15803D;margin-top:4px;">Custom expiry &amp; attempt meters</div>
+                </td>
+                <td style="padding:18px 20px;text-align:center;color:#64748B;">
+                  <span style="font-size:0.85rem;">Basic .htaccess redirect</span>
+                  <div style="font-size:0.75rem;color:#94A3B8;margin-top:4px;">Requires server tuning</div>
+                </td>
+                <td style="padding:18px 20px;text-align:center;color:#64748B;">
+                  <span style="font-size:0.85rem;">Proprietary CDN Locker</span>
+                  <div style="font-size:0.75rem;color:#94A3B8;margin-top:4px;">Stored on external SaaS</div>
+                </td>
+              </tr>
+
+              <!-- Row 3: Data Ownership & Privacy -->
+              <tr style="border-bottom:1px solid #EBF5EE;">
+                <td style="padding:18px 24px;">
+                  <strong style="color:#0F172A;display:block;">Data Ownership &amp; GDPR</strong>
+                  <span style="font-size:0.825rem;color:#64748B;">Where customer personally identifiable information lives.</span>
+                </td>
+                <td style="padding:18px 20px;background:#FAFDFB;border-left:2px solid #22A06B;border-right:2px solid #22A06B;text-align:center;">
+                  <span style="display:inline-block;padding:4px 10px;background:#DCFCE7;color:#166534;border-radius:6px;font-weight:700;font-size:0.85rem;">100% Self-Hosted</span>
+                  <div style="font-size:0.75rem;color:#15803D;margin-top:4px;">Stored in your WP database</div>
+                </td>
+                <td style="padding:18px 20px;text-align:center;color:#64748B;">
+                  <span style="font-size:0.85rem;">Self-Hosted</span>
+                  <div style="font-size:0.75rem;color:#10B981;margin-top:4px;">Stored on your server</div>
+                </td>
+                <td style="padding:18px 20px;text-align:center;color:#64748B;">
+                  <span style="font-size:0.85rem;">Hosted on Third-Party SaaS</span>
+                  <div style="font-size:0.75rem;color:#EF4444;margin-top:4px;">Cross-border data transit</div>
+                </td>
+              </tr>
+
+              <!-- Row 4: Checkout Experience -->
+              <tr style="border-bottom:1px solid #EBF5EE;">
+                <td style="padding:18px 24px;">
+                  <strong style="color:#0F172A;display:block;">Frictionless Checkout</strong>
+                  <span style="font-size:0.825rem;color:#64748B;">Conversion-optimized, multi-step or 1-page checkout flows.</span>
+                </td>
+                <td style="padding:18px 20px;background:#FAFDFB;border-left:2px solid #22A06B;border-right:2px solid #22A06B;text-align:center;">
+                  <span style="display:inline-block;padding:4px 10px;background:#DCFCE7;color:#166534;border-radius:6px;font-weight:700;font-size:0.85rem;">Built-in Modern Flow</span>
+                  <div style="font-size:0.75rem;color:#15803D;margin-top:4px;">Order summary &amp; coupon tray</div>
+                </td>
+                <td style="padding:18px 20px;text-align:center;color:#64748B;">
+                  <span style="font-size:0.85rem;">Traditional Form</span>
+                  <div style="font-size:0.75rem;color:#94A3B8;margin-top:4px;">Requires paid checkout addons</div>
+                </td>
+                <td style="padding:18px 20px;text-align:center;color:#64748B;">
+                  <span style="font-size:0.85rem;">Modern Slide/Modal</span>
+                  <div style="font-size:0.75rem;color:#10B981;margin-top:4px;">High converting</div>
+                </td>
+              </tr>
+
+              <!-- Row 5: Pricing & Licensing -->
+              <tr style="border-bottom:1px solid #EBF5EE;">
+                <td style="padding:18px 24px;">
+                  <strong style="color:#0F172A;display:block;">Licensing &amp; SaaS Fees</strong>
+                  <span style="font-size:0.825rem;color:#64748B;">Ongoing operational and platform expenses.</span>
+                </td>
+                <td style="padding:18px 20px;background:#FAFDFB;border-left:2px solid #22A06B;border-right:2px solid #22A06B;text-align:center;">
+                  <span style="display:inline-block;padding:4px 10px;background:#DCFCE7;color:#166534;border-radius:6px;font-weight:700;font-size:0.85rem;">GPL-Licensed Plugin</span>
+                  <div style="font-size:0.75rem;color:#15803D;margin-top:4px;">No % take rates or lock-in</div>
+                </td>
+                <td style="padding:18px 20px;text-align:center;color:#64748B;">
+                  <span style="font-size:0.85rem;">Free Core + Paid Addons</span>
+                  <div style="font-size:0.75rem;color:#94A3B8;margin-top:4px;">Cost escalates with extensions</div>
+                </td>
+                <td style="padding:18px 20px;text-align:center;color:#64748B;">
+                  <span style="font-size:0.85rem;">Subscription Tiered</span>
+                  <div style="font-size:0.75rem;color:#EF4444;margin-top:4px;">Monthly / annual platform fees</div>
+                </td>
+              </tr>
+
+              <!-- Row 6: Performance & Site Speed -->
+              <tr>
+                <td style="padding:18px 24px;">
+                  <strong style="color:#0F172A;display:block;">Page Load &amp; Asset Footprint</strong>
+                  <span style="font-size:0.825rem;color:#64748B;">Impact on WordPress site performance score (TTFB &amp; Core Web Vitals).</span>
+                </td>
+                <td style="padding:18px 20px;background:#FAFDFB;border-left:2px solid #22A06B;border-right:2px solid #22A06B;border-bottom:2px solid #22A06B;text-align:center;">
+                  <span style="display:inline-block;padding:4px 10px;background:#DCFCE7;color:#166534;border-radius:6px;font-weight:700;font-size:0.85rem;">Ultra-Lightweight</span>
+                  <div style="font-size:0.75rem;color:#15803D;margin-top:4px;">Direct SQL indexing &amp; vanilla JS</div>
+                </td>
+                <td style="padding:18px 20px;text-align:center;color:#64748B;">
+                  <span style="font-size:0.85rem;">Heavyweight</span>
+                  <div style="font-size:0.75rem;color:#EF4444;margin-top:4px;">Large CSS/JS assets across site</div>
+                </td>
+                <td style="padding:18px 20px;text-align:center;color:#64748B;">
+                  <span style="font-size:0.85rem;">Moderate</span>
+                  <div style="font-size:0.75rem;color:#94A3B8;margin-top:4px;">Loads external API iframes/scripts</div>
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+
+      <!-- 3 Key Decision Columns -->
+      <div style="display:grid;grid-template-columns:repeat(auto-fit, minmax(320px, 1fr));gap:24px;margin-bottom:3.5rem;">
+        
+        <!-- Card 1 -->
+        <div style="background:#F7FCF9;border:1px solid #D4E8DC;border-radius:16px;padding:28px;">
+          <div style="font-size:1.75rem;margin-bottom:12px;">⚡</div>
+          <h3 style="font-family:var(--om-font-heading);font-size:1.25rem;font-weight:700;color:#0B5135;margin-top:0;margin-bottom:10px;">
+            Why switch from WooCommerce?
+          </h3>
+          <p style="font-size:0.95rem;color:#3D5147;line-height:1.65;margin:0;">
+            WooCommerce relies on WordPress's core post and postmeta tables, which forces large SQL JOIN operations as your orders and customer list scale into the thousands. OmnifyWP stores products and orders in purpose-built relational SQL tables, resulting in near-instant query lookups.
+          </p>
+        </div>
+
+        <!-- Card 2 -->
+        <div style="background:#F7FCF9;border:1px solid #D4E8DC;border-radius:16px;padding:28px;">
+          <div style="font-size:1.75rem;margin-bottom:12px;">🛡️</div>
+          <h3 style="font-family:var(--om-font-heading);font-size:1.25rem;font-weight:700;color:#0B5135;margin-top:0;margin-bottom:10px;">
+            Why not use an external SaaS?
+          </h3>
+          <p style="font-size:0.95rem;color:#3D5147;line-height:1.65;margin:0;">
+            External cloud checkouts stream your customers' sensitive transaction details to third-party databases and charge recurring subscription fees or transaction percentages. With OmnifyWP, 100% of your customer records and payment relationships remain securely on your own WordPress hosting.
+          </p>
+        </div>
+
+        <!-- Card 3 -->
+        <div style="background:#F7FCF9;border:1px solid #D4E8DC;border-radius:16px;padding:28px;">
+          <div style="font-size:1.75rem;margin-bottom:12px;">🔒</div>
+          <h3 style="font-family:var(--om-font-heading);font-size:1.25rem;font-weight:700;color:#0B5135;margin-top:0;margin-bottom:10px;">
+            Secure by cryptographic design
+          </h3>
+          <p style="font-size:0.95rem;color:#3D5147;line-height:1.65;margin:0;">
+            Unlike standard WordPress file downloads that expose direct media upload URLs, OmnifyWP signs every file request with an HMAC cryptographic token. Download links automatically expire after a set time window and enforce strict maximum download attempt counts.
+          </p>
+        </div>
+
+      </div>
+
+    </div>
+  </section>
+  <!-- /wp:html -->
+
+  <!-- wp:pattern {"slug":"omnify/cta-band"} /-->
+
+</main>
+<!-- /wp:group -->
+
+<!-- wp:template-part {"slug":"footer","tagName":"footer"} /-->

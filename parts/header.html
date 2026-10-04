@@ -1,0 +1,76 @@
+<!-- wp:group {"tagName":"header","className":"om-site-header","style":{"position":{"type":"sticky","top":"0px"}},"layout":{"type":"constrained"}} -->
+<header class="wp-block-group om-site-header">
+
+	<!-- wp:group {"className":"om-container om-site-header__inner","layout":{"type":"flex","flexWrap":"nowrap","justifyContent":"space-between","verticalAlignment":"center"}} -->
+	<div class="wp-block-group om-container om-site-header__inner">
+
+		<!-- ═══════════════════════════════════════
+		     BRAND LOGO
+		     ═══════════════════════════════════════ -->
+		<!-- wp:group {"className":"om-logo","layout":{"type":"flex","flexWrap":"nowrap","verticalAlignment":"center"},"style":{"spacing":{"blockGap":"10px"}}} -->
+		<div class="wp-block-group om-logo">
+
+			<!-- wp:html -->
+			<a href="/" class="om-logo__mark" aria-label="OmnifyWP home" style="display:inline-flex;align-items:center;justify-content:center;width:36px;height:36px;border-radius:var(--om-radius-sm);background:var(--om-grad-button);flex-shrink:0;text-decoration:none;">
+				<svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#ffffff" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false">
+					<polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"/>
+				</svg>
+			</a>
+			<!-- /wp:html -->
+
+			<!-- wp:html -->
+			<a href="/" style="font-family:var(--om-font-heading);font-size:1.125rem;font-weight:700;color:var(--om-ink);text-decoration:none;letter-spacing:-0.02em;" aria-label="OmnifyWP">OmnifyWP</a>
+			<!-- /wp:html -->
+
+		</div>
+		<!-- /wp:group -->
+
+		<!-- ═══════════════════════════════════════
+		     PRIMARY NAVIGATION
+		     ═══════════════════════════════════════ -->
+		<!-- wp:navigation {"className":"om-nav","overlayMenu":"mobile","layout":{"type":"flex","justifyContent":"center","flexWrap":"nowrap"},"style":{"spacing":{"blockGap":"4px"}}} -->
+
+			<!-- wp:navigation-link {"label":"Features","url":"/features/","className":"om-nav__link"} /-->
+			<!-- wp:navigation-link {"label":"Compare","url":"/compare/","className":"om-nav__link"} /-->
+			<!-- wp:navigation-link {"label":"Integrations","url":"/integrations/","className":"om-nav__link"} /-->
+			<!-- wp:navigation-link {"label":"Documentation","url":"https://omnifywp.com/doc/","className":"om-nav__link"} /-->
+			<!-- wp:navigation-link {"label":"Blog","url":"/blog/","className":"om-nav__link"} /-->
+
+		<!-- /wp:navigation -->
+
+		<!-- ═══════════════════════════════════════
+		     HEADER CTAs + MOBILE TOGGLE
+		     ═══════════════════════════════════════ -->
+		<!-- wp:group {"className":"om-header-cta","layout":{"type":"flex","flexWrap":"nowrap","verticalAlignment":"center"},"style":{"spacing":{"blockGap":"12px"}}} -->
+		<div class="wp-block-group om-header-cta">
+
+			<!-- wp:html -->
+			<a href="https://playground.wordpress.net/?blueprint-url=https%3A%2F%2Fraw.githubusercontent.com%2Fomnifywp%2Fomnifywp-ecommerce%2Fmain%2Fblueprint.json" class="om-btn om-btn--secondary om-btn--sm" target="_blank" rel="noopener noreferrer">🎮 Live Demo</a>
+			<!-- /wp:html -->
+
+			<!-- wp:html -->
+			<a href="https://wordpress.org/plugins/omnifywp-ecommerce/" class="om-btn om-btn--primary om-btn--sm" target="_blank" rel="noopener noreferrer">Get on WP.org</a>
+			<!-- /wp:html -->
+
+			<!-- Mobile nav toggle (visually hidden on desktop via CSS) -->
+			<button
+				class="om-nav-toggle"
+				aria-expanded="false"
+				aria-controls="om-mobile-menu"
+				aria-label="Open navigation menu"
+			>
+				<svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false">
+					<line x1="3" y1="6" x2="21" y2="6"/>
+					<line x1="3" y1="12" x2="21" y2="12"/>
+					<line x1="3" y1="18" x2="21" y2="18"/>
+				</svg>
+			</button>
+
+		</div>
+		<!-- /wp:group -->
+
+	</div>
+	<!-- /wp:group -->
+
+</header>
+<!-- /wp:group -->

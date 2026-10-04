@@ -1,0 +1,67 @@
+<!-- wp:template-part {"slug":"header","tagName":"header"} /-->
+
+<!-- wp:group {"tagName":"main","className":"om-container","style":{"spacing":{"padding":{"top":"var:preset|spacing|80","bottom":"var:preset|spacing|80"}}},"layout":{"type":"constrained"}} -->
+<main class="wp-block-group om-container" style="padding-top:var(--wp--preset--spacing--80);padding-bottom:var(--wp--preset--spacing--80)">
+
+	<!-- wp:group {"className":"om-section om-text-center","style":{"spacing":{"margin":{"bottom":"var:preset|spacing|60"}}},"layout":{"type":"constrained"}} -->
+	<div class="wp-block-group om-section om-text-center" style="margin-bottom:var(--wp--preset--spacing--60)">
+		<!-- wp:heading {"level":1,"fontSize":"x-large"} -->
+		<h1 class="wp-block-heading has-x-large-font-size">Blog &amp; Updates</h1>
+		<!-- /wp:heading -->
+
+		<!-- wp:paragraph {"className":"om-text-muted","style":{"typography":{"fontSize":"1.125rem"}}} -->
+		<p class="om-text-muted" style="font-size:1.125rem">Tips, tutorials, and news from the OmnifyWP team.</p>
+		<!-- /wp:paragraph -->
+	</div>
+	<!-- /wp:group -->
+
+	<!-- wp:query {"queryId":0,"query":{"perPage":9,"pages":0,"offset":0,"postType":"post","order":"desc","orderBy":"date","author":"","search":"","exclude":[],"sticky":"","inherit":true},"layout":{"type":"default"}} -->
+	<div class="wp-block-query">
+
+		<!-- wp:post-template {"className":"om-card-grid","layout":{"type":"grid","columnCount":3}} -->
+
+			<!-- wp:group {"className":"om-card","tagName":"article","style":{"spacing":{"padding":{"top":"0","bottom":"0"}},"border":{"radius":"8px"}},"layout":{"type":"flex","orientation":"vertical"}} -->
+			<article class="wp-block-group om-card" style="border-radius:8px">
+
+				<!-- wp:post-featured-image {"isLink":true,"aspectRatio":"16/9","style":{"border":{"radius":{"topLeft":"8px","topRight":"8px"}}}} /-->
+
+				<!-- wp:group {"style":{"spacing":{"padding":{"top":"1.25rem","right":"1.25rem","bottom":"1.25rem","left":"1.25rem"}}},"layout":{"type":"flex","orientation":"vertical","justifyContent":"left"}} -->
+				<div class="wp-block-group" style="padding-top:1.25rem;padding-right:1.25rem;padding-bottom:1.25rem;padding-left:1.25rem">
+
+					<!-- wp:post-title {"isLink":true,"level":2,"style":{"typography":{"fontSize":"1.125rem","fontWeight":"600"}},"className":"om-card__title"} /-->
+
+					<!-- wp:post-excerpt {"moreText":"","excerptLength":20,"className":"om-card__body om-text-muted"} /-->
+
+					<!-- wp:post-date {"className":"om-text-muted","style":{"typography":{"fontSize":"0.875rem"}}} /-->
+
+				</div>
+				<!-- /wp:group -->
+
+			</article>
+			<!-- /wp:group -->
+
+		<!-- /wp:post-template -->
+
+		<!-- wp:group {"style":{"spacing":{"margin":{"top":"var:preset|spacing|60"}}},"layout":{"type":"flex","flexWrap":"wrap","justifyContent":"center"}} -->
+		<div class="wp-block-group" style="margin-top:var(--wp--preset--spacing--60)">
+			<!-- wp:query-pagination {"paginationArrow":"arrow","layout":{"type":"flex","justifyContent":"center","flexWrap":"wrap"}} -->
+				<!-- wp:query-pagination-previous /-->
+				<!-- wp:query-pagination-numbers /-->
+				<!-- wp:query-pagination-next /-->
+			<!-- /wp:query-pagination -->
+		</div>
+		<!-- /wp:group -->
+
+		<!-- wp:query-no-results -->
+			<!-- wp:paragraph {"className":"om-text-muted om-text-center"} -->
+			<p class="om-text-muted om-text-center">No posts found. Check back soon for new content.</p>
+			<!-- /wp:paragraph -->
+		<!-- /wp:query-no-results -->
+
+	</div>
+	<!-- /wp:query -->
+
+</main>
+<!-- /wp:group -->
+
+<!-- wp:template-part {"slug":"footer","tagName":"footer"} /-->

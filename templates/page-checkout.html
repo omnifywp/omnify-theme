@@ -1,0 +1,37 @@
+<!-- wp:template-part {"slug":"header","tagName":"header"} /-->
+
+<!-- wp:group {"tagName":"main","style":{"spacing":{"padding":{"top":"var:preset|spacing|70","bottom":"var:preset|spacing|80","left":"var:preset|spacing|40","right":"var:preset|spacing|40"}}},"layout":{"type":"constrained","contentSize":"1180px"}} -->
+<main class="wp-block-group">
+
+	<!-- wp:group {"style":{"spacing":{"margin":{"bottom":"var:preset|spacing|50"}}},"layout":{"type":"flex","flexWrap":"nowrap","justifyContent":"space-between","verticalAlignment":"center"}} -->
+	<div class="wp-block-group" style="margin-bottom:var(--wp--preset--spacing--50)">
+		<!-- wp:group {"layout":{"type":"flex","flexWrap":"wrap","verticalAlignment":"center"}} -->
+		<div class="wp-block-group">
+			<!-- wp:heading {"level":1,"style":{"typography":{"fontSize":"2.25rem","fontWeight":"800","letterSpacing":"-0.03em"}}} -->
+			<h1 class="wp-block-heading" style="font-size:2.25rem;font-weight:800;letter-spacing:-0.03em">Secure Checkout</h1>
+			<!-- wp:paragraph {"style":{"color":{"text":"var:preset|color|dim"}}} -->
+			<p class="has-dim-color has-text-color" style="font-size:0.95rem;margin:0 0 0 16px">⚡ 256-Bit Encrypted &bull; Instant Locker Delivery</p>
+			<!-- /wp:paragraph -->
+		</div>
+		<!-- /wp:group -->
+
+		<!-- wp:group {"className":"omnify-checkout-steps-badge","style":{"border":{"width":"1px","style":"solid","color":"rgba(255,255,255,0.08)"},"spacing":{"padding":{"top":"6px","bottom":"6px","left":"14px","right":"14px"}},"border":{"radius":"9999px"}},"layout":{"type":"flex","flexWrap":"nowrap"}} -->
+		<div class="wp-block-group omnify-checkout-steps-badge" style="border-width:1px;border-style:solid;border-color:rgba(255,255,255,0.08);border-radius:9999px;padding-top:6px;padding-right:14px;padding-bottom:6px;padding-left:14px">
+			<!-- wp:paragraph {"style":{"typography":{"fontFamily":"JetBrains Mono, monospace","fontSize":"0.8rem"}}} -->
+			<p style="font-family:JetBrains Mono, monospace;font-size:0.8rem;margin:0"><span style="color:var(--wp--preset--color--cyan)">01</span> Cart &rarr; <span style="color:var(--wp--preset--color--violet);font-weight:700">02 Checkout</span> &rarr; <span style="opacity:0.4">03 Complete</span></p>
+			<!-- /wp:paragraph -->
+		</div>
+		<!-- /wp:group -->
+	</div>
+	<!-- /wp:group -->
+
+	<!-- wp:shortcode -->
+	[omnify_checkout]
+	<!-- /wp:shortcode -->
+
+	<!-- wp:pattern {"slug":"omnify/trust-badges"} /-->
+
+</main>
+<!-- /wp:group -->
+
+<!-- wp:template-part {"slug":"footer","tagName":"footer"} /-->
