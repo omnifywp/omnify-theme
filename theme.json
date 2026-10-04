@@ -130,6 +130,14 @@
     }
   },
   "styles": {
+    "spacing": {
+      "padding": {
+        "top": "0px",
+        "bottom": "0px",
+        "left": "clamp(1.15rem, 4vw, 2rem)",
+        "right": "clamp(1.15rem, 4vw, 2rem)"
+      }
+    },
     "color": {
       "background": "#FFFFFF",
       "text": "#0D1B12"
