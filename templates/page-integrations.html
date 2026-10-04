@@ -1,287 +1,520 @@
 <!-- wp:template-part {"slug":"header","tagName":"header"} /-->
 
-<!-- wp:group {"tagName":"main","className":"site-main","layout":{"type":"constrained"}} -->
+<!-- wp:group {"tagName":"main","className":"site-main","layout":{"type":"default"}} -->
 <main class="wp-block-group site-main">
 
-	<!-- Integrations Hero -->
-	<!-- wp:group {"tagName":"section","style":{"spacing":{"padding":{"top":"var:preset|spacing|80","bottom":"var:preset|spacing|80"}}},"className":"om-section om-text-center","layout":{"type":"constrained"}} -->
-	<section class="wp-block-group om-section om-text-center" style="padding-top:var(--wp--preset--spacing--80);padding-bottom:var(--wp--preset--spacing--80)">
-
-		<!-- wp:group {"className":"om-container","layout":{"type":"constrained","contentSize":"760px"}} -->
-		<div class="wp-block-group om-container">
-
-			<!-- wp:paragraph {"className":"om-eyebrow"} -->
-			<p class="om-eyebrow">Compatibility</p>
-			<!-- /wp:paragraph -->
-
-			<!-- wp:heading {"level":1,"style":{"typography":{"fontSize":"clamp(2.25rem,5vw,3.5rem)","fontWeight":"700","lineHeight":"1.15"}}} -->
-			<h1 style="font-size:clamp(2.25rem,5vw,3.5rem);font-weight:700;line-height:1.15">Integrations &amp; Compatibility</h1>
-			<!-- /wp:heading -->
-
-			<!-- wp:paragraph {"style":{"typography":{"fontSize":"1.2rem"},"spacing":{"margin":{"top":"1.25rem"}}}} -->
-			<p style="font-size:1.2rem;margin-top:1.25rem">OmnifyWP works within the WordPress ecosystem. See what payment options, hosting environments, and developer tools are compatible.</p>
-			<!-- /wp:paragraph -->
-
+	<!-- Integrations Hero Section -->
+	<!-- wp:html -->
+	<section class="om-section om-hero-saas" style="position:relative;background:linear-gradient(180deg, #F0FAF4 0%, #FFFFFF 100%);padding-top:clamp(4rem, 7vw, 6.5rem);padding-bottom:clamp(3rem, 6vw, 4.5rem);overflow:hidden;border-bottom:1px solid #E6F4EC;">
+		<div class="om-container" style="max-width:960px;margin-inline:auto;text-align:center;padding-inline:clamp(1rem,4vw,2.5rem);">
+			<span class="om-eyebrow" style="margin-bottom:1rem;display:inline-block;">Ecosystem &amp; Connectivity</span>
+			<h1 style="font-family:var(--om-font-heading);font-size:clamp(2.5rem, 5vw, 3.75rem);font-weight:800;letter-spacing:-0.035em;color:var(--om-ink);line-height:1.15;margin-bottom:1.25rem;">
+				Connect your store with the tools you already use.
+			</h1>
+			<p class="om-text-muted" style="font-size:clamp(1.0625rem, 2vw, 1.25rem);line-height:1.65;max-width:760px;margin-inline:auto;margin-bottom:2rem;">
+				OmnifyWP includes built-in configurations for leading payment gateways worldwide, analytics &amp; conversion tracking, page builders, and developer REST APIs — zero expensive 3rd-party SaaS add-ons required.
+			</p>
+			<div style="display:flex;justify-content:center;gap:1.5rem;flex-wrap:wrap;font-size:0.875rem;font-weight:600;color:var(--om-slate);">
+				<span style="display:inline-flex;align-items:center;gap:0.4rem;"><span style="color:#22A06B;">✓</span> 10 Global &amp; Regional Payment Gateways</span>
+				<span style="display:inline-flex;align-items:center;gap:0.4rem;"><span style="color:#22A06B;">✓</span> Native GA4 &amp; Meta Pixel Tracking</span>
+				<span style="display:inline-flex;align-items:center;gap:0.4rem;"><span style="color:#22A06B;">✓</span> 100% Page Builder Compatible</span>
+			</div>
 		</div>
-		<!-- /wp:group -->
-
 	</section>
-	<!-- /wp:group -->
+	<!-- /wp:html -->
 
-	<!-- Payment Options Section -->
-	<!-- wp:group {"tagName":"section","style":{"spacing":{"padding":{"top":"var:preset|spacing|80","bottom":"var:preset|spacing|80"}}},"className":"om-section","layout":{"type":"constrained"}} -->
-	<section class="wp-block-group om-section" style="padding-top:var(--wp--preset--spacing--80);padding-bottom:var(--wp--preset--spacing--80)">
+	<!-- Category 1: Global & Regional Payment Gateways -->
+	<!-- wp:html -->
+	<section class="om-section" style="background:#ffffff;padding-top:clamp(4rem, 6vw, 5.5rem);padding-bottom:clamp(3.5rem, 6vw, 5rem);">
+		<div class="om-container" style="max-width:1200px;margin-inline:auto;padding-inline:clamp(1rem,4vw,2.5rem);">
+			
+			<div style="margin-bottom:2.5rem;">
+				<div style="display:inline-flex;align-items:center;gap:0.5rem;font-family:var(--om-font-mono);font-size:0.75rem;font-weight:700;letter-spacing:0.08em;text-transform:uppercase;color:#18794E;background:#ECFDF5;padding:4px 10px;border-radius:6px;margin-bottom:0.75rem;">
+					Payment Infrastructure
+				</div>
+				<h2 style="font-family:var(--om-font-heading);font-size:clamp(1.75rem, 3.5vw, 2.5rem);font-weight:800;letter-spacing:-0.03em;color:var(--om-ink);margin:0 0 0.75rem;">
+					Global &amp; Regional Payment Gateways
+				</h2>
+				<p class="om-text-muted" style="font-size:1.0625rem;line-height:1.65;max-width:760px;margin:0;">
+					Collect payments securely with direct gateway settlements. Zero platform commission fees, automated webhook callbacks, and native in-app refund management.
+				</p>
+			</div>
 
-		<!-- wp:group {"className":"om-container","layout":{"type":"constrained","contentSize":"1200px"}} -->
-		<div class="wp-block-group om-container">
+			<div style="display:grid;grid-template-columns:repeat(auto-fill, minmax(280px, 1fr));gap:1.5rem;">
 
-			<!-- wp:heading {"level":2,"style":{"typography":{"fontSize":"clamp(1.5rem,3vw,2rem)","fontWeight":"700"},"spacing":{"margin":{"bottom":"0.75rem"}}}} -->
-			<h2 style="font-size:clamp(1.5rem,3vw,2rem);font-weight:700;margin-bottom:0.75rem">Payment Options</h2>
-			<!-- /wp:heading -->
-
-			<!-- wp:paragraph {"style":{"spacing":{"margin":{"bottom":"2.5rem"}}}} -->
-			<p style="margin-bottom:2.5rem">Payment methods available in OmnifyWP depend on your store settings configuration.</p>
-			<!-- /wp:paragraph -->
-
-			<!-- wp:html -->
-			<div class="om-integrations-grid">
-
-				<div class="om-integration-tile">
-					<span class="om-integration-tile__icon" aria-hidden="true">💳</span>
-					<p class="om-integration-tile__name">Stripe</p>
-					<p class="om-integration-tile__desc">Configure in Settings</p>
+				<!-- Gateway: Stripe -->
+				<div style="background:#ffffff;border:1px solid #E2E8F0;border-radius:14px;padding:1.75rem;display:flex;flex-direction:column;justify-content:space-between;box-shadow:0 2px 8px rgba(0,0,0,0.03);transition:transform 0.2s, border-color 0.2s;">
+					<div>
+						<div style="display:flex;align-items:center;justify-content:space-between;margin-bottom:1rem;">
+							<div style="width:48px;height:48px;border-radius:10px;background:#635BFF;display:flex;align-items:center;justify-content:center;color:#fff;font-weight:800;font-size:1.25rem;">
+								S
+							</div>
+							<span style="font-family:var(--om-font-mono);font-size:0.72rem;background:#ECFDF5;color:#065F46;padding:3px 8px;border-radius:4px;font-weight:700;">Global (47+ Countries)</span>
+						</div>
+						<h3 style="font-size:1.15rem;font-weight:700;color:var(--om-ink);margin-bottom:0.5rem;">Stripe</h3>
+						<p style="font-size:0.875rem;color:var(--om-slate);line-height:1.6;margin-bottom:1.25rem;">
+							Accept Visa, Mastercard, American Express, Apple Pay, Google Pay, and localized European rails. Supports Webhooks, Test/Live mode toggles, and direct refund processing.
+						</p>
+					</div>
+					<div style="font-size:0.75rem;color:#18794E;font-weight:600;border-top:1px solid #F1F5F9;padding-top:0.75rem;">
+						✓ Apple Pay &bull; Google Pay &bull; Webhooks
+					</div>
 				</div>
 
-				<div class="om-integration-tile">
-					<span class="om-integration-tile__icon" aria-hidden="true">🅿️</span>
-					<p class="om-integration-tile__name">PayPal</p>
-					<p class="om-integration-tile__desc">Configure in Settings</p>
+				<!-- Gateway: PayPal -->
+				<div style="background:#ffffff;border:1px solid #E2E8F0;border-radius:14px;padding:1.75rem;display:flex;flex-direction:column;justify-content:space-between;box-shadow:0 2px 8px rgba(0,0,0,0.03);">
+					<div>
+						<div style="display:flex;align-items:center;justify-content:space-between;margin-bottom:1rem;">
+							<div style="width:48px;height:48px;border-radius:10px;background:#003087;display:flex;align-items:center;justify-content:center;color:#fff;font-weight:800;font-size:1.25rem;">
+								P
+							</div>
+							<span style="font-family:var(--om-font-mono);font-size:0.72rem;background:#ECFDF5;color:#065F46;padding:3px 8px;border-radius:4px;font-weight:700;">Worldwide (200+ Markets)</span>
+						</div>
+						<h3 style="font-size:1.15rem;font-weight:700;color:var(--om-ink);margin-bottom:0.5rem;">PayPal Commerce</h3>
+						<p style="font-size:0.875rem;color:var(--om-slate);line-height:1.6;margin-bottom:1.25rem;">
+							Frictionless PayPal wallet checkout and Pay Later financing. Includes automated IPN/webhook listeners, Sandbox testing, and in-dashboard refund triggers.
+						</p>
+					</div>
+					<div style="font-size:0.75rem;color:#18794E;font-weight:600;border-top:1px solid #F1F5F9;padding-top:0.75rem;">
+						✓ PayPal Smart Buttons &bull; Pay Later &bull; Sandbox
+					</div>
 				</div>
 
-				<div class="om-integration-tile">
-					<span class="om-integration-tile__icon" aria-hidden="true">🏦</span>
-					<p class="om-integration-tile__name">Bank Transfer</p>
-					<p class="om-integration-tile__desc">Offline payment</p>
+				<!-- Gateway: Razorpay -->
+				<div style="background:#ffffff;border:1px solid #E2E8F0;border-radius:14px;padding:1.75rem;display:flex;flex-direction:column;justify-content:space-between;box-shadow:0 2px 8px rgba(0,0,0,0.03);">
+					<div>
+						<div style="display:flex;align-items:center;justify-content:space-between;margin-bottom:1rem;">
+							<div style="width:48px;height:48px;border-radius:10px;background:#0C2340;display:flex;align-items:center;justify-content:center;color:#00BAF2;font-weight:800;font-size:1.25rem;">
+								R
+							</div>
+							<span style="font-family:var(--om-font-mono);font-size:0.72rem;background:#EFF6FF;color:#1E40AF;padding:3px 8px;border-radius:4px;font-weight:700;">India (UPI / NetBanking)</span>
+						</div>
+						<h3 style="font-size:1.15rem;font-weight:700;color:var(--om-ink);margin-bottom:0.5rem;">Razorpay</h3>
+						<p style="font-size:0.875rem;color:var(--om-slate);line-height:1.6;margin-bottom:1.25rem;">
+							High-conversion Indian checkout supporting UPI (Google Pay, PhonePe, Paytm), RuPay cards, NetBanking, and mobile wallets with webhook order fulfillment.
+						</p>
+					</div>
+					<div style="font-size:0.75rem;color:#18794E;font-weight:600;border-top:1px solid #F1F5F9;padding-top:0.75rem;">
+						✓ UPI QR &bull; RuPay &bull; NetBanking &bull; Instant Refunds
+					</div>
 				</div>
 
-				<div class="om-integration-tile">
-					<span class="om-integration-tile__icon" aria-hidden="true">💵</span>
-					<p class="om-integration-tile__name">Cash on Delivery</p>
-					<p class="om-integration-tile__desc">Offline payment</p>
+				<!-- Gateway: Mollie -->
+				<div style="background:#ffffff;border:1px solid #E2E8F0;border-radius:14px;padding:1.75rem;display:flex;flex-direction:column;justify-content:space-between;box-shadow:0 2px 8px rgba(0,0,0,0.03);">
+					<div>
+						<div style="display:flex;align-items:center;justify-content:space-between;margin-bottom:1rem;">
+							<div style="width:48px;height:48px;border-radius:10px;background:#000000;display:flex;align-items:center;justify-content:center;color:#fff;font-weight:800;font-size:1.25rem;">
+								M
+							</div>
+							<span style="font-family:var(--om-font-mono);font-size:0.72rem;background:#ECFDF5;color:#065F46;padding:3px 8px;border-radius:4px;font-weight:700;">European Union</span>
+						</div>
+						<h3 style="font-size:1.15rem;font-weight:700;color:var(--om-ink);margin-bottom:0.5rem;">Mollie</h3>
+						<p style="font-size:0.875rem;color:var(--om-slate);line-height:1.6;margin-bottom:1.25rem;">
+							The premier payment platform for European merchants. Support iDEAL (Netherlands), Bancontact (Belgium), SEPA Direct Debit, SOFORT, and Klarna.
+						</p>
+					</div>
+					<div style="font-size:0.75rem;color:#18794E;font-weight:600;border-top:1px solid #F1F5F9;padding-top:0.75rem;">
+						✓ iDEAL &bull; Bancontact &bull; SEPA &bull; Webhooks
+					</div>
 				</div>
 
-				<div class="om-integration-tile">
-					<span class="om-integration-tile__icon" aria-hidden="true">📄</span>
-					<p class="om-integration-tile__name">Cheque Payment</p>
-					<p class="om-integration-tile__desc">Offline payment</p>
+				<!-- Gateway: Paystack -->
+				<div style="background:#ffffff;border:1px solid #E2E8F0;border-radius:14px;padding:1.75rem;display:flex;flex-direction:column;justify-content:space-between;box-shadow:0 2px 8px rgba(0,0,0,0.03);">
+					<div>
+						<div style="display:flex;align-items:center;justify-content:space-between;margin-bottom:1rem;">
+							<div style="width:48px;height:48px;border-radius:10px;background:#00C3F7;display:flex;align-items:center;justify-content:center;color:#fff;font-weight:800;font-size:1.25rem;">
+								P
+							</div>
+							<span style="font-family:var(--om-font-mono);font-size:0.72rem;background:#FEF3C7;color:#92400E;padding:3px 8px;border-radius:4px;font-weight:700;">Africa (Nigeria, Ghana, SA)</span>
+						</div>
+						<h3 style="font-size:1.15rem;font-weight:700;color:var(--om-ink);margin-bottom:0.5rem;">Paystack</h3>
+						<p style="font-size:0.875rem;color:var(--om-slate);line-height:1.6;margin-bottom:1.25rem;">
+							Streamlined checkout for emerging African economies. Accept local cards, mobile money, USSD, and bank transfers with cryptographic HMAC signature verification.
+						</p>
+					</div>
+					<div style="font-size:0.75rem;color:#18794E;font-weight:600;border-top:1px solid #F1F5F9;padding-top:0.75rem;">
+						✓ Cards &bull; Mobile Money &bull; USSD &bull; Bank Transfer
+					</div>
 				</div>
 
-				<!-- PLACEHOLDER: Verify and replace the following three tiles with confirmed payment integrations before publishing -->
-				<div class="om-integration-tile">
-					<span class="om-integration-tile__icon" aria-hidden="true">🔲</span>
-					<p class="om-integration-tile__name">[Placeholder]</p>
-					<p class="om-integration-tile__desc">Verify before publishing</p>
+				<!-- Gateway: Tap Payments -->
+				<div style="background:#ffffff;border:1px solid #E2E8F0;border-radius:14px;padding:1.75rem;display:flex;flex-direction:column;justify-content:space-between;box-shadow:0 2px 8px rgba(0,0,0,0.03);">
+					<div>
+						<div style="display:flex;align-items:center;justify-content:space-between;margin-bottom:1rem;">
+							<div style="width:48px;height:48px;border-radius:10px;background:#2ACEA7;display:flex;align-items:center;justify-content:center;color:#fff;font-weight:800;font-size:1.25rem;">
+								T
+							</div>
+							<span style="font-family:var(--om-font-mono);font-size:0.72rem;background:#F0FAF4;color:#0B5135;padding:3px 8px;border-radius:4px;font-weight:700;">Middle East &amp; GCC</span>
+						</div>
+						<h3 style="font-size:1.15rem;font-weight:700;color:var(--om-ink);margin-bottom:0.5rem;">Tap Payments</h3>
+						<p style="font-size:0.875rem;color:var(--om-slate);line-height:1.6;margin-bottom:1.25rem;">
+							Tailored payment rails for UAE, Saudi Arabia, Kuwait, Bahrain, and Qatar. Supports KNET, mada, Benefit, and regional debit systems with charge webhooks.
+						</p>
+					</div>
+					<div style="font-size:0.75rem;color:#18794E;font-weight:600;border-top:1px solid #F1F5F9;padding-top:0.75rem;">
+						✓ mada &bull; KNET &bull; GCC Debit &bull; Apple Pay
+					</div>
 				</div>
 
-				<div class="om-integration-tile">
-					<span class="om-integration-tile__icon" aria-hidden="true">🔲</span>
-					<p class="om-integration-tile__name">[Placeholder]</p>
-					<p class="om-integration-tile__desc">Verify before publishing</p>
+				<!-- Gateway: Alipay -->
+				<div style="background:#ffffff;border:1px solid #E2E8F0;border-radius:14px;padding:1.75rem;display:flex;flex-direction:column;justify-content:space-between;box-shadow:0 2px 8px rgba(0,0,0,0.03);">
+					<div>
+						<div style="display:flex;align-items:center;justify-content:space-between;margin-bottom:1rem;">
+							<div style="width:48px;height:48px;border-radius:10px;background:#1677FF;display:flex;align-items:center;justify-content:center;color:#fff;font-weight:800;font-size:1.25rem;">
+								支
+							</div>
+							<span style="font-family:var(--om-font-mono);font-size:0.72rem;background:#EFF6FF;color:#1E40AF;padding:3px 8px;border-radius:4px;font-weight:700;">China &amp; APAC</span>
+						</div>
+						<h3 style="font-size:1.15rem;font-weight:700;color:var(--om-ink);margin-bottom:0.5rem;">Alipay</h3>
+						<p style="font-size:0.875rem;color:var(--om-slate);line-height:1.6;margin-bottom:1.25rem;">
+							Reach over 1 billion consumers across China and cross-border APAC shoppers. Configurable RSA private/public key encryption and sandbox test modes.
+						</p>
+					</div>
+					<div style="font-size:0.75rem;color:#18794E;font-weight:600;border-top:1px solid #F1F5F9;padding-top:0.75rem;">
+						✓ Cross-Border QR &bull; RSA2 Security &bull; CNY / Multi-Currency
+					</div>
 				</div>
 
-				<div class="om-integration-tile">
-					<span class="om-integration-tile__icon" aria-hidden="true">🔲</span>
-					<p class="om-integration-tile__name">[Placeholder]</p>
-					<p class="om-integration-tile__desc">Verify before publishing</p>
+				<!-- Gateway: WeChat Pay -->
+				<div style="background:#ffffff;border:1px solid #E2E8F0;border-radius:14px;padding:1.75rem;display:flex;flex-direction:column;justify-content:space-between;box-shadow:0 2px 8px rgba(0,0,0,0.03);">
+					<div>
+						<div style="display:flex;align-items:center;justify-content:space-between;margin-bottom:1rem;">
+							<div style="width:48px;height:48px;border-radius:10px;background:#07C160;display:flex;align-items:center;justify-content:center;color:#fff;font-weight:800;font-size:1.25rem;">
+								微
+							</div>
+							<span style="font-family:var(--om-font-mono);font-size:0.72rem;background:#ECFDF5;color:#065F46;padding:3px 8px;border-radius:4px;font-weight:700;">China &amp; APAC</span>
+						</div>
+						<h3 style="font-size:1.15rem;font-weight:700;color:var(--om-ink);margin-bottom:0.5rem;">WeChat Pay</h3>
+						<p style="font-size:0.875rem;color:var(--om-slate);line-height:1.6;margin-bottom:1.25rem;">
+							Native mobile QR code scanning and wallet checkout for WeChat users. Configurable AppID, Merchant MCHID, and API signature secret tokens.
+						</p>
+					</div>
+					<div style="font-size:0.75rem;color:#18794E;font-weight:600;border-top:1px solid #F1F5F9;padding-top:0.75rem;">
+						✓ Native QR Pay &bull; Sandbox Mode &bull; Asynchronous Notifications
+					</div>
+				</div>
+
+				<!-- Gateway: SSLCommerz -->
+				<div style="background:#ffffff;border:1px solid #E2E8F0;border-radius:14px;padding:1.75rem;display:flex;flex-direction:column;justify-content:space-between;box-shadow:0 2px 8px rgba(0,0,0,0.03);">
+					<div>
+						<div style="display:flex;align-items:center;justify-content:space-between;margin-bottom:1rem;">
+							<div style="width:48px;height:48px;border-radius:10px;background:#ED1C24;display:flex;align-items:center;justify-content:center;color:#fff;font-weight:800;font-size:1.25rem;">
+								S
+							</div>
+							<span style="font-family:var(--om-font-mono);font-size:0.72rem;background:#FEF2F2;color:#991B1B;padding:3px 8px;border-radius:4px;font-weight:700;">Bangladesh (bKash / Nagad)</span>
+						</div>
+						<h3 style="font-size:1.15rem;font-weight:700;color:var(--om-ink);margin-bottom:0.5rem;">SSLCommerz</h3>
+						<p style="font-size:0.875rem;color:var(--om-slate);line-height:1.6;margin-bottom:1.25rem;">
+							The leading gateway in Bangladesh. Accept bKash, Nagad, Rocket, Upay, local VISA/Mastercard cards, and internet banking with instant IPN order reconciliation.
+						</p>
+					</div>
+					<div style="font-size:0.75rem;color:#18794E;font-weight:600;border-top:1px solid #F1F5F9;padding-top:0.75rem;">
+						✓ bKash &bull; Nagad &bull; Local Cards &bull; IPN Callbacks
+					</div>
+				</div>
+
+				<!-- Gateway: Khalti & eSewa -->
+				<div style="background:#ffffff;border:1px solid #E2E8F0;border-radius:14px;padding:1.75rem;display:flex;flex-direction:column;justify-content:space-between;box-shadow:0 2px 8px rgba(0,0,0,0.03);">
+					<div>
+						<div style="display:flex;align-items:center;justify-content:space-between;margin-bottom:1rem;">
+							<div style="width:48px;height:48px;border-radius:10px;background:#5C2D91;display:flex;align-items:center;justify-content:center;color:#fff;font-weight:800;font-size:1.25rem;">
+								K
+							</div>
+							<span style="font-family:var(--om-font-mono);font-size:0.72rem;background:#F5F3FF;color:#5B21B6;padding:3px 8px;border-radius:4px;font-weight:700;">Nepal (NPR)</span>
+						</div>
+						<h3 style="font-size:1.15rem;font-weight:700;color:var(--om-ink);margin-bottom:0.5rem;">Khalti &amp; eSewa</h3>
+						<p style="font-size:0.875rem;color:var(--om-slate);line-height:1.6;margin-bottom:1.25rem;">
+							Built-in integration for Nepal's dominant digital wallets. Accept instant payments in Nepali Rupee (NPR) via eSewa EPAY and Khalti payment SDKs.
+						</p>
+					</div>
+					<div style="font-size:0.75rem;color:#18794E;font-weight:600;border-top:1px solid #F1F5F9;padding-top:0.75rem;">
+						✓ eSewa ePay &bull; Khalti Wallet &bull; Sandbox Mode
+					</div>
+				</div>
+
+				<!-- Offline Methods -->
+				<div style="background:#FAFDFB;border:1px dashed #A8DFBF;border-radius:14px;padding:1.75rem;display:flex;flex-direction:column;justify-content:space-between;">
+					<div>
+						<div style="display:flex;align-items:center;justify-content:space-between;margin-bottom:1rem;">
+							<div style="width:48px;height:48px;border-radius:10px;background:#18794E;display:flex;align-items:center;justify-content:center;color:#fff;font-weight:800;font-size:1.25rem;">
+								🏦
+							</div>
+							<span style="font-family:var(--om-font-mono);font-size:0.72rem;background:#EFF8F2;color:#0B5135;padding:3px 8px;border-radius:4px;font-weight:700;">Zero Fee / Offline</span>
+						</div>
+						<h3 style="font-size:1.15rem;font-weight:700;color:var(--om-ink);margin-bottom:0.5rem;">Offline Payment Methods</h3>
+						<p style="font-size:0.875rem;color:var(--om-slate);line-height:1.6;margin-bottom:1.25rem;">
+							Built-in support for Bank Transfer (BACS), Cash on Delivery (COD), and Cheque payments with custom checkout instructions and manual order confirmation.
+						</p>
+					</div>
+					<div style="font-size:0.75rem;color:#18794E;font-weight:600;border-top:1px solid #D4E8DC;padding-top:0.75rem;">
+						✓ Bank Wire (BACS) &bull; Cash on Delivery &bull; Cheque
+					</div>
 				</div>
 
 			</div>
-			<!-- /om-integrations-grid -->
-			<!-- /wp:html -->
-
 		</div>
-		<!-- /wp:group -->
-
 	</section>
-	<!-- /wp:group -->
+	<!-- /wp:html -->
 
-	<!-- WordPress Compatibility Section -->
-	<!-- wp:group {"tagName":"section","style":{"color":{"background":"#F9FAFB"},"spacing":{"padding":{"top":"var:preset|spacing|80","bottom":"var:preset|spacing|80"}}},"className":"om-section","layout":{"type":"constrained"}} -->
-	<section class="wp-block-group om-section" style="background-color:#F9FAFB;padding-top:var(--wp--preset--spacing--80);padding-bottom:var(--wp--preset--spacing--80)">
-
-		<!-- wp:group {"className":"om-container","layout":{"type":"constrained","contentSize":"1200px"}} -->
-		<div class="wp-block-group om-container">
-
-			<!-- wp:heading {"level":2,"style":{"typography":{"fontSize":"clamp(1.5rem,3vw,2rem)","fontWeight":"700"},"spacing":{"margin":{"bottom":"2.5rem"}}}} -->
-			<h2 style="font-size:clamp(1.5rem,3vw,2rem);font-weight:700;margin-bottom:2.5rem">WordPress Compatibility</h2>
-			<!-- /wp:heading -->
-
-			<!-- wp:columns {"style":{"spacing":{"blockGap":"1.5rem"}}} -->
-			<div class="wp-block-columns">
-
-				<!-- wp:column {"style":{"border":{"radius":"12px","width":"1px","color":"#D4E8DC"},"color":{"background":"#FFFFFF"},"spacing":{"padding":{"top":"1.75rem","bottom":"1.75rem","left":"1.75rem","right":"1.75rem"}}}} -->
-				<div class="wp-block-column" style="border-radius:12px;border:1px solid #D4E8DC;background-color:#FFFFFF;padding:1.75rem">
-					<!-- wp:paragraph {"style":{"typography":{"fontSize":"2rem"}}} -->
-					<p style="font-size:2rem">🔷</p>
-					<!-- /wp:paragraph -->
-					<!-- wp:heading {"level":3,"style":{"typography":{"fontSize":"1.15rem","fontWeight":"700"}}} -->
-					<h3 style="font-size:1.15rem;font-weight:700">WordPress 6.5+</h3>
-					<!-- /wp:heading -->
-					<!-- wp:paragraph {"style":{"color":{"text":"#4B5563"}}} -->
-					<p style="color:#4B5563">Requires WordPress 6.5 or later. Full Site Editing supported.</p>
-					<!-- /wp:paragraph -->
+	<!-- Category 2: Marketing, Analytics & Pixel Tracking -->
+	<!-- wp:html -->
+	<section class="om-section" style="background:#FBFDFB;border-top:1px solid #E6F4EC;border-bottom:1px solid #E6F4EC;padding-top:clamp(4rem, 6vw, 5.5rem);padding-bottom:clamp(3.5rem, 6vw, 5rem);">
+		<div class="om-container" style="max-width:1200px;margin-inline:auto;padding-inline:clamp(1rem,4vw,2.5rem);">
+			
+			<div style="margin-bottom:2.5rem;">
+				<div style="display:inline-flex;align-items:center;gap:0.5rem;font-family:var(--om-font-mono);font-size:0.75rem;font-weight:700;letter-spacing:0.08em;text-transform:uppercase;color:#18794E;background:#ECFDF5;padding:4px 10px;border-radius:6px;margin-bottom:0.75rem;">
+					Marketing &amp; Attribution
 				</div>
-				<!-- /wp:column -->
+				<h2 style="font-family:var(--om-font-heading);font-size:clamp(1.75rem, 3.5vw, 2.5rem);font-weight:800;letter-spacing:-0.03em;color:var(--om-ink);margin:0 0 0.75rem;">
+					Native Conversion &amp; Ad Tracking
+				</h2>
+				<p class="om-text-muted" style="font-size:1.0625rem;line-height:1.65;max-width:760px;margin:0;">
+					Measure advertising ROI and customer journeys without bloated external tracking plugins or complex Google Tag Manager containers.
+				</p>
+			</div>
 
-				<!-- wp:column {"style":{"border":{"radius":"12px","width":"1px","color":"#D4E8DC"},"color":{"background":"#FFFFFF"},"spacing":{"padding":{"top":"1.75rem","bottom":"1.75rem","left":"1.75rem","right":"1.75rem"}}}} -->
-				<div class="wp-block-column" style="border-radius:12px;border:1px solid #D4E8DC;background-color:#FFFFFF;padding:1.75rem">
-					<!-- wp:paragraph {"style":{"typography":{"fontSize":"2rem"}}} -->
-					<p style="font-size:2rem">🐘</p>
-					<!-- /wp:paragraph -->
-					<!-- wp:heading {"level":3,"style":{"typography":{"fontSize":"1.15rem","fontWeight":"700"}}} -->
-					<h3 style="font-size:1.15rem;font-weight:700">PHP 8.1+</h3>
-					<!-- /wp:heading -->
-					<!-- wp:paragraph {"style":{"color":{"text":"#4B5563"}}} -->
-					<p style="color:#4B5563">Requires PHP 8.1 or later. PHP 8.2+ recommended for best performance.</p>
-					<!-- /wp:paragraph -->
-				</div>
-				<!-- /wp:column -->
+			<div style="display:grid;grid-template-columns:repeat(auto-fit, minmax(320px, 1fr));gap:1.75rem;">
 
-				<!-- wp:column {"style":{"border":{"radius":"12px","width":"1px","color":"#D4E8DC"},"color":{"background":"#FFFFFF"},"spacing":{"padding":{"top":"1.75rem","bottom":"1.75rem","left":"1.75rem","right":"1.75rem"}}}} -->
-				<div class="wp-block-column" style="border-radius:12px;border:1px solid #D4E8DC;background-color:#FFFFFF;padding:1.75rem">
-					<!-- wp:paragraph {"style":{"typography":{"fontSize":"2rem"}}} -->
-					<p style="font-size:2rem">🗄️</p>
-					<!-- /wp:paragraph -->
-					<!-- wp:heading {"level":3,"style":{"typography":{"fontSize":"1.15rem","fontWeight":"700"}}} -->
-					<h3 style="font-size:1.15rem;font-weight:700">MySQL 5.7+ / MariaDB 10.3+</h3>
-					<!-- /wp:heading -->
-					<!-- wp:paragraph {"style":{"color":{"text":"#4B5563"}}} -->
-					<p style="color:#4B5563">Compatible with MySQL 5.7 or later and MariaDB 10.3 or later.</p>
-					<!-- /wp:paragraph -->
+				<!-- Integration: Google Analytics 4 -->
+				<div style="background:#ffffff;border:1px solid #E2E8F0;border-radius:14px;padding:2rem;box-shadow:0 2px 8px rgba(0,0,0,0.03);">
+					<div style="display:flex;align-items:center;gap:14px;margin-bottom:1.25rem;">
+						<div style="width:44px;height:44px;border-radius:10px;background:#F9AB00;display:flex;align-items:center;justify-content:center;color:#fff;font-weight:800;font-size:1.2rem;">
+							GA
+						</div>
+						<div>
+							<h3 style="font-size:1.15rem;font-weight:700;color:var(--om-ink);margin:0;">Google Analytics 4 (GA4)</h3>
+							<span style="font-size:0.75rem;color:#10B981;font-weight:600;">Native gtag.js Integration</span>
+						</div>
+					</div>
+					<p style="font-size:0.9rem;color:var(--om-slate);line-height:1.65;margin-bottom:1.25rem;">
+						Simply input your Measurement ID (<code>G-XXXXXXXXXX</code>) under Store Settings &gt; Tracking. OmnifyWP automatically injects asynchronous gtag.js tags, supports Google Debug Mode, and tracks page views and checkout conversions cleanly.
+					</p>
+					<ul style="list-style:none;padding:0;margin:0;font-size:0.8125rem;color:var(--om-slate);display:flex;flex-direction:column;gap:0.4rem;">
+						<li>✓ Zero external plugin dependencies</li>
+						<li>✓ Asynchronous non-blocking loading strategy</li>
+						<li>✓ Built-in Debug Mode toggle for testing</li>
+					</ul>
 				</div>
-				<!-- /wp:column -->
+
+				<!-- Integration: Meta Pixel -->
+				<div style="background:#ffffff;border:1px solid #E2E8F0;border-radius:14px;padding:2rem;box-shadow:0 2px 8px rgba(0,0,0,0.03);">
+					<div style="display:flex;align-items:center;gap:14px;margin-bottom:1.25rem;">
+						<div style="width:44px;height:44px;border-radius:10px;background:#0081FB;display:flex;align-items:center;justify-content:center;color:#fff;font-weight:800;font-size:1.2rem;">
+							M
+						</div>
+						<div>
+							<h3 style="font-size:1.15rem;font-weight:700;color:var(--om-ink);margin:0;">Meta Pixel (Facebook &amp; Instagram)</h3>
+							<span style="font-size:0.75rem;color:#10B981;font-weight:600;">Native fbevents.js Integration</span>
+						</div>
+					</div>
+					<p style="font-size:0.9rem;color:var(--om-slate);line-height:1.65;margin-bottom:1.25rem;">
+						Add your Meta Pixel ID under Store Settings to automatically fire standard PageView and store interaction events across Facebook and Instagram ads. Includes native <code>&lt;noscript&gt;</code> fallback tags.
+					</p>
+					<ul style="list-style:none;padding:0;margin:0;font-size:0.8125rem;color:var(--om-slate);display:flex;flex-direction:column;gap:0.4rem;">
+						<li>✓ Automated fbevents.js script injection</li>
+						<li>✓ Accurate conversion attribution for ad campaigns</li>
+						<li>✓ Compliant noscript tracking fallback</li>
+					</ul>
+				</div>
+
+				<!-- Integration: Abandoned Cart Recovery -->
+				<div style="background:#ffffff;border:1px solid #E2E8F0;border-radius:14px;padding:2rem;box-shadow:0 2px 8px rgba(0,0,0,0.03);">
+					<div style="display:flex;align-items:center;gap:14px;margin-bottom:1.25rem;">
+						<div style="width:44px;height:44px;border-radius:10px;background:#18794E;display:flex;align-items:center;justify-content:center;color:#fff;font-weight:800;font-size:1.2rem;">
+							🛒
+						</div>
+						<div>
+							<h3 style="font-size:1.15rem;font-weight:700;color:var(--om-ink);margin:0;">Abandoned Cart Engine</h3>
+							<span style="font-size:0.75rem;color:#10B981;font-weight:600;">Built-in Automated Capture</span>
+						</div>
+					</div>
+					<p style="font-size:0.9rem;color:var(--om-slate);line-height:1.65;margin-bottom:1.25rem;">
+						OmnifyWP actively monitors checkout field changes via REST endpoint <code>/checkout/abandoned-cart</code>. When a shopper leaves without finalizing, automated reminder cycles and coupon incentives help recover lost revenue.
+					</p>
+					<ul style="list-style:none;padding:0;margin:0;font-size:0.8125rem;color:var(--om-slate);display:flex;flex-direction:column;gap:0.4rem;">
+						<li>✓ Configurable capture delay (e.g. 60 mins)</li>
+						<li>✓ Automated email reminder scheduler</li>
+						<li>✓ Detailed cart retention reporting</li>
+					</ul>
+				</div>
 
 			</div>
-			<!-- /wp:columns -->
-
 		</div>
-		<!-- /wp:group -->
-
 	</section>
-	<!-- /wp:group -->
+	<!-- /wp:html -->
 
-	<!-- Developer Tools Section -->
-	<!-- wp:group {"tagName":"section","style":{"spacing":{"padding":{"top":"var:preset|spacing|80","bottom":"var:preset|spacing|80"}}},"className":"om-section","layout":{"type":"constrained"}} -->
-	<section class="wp-block-group om-section" style="padding-top:var(--wp--preset--spacing--80);padding-bottom:var(--wp--preset--spacing--80)">
-
-		<!-- wp:group {"className":"om-container","layout":{"type":"constrained","contentSize":"1200px"}} -->
-		<div class="wp-block-group om-container">
-
-			<!-- wp:heading {"level":2,"style":{"typography":{"fontSize":"clamp(1.5rem,3vw,2rem)","fontWeight":"700"},"spacing":{"margin":{"bottom":"2.5rem"}}}} -->
-			<h2 style="font-size:clamp(1.5rem,3vw,2rem);font-weight:700;margin-bottom:2.5rem">Developer Tools</h2>
-			<!-- /wp:heading -->
-
-			<!-- wp:columns {"style":{"spacing":{"blockGap":"1.5rem"}}} -->
-			<div class="wp-block-columns">
-
-				<!-- wp:column {"style":{"border":{"radius":"12px","width":"1px","color":"#D4E8DC"},"color":{"background":"#F9FAFB"},"spacing":{"padding":{"top":"1.5rem","bottom":"1.5rem","left":"1.5rem","right":"1.5rem"}}}} -->
-				<div class="wp-block-column" style="border-radius:12px;border:1px solid #D4E8DC;background-color:#F9FAFB;padding:1.5rem">
-					<!-- wp:heading {"level":3,"style":{"typography":{"fontSize":"1rem","fontWeight":"700"}}} -->
-					<h3 style="font-size:1rem;font-weight:700">🔌 REST API</h3>
-					<!-- /wp:heading -->
-					<!-- wp:paragraph {"style":{"color":{"text":"#4B5563"},"typography":{"fontSize":"0.95rem"}}} -->
-					<p style="color:#4B5563;font-size:0.95rem">Full REST API for headless and custom integrations. Manage products, orders, and customers programmatically.</p>
-					<!-- /wp:paragraph -->
+	<!-- Category 3: WordPress Ecosystem & Page Builders -->
+	<!-- wp:html -->
+	<section class="om-section" style="background:#ffffff;padding-top:clamp(4rem, 6vw, 5.5rem);padding-bottom:clamp(3.5rem, 6vw, 5rem);">
+		<div class="om-container" style="max-width:1200px;margin-inline:auto;padding-inline:clamp(1rem,4vw,2.5rem);">
+			
+			<div style="margin-bottom:2.5rem;">
+				<div style="display:inline-flex;align-items:center;gap:0.5rem;font-family:var(--om-font-mono);font-size:0.75rem;font-weight:700;letter-spacing:0.08em;text-transform:uppercase;color:#18794E;background:#ECFDF5;padding:4px 10px;border-radius:6px;margin-bottom:0.75rem;">
+					WordPress Compatibility
 				</div>
-				<!-- /wp:column -->
+				<h2 style="font-family:var(--om-font-heading);font-size:clamp(1.75rem, 3.5vw, 2.5rem);font-weight:800;letter-spacing:-0.03em;color:var(--om-ink);margin:0 0 0.75rem;">
+					Works with every modern builder &amp; theme
+				</h2>
+				<p class="om-text-muted" style="font-size:1.0625rem;line-height:1.65;max-width:760px;margin:0;">
+					OmnifyWP does not force rigid storefront templates or lock you into a proprietary theme. Embed buy buttons, catalogs, and checkout modals into any design stack.
+				</p>
+			</div>
 
-				<!-- wp:column {"style":{"border":{"radius":"12px","width":"1px","color":"#D4E8DC"},"color":{"background":"#F9FAFB"},"spacing":{"padding":{"top":"1.5rem","bottom":"1.5rem","left":"1.5rem","right":"1.5rem"}}}} -->
-				<div class="wp-block-column" style="border-radius:12px;border:1px solid #D4E8DC;background-color:#F9FAFB;padding:1.5rem">
-					<!-- wp:heading {"level":3,"style":{"typography":{"fontSize":"1rem","fontWeight":"700"}}} -->
-					<h3 style="font-size:1rem;font-weight:700">📥 Import / Export (CSV)</h3>
-					<!-- /wp:heading -->
-					<!-- wp:paragraph {"style":{"color":{"text":"#4B5563"},"typography":{"fontSize":"0.95rem"}}} -->
-					<p style="color:#4B5563;font-size:0.95rem">Bulk import and export products and orders via CSV for easy data migration and management.</p>
-					<!-- /wp:paragraph -->
-				</div>
-				<!-- /wp:column -->
+			<div style="display:grid;grid-template-columns:repeat(auto-fill, minmax(260px, 1fr));gap:1.5rem;">
 
-				<!-- wp:column {"style":{"border":{"radius":"12px","width":"1px","color":"#D4E8DC"},"color":{"background":"#F9FAFB"},"spacing":{"padding":{"top":"1.5rem","bottom":"1.5rem","left":"1.5rem","right":"1.5rem"}}}} -->
-				<div class="wp-block-column" style="border-radius:12px;border:1px solid #D4E8DC;background-color:#F9FAFB;padding:1.5rem">
-					<!-- wp:heading {"level":3,"style":{"typography":{"fontSize":"1rem","fontWeight":"700"}}} -->
-					<h3 style="font-size:1rem;font-weight:700">🔑 API Keys Management</h3>
-					<!-- /wp:heading -->
-					<!-- wp:paragraph {"style":{"color":{"text":"#4B5563"},"typography":{"fontSize":"0.95rem"}}} -->
-					<p style="color:#4B5563;font-size:0.95rem">Generate and manage API keys for third-party integrations directly from the WordPress admin.</p>
-					<!-- /wp:paragraph -->
+				<!-- FSE & Block Editor -->
+				<div style="background:#FBFDFB;border:1px solid #E2E8F0;border-radius:12px;padding:1.5rem;">
+					<h3 style="font-size:1.05rem;font-weight:700;color:var(--om-ink);margin-bottom:0.5rem;">WordPress Block Editor (Gutenberg)</h3>
+					<p style="font-size:0.85rem;color:var(--om-slate);line-height:1.6;margin:0;">
+						Full Site Editing (FSE) native. Insert blocks, customize templates, and style checkout flows directly within the modern WordPress Site Editor.
+					</p>
 				</div>
-				<!-- /wp:column -->
+
+				<!-- Elementor -->
+				<div style="background:#FBFDFB;border:1px solid #E2E8F0;border-radius:12px;padding:1.5rem;">
+					<h3 style="font-size:1.05rem;font-weight:700;color:var(--om-ink);margin-bottom:0.5rem;">Elementor &amp; Elementor Pro</h3>
+					<p style="font-size:0.85rem;color:var(--om-slate);line-height:1.6;margin:0;">
+						Drop OmnifyWP shortcodes or Gutenberg blocks directly into Elementor pages, popups, and custom landing page templates without styling clashes.
+					</p>
+				</div>
+
+				<!-- Bricks & Divi -->
+				<div style="background:#FBFDFB;border:1px solid #E2E8F0;border-radius:12px;padding:1.5rem;">
+					<h3 style="font-size:1.05rem;font-weight:700;color:var(--om-ink);margin-bottom:0.5rem;">Bricks Builder &amp; Divi</h3>
+					<p style="font-size:0.85rem;color:var(--om-slate);line-height:1.6;margin:0;">
+						Fully compatible with high-performance visual builders like Bricks, Oxygen, Beaver Builder, and Elegant Themes Divi.
+					</p>
+				</div>
+
+				<!-- Classic & Modern Themes -->
+				<div style="background:#FBFDFB;border:1px solid #E2E8F0;border-radius:12px;padding:1.5rem;">
+					<h3 style="font-size:1.05rem;font-weight:700;color:var(--om-ink);margin-bottom:0.5rem;">Astra, GeneratePress &amp; Kadence</h3>
+					<p style="font-size:0.85rem;color:var(--om-slate);line-height:1.6;margin:0;">
+						Lightweight CSS structure integrates seamlessly with classic and modern block-ready themes without overriding custom typography or colors.
+					</p>
+				</div>
 
 			</div>
-			<!-- /wp:columns -->
+		</div>
+	</section>
+	<!-- /wp:html -->
 
-			<!-- wp:spacer {"height":"1.5rem"} -->
-			<div style="height:1.5rem" aria-hidden="true" class="wp-block-spacer"></div>
-			<!-- /wp:spacer -->
-
-			<!-- wp:columns {"style":{"spacing":{"blockGap":"1.5rem"}}} -->
-			<div class="wp-block-columns">
-
-				<!-- wp:column {"style":{"border":{"radius":"12px","width":"1px","color":"#D4E8DC"},"color":{"background":"#F9FAFB"},"spacing":{"padding":{"top":"1.5rem","bottom":"1.5rem","left":"1.5rem","right":"1.5rem"}}}} -->
-				<div class="wp-block-column" style="border-radius:12px;border:1px solid #D4E8DC;background-color:#F9FAFB;padding:1.5rem">
-					<!-- wp:heading {"level":3,"style":{"typography":{"fontSize":"1rem","fontWeight":"700"}}} -->
-					<h3 style="font-size:1rem;font-weight:700">📋 Activity Log</h3>
-					<!-- /wp:heading -->
-					<!-- wp:paragraph {"style":{"color":{"text":"#4B5563"},"typography":{"fontSize":"0.95rem"}}} -->
-					<p style="color:#4B5563;font-size:0.95rem">Track admin actions and system events with a built-in activity log for auditing and debugging.</p>
-					<!-- /wp:paragraph -->
+	<!-- Category 4: Developer Tools, REST API & Data Portability -->
+	<!-- wp:html -->
+	<section class="om-section" style="background:#F7FCF9;border-top:1px solid #E6F4EC;padding-top:clamp(4rem, 6vw, 5.5rem);padding-bottom:clamp(3.5rem, 6vw, 5rem);">
+		<div class="om-container" style="max-width:1200px;margin-inline:auto;padding-inline:clamp(1rem,4vw,2.5rem);">
+			
+			<div style="margin-bottom:2.5rem;">
+				<div style="display:inline-flex;align-items:center;gap:0.5rem;font-family:var(--om-font-mono);font-size:0.75rem;font-weight:700;letter-spacing:0.08em;text-transform:uppercase;color:#18794E;background:#ECFDF5;padding:4px 10px;border-radius:6px;margin-bottom:0.75rem;">
+					Developer Extensibility
 				</div>
-				<!-- /wp:column -->
+				<h2 style="font-family:var(--om-font-heading);font-size:clamp(1.75rem, 3.5vw, 2.5rem);font-weight:800;letter-spacing:-0.03em;color:var(--om-ink);margin:0 0 0.75rem;">
+					Developer Tools, REST API &amp; Webhooks
+				</h2>
+				<p class="om-text-muted" style="font-size:1.0625rem;line-height:1.65;max-width:760px;margin:0;">
+					Built with headless architectures, custom micro-services, and mobile app backends in mind. Complete data ownership and open standards.
+				</p>
+			</div>
 
-				<!-- wp:column {"style":{"border":{"radius":"12px","width":"1px","color":"#D4E8DC"},"color":{"background":"#F9FAFB"},"spacing":{"padding":{"top":"1.5rem","bottom":"1.5rem","left":"1.5rem","right":"1.5rem"}}}} -->
-				<div class="wp-block-column" style="border-radius:12px;border:1px solid #D4E8DC;background-color:#F9FAFB;padding:1.5rem">
-					<!-- wp:heading {"level":3,"style":{"typography":{"fontSize":"1rem","fontWeight":"700"}}} -->
-					<h3 style="font-size:1rem;font-weight:700">🔔 Webhooks <span style="font-size:0.8rem;font-weight:400;color:#6B7280">[placeholder]</span></h3>
-					<!-- /wp:heading -->
-					<!-- wp:paragraph {"style":{"color":{"text":"#4B5563"},"typography":{"fontSize":"0.95rem"}}} -->
-					<!-- PLACEHOLDER: Verify webhook support and update this card before publishing -->
-					<p style="color:#4B5563;font-size:0.95rem">Send real-time event notifications to external services. Verify availability before publishing.</p>
-					<!-- /wp:paragraph -->
+			<div style="display:grid;grid-template-columns:repeat(auto-fit, minmax(280px, 1fr));gap:1.5rem;">
+
+				<!-- Tool 1: REST API -->
+				<div style="background:#ffffff;border:1px solid #D4E8DC;border-radius:12px;padding:1.75rem;">
+					<div style="font-family:var(--om-font-mono);font-size:0.78rem;font-weight:700;color:#18794E;margin-bottom:0.5rem;">
+						omnify/v1/*
+					</div>
+					<h3 style="font-size:1.1rem;font-weight:700;color:var(--om-ink);margin-bottom:0.5rem;">Headless REST API</h3>
+					<p style="font-size:0.875rem;color:var(--om-slate);line-height:1.6;margin:0 0 1rem;">
+						Comprehensive REST routes for listing products, managing customers, reading orders, validating coupons, and tracking downloads from mobile apps or Jamstack frontends.
+					</p>
+					<a href="/docs/" style="font-size:0.8125rem;font-weight:700;color:#0B5135;text-decoration:underline;">Read API Documentation &rarr;</a>
 				</div>
-				<!-- /wp:column -->
 
-				<!-- Empty column for layout balance -->
-				<!-- wp:column /-->
+				<!-- Tool 2: Granular API Keys -->
+				<div style="background:#ffffff;border:1px solid #D4E8DC;border-radius:12px;padding:1.75rem;">
+					<div style="font-family:var(--om-font-mono);font-size:0.78rem;font-weight:700;color:#18794E;margin-bottom:0.5rem;">
+						Tools &gt; API Keys
+					</div>
+					<h3 style="font-size:1.1rem;font-weight:700;color:var(--om-ink);margin-bottom:0.5rem;">API Key Management</h3>
+					<p style="font-size:0.875rem;color:var(--om-slate);line-height:1.6;margin:0 0 1rem;">
+						Issue cryptographic API keys directly inside WordPress admin. Assign Read, Write, or Read/Write permissions with user-scoped capabilities.
+					</p>
+					<span style="font-size:0.8125rem;color:#10B981;font-weight:600;">✓ Scoped Read / Write Tokens</span>
+				</div>
+
+				<!-- Tool 3: Webhooks -->
+				<div style="background:#ffffff;border:1px solid #D4E8DC;border-radius:12px;padding:1.75rem;">
+					<div style="font-family:var(--om-font-mono);font-size:0.78rem;font-weight:700;color:#18794E;margin-bottom:0.5rem;">
+						Asynchronous Callbacks
+					</div>
+					<h3 style="font-size:1.1rem;font-weight:700;color:var(--om-ink);margin-bottom:0.5rem;">Payment Webhooks</h3>
+					<p style="font-size:0.875rem;color:var(--om-slate);line-height:1.6;margin:0 0 1rem;">
+						Pre-configured webhook receivers for Stripe, PayPal, Razorpay, Paystack, Tap, Mollie, and SSLCommerz ensure transactions update instantly in the background.
+					</p>
+					<span style="font-size:0.8125rem;color:#10B981;font-weight:600;">✓ Instant background status updates</span>
+				</div>
+
+				<!-- Tool 4: CSV Import & Export -->
+				<div style="background:#ffffff;border:1px solid #D4E8DC;border-radius:12px;padding:1.75rem;">
+					<div style="font-family:var(--om-font-mono);font-size:0.78rem;font-weight:700;color:#18794E;margin-bottom:0.5rem;">
+						Tools &gt; Import / Export
+					</div>
+					<h3 style="font-size:1.1rem;font-weight:700;color:var(--om-ink);margin-bottom:0.5rem;">CSV Import &amp; Export</h3>
+					<p style="font-size:0.875rem;color:var(--om-slate);line-height:1.6;margin:0 0 1rem;">
+						Easily migrate catalog items, pricing tiers, and inventory into OmnifyWP using standard CSV formats. Export orders and customer datasets anytime.
+					</p>
+					<span style="font-size:0.8125rem;color:#10B981;font-weight:600;">✓ One-click CSV reporting</span>
+				</div>
 
 			</div>
-			<!-- /wp:columns -->
-
 		</div>
-		<!-- /wp:group -->
-
 	</section>
-	<!-- /wp:group -->
+	<!-- /wp:html -->
 
-	<!-- Hosting Section -->
-	<!-- wp:group {"tagName":"section","style":{"color":{"background":"#EFF8F2"},"spacing":{"padding":{"top":"var:preset|spacing|70","bottom":"var:preset|spacing|70"}}},"className":"om-section","layout":{"type":"constrained"}} -->
-	<section class="wp-block-group om-section" style="background-color:#EFF8F2;padding-top:var(--wp--preset--spacing--70);padding-bottom:var(--wp--preset--spacing--70)">
+	<!-- Hosting & System Requirements Section -->
+	<!-- wp:html -->
+	<section class="om-section" style="background:#ffffff;padding-top:clamp(4rem, 6vw, 5.5rem);padding-bottom:clamp(4rem, 6vw, 5.5rem);border-top:1px solid #EBF5EE;">
+		<div class="om-container" style="max-width:960px;margin-inline:auto;padding-inline:clamp(1rem,4vw,2.5rem);">
+			<div class="om-text-center" style="margin-bottom:2.5rem;">
+				<span class="om-eyebrow">Environment</span>
+				<h2 style="font-family:var(--om-font-heading);font-size:clamp(1.75rem, 3.5vw, 2.5rem);font-weight:800;letter-spacing:-0.03em;color:var(--om-ink);margin-top:0.5rem;margin-bottom:0.75rem;">
+					System &amp; Server Requirements
+				</h2>
+				<p class="om-text-muted" style="font-size:1.0625rem;line-height:1.65;max-width:680px;margin-inline:auto;">
+					Engineered for optimal compatibility with 99.9% of standard WordPress web hosts.
+				</p>
+			</div>
 
-		<!-- wp:group {"className":"om-container","layout":{"type":"constrained","contentSize":"760px"}} -->
-		<div class="wp-block-group om-container">
+			<div style="display:grid;grid-template-columns:repeat(auto-fit, minmax(260px, 1fr));gap:1.5rem;">
+				
+				<div style="background:#FAFDFB;border:1px solid #D4E8DC;border-radius:12px;padding:1.5rem;text-align:center;">
+					<div style="font-size:2rem;margin-bottom:0.5rem;">🔷</div>
+					<h3 style="font-size:1.1rem;font-weight:700;color:var(--om-ink);margin-bottom:0.25rem;">WordPress 6.5+</h3>
+					<p style="font-size:0.85rem;color:var(--om-slate);line-height:1.5;margin:0;">
+						Fully tested on modern WordPress releases with Full Site Editing support.
+					</p>
+				</div>
 
-			<!-- wp:heading {"level":2,"style":{"typography":{"fontSize":"clamp(1.5rem,3vw,2rem)","fontWeight":"700"},"spacing":{"margin":{"bottom":"1rem"}}}} -->
-			<h2 style="font-size:clamp(1.5rem,3vw,2rem);font-weight:700;margin-bottom:1rem">🖥️ Hosting</h2>
-			<!-- /wp:heading -->
+				<div style="background:#FAFDFB;border:1px solid #D4E8DC;border-radius:12px;padding:1.5rem;text-align:center;">
+					<div style="font-size:2rem;margin-bottom:0.5rem;">🐘</div>
+					<h3 style="font-size:1.1rem;font-weight:700;color:var(--om-ink);margin-bottom:0.25rem;">PHP 8.1 / 8.2+</h3>
+					<p style="font-size:0.85rem;color:var(--om-slate);line-height:1.5;margin:0;">
+						Requires modern PHP runtime for strict type safety and high-speed execution.
+					</p>
+				</div>
 
-			<!-- wp:paragraph {"style":{"typography":{"fontSize":"1.05rem"},"color":{"text":"#374151"}}} -->
-			<p style="font-size:1.05rem;color:#374151">OmnifyWP runs on any standard WordPress hosting that meets the PHP and MySQL requirements listed above. No special hosting is required.</p>
-			<!-- /wp:paragraph -->
+				<div style="background:#FAFDFB;border:1px solid #D4E8DC;border-radius:12px;padding:1.5rem;text-align:center;">
+					<div style="font-size:2rem;margin-bottom:0.5rem;">🗄️</div>
+					<h3 style="font-size:1.1rem;font-weight:700;color:var(--om-ink);margin-bottom:0.25rem;">MySQL 5.7+ / MariaDB 10.3+</h3>
+					<p style="font-size:0.85rem;color:var(--om-slate);line-height:1.5;margin:0;">
+						Supports InnoDB storage engine for dedicated custom SQL ecommerce tables.
+					</p>
+				</div>
 
+			</div>
 		</div>
-		<!-- /wp:group -->
-
 	</section>
-	<!-- /wp:group -->
+	<!-- /wp:html -->
 
 	<!-- CTA Band Pattern -->
 	<!-- wp:pattern {"slug":"omnify/cta-band"} /-->
