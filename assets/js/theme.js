@@ -17,6 +17,21 @@
   const backdrop = document.querySelector( '.om-nav-backdrop' );
 
   if ( toggle && nav ) {
+    // Portal nav drawer & backdrop directly to body on mobile viewports
+    // This completely bypasses parent sticky header, backdrop-filter, or transform stacking contexts
+    function portalNavToBody() {
+      if ( window.innerWidth <= 900 ) {
+        if ( backdrop && backdrop.parentElement !== document.body ) {
+          document.body.appendChild( backdrop );
+        }
+        if ( nav.parentElement !== document.body ) {
+          document.body.appendChild( nav );
+        }
+      }
+    }
+    portalNavToBody();
+    window.addEventListener( 'resize', portalNavToBody );
+
     function closeNav() {
       nav.classList.remove( 'is-open' );
       toggle.classList.remove( 'is-active' );
@@ -27,6 +42,7 @@
     }
 
     function openNav() {
+      portalNavToBody();
       nav.classList.add( 'is-open' );
       toggle.classList.add( 'is-active' );
       if ( backdrop ) backdrop.classList.add( 'is-open' );
@@ -44,6 +60,15 @@
         openNav();
       }
     } );
+
+    // Dedicated mobile drawer close button
+    const closeBtn = nav.querySelector( '.om-nav-close-btn' );
+    if ( closeBtn ) {
+      closeBtn.addEventListener( 'click', function ( e ) {
+        e.stopPropagation();
+        closeNav();
+      } );
+    }
 
     if ( backdrop ) {
       backdrop.addEventListener( 'click', closeNav );
