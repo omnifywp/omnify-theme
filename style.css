@@ -1181,3 +1181,149 @@ code, kbd, samp, pre {
   color: var(--om-forest);
   white-space: nowrap;
 }
+
+/* ============================================================
+ * SAAS BENTO GRID (SureCart & FluentCart Inspired)
+ * ============================================================ */
+.om-bento-grid {
+  display: grid;
+  grid-template-columns: repeat(12, 1fr);
+  gap: 1.5rem;
+}
+
+.om-bento-card {
+  background: #FFFFFF;
+  border: 1px solid #E2E8F0;
+  border-radius: 18px;
+  padding: clamp(1.5rem, 3vw, 2.25rem);
+  box-shadow: 0 4px 20px -2px rgba(11,81,53,0.05), 0 2px 6px -1px rgba(0,0,0,0.02);
+  display: flex;
+  flex-direction: column;
+  transition: transform 0.25s var(--om-ease), box-shadow 0.25s var(--om-ease), border-color 0.25s var(--om-ease);
+  position: relative;
+  overflow: hidden;
+}
+
+.om-bento-card:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 16px 36px -8px rgba(11,81,53,0.12), 0 4px 12px -2px rgba(0,0,0,0.03);
+  border-color: var(--om-mint-light);
+}
+
+.om-bento-card--wide-7 {
+  grid-column: span 7;
+}
+
+.om-bento-card--wide-5 {
+  grid-column: span 5;
+}
+
+.om-bento-card--wide-4 {
+  grid-column: span 4;
+}
+
+@media (max-width: 992px) {
+  .om-bento-card--wide-7,
+  .om-bento-card--wide-5 {
+    grid-column: span 12;
+  }
+  .om-bento-card--wide-4 {
+    grid-column: span 6;
+  }
+}
+
+@media (max-width: 640px) {
+  .om-bento-card--wide-4 {
+    grid-column: span 12;
+  }
+}
+
+.om-bento-card__badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.35rem;
+  padding: 0.25rem 0.65rem;
+  background: #ECFDF5;
+  border: 1px solid #D1FAE5;
+  border-radius: 9999px;
+  font-size: 0.72rem;
+  font-weight: 700;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  color: #065F46;
+  margin-bottom: 1rem;
+  align-self: flex-start;
+}
+
+.om-bento-card__title {
+  font-family: var(--om-font-heading);
+  font-size: clamp(1.2rem, 2vw, 1.45rem);
+  font-weight: 800;
+  color: var(--om-ink);
+  margin-top: 0;
+  margin-bottom: 0.75rem;
+  letter-spacing: -0.025em;
+  line-height: 1.25;
+}
+
+.om-bento-card__text {
+  font-size: 0.9375rem;
+  color: var(--om-slate);
+  line-height: 1.65;
+  margin-top: 0;
+  margin-bottom: 1.75rem;
+}
+
+/* ============================================================
+ * WORKFLOW & SOLUTIONS GRIDS
+ * ============================================================ */
+.om-steps {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 1.5rem;
+}
+
+.om-step-card {
+  transition: transform 0.2s var(--om-ease), box-shadow 0.2s var(--om-ease), border-color 0.2s var(--om-ease);
+}
+
+.om-step-card:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 10px 25px -4px rgba(11,81,53,0.1);
+  border-color: var(--om-mint-light);
+}
+
+@media (max-width: 1024px) {
+  .om-steps {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 580px) {
+  .om-steps {
+    grid-template-columns: 1fr;
+  }
+}
+
+.om-solutions-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1.75rem;
+}
+
+.om-solution-card {
+  transition: transform 0.2s var(--om-ease), box-shadow 0.2s var(--om-ease), border-color 0.2s var(--om-ease);
+}
+
+.om-solution-card:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 12px 30px -4px rgba(11,81,53,0.1);
+  border-color: var(--om-mint-light);
+}
+
+@media (max-width: 992px) {
+  .om-solutions-grid {
+    grid-template-columns: 1fr;
+  }
+}
+

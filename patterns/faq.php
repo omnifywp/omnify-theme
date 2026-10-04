@@ -135,7 +135,7 @@ defined( 'ABSPATH' ) || exit;
 						<svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="m6 9 6 6 6-6"/></svg>
 					</span>
 				</button>
-				<div id="faq-6" class="om-faq__answer" hidden>
+				<div id="faq-7" class="om-faq__answer" hidden>
 					<div class="om-faq__answer-inner">
 						<p>Yes. OmnifyWP is engineered to be 100% theme-agnostic. Whether you use WordPress Full Site Editing (FSE) block themes, Elementor, Divi, Bricks, Beaver Builder, or classic themes like Astra and GeneratePress, you can embed product cards, buy buttons, checkout pages, and customer portals cleanly using native Gutenberg blocks or shortcodes.</p>
 					</div>

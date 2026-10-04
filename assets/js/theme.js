@@ -149,6 +149,40 @@
     }
   } );
 
+  // ─── 3b. Interactive Hero Mockup Tabs ────────────────────────────────────
+  document.querySelectorAll( '.om-mockup-tab' ).forEach( function ( btn ) {
+    btn.addEventListener( 'click', function () {
+      const targetId = btn.getAttribute( 'data-tab-target' );
+      const bar      = btn.closest( '.om-mockup-tabs-bar' );
+      const frame    = btn.closest( '.om-browser-frame' );
+      if ( ! bar || ! frame ) return;
+
+      bar.querySelectorAll( '.om-mockup-tab' ).forEach( function ( tab ) {
+        tab.classList.remove( 'is-active' );
+        tab.style.background = 'transparent';
+        tab.style.color      = '#64748B';
+        tab.style.borderColor = 'transparent';
+        tab.style.fontWeight  = '600';
+      } );
+
+      btn.classList.add( 'is-active' );
+      btn.style.background = '#EFF8F2';
+      btn.style.color      = '#0B5135';
+      btn.style.borderColor = '#D4E8DC';
+      btn.style.fontWeight  = '700';
+
+      frame.querySelectorAll( '.om-mockup-panel' ).forEach( function ( panel ) {
+        if ( panel.id === targetId ) {
+          panel.classList.add( 'is-active' );
+          panel.style.display = 'block';
+        } else {
+          panel.classList.remove( 'is-active' );
+          panel.style.display = 'none';
+        }
+      } );
+    } );
+  } );
+
   // ─── 4. Theme (Dark/Light) Toggle ────────────────────────────────────────
   const themeToggle = document.getElementById( 'om-theme-toggle' );
   const STORAGE_KEY = 'omnify-theme-pref';
