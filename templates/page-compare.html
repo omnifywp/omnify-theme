@@ -4,46 +4,49 @@
 <main class="wp-block-group om-compare-page">
 
   <!-- Hero Header Section -->
-  <!-- wp:html -->
-  <section class="om-hero" style="position:relative;background:linear-gradient(180deg, #F0FAF4 0%, #FFFFFF 100%);padding-top:clamp(4rem, 7vw, 6.5rem);padding-bottom:clamp(3rem, 6vw, 4.5rem);border-bottom:1px solid #E6F4EC;overflow:hidden;">
-    <div style="position:absolute;top:-20%;left:50%;transform:translateX(-50%);width:1000px;height:500px;background:radial-gradient(50% 50% at 50% 0%, rgba(34,160,107,0.14) 0%, transparent 100%);pointer-events:none;z-index:0;"></div>
+  <!-- wp:group {"className":"om-hero om-hero-saas","style":{"spacing":{"padding":{"top":"clamp(4rem, 7vw, 6.5rem)","bottom":"clamp(3rem, 6vw, 4.5rem)"}}},"layout":{"type":"constrained","contentSize":"980px"}} -->
+  <div class="wp-block-group om-hero om-hero-saas om-text-center">
+    <!-- wp:paragraph {"className":"om-badge om-badge--neutral","style":{"typography":{"fontSize":"0.8125rem","fontWeight":"700","letterSpacing":"0.04em","textTransform":"uppercase"},"spacing":{"margin":{"bottom":"1.25rem"}}}} -->
+    <p class="om-badge om-badge--neutral" style="font-size:0.8125rem;font-weight:700;letter-spacing:0.04em;text-transform:uppercase;margin-bottom:1.25rem;display:inline-flex;align-items:center;gap:6px;">● Transparent Architectural Comparison</p>
+    <!-- /wp:paragraph -->
 
-    <div class="om-container om-text-center" style="position:relative;z-index:1;max-width:980px;margin-inline:auto;padding-inline:clamp(1rem,4vw,2.5rem);">
-      <div style="display:inline-flex;align-items:center;gap:0.5rem;padding:0.4rem 1rem;background:rgba(34,160,107,0.1);border:1px solid rgba(34,160,107,0.25);border-radius:9999px;font-size:0.8125rem;font-weight:700;letter-spacing:0.04em;text-transform:uppercase;color:#0B5135;margin-bottom:1.25rem;">
-        <span style="display:inline-block;width:7px;height:7px;border-radius:50%;background:#22A06B;"></span>
-        Transparent Architectural Comparison
-      </div>
+    <!-- wp:heading {"level":1,"style":{"typography":{"fontSize":"clamp(2.4rem, 5vw, 3.8rem)","fontWeight":"800","letterSpacing":"-0.035em","lineHeight":"1.15"}},"textColor":"ink","className":"om-hero-title"} -->
+    <h1 class="wp-block-heading has-ink-color has-text-color om-hero-title" style="font-size:clamp(2.4rem, 5vw, 3.8rem);font-weight:800;letter-spacing:-0.035em;line-height:1.15;margin:0 0 1.25rem;">OmnifyWP vs. The Competition</h1>
+    <!-- /wp:heading -->
 
-      <h1 style="font-family:var(--om-font-heading);font-size:clamp(2.4rem, 5vw, 3.8rem);font-weight:800;letter-spacing:-0.035em;color:#0D1B12;line-height:1.15;margin:0 0 1.25rem;">
-        OmnifyWP vs. The Competition
-      </h1>
-      <p style="font-family:var(--om-font-body);font-size:clamp(1.05rem, 1.8vw, 1.25rem);line-height:1.65;color:#3D5147;max-width:760px;margin-inline:auto;margin-bottom:2rem;">
-        Compare actual technical architecture, database design, payment processing fees, and asset protection across the top WordPress eCommerce solutions.
-      </p>
+    <!-- wp:paragraph {"style":{"typography":{"fontSize":"clamp(1.05rem, 1.8vw, 1.25rem)","lineHeight":"1.65"}},"textColor":"slate","className":"om-hero-desc"} -->
+    <p class="has-slate-color has-text-color om-hero-desc" style="font-size:clamp(1.05rem, 1.8vw, 1.25rem);line-height:1.65;max-width:760px;margin-inline:auto;margin-bottom:2rem;">Compare actual technical architecture, database design, payment processing fees, and asset protection across the top WordPress eCommerce solutions.</p>
+    <!-- /wp:paragraph -->
 
-      <!-- Quick Pill Summary -->
-      <div style="display:flex;justify-content:center;gap:1.5rem;flex-wrap:wrap;font-size:0.875rem;font-weight:600;color:#6B7F74;">
-        <span style="display:inline-flex;align-items:center;gap:0.4rem;"><span style="color:#22A06B;">✓</span> Zero postmeta query overhead</span>
-        <span style="display:inline-flex;align-items:center;gap:0.4rem;"><span style="color:#22A06B;">✓</span> 100% self-hosted data ownership</span>
-        <span style="display:inline-flex;align-items:center;gap:0.4rem;"><span style="color:#22A06B;">✓</span> 0% platform transaction cut</span>
-        <span style="display:inline-flex;align-items:center;gap:0.4rem;"><span style="color:#22A06B;">✓</span> SHA-256 HMAC file protection</span>
-      </div>
+    <!-- Quick Pill Summary -->
+    <!-- wp:group {"layout":{"type":"flex","justifyContent":"center","flexWrap":"wrap"},"style":{"spacing":{"blockGap":"1.5rem"}}} -->
+    <div class="wp-block-group" style="font-size:0.875rem;font-weight:600;color:var(--om-slate);">
+      <!-- wp:paragraph -->
+      <p style="margin:0;"><span style="color:#22A06B;">✓</span> Zero postmeta query overhead</p>
+      <!-- /wp:paragraph -->
+      <!-- wp:paragraph -->
+      <p style="margin:0;"><span style="color:#22A06B;">✓</span> 100% self-hosted data ownership</p>
+      <!-- /wp:paragraph -->
+      <!-- wp:paragraph -->
+      <p style="margin:0;"><span style="color:#22A06B;">✓</span> 0% platform transaction cut</p>
+      <!-- /wp:paragraph -->
+      <!-- wp:paragraph -->
+      <p style="margin:0;"><span style="color:#22A06B;">✓</span> SHA-256 HMAC file protection</p>
+      <!-- /wp:paragraph -->
     </div>
-  </section>
-  <!-- /wp:html -->
+    <!-- /wp:group -->
+  </div>
+  <!-- /wp:group -->
 
   <!-- Comparison Matrix Table Section -->
-  <!-- wp:html -->
-  <section class="om-section" style="background:#FFFFFF;padding-top:clamp(3.5rem, 6vw, 5rem);padding-bottom:clamp(4rem, 7vw, 6rem);">
-    <div class="om-container" style="max-width:1300px;margin-inline:auto;padding-inline:clamp(1rem,4vw,2.5rem);">
-
-      <!-- Comparison Matrix Card -->
-      <div style="background:#FFFFFF;border:1px solid #D4E8DC;border-radius:20px;box-shadow:0 15px 45px -10px rgba(11,81,53,0.08);overflow:hidden;margin-bottom:4rem;">
-        <div style="overflow-x:auto;">
-          <table style="width:100%;min-width:980px;border-collapse:collapse;font-size:0.925rem;text-align:left;">
-            <thead>
-              <tr style="background:#F7FCF9;border-bottom:2px solid #D4E8DC;">
-                <th style="padding:22px 24px;font-family:var(--om-font-heading);font-size:1.05rem;font-weight:800;color:#0F172A;width:24%;">Feature / Capability</th>
+  <!-- wp:group {"className":"om-section","style":{"spacing":{"padding":{"top":"clamp(3.5rem, 6vw, 5rem)","bottom":"clamp(4rem, 7vw, 6rem)"}}},"layout":{"type":"constrained","contentSize":"1300px"}} -->
+  <div class="wp-block-group om-section">
+    <!-- wp:table {"hasFixedLayout":false,"className":"om-comparison-table"} -->
+    <figure class="wp-block-table om-comparison-table" style="background:#FFFFFF;border:1px solid #D4E8DC;border-radius:20px;box-shadow:0 15px 45px -10px rgba(11,81,53,0.08);overflow-x:auto;margin-bottom:4rem;">
+      <table style="width:100%;min-width:980px;border-collapse:collapse;font-size:0.925rem;text-align:left;">
+        <thead>
+          <tr style="background:#F7FCF9;border-bottom:2px solid #D4E8DC;">
+            <th style="padding:22px 24px;font-family:var(--om-font-heading);font-size:1.05rem;font-weight:800;color:#0F172A;width:24%;">Feature / Capability</th>
                 
                 <!-- OmnifyWP (Highlighted) -->
                 <th style="padding:22px 18px;font-family:var(--om-font-heading);font-size:1.15rem;font-weight:800;color:#0B5135;background:#EFF8F2;text-align:center;width:20%;border-left:2px solid #22A06B;border-right:2px solid #22A06B;position:relative;">
@@ -269,99 +272,154 @@
 
             </tbody>
           </table>
-        </div>
+        </figure>
+        <!-- /wp:table -->
       </div>
+  <!-- /wp:group -->
 
-      <!-- Deep Dive Comparison Cards -->
-      <div style="margin-bottom:2.5rem;text-align:center;">
-        <span class="om-eyebrow" style="background:rgba(34,160,107,0.1);color:#0B5135;">Head-to-Head Analysis</span>
-        <h2 style="font-family:var(--om-font-heading);font-size:clamp(1.75rem, 3.5vw, 2.5rem);font-weight:800;letter-spacing:-0.03em;color:var(--om-ink);margin:0.5rem 0 1rem;">
-          How OmnifyWP solves common pain points
-        </h2>
+  <!-- Deep Dive Comparison Cards Section -->
+  <!-- wp:group {"className":"om-section","style":{"spacing":{"padding":{"top":"clamp(3rem, 5vw, 4.5rem)","bottom":"clamp(4rem, 7vw, 6rem)"}}},"layout":{"type":"constrained","contentSize":"1300px"}} -->
+  <div class="wp-block-group om-section">
+
+    <!-- Deep Dive Heading -->
+    <!-- wp:group {"className":"om-text-center","style":{"spacing":{"margin":{"bottom":"2.5rem"}}},"layout":{"type":"constrained","contentSize":"700px"}} -->
+    <div class="wp-block-group om-text-center" style="margin-bottom:2.5rem;">
+      <!-- wp:paragraph {"className":"om-badge om-badge--neutral","style":{"typography":{"fontSize":"0.75rem","fontWeight":"700","textTransform":"uppercase"}}} -->
+      <p class="om-badge om-badge--neutral" style="font-size:0.75rem;font-weight:700;text-transform:uppercase;">Head-to-Head Analysis</p>
+      <!-- /wp:paragraph -->
+
+      <!-- wp:heading {"level":2,"style":{"typography":{"fontSize":"clamp(1.75rem, 3.5vw, 2.5rem)","fontWeight":"800","letterSpacing":"-0.03em"}},"textColor":"ink"} -->
+      <h2 class="wp-block-heading has-ink-color has-text-color" style="font-size:clamp(1.75rem, 3.5vw, 2.5rem);font-weight:800;letter-spacing:-0.03em;margin:0.5rem 0 1rem;">How OmnifyWP solves common pain points</h2>
+      <!-- /wp:heading -->
+    </div>
+    <!-- /wp:group -->
+
+    <!-- Deep Dive Columns -->
+    <!-- wp:columns {"style":{"spacing":{"blockGap":"24px","margin":{"bottom":"4rem"}}}} -->
+    <div class="wp-block-columns" style="margin-bottom:4rem;">
+
+      <!-- Deep Dive 1: WooCommerce -->
+      <!-- wp:column {"style":{"border":{"width":"1px","color":"#D4E8DC","radius":"16px"},"spacing":{"padding":{"top":"32px","bottom":"32px","left":"32px","right":"32px"}}},"backgroundColor":"background-alt"} -->
+      <div class="wp-block-column has-background-alt-background-color has-background" style="border-color:#D4E8DC;border-width:1px;border-radius:16px;padding:32px;">
+        <!-- wp:paragraph {"className":"om-badge om-badge--neutral","style":{"typography":{"fontSize":"0.75rem","fontWeight":"700","textTransform":"uppercase"},"spacing":{"margin":{"bottom":"12px"}}}} -->
+        <p class="om-badge om-badge--neutral" style="font-size:0.75rem;font-weight:700;text-transform:uppercase;margin-bottom:12px;">VS WooCommerce</p>
+        <!-- /wp:paragraph -->
+
+        <!-- wp:heading {"level":3,"style":{"typography":{"fontSize":"1.35rem","fontWeight":"700"}},"textColor":"forest"} -->
+        <h3 class="wp-block-heading has-forest-color has-text-color" style="font-size:1.35rem;font-weight:700;margin-top:0;margin-bottom:12px;">Eliminate database bloat &amp; expensive extension fatigue</h3>
+        <!-- /wp:heading -->
+
+        <!-- wp:paragraph {"style":{"typography":{"fontSize":"0.95rem","lineHeight":"1.65"}},"textColor":"slate"} -->
+        <p class="has-slate-color has-text-color" style="font-size:0.95rem;line-height:1.65;margin-bottom:1.25rem;">WooCommerce treats products and orders as standard WordPress posts. Under moderate traffic, queries against millions of rows in <code>wp_postmeta</code> grind checkouts to a crawl. OmnifyWP stores everything in purpose-built custom relational SQL tables, delivering sub-100ms response times without paying hundreds of dollars annually for essential checkout addons.</p>
+        <!-- /wp:paragraph -->
+
+        <!-- wp:list {"style":{"typography":{"fontSize":"0.875rem","fontWeight":"600"}},"textColor":"emerald"} -->
+        <ul class="wp-block-list has-emerald-color has-text-color" style="font-size:0.875rem;font-weight:600;">
+          <!-- wp:list-item -->
+          <li>✓ No <code>wp_postmeta</code> table fragmentation</li>
+          <!-- /wp:list-item -->
+          <!-- wp:list-item -->
+          <li>✓ Built-in coupons, reviews, abandoned carts &amp; analytics</li>
+          <!-- /wp:list-item -->
+          <!-- wp:list-item -->
+          <li>✓ 100% theme-agnostic Gutenberg &amp; Elementor blocks</li>
+          <!-- /wp:list-item -->
+        </ul>
+        <!-- /wp:list -->
+
+        <!-- wp:buttons {"style":{"spacing":{"margin":{"top":"1.5rem"}}}} -->
+        <div class="wp-block-buttons" style="margin-top:1.5rem;border-top:1px solid #D4E8DC;padding-top:1rem;">
+          <!-- wp:button {"className":"om-btn--secondary","style":{"typography":{"fontSize":"0.875rem"}}} -->
+          <div class="wp-block-button om-btn--secondary" style="font-size:0.875rem;width:100%;"><a class="wp-block-button__link" href="https://playground.wordpress.net/?blueprint-url=https%3A%2F%2Fraw.githubusercontent.com%2Fomnifywp%2Fomnifywp-ecommerce%2Fmain%2Fblueprint.json" target="_blank" rel="noopener noreferrer" style="width:100%;justify-content:center;">Test OmnifyWP Speed Live &rarr;</a></div>
+          <!-- /wp:button -->
+        </div>
+        <!-- /wp:buttons -->
       </div>
+      <!-- /wp:column -->
 
-      <div style="display:grid;grid-template-columns:repeat(auto-fit, minmax(340px, 1fr));gap:24px;margin-bottom:4rem;">
-        
-        <!-- Deep Dive 1: WooCommerce -->
-        <div style="background:#F7FCF9;border:1px solid #D4E8DC;border-radius:16px;padding:32px;display:flex;flex-direction:column;justify-content:space-between;">
-          <div>
-            <div style="display:inline-block;padding:4px 10px;background:#EFF8F2;color:#0B5135;border-radius:6px;font-size:0.75rem;font-weight:700;text-transform:uppercase;margin-bottom:12px;">
-              VS WooCommerce
-            </div>
-            <h3 style="font-family:var(--om-font-heading);font-size:1.35rem;font-weight:700;color:#0B5135;margin-top:0;margin-bottom:12px;">
-              Eliminate database bloat &amp; expensive extension fatigue
-            </h3>
-            <p style="font-size:0.95rem;color:#3D5147;line-height:1.65;margin-bottom:1.25rem;">
-              WooCommerce treats products and orders as standard WordPress posts. Under moderate traffic, queries against millions of rows in <code>wp_postmeta</code> grind checkouts to a crawl. OmnifyWP stores everything in purpose-built custom relational SQL tables, delivering sub-100ms response times without paying hundreds of dollars annually for essential checkout addons.
-            </p>
-            <ul style="list-style:none;padding:0;margin:0;font-size:0.875rem;color:#18794E;display:flex;flex-direction:column;gap:6px;font-weight:600;">
-              <li>✓ No <code>wp_postmeta</code> table fragmentation</li>
-              <li>✓ Built-in coupons, reviews, abandoned carts &amp; analytics</li>
-              <li>✓ 100% theme-agnostic Gutenberg &amp; Elementor blocks</li>
-            </ul>
-          </div>
-          <div style="margin-top:1.5rem;border-top:1px solid #D4E8DC;padding-top:1rem;">
-            <a href="https://playground.wordpress.net/?blueprint-url=https%3A%2F%2Fraw.githubusercontent.com%2Fomnifywp%2Fomnifywp-ecommerce%2Fmain%2Fblueprint.json" class="om-btn om-btn--secondary" target="_blank" rel="noopener noreferrer" style="width:100%;justify-content:center;background:#ffffff;font-size:0.875rem;">
-              Test OmnifyWP Speed Live &rarr;
-            </a>
-          </div>
+      <!-- Deep Dive 2: Easy Digital Downloads -->
+      <!-- wp:column {"style":{"border":{"width":"1px","color":"#D4E8DC","radius":"16px"},"spacing":{"padding":{"top":"32px","bottom":"32px","left":"32px","right":"32px"}}},"backgroundColor":"background-alt"} -->
+      <div class="wp-block-column has-background-alt-background-color has-background" style="border-color:#D4E8DC;border-width:1px;border-radius:16px;padding:32px;">
+        <!-- wp:paragraph {"className":"om-badge om-badge--neutral","style":{"typography":{"fontSize":"0.75rem","fontWeight":"700","textTransform":"uppercase"},"spacing":{"margin":{"bottom":"12px"}}}} -->
+        <p class="om-badge om-badge--neutral" style="font-size:0.75rem;font-weight:700;text-transform:uppercase;margin-bottom:12px;">VS Easy Digital Downloads</p>
+        <!-- /wp:paragraph -->
+
+        <!-- wp:heading {"level":3,"style":{"typography":{"fontSize":"1.35rem","fontWeight":"700"}},"textColor":"forest"} -->
+        <h3 class="wp-block-heading has-forest-color has-text-color" style="font-size:1.35rem;font-weight:700;margin-top:0;margin-bottom:12px;">Physical merchandise &amp; bundles without tiered surcharges</h3>
+        <!-- /wp:heading -->
+
+        <!-- wp:paragraph {"style":{"typography":{"fontSize":"0.95rem","lineHeight":"1.65"}},"textColor":"slate"} -->
+        <p class="has-slate-color has-text-color" style="font-size:0.95rem;line-height:1.65;margin-bottom:1.25rem;">While EDD is respected for downloadable goods, expanding into physical merchandise, complex variant attribute swatches, or product bundles requires expensive recurring licenses or separate addons. Furthermore, EDD's free version levies up to a 2% platform transaction fee. OmnifyWP natively handles both physical and digital inventories with zero commission take rates.</p>
+        <!-- /wp:paragraph -->
+
+        <!-- wp:list {"style":{"typography":{"fontSize":"0.875rem","fontWeight":"600"}},"textColor":"emerald"} -->
+        <ul class="wp-block-list has-emerald-color has-text-color" style="font-size:0.875rem;font-weight:600;">
+          <!-- wp:list-item -->
+          <li>✓ Native support for physical parcel shipping &amp; delivery zones</li>
+          <!-- /wp:list-item -->
+          <!-- wp:list-item -->
+          <li>✓ True 0% commission &bull; keep 100% of your earnings</li>
+          <!-- /wp:list-item -->
+          <!-- wp:list-item -->
+          <li>✓ Bundled multi-gateway support (Stripe, PayPal, Mollie, Razorpay)</li>
+          <!-- /wp:list-item -->
+        </ul>
+        <!-- /wp:list -->
+
+        <!-- wp:buttons {"style":{"spacing":{"margin":{"top":"1.5rem"}}}} -->
+        <div class="wp-block-buttons" style="margin-top:1.5rem;border-top:1px solid #D4E8DC;padding-top:1rem;">
+          <!-- wp:button {"className":"om-btn--secondary","style":{"typography":{"fontSize":"0.875rem"}}} -->
+          <div class="wp-block-button om-btn--secondary" style="font-size:0.875rem;width:100%;"><a class="wp-block-button__link" href="/features/" style="width:100%;justify-content:center;">Explore Product Catalog Features &rarr;</a></div>
+          <!-- /wp:button -->
         </div>
-
-        <!-- Deep Dive 2: Easy Digital Downloads -->
-        <div style="background:#F7FCF9;border:1px solid #D4E8DC;border-radius:16px;padding:32px;display:flex;flex-direction:column;justify-content:space-between;">
-          <div>
-            <div style="display:inline-block;padding:4px 10px;background:#EFF8F2;color:#0B5135;border-radius:6px;font-size:0.75rem;font-weight:700;text-transform:uppercase;margin-bottom:12px;">
-              VS Easy Digital Downloads
-            </div>
-            <h3 style="font-family:var(--om-font-heading);font-size:1.35rem;font-weight:700;color:#0B5135;margin-top:0;margin-bottom:12px;">
-              Physical merchandise &amp; bundles without tiered surcharges
-            </h3>
-            <p style="font-size:0.95rem;color:#3D5147;line-height:1.65;margin-bottom:1.25rem;">
-              While EDD is respected for downloadable goods, expanding into physical merchandise, complex variant attribute swatches, or product bundles requires expensive recurring licenses or separate addons. Furthermore, EDD's free version levies up to a 2% platform transaction fee. OmnifyWP natively handles both physical and digital inventories with zero commission take rates.
-            </p>
-            <ul style="list-style:none;padding:0;margin:0;font-size:0.875rem;color:#18794E;display:flex;flex-direction:column;gap:6px;font-weight:600;">
-              <li>✓ Native support for physical parcel shipping &amp; delivery zones</li>
-              <li>✓ True 0% commission &bull; keep 100% of your earnings</li>
-              <li>✓ Bundled multi-gateway support (Stripe, PayPal, Mollie, Razorpay)</li>
-            </ul>
-          </div>
-          <div style="margin-top:1.5rem;border-top:1px solid #D4E8DC;padding-top:1rem;">
-            <a href="/features/" class="om-btn om-btn--secondary" style="width:100%;justify-content:center;background:#ffffff;font-size:0.875rem;">
-              Explore Product Catalog Features &rarr;
-            </a>
-          </div>
-        </div>
-
-        <!-- Deep Dive 3: SureCart & Cloud SaaS -->
-        <div style="background:#F7FCF9;border:1px solid #D4E8DC;border-radius:16px;padding:32px;display:flex;flex-direction:column;justify-content:space-between;">
-          <div>
-            <div style="display:inline-block;padding:4px 10px;background:#EFF8F2;color:#0B5135;border-radius:6px;font-size:0.75rem;font-weight:700;text-transform:uppercase;margin-bottom:12px;">
-              VS SureCart &amp; Cloud SaaS
-            </div>
-            <h3 style="font-family:var(--om-font-heading);font-size:1.35rem;font-weight:700;color:#0B5135;margin-top:0;margin-bottom:12px;">
-              Full data sovereignty without third-party cloud lock-in
-            </h3>
-            <p style="font-size:0.95rem;color:#3D5147;line-height:1.65;margin-bottom:1.25rem;">
-              Cloud checkouts decouple payments by routing customer orders and customer records through external proprietary servers. If their servers experience an outage or change pricing terms, your business is compromised. OmnifyWP gives you the sleek checkout UX of a SaaS with the uncompromising security and ownership of self-hosted WordPress.
-            </p>
-            <ul style="list-style:none;padding:0;margin:0;font-size:0.875rem;color:#18794E;display:flex;flex-direction:column;gap:6px;font-weight:600;">
-              <li>✓ Zero cross-border data transit or GDPR exposure</li>
-              <li>✓ No risk of 3rd-party SaaS subscription increases</li>
-              <li>✓ HMAC-signed digital files remain on your secured server</li>
-            </ul>
-          </div>
-          <div style="margin-top:1.5rem;border-top:1px solid #D4E8DC;padding-top:1rem;">
-            <a href="https://wordpress.org/plugins/omnifywp-ecommerce/" class="om-btn om-btn--primary" target="_blank" rel="noopener noreferrer" style="width:100%;justify-content:center;font-size:0.875rem;">
-              Download on WordPress.org &rarr;
-            </a>
-          </div>
-        </div>
-
+        <!-- /wp:buttons -->
       </div>
+      <!-- /wp:column -->
+
+      <!-- Deep Dive 3: SureCart & Cloud SaaS -->
+      <!-- wp:column {"style":{"border":{"width":"1px","color":"#D4E8DC","radius":"16px"},"spacing":{"padding":{"top":"32px","bottom":"32px","left":"32px","right":"32px"}}},"backgroundColor":"background-alt"} -->
+      <div class="wp-block-column has-background-alt-background-color has-background" style="border-color:#D4E8DC;border-width:1px;border-radius:16px;padding:32px;">
+        <!-- wp:paragraph {"className":"om-badge om-badge--neutral","style":{"typography":{"fontSize":"0.75rem","fontWeight":"700","textTransform":"uppercase"},"spacing":{"margin":{"bottom":"12px"}}}} -->
+        <p class="om-badge om-badge--neutral" style="font-size:0.75rem;font-weight:700;text-transform:uppercase;margin-bottom:12px;">VS SureCart &amp; Cloud SaaS</p>
+        <!-- /wp:paragraph -->
+
+        <!-- wp:heading {"level":3,"style":{"typography":{"fontSize":"1.35rem","fontWeight":"700"}},"textColor":"forest"} -->
+        <h3 class="wp-block-heading has-forest-color has-text-color" style="font-size:1.35rem;font-weight:700;margin-top:0;margin-bottom:12px;">Full data sovereignty without third-party cloud lock-in</h3>
+        <!-- /wp:heading -->
+
+        <!-- wp:paragraph {"style":{"typography":{"fontSize":"0.95rem","lineHeight":"1.65"}},"textColor":"slate"} -->
+        <p class="has-slate-color has-text-color" style="font-size:0.95rem;line-height:1.65;margin-bottom:1.25rem;">Cloud checkouts decouple payments by routing customer orders and customer records through external proprietary servers. If their servers experience an outage or change pricing terms, your business is compromised. OmnifyWP gives you the sleek checkout UX of a SaaS with the uncompromising security and ownership of self-hosted WordPress.</p>
+        <!-- /wp:paragraph -->
+
+        <!-- wp:list {"style":{"typography":{"fontSize":"0.875rem","fontWeight":"600"}},"textColor":"emerald"} -->
+        <ul class="wp-block-list has-emerald-color has-text-color" style="font-size:0.875rem;font-weight:600;">
+          <!-- wp:list-item -->
+          <li>✓ Zero cross-border data transit or GDPR exposure</li>
+          <!-- /wp:list-item -->
+          <!-- wp:list-item -->
+          <li>✓ No risk of 3rd-party SaaS subscription increases</li>
+          <!-- /wp:list-item -->
+          <!-- wp:list-item -->
+          <li>✓ HMAC-signed digital files remain on your secured server</li>
+          <!-- /wp:list-item -->
+        </ul>
+        <!-- /wp:list -->
+
+        <!-- wp:buttons {"style":{"spacing":{"margin":{"top":"1.5rem"}}}} -->
+        <div class="wp-block-buttons" style="margin-top:1.5rem;border-top:1px solid #D4E8DC;padding-top:1rem;">
+          <!-- wp:button {"className":"om-btn--primary","style":{"typography":{"fontSize":"0.875rem"}}} -->
+          <div class="wp-block-button om-btn--primary" style="font-size:0.875rem;width:100%;"><a class="wp-block-button__link" href="https://wordpress.org/plugins/omnifywp-ecommerce/" target="_blank" rel="noopener noreferrer" style="width:100%;justify-content:center;">Download on WordPress.org &rarr;</a></div>
+          <!-- /wp:button -->
+        </div>
+        <!-- /wp:buttons -->
+      </div>
+      <!-- /wp:column -->
 
     </div>
-  </section>
-  <!-- /wp:html -->
+    <!-- /wp:columns -->
+
+  </div>
+  <!-- /wp:group -->
 
   <!-- wp:pattern {"slug":"omnify/cta-band"} /-->
 

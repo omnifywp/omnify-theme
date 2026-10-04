@@ -4,34 +4,42 @@
 <main class="wp-block-group om-blog-page">
 
   <!-- Blog Hero Header Section -->
-  <!-- wp:html -->
-  <section class="om-blog-hero" style="position:relative;background:linear-gradient(180deg, #F0FAF4 0%, #FFFFFF 100%);padding-top:clamp(4rem, 7vw, 6rem);padding-bottom:clamp(3rem, 5vw, 4.5rem);border-bottom:1px solid #E6F4EC;overflow:hidden;">
-    <div style="position:absolute;top:-10%;left:50%;transform:translateX(-50%);width:900px;height:450px;background:radial-gradient(50% 50% at 50% 0%, rgba(34,160,107,0.14) 0%, transparent 100%);pointer-events:none;z-index:0;"></div>
+  <!-- wp:group {"className":"om-blog-hero om-hero-saas","style":{"spacing":{"padding":{"top":"clamp(4rem, 7vw, 6rem)","bottom":"clamp(3rem, 5vw, 4.5rem)"}}},"layout":{"type":"constrained","contentSize":"960px"}} -->
+  <div class="wp-block-group om-blog-hero om-hero-saas om-text-center">
+    <!-- wp:paragraph {"className":"om-badge om-badge--neutral","style":{"typography":{"fontSize":"0.8125rem","fontWeight":"700","letterSpacing":"0.04em","textTransform":"uppercase"},"spacing":{"margin":{"bottom":"1.25rem"}}}} -->
+    <p class="om-badge om-badge--neutral" style="font-size:0.8125rem;font-weight:700;letter-spacing:0.04em;text-transform:uppercase;margin-bottom:1.25rem;display:inline-flex;align-items:center;gap:6px;">● Engineering &amp; eCommerce Knowledge Base</p>
+    <!-- /wp:paragraph -->
 
-    <div class="om-container om-text-center" style="position:relative;z-index:1;max-width:960px;margin-inline:auto;padding-inline:clamp(1rem,4vw,2.5rem);">
-      <div style="display:inline-flex;align-items:center;gap:0.5rem;padding:0.4rem 1rem;background:rgba(34,160,107,0.1);border:1px solid rgba(34,160,107,0.25);border-radius:9999px;font-size:0.8125rem;font-weight:700;letter-spacing:0.04em;text-transform:uppercase;color:#0B5135;margin-bottom:1.25rem;">
-        <span style="display:inline-block;width:7px;height:7px;border-radius:50%;background:#22A06B;"></span>
-        Engineering &amp; eCommerce Knowledge Base
-      </div>
+    <!-- wp:heading {"level":1,"style":{"typography":{"fontSize":"clamp(2.4rem, 5vw, 3.8rem)","fontWeight":"800","letterSpacing":"-0.035em","lineHeight":"1.15"}},"textColor":"ink","className":"om-hero-title"} -->
+    <h1 class="wp-block-heading has-ink-color has-text-color om-hero-title" style="font-size:clamp(2.4rem, 5vw, 3.8rem);font-weight:800;letter-spacing:-0.035em;line-height:1.15;margin:0 0 1.25rem;">Insights, Architecture &amp; Growth</h1>
+    <!-- /wp:heading -->
 
-      <h1 style="font-family:var(--om-font-heading);font-size:clamp(2.4rem, 5vw, 3.8rem);font-weight:800;letter-spacing:-0.035em;color:#0D1B12;line-height:1.15;margin:0 0 1.25rem;text-wrap:balance;">
-        Insights, Architecture &amp; Growth
-      </h1>
-      <p style="font-family:var(--om-font-body);font-size:clamp(1.05rem, 1.8vw, 1.25rem);line-height:1.65;color:#3D5147;max-width:720px;margin-inline:auto;margin-bottom:2.25rem;">
-        In-depth technical guides, conversion benchmarks, and security teardowns for modern WordPress store owners and developers.
-      </p>
+    <!-- wp:paragraph {"style":{"typography":{"fontSize":"clamp(1.05rem, 1.8vw, 1.25rem)","lineHeight":"1.65"}},"textColor":"slate","className":"om-hero-desc"} -->
+    <p class="has-slate-color has-text-color om-hero-desc" style="font-size:clamp(1.05rem, 1.8vw, 1.25rem);line-height:1.65;max-width:720px;margin-inline:auto;margin-bottom:2.25rem;">In-depth technical guides, conversion benchmarks, and security teardowns for modern WordPress store owners and developers.</p>
+    <!-- /wp:paragraph -->
 
-      <!-- Category Filter Pills Bar -->
-      <nav class="om-blog-filter-bar" aria-label="Blog categories" style="display:flex;justify-content:center;gap:0.75rem;flex-wrap:wrap;">
-        <a href="/blog/" class="om-blog-filter-pill is-active" style="padding:0.5rem 1.15rem;border-radius:9999px;font-size:0.875rem;font-weight:700;text-decoration:none;background:#0B5135;color:#FFFFFF;box-shadow:0 2px 8px rgba(11,81,53,0.2);">All Posts</a>
-        <a href="/category/architecture/" class="om-blog-filter-pill" style="padding:0.5rem 1.15rem;border-radius:9999px;font-size:0.875rem;font-weight:600;text-decoration:none;background:#FFFFFF;color:#3D5147;border:1px solid #D4E8DC;">⚡ Architecture</a>
-        <a href="/category/security/" class="om-blog-filter-pill" style="padding:0.5rem 1.15rem;border-radius:9999px;font-size:0.875rem;font-weight:600;text-decoration:none;background:#FFFFFF;color:#3D5147;border:1px solid #D4E8DC;">🔒 Security</a>
-        <a href="/category/tutorials/" class="om-blog-filter-pill" style="padding:0.5rem 1.15rem;border-radius:9999px;font-size:0.875rem;font-weight:600;text-decoration:none;background:#FFFFFF;color:#3D5147;border:1px solid #D4E8DC;">📦 Tutorials</a>
-        <a href="/category/case-studies/" class="om-blog-filter-pill" style="padding:0.5rem 1.15rem;border-radius:9999px;font-size:0.875rem;font-weight:600;text-decoration:none;background:#FFFFFF;color:#3D5147;border:1px solid #D4E8DC;">📈 Case Studies</a>
-      </nav>
+    <!-- Category Filter Pills Bar -->
+    <!-- wp:buttons {"layout":{"type":"flex","justifyContent":"center"},"className":"om-blog-filter-bar"} -->
+    <div class="wp-block-buttons om-blog-filter-bar">
+      <!-- wp:button {"className":"om-btn--primary om-btn--sm"} -->
+      <div class="wp-block-button om-btn--primary om-btn--sm"><a class="wp-block-button__link" href="/blog/">All Posts</a></div>
+      <!-- /wp:button -->
+      <!-- wp:button {"className":"om-btn--secondary om-btn--sm"} -->
+      <div class="wp-block-button om-btn--secondary om-btn--sm"><a class="wp-block-button__link" href="/category/architecture/">⚡ Architecture</a></div>
+      <!-- /wp:button -->
+      <!-- wp:button {"className":"om-btn--secondary om-btn--sm"} -->
+      <div class="wp-block-button om-btn--secondary om-btn--sm"><a class="wp-block-button__link" href="/category/security/">🔒 Security</a></div>
+      <!-- /wp:button -->
+      <!-- wp:button {"className":"om-btn--secondary om-btn--sm"} -->
+      <div class="wp-block-button om-btn--secondary om-btn--sm"><a class="wp-block-button__link" href="/category/tutorials/">📦 Tutorials</a></div>
+      <!-- /wp:button -->
+      <!-- wp:button {"className":"om-btn--secondary om-btn--sm"} -->
+      <div class="wp-block-button om-btn--secondary om-btn--sm"><a class="wp-block-button__link" href="/category/case-studies/">📈 Case Studies</a></div>
+      <!-- /wp:button -->
     </div>
-  </section>
-  <!-- /wp:html -->
+    <!-- /wp:buttons -->
+  </div>
+  <!-- /wp:group -->
 
   <!-- Main Query Loop Section -->
   <!-- wp:group {"className":"om-section","style":{"spacing":{"padding":{"top":"clamp(3.5rem, 6vw, 5rem)","bottom":"clamp(4rem, 7vw, 6rem)"}}},"layout":{"type":"constrained","contentSize":"1240px"}} -->
@@ -111,32 +119,40 @@
   <!-- /wp:group -->
 
   <!-- AIO / Newsletter Knowledge Digest Banner -->
-  <!-- wp:html -->
-  <section class="om-newsletter-section" style="background:#F7FCF9;border-top:1px solid #E6F4EC;padding-block:clamp(3.5rem, 6vw, 5rem);">
-    <div class="om-container" style="max-width:860px;margin-inline:auto;text-align:center;padding-inline:clamp(1rem,4vw,2.5rem);">
-      <div style="background:#FFFFFF;border:1px solid #D4E8DC;border-radius:20px;padding:clamp(2rem, 5vw, 3.5rem);box-shadow:0 12px 35px -8px rgba(11,81,53,0.08);">
-        <div style="display:inline-flex;align-items:center;gap:0.4rem;padding:0.3rem 0.85rem;background:#EFF8F2;border-radius:9999px;font-size:0.75rem;font-weight:700;color:#0B5135;text-transform:uppercase;margin-bottom:1rem;">
-          📬 Monthly Engineering Dispatch
-        </div>
-        <h3 style="font-family:var(--om-font-heading);font-size:clamp(1.5rem, 3vw, 2.15rem);font-weight:800;letter-spacing:-0.03em;color:#0D1B12;margin:0 0 0.75rem;">
-          Stay ahead with high-performance eCommerce architecture.
-        </h3>
-        <p style="font-size:1rem;color:#3D5147;line-height:1.6;max-width:600px;margin:0 auto 1.75rem;">
-          Join 10,000+ store owners and developers receiving our benchmark reports, security protocols, and release teardowns. 100% signal, zero marketing spam.
-        </p>
-        <div style="display:flex;gap:0.75rem;justify-content:center;flex-wrap:wrap;max-width:520px;margin:0 auto;">
-          <input type="email" placeholder="Enter your email address" style="flex:1;min-width:240px;padding:0.8rem 1.2rem;border:1px solid #CBD5E1;border-radius:8px;font-size:0.95rem;outline:none;" aria-label="Email Address">
-          <button type="button" class="om-btn om-btn--primary" style="padding:0.8rem 1.5rem;font-size:0.95rem;border-radius:8px;cursor:pointer;">
-            Subscribe Free &rarr;
-          </button>
-        </div>
-        <div style="font-size:0.75rem;color:#64748B;margin-top:0.75rem;">
-          🔒 Strictly GDPR compliant. Unsubscribe with 1-click anytime.
-        </div>
+  <!-- wp:group {"className":"om-newsletter-section om-section","style":{"spacing":{"padding":{"top":"clamp(3.5rem, 6vw, 5rem)","bottom":"clamp(3.5rem, 6vw, 5rem)"}}},"backgroundColor":"background-alt","layout":{"type":"constrained","contentSize":"860px"}} -->
+  <div class="wp-block-group om-newsletter-section om-section has-background-alt-background-color has-background" style="border-top:1px solid #E6F4EC;">
+    <!-- wp:group {"style":{"border":{"width":"1px","color":"#D4E8DC","radius":"20px"},"spacing":{"padding":{"top":"clamp(2rem, 5vw, 3.5rem)","bottom":"clamp(2rem, 5vw, 3.5rem)","left":"clamp(1.5rem, 4vw, 3rem)","right":"clamp(1.5rem, 4vw, 3rem)"}}},"backgroundColor":"white","className":"om-text-center"} -->
+    <div class="wp-block-group has-white-background-color has-background om-text-center" style="border-color:#D4E8DC;border-width:1px;border-radius:20px;box-shadow:0 12px 35px -8px rgba(11,81,53,0.08);">
+      <!-- wp:paragraph {"className":"om-badge om-badge--neutral","style":{"typography":{"fontSize":"0.75rem","fontWeight":"700","letterSpacing":"0.04em","textTransform":"uppercase"},"spacing":{"margin":{"bottom":"1rem"}}}} -->
+      <p class="om-badge om-badge--neutral" style="font-size:0.75rem;font-weight:700;letter-spacing:0.04em;text-transform:uppercase;margin-bottom:1rem;display:inline-flex;align-items:center;">📬 Monthly Engineering Dispatch</p>
+      <!-- /wp:paragraph -->
+
+      <!-- wp:heading {"level":3,"style":{"typography":{"fontSize":"clamp(1.5rem, 3vw, 2.15rem)","fontWeight":"800","letterSpacing":"-0.03em"}},"textColor":"ink"} -->
+      <h3 class="wp-block-heading has-ink-color has-text-color" style="font-size:clamp(1.5rem, 3vw, 2.15rem);font-weight:800;letter-spacing:-0.03em;margin:0 0 0.75rem;">Stay ahead with high-performance eCommerce architecture.</h3>
+      <!-- /wp:heading -->
+
+      <!-- wp:paragraph {"style":{"typography":{"fontSize":"1rem","lineHeight":"1.6"}},"textColor":"slate"} -->
+      <p class="has-slate-color has-text-color" style="font-size:1rem;line-height:1.6;max-width:600px;margin:0 auto 1.75rem;">Join 10,000+ store owners and developers receiving our benchmark reports, security protocols, and release teardowns. 100% signal, zero marketing spam.</p>
+      <!-- /wp:paragraph -->
+
+      <!-- wp:buttons {"layout":{"type":"flex","justifyContent":"center"}} -->
+      <div class="wp-block-buttons">
+        <!-- wp:button {"className":"om-btn--primary"} -->
+        <div class="wp-block-button om-btn--primary"><a class="wp-block-button__link" href="/features/">Explore Features &rarr;</a></div>
+        <!-- /wp:button -->
+        <!-- wp:button {"className":"om-btn--secondary"} -->
+        <div class="wp-block-button om-btn--secondary"><a class="wp-block-button__link" href="https://wordpress.org/plugins/omnifywp-ecommerce/" target="_blank" rel="noopener noreferrer">Free Download on WP.org</a></div>
+        <!-- /wp:button -->
       </div>
+      <!-- /wp:buttons -->
+
+      <!-- wp:paragraph {"style":{"typography":{"fontSize":"0.75rem"}},"className":"om-text-muted"} -->
+      <p class="om-text-muted" style="font-size:0.75rem;margin-top:1rem;margin-bottom:0;">🔒 Strictly GDPR compliant. 100% Open-source and free.</p>
+      <!-- /wp:paragraph -->
     </div>
-  </section>
-  <!-- /wp:html -->
+    <!-- /wp:group -->
+  </div>
+  <!-- /wp:group -->
 
 </main>
 <!-- /wp:group -->

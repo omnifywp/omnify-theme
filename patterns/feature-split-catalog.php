@@ -3,136 +3,154 @@
  * Title: Feature Split — Product Catalog
  * Slug: omnify/feature-split-catalog
  * Categories: omnify-features
+ * Block Types: core/group
  */
 
 defined( 'ABSPATH' ) || exit;
 ?>
 
-<!-- wp:html -->
-<section class="om-section" style="background:#ffffff;padding-top:clamp(4rem, 7vw, 6rem);padding-bottom:clamp(4rem, 7vw, 6rem);border-top:1px solid #EBF5EE;">
-	<div class="om-container">
+<!-- wp:group {"tagName":"section","className":"om-section om-catalog-section","style":{"spacing":{"padding":{"top":"clamp(4rem, 7vw, 6rem)","bottom":"clamp(4rem, 7vw, 6rem)"}}},"layout":{"type":"constrained","contentSize":"1240px"}} -->
+<section class="wp-block-group om-section om-catalog-section">
 
-		<div class="om-feature-split">
+	<!-- Split Columns -->
+	<!-- wp:columns {"className":"om-feature-split","style":{"spacing":{"blockGap":"clamp(2rem, 5vw, 4rem)"}}} -->
+	<div class="wp-block-columns om-feature-split">
 
-			<!-- Left: Text content -->
-			<div class="om-feature-split__content">
-				<span class="om-feature-split__kicker">Product Management</span>
+		<!-- Left: Text Content Column -->
+		<!-- wp:column {"className":"om-feature-split__content","width":"48%"} -->
+		<div class="wp-block-column om-feature-split__content">
+			<!-- wp:paragraph {"className":"om-feature-split__kicker"} -->
+			<p class="om-feature-split__kicker">Product Management</p>
+			<!-- /wp:paragraph -->
 
-				<h2 class="om-feature-split__headline" style="font-size:clamp(1.85rem, 3.5vw, 2.5rem);font-weight:800;letter-spacing:-0.035em;color:var(--om-ink);margin-top:0.5rem;margin-bottom:1.25rem;line-height:1.2;">
-					Build and manage your catalog with effortless speed.
-				</h2>
+			<!-- wp:heading {"level":2,"className":"om-feature-split__headline"} -->
+			<h2 class="wp-block-heading om-feature-split__headline">Build and manage your catalog with effortless speed.</h2>
+			<!-- /wp:heading -->
 
-				<p class="om-feature-split__body" style="font-size:1.0625rem;line-height:1.7;color:var(--om-slate);margin-bottom:1.75rem;">
-					Create physical merchandise, courses, licenses, variable products with attributes, and high-converting product bundles &mdash; all through a unified, 4-step wizard with zero database bloat.
-				</p>
+			<!-- wp:paragraph {"className":"om-feature-split__body"} -->
+			<p class="om-feature-split__body">Create physical merchandise, courses, licenses, variable products with attributes, and high-converting product bundles &mdash; all through a unified, 4-step wizard with zero database bloat.</p>
+			<!-- /wp:paragraph -->
 
-				<ul class="om-check-list" style="margin-bottom:2rem;">
-					<li><strong>Multi-Format Inventory:</strong> Instant downloads, license keys, physical items, and bundles</li>
-					<li><strong>Step-by-Step Creation:</strong> Dedicated UI for pricing tiers, inventory caps, and digital assets</li>
-					<li><strong>Attribute Swatches:</strong> Custom visual variants (sizes, formats, color pills)</li>
-					<li><strong>Instant Save &amp; Publish:</strong> Auto-generates clean slugs and storefront catalog cards</li>
-				</ul>
+			<!-- wp:list {"className":"om-check-list"} -->
+			<ul class="wp-block-list om-check-list">
+				<!-- wp:list-item -->
+				<li><strong>Multi-Format Inventory:</strong> Instant downloads, license keys, physical items, and bundles</li>
+				<!-- /wp:list-item -->
+				<!-- wp:list-item -->
+				<li><strong>Step-by-Step Creation:</strong> Dedicated UI for pricing tiers, inventory caps, and digital assets</li>
+				<!-- /wp:list-item -->
+				<!-- wp:list-item -->
+				<li><strong>Attribute Swatches:</strong> Custom visual variants (sizes, formats, color pills)</li>
+				<!-- /wp:list-item -->
+				<!-- wp:list-item -->
+				<li><strong>Instant Save &amp; Publish:</strong> Auto-generates clean slugs and storefront catalog cards</li>
+				<!-- /wp:list-item -->
+			</ul>
+			<!-- /wp:list -->
 
-				<a class="om-btn om-btn--primary" href="/features/">
-					Explore Product Tools &rarr;
-				</a>
-			</div><!-- /.om-feature-split__content -->
+			<!-- wp:buttons -->
+			<div class="wp-block-buttons">
+				<!-- wp:button {"className":"om-btn--primary"} -->
+				<div class="wp-block-button om-btn--primary"><a class="wp-block-button__link" href="/features/">Explore Product Tools &rarr;</a></div>
+				<!-- /wp:button -->
+			</div>
+			<!-- /wp:buttons -->
+		</div>
+		<!-- /wp:column -->
 
-			<!-- Right: Interactive Product Editor Mockup -->
-			<div class="om-feature-split__visual">
-				<div class="om-browser-frame" style="border:1px solid #D4E8DC;border-radius:16px;box-shadow:0 20px 45px -10px rgba(11,81,53,0.12);background:#fff;overflow:hidden;">
-					
-					<!-- Chrome Bar -->
-					<div class="om-browser-chrome" style="background:#F7FCF9;padding:10px 16px;display:flex;align-items:center;gap:10px;border-bottom:1px solid #E6F4EC;">
-						<div class="om-browser-dots" style="display:flex;gap:6px;">
-							<span class="om-browser-dot om-browser-dot--red"></span>
-							<span class="om-browser-dot om-browser-dot--yellow"></span>
-							<span class="om-browser-dot om-browser-dot--green"></span>
-						</div>
-						<div class="om-browser-bar" style="flex:1;background:#fff;border:1px solid #D4E8DC;border-radius:5px;padding:3px 10px;font-size:0.75rem;color:#6B7F74;">
-							mystore.local/wp-admin/admin.php?page=omnify-products&amp;action=new
-						</div>
+		<!-- Right: Visual Mockup Column -->
+		<!-- wp:column {"className":"om-feature-split__visual","width":"52%"} -->
+		<div class="wp-block-column om-feature-split__visual">
+			<!-- wp:group {"className":"om-browser-frame","style":{"border":{"radius":"16px"}},"layout":{"type":"default"}} -->
+			<div class="wp-block-group om-browser-frame">
+				
+				<!-- Chrome Bar -->
+				<div class="om-browser-chrome" style="background:#F7FCF9;padding:10px 16px;display:flex;align-items:center;gap:10px;border-bottom:1px solid #E6F4EC;">
+					<div class="om-browser-dots" style="display:flex;gap:6px;">
+						<span class="om-browser-dot om-browser-dot--red"></span>
+						<span class="om-browser-dot om-browser-dot--yellow"></span>
+						<span class="om-browser-dot om-browser-dot--green"></span>
 					</div>
-
-					<!-- Wizard UI Simulator -->
-					<div style="background:#FAFDFB;padding:22px;font-family:var(--om-font-body);">
-						
-						<!-- Wizard Breadcrumb Steps -->
-						<div style="display:flex;align-items:center;justify-content:space-between;background:#FFFFFF;border:1px solid #E2E8F0;padding:10px 16px;border-radius:10px;margin-bottom:18px;">
-							<div style="display:flex;align-items:center;gap:6px;color:#18794E;font-weight:700;font-size:0.8rem;">
-								<span style="width:20px;height:20px;border-radius:50%;background:#18794E;color:#fff;display:inline-flex;align-items:center;justify-content:center;font-size:0.7rem;">1</span>
-								Basics
-							</div>
-							<span style="color:#CBD5E1;">&rarr;</span>
-							<div style="display:flex;align-items:center;gap:6px;color:#64748B;font-weight:600;font-size:0.8rem;">
-								<span style="width:20px;height:20px;border-radius:50%;background:#E2E8F0;color:#64748B;display:inline-flex;align-items:center;justify-content:center;font-size:0.7rem;">2</span>
-								Pricing
-							</div>
-							<span style="color:#CBD5E1;">&rarr;</span>
-							<div style="display:flex;align-items:center;gap:6px;color:#64748B;font-weight:600;font-size:0.8rem;">
-								<span style="width:20px;height:20px;border-radius:50%;background:#E2E8F0;color:#64748B;display:inline-flex;align-items:center;justify-content:center;font-size:0.7rem;">3</span>
-								Content &amp; Files
-							</div>
-						</div>
-
-						<!-- Wizard Form Box -->
-						<div style="background:#FFFFFF;border:1px solid #E2E8F0;border-radius:12px;padding:18px;margin-bottom:16px;">
-							<div style="margin-bottom:12px;">
-								<label style="display:block;font-size:0.75rem;font-weight:700;color:#475569;margin-bottom:5px;text-transform:uppercase;">Product Title *</label>
-								<div style="background:#F8FAFC;border:1.5px solid #CBD5E1;border-radius:6px;padding:8px 12px;font-size:0.875rem;font-weight:600;color:#0F172A;">
-									WordPress Masterclass &amp; Design Assets
-								</div>
-							</div>
-
-							<!-- Product Kind Selector (Digital / Physical / Bundle) -->
-							<div style="margin-bottom:14px;">
-								<label style="display:block;font-size:0.75rem;font-weight:700;color:#475569;margin-bottom:6px;text-transform:uppercase;">Product Type</label>
-								<div style="display:grid;grid-template-columns:1fr 1fr 1fr;gap:8px;">
-									<div style="background:#EFF8F2;border:2px solid #22A06B;border-radius:8px;padding:10px;text-align:center;cursor:pointer;">
-										<div style="font-size:0.9rem;font-weight:700;color:#0B5135;">⚡ Digital</div>
-										<span style="font-size:0.68rem;color:#18794E;">Files, licenses</span>
-									</div>
-									<div style="background:#F8FAFC;border:1px solid #E2E8F0;border-radius:8px;padding:10px;text-align:center;opacity:0.7;">
-										<div style="font-size:0.9rem;font-weight:600;color:#475569;">📦 Physical</div>
-										<span style="font-size:0.68rem;color:#64748B;">Inventory, parcel</span>
-									</div>
-									<div style="background:#F8FAFC;border:1px solid #E2E8F0;border-radius:8px;padding:10px;text-align:center;opacity:0.7;">
-										<div style="font-size:0.9rem;font-weight:600;color:#475569;">🎁 Bundle</div>
-										<span style="font-size:0.68rem;color:#64748B;">Multi-item kit</span>
-									</div>
-								</div>
-							</div>
-
-							<!-- Attached File Protection Box -->
-							<div style="background:#F0FDF4;border:1px dashed #86EFAC;border-radius:8px;padding:10px 14px;display:flex;align-items:center;justify-content:space-between;">
-								<div style="display:flex;align-items:center;gap:8px;">
-									<span style="font-size:1.1rem;">🔒</span>
-									<div>
-										<div style="font-size:0.8rem;font-weight:700;color:#166534;">masterclass-complete-v2.zip</div>
-										<div style="font-size:0.68rem;color:#15803D;">HMAC Token Expire: 48h &bull; Max Downloads: 5</div>
-									</div>
-								</div>
-								<span style="font-size:0.72rem;background:#DCFCE7;color:#166534;font-weight:700;padding:2px 8px;border-radius:4px;">Protected</span>
-							</div>
-
-						</div>
-
-						<!-- Action Footer -->
-						<div style="display:flex;justify-content:space-between;align-items:center;">
-							<span style="font-size:0.75rem;color:#64748B;">Step 1 of 4 &bull; Autosaved</span>
-							<div style="display:flex;gap:8px;">
-								<button type="button" style="background:#E2E8F0;border:none;padding:6px 12px;border-radius:6px;font-size:0.8rem;font-weight:600;color:#475569;">Cancel</button>
-								<button type="button" style="background:#18794E;border:none;padding:6px 16px;border-radius:6px;font-size:0.8rem;font-weight:700;color:#FFFFFF;cursor:pointer;">Next: Pricing &rarr;</button>
-							</div>
-						</div>
-
+					<div class="om-browser-bar" style="flex:1;background:#fff;border:1px solid #D4E8DC;border-radius:5px;padding:3px 10px;font-size:0.75rem;color:#6B7F74;">
+						mystore.local/wp-admin/admin.php?page=omnify-products&amp;action=new
 					</div>
-
 				</div>
-			</div><!-- /.om-feature-split__visual -->
 
-		</div><!-- /.om-feature-split -->
+				<!-- Wizard UI Simulator -->
+				<div style="background:#FAFDFB;padding:22px;font-family:var(--om-font-body);">
+					<!-- Wizard Steps -->
+					<div style="display:flex;align-items:center;justify-content:space-between;background:#FFFFFF;border:1px solid #E2E8F0;padding:10px 16px;border-radius:10px;margin-bottom:18px;">
+						<div style="display:flex;align-items:center;gap:6px;color:#18794E;font-weight:700;font-size:0.8rem;">
+							<span style="width:20px;height:20px;border-radius:50%;background:#18794E;color:#fff;display:inline-flex;align-items:center;justify-content:center;font-size:0.7rem;">1</span>
+							Basics
+						</div>
+						<span style="color:#CBD5E1;">&rarr;</span>
+						<div style="display:flex;align-items:center;gap:6px;color:#64748B;font-weight:600;font-size:0.8rem;">
+							<span style="width:20px;height:20px;border-radius:50%;background:#E2E8F0;color:#64748B;display:inline-flex;align-items:center;justify-content:center;font-size:0.7rem;">2</span>
+							Pricing
+						</div>
+						<span style="color:#CBD5E1;">&rarr;</span>
+						<div style="display:flex;align-items:center;gap:6px;color:#64748B;font-weight:600;font-size:0.8rem;">
+							<span style="width:20px;height:20px;border-radius:50%;background:#E2E8F0;color:#64748B;display:inline-flex;align-items:center;justify-content:center;font-size:0.7rem;">3</span>
+							Content &amp; Files
+						</div>
+					</div>
 
-	</div><!-- /.om-container -->
+					<!-- Wizard Form Box -->
+					<div style="background:#FFFFFF;border:1px solid #E2E8F0;border-radius:12px;padding:18px;margin-bottom:16px;">
+						<div style="margin-bottom:12px;">
+							<label style="display:block;font-size:0.75rem;font-weight:700;color:#475569;margin-bottom:5px;text-transform:uppercase;">Product Title *</label>
+							<div style="background:#F8FAFC;border:1.5px solid #CBD5E1;border-radius:6px;padding:8px 12px;font-size:0.875rem;font-weight:600;color:#0F172A;">
+								WordPress Masterclass &amp; Design Assets
+							</div>
+						</div>
+
+						<div style="margin-bottom:14px;">
+							<label style="display:block;font-size:0.75rem;font-weight:700;color:#475569;margin-bottom:6px;text-transform:uppercase;">Product Type</label>
+							<div style="display:grid;grid-template-columns:1fr 1fr 1fr;gap:8px;">
+								<div style="background:#EFF8F2;border:2px solid #22A06B;border-radius:8px;padding:10px;text-align:center;">
+									<div style="font-size:0.9rem;font-weight:700;color:#0B5135;">⚡ Digital</div>
+									<span style="font-size:0.68rem;color:#18794E;">Files, licenses</span>
+								</div>
+								<div style="background:#F8FAFC;border:1px solid #E2E8F0;border-radius:8px;padding:10px;text-align:center;opacity:0.7;">
+									<div style="font-size:0.9rem;font-weight:600;color:#475569;">📦 Physical</div>
+									<span style="font-size:0.68rem;color:#64748B;">Inventory, parcel</span>
+								</div>
+								<div style="background:#F8FAFC;border:1px solid #E2E8F0;border-radius:8px;padding:10px;text-align:center;opacity:0.7;">
+									<div style="font-size:0.9rem;font-weight:600;color:#475569;">🎁 Bundle</div>
+									<span style="font-size:0.68rem;color:#64748B;">Multi-item kit</span>
+								</div>
+							</div>
+						</div>
+
+						<div style="background:#F0FDF4;border:1px dashed #86EFAC;border-radius:8px;padding:10px 14px;display:flex;align-items:center;justify-content:space-between;">
+							<div style="display:flex;align-items:center;gap:8px;">
+								<span style="font-size:1.1rem;">🔒</span>
+								<div>
+									<div style="font-size:0.8rem;font-weight:700;color:#166534;">masterclass-complete-v2.zip</div>
+									<div style="font-size:0.68rem;color:#15803D;">HMAC Token Expire: 48h &bull; Max Downloads: 5</div>
+								</div>
+							</div>
+							<span style="font-size:0.72rem;background:#DCFCE7;color:#166534;font-weight:700;padding:2px 8px;border-radius:4px;">Protected</span>
+						</div>
+					</div>
+
+					<div style="display:flex;justify-content:space-between;align-items:center;">
+						<span style="font-size:0.75rem;color:#64748B;">Step 1 of 4 &bull; Autosaved</span>
+						<div style="display:flex;gap:8px;">
+							<button type="button" style="background:#E2E8F0;border:none;padding:6px 12px;border-radius:6px;font-size:0.8rem;font-weight:600;color:#475569;">Cancel</button>
+							<button type="button" style="background:#18794E;border:none;padding:6px 16px;border-radius:6px;font-size:0.8rem;font-weight:700;color:#FFFFFF;cursor:pointer;">Next: Pricing &rarr;</button>
+						</div>
+					</div>
+				</div>
+
+			</div>
+			<!-- /wp:group -->
+		</div>
+		<!-- /wp:column -->
+
+	</div>
+	<!-- /wp:columns -->
+
 </section>
-<!-- /wp:html -->
+<!-- /wp:group -->

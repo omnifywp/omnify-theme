@@ -3,83 +3,106 @@
  * Title: How It Works — Workflow Steps
  * Slug: omnify/workflow-steps
  * Categories: omnify-features
+ * Block Types: core/group
  */
 
 defined( 'ABSPATH' ) || exit;
 ?>
 
-<!-- wp:html -->
-<section class="om-section" style="background:#F7FCF9;padding-top:clamp(4rem, 7vw, 6rem);padding-bottom:clamp(4rem, 7vw, 6rem);border-top:1px solid #E6F4EC;border-bottom:1px solid #E6F4EC;">
-	<div class="om-container" style="max-width:1240px;margin-inline:auto;padding-inline:clamp(1rem,4vw,2.5rem);">
+<!-- wp:group {"tagName":"section","className":"om-section om-steps-section","style":{"spacing":{"padding":{"top":"clamp(4rem, 7vw, 6rem)","bottom":"clamp(4rem, 7vw, 6rem)"}}},"layout":{"type":"constrained","contentSize":"1240px"}} -->
+<section class="wp-block-group om-section om-steps-section">
 
-		<!-- Centered Heading Area -->
-		<div class="om-text-center" style="margin-bottom:3.5rem;">
-			<span class="om-eyebrow">Store Workflow</span>
-			<h2 style="font-size:clamp(2rem, 3.8vw, 2.75rem);font-weight:800;letter-spacing:-0.035em;color:var(--om-ink);margin-top:0.75rem;margin-bottom:1rem;line-height:1.2;text-wrap:balance;">
-				From installation to first sale in minutes.
-			</h2>
-			<p class="om-text-muted" style="font-size:1.0625rem;line-height:1.7;max-width:620px;margin-inline:auto;">
-				OmnifyWP walks you through an intuitive, guided workflow. Connect your preferred payments, publish your catalog, and fulfill orders with complete peace of mind.
-			</p>
+	<!-- Header Area -->
+	<!-- wp:group {"className":"om-text-center","style":{"spacing":{"margin":{"bottom":"3.5rem"}}},"layout":{"type":"constrained","contentSize":"720px"}} -->
+	<div class="wp-block-group om-text-center" style="margin-bottom:3.5rem">
+		<!-- wp:paragraph {"className":"om-eyebrow"} -->
+		<p class="om-eyebrow">Store Workflow</p>
+		<!-- /wp:paragraph -->
+
+		<!-- wp:heading {"level":2,"style":{"typography":{"fontSize":"clamp(2rem, 3.8vw, 2.75rem)","fontWeight":"800","letterSpacing":"-0.035em","lineHeight":"1.2"}}} -->
+		<h2 class="wp-block-heading" style="font-size:clamp(2rem, 3.8vw, 2.75rem);font-weight:800;letter-spacing:-0.035em;line-height:1.2">From installation to first sale in minutes.</h2>
+		<!-- /wp:heading -->
+
+		<!-- wp:paragraph {"className":"om-text-muted","style":{"typography":{"fontSize":"1.0625rem","lineHeight":"1.7"}}} -->
+		<p class="om-text-muted" style="font-size:1.0625rem;line-height:1.7">OmnifyWP walks you through an intuitive, guided workflow. Connect your preferred payments, publish your catalog, and fulfill orders with complete peace of mind.</p>
+		<!-- /wp:paragraph -->
+	</div>
+	<!-- /wp:group -->
+
+	<!-- 4 Steps Columns -->
+	<!-- wp:columns {"className":"om-steps"} -->
+	<div class="wp-block-columns om-steps">
+
+		<!-- Step 1 -->
+		<!-- wp:column {"className":"om-step-card"} -->
+		<div class="wp-block-column om-step-card">
+			<!-- wp:paragraph {"className":"om-step__number"} -->
+			<p class="om-step__number">01</p>
+			<!-- /wp:paragraph -->
+
+			<!-- wp:heading {"level":3,"className":"om-step__title"} -->
+			<h3 class="wp-block-heading om-step__title">Quick Store Setup</h3>
+			<!-- /wp:heading -->
+
+			<!-- wp:paragraph {"className":"om-step__body"} -->
+			<p class="om-step__body">Run the streamlined setup wizard to configure your store name, default currency, and email notifications.</p>
+			<!-- /wp:paragraph -->
 		</div>
+		<!-- /wp:column -->
 
-		<!-- 4-step Grid -->
-		<div class="om-steps">
+		<!-- Step 2 -->
+		<!-- wp:column {"className":"om-step-card"} -->
+		<div class="wp-block-column om-step-card">
+			<!-- wp:paragraph {"className":"om-step__number"} -->
+			<p class="om-step__number">02</p>
+			<!-- /wp:paragraph -->
 
-			<!-- Step 1 -->
-			<div class="om-step-card" style="background:#ffffff;border:1px solid #D4E8DC;border-radius:18px;padding:2rem 1.75rem;box-shadow:0 4px 16px rgba(11,81,53,0.06);position:relative;display:flex;flex-direction:column;transition:transform 0.2s ease, box-shadow 0.2s ease;">
-				<div style="width:48px;height:48px;border-radius:12px;background:#EFF8F2;color:#18794E;display:flex;align-items:center;justify-content:center;font-family:var(--om-font-mono);font-size:1.15rem;font-weight:800;margin-bottom:1.25rem;border:1px solid #D4E8DC;">
-					01
-				</div>
-				<h3 style="font-size:1.15rem;font-weight:700;color:var(--om-ink);margin-top:0;margin-bottom:0.75rem;letter-spacing:-0.02em;">
-					Quick Store Setup
-				</h3>
-				<p style="font-size:0.925rem;color:var(--om-slate-mid);line-height:1.6;margin:0;">
-					Run the streamlined setup wizard to configure your store name, default currency, and email notifications.
-				</p>
-			</div>
+			<!-- wp:heading {"level":3,"className":"om-step__title"} -->
+			<h3 class="wp-block-heading om-step__title">Add Products &amp; Files</h3>
+			<!-- /wp:heading -->
 
-			<!-- Step 2 -->
-			<div class="om-step-card" style="background:#ffffff;border:1px solid #D4E8DC;border-radius:18px;padding:2rem 1.75rem;box-shadow:0 4px 16px rgba(11,81,53,0.06);position:relative;display:flex;flex-direction:column;transition:transform 0.2s ease, box-shadow 0.2s ease;">
-				<div style="width:48px;height:48px;border-radius:12px;background:#EFF8F2;color:#18794E;display:flex;align-items:center;justify-content:center;font-family:var(--om-font-mono);font-size:1.15rem;font-weight:800;margin-bottom:1.25rem;border:1px solid #D4E8DC;">
-					02
-				</div>
-				<h3 style="font-size:1.15rem;font-weight:700;color:var(--om-ink);margin-top:0;margin-bottom:0.75rem;letter-spacing:-0.02em;">
-					Add Products &amp; Files
-				</h3>
-				<p style="font-size:0.925rem;color:var(--om-slate-mid);line-height:1.6;margin:0;">
-					Create physical products, license codes, or upload protected digital files with expiry meters and attempt caps.
-				</p>
-			</div>
-
-			<!-- Step 3 -->
-			<div class="om-step-card" style="background:#ffffff;border:1px solid #D4E8DC;border-radius:18px;padding:2rem 1.75rem;box-shadow:0 4px 16px rgba(11,81,53,0.06);position:relative;display:flex;flex-direction:column;transition:transform 0.2s ease, box-shadow 0.2s ease;">
-				<div style="width:48px;height:48px;border-radius:12px;background:#EFF8F2;color:#18794E;display:flex;align-items:center;justify-content:center;font-family:var(--om-font-mono);font-size:1.15rem;font-weight:800;margin-bottom:1.25rem;border:1px solid #D4E8DC;">
-					03
-				</div>
-				<h3 style="font-size:1.15rem;font-weight:700;color:var(--om-ink);margin-top:0;margin-bottom:0.75rem;letter-spacing:-0.02em;">
-					Publish Fast Storefront
-				</h3>
-				<p style="font-size:0.925rem;color:var(--om-slate-mid);line-height:1.6;margin:0;">
-					Place storefront shortcodes or patterns on any page. Shoppers get instant search, filters, and friction-free checkout.
-				</p>
-			</div>
-
-			<!-- Step 4 -->
-			<div class="om-step-card" style="background:#ffffff;border:1px solid #D4E8DC;border-radius:18px;padding:2rem 1.75rem;box-shadow:0 4px 16px rgba(11,81,53,0.06);position:relative;display:flex;flex-direction:column;transition:transform 0.2s ease, box-shadow 0.2s ease;">
-				<div style="width:48px;height:48px;border-radius:12px;background:#EFF8F2;color:#18794E;display:flex;align-items:center;justify-content:center;font-family:var(--om-font-mono);font-size:1.15rem;font-weight:800;margin-bottom:1.25rem;border:1px solid #D4E8DC;">
-					04
-				</div>
-				<h3 style="font-size:1.15rem;font-weight:700;color:var(--om-ink);margin-top:0;margin-bottom:0.75rem;letter-spacing:-0.02em;">
-					Fulfill &amp; Track Growth
-				</h3>
-				<p style="font-size:0.925rem;color:var(--om-slate-mid);line-height:1.6;margin:0;">
-					Track sales, view orders, handle refunds, and inspect download metrics in real-time from your WordPress dashboard.
-				</p>
-			</div>
-
+			<!-- wp:paragraph {"className":"om-step__body"} -->
+			<p class="om-step__body">Create physical products, license codes, or upload protected digital files with expiry meters and attempt caps.</p>
+			<!-- /wp:paragraph -->
 		</div>
+		<!-- /wp:column -->
+
+		<!-- Step 3 -->
+		<!-- wp:column {"className":"om-step-card"} -->
+		<div class="wp-block-column om-step-card">
+			<!-- wp:paragraph {"className":"om-step__number"} -->
+			<p class="om-step__number">03</p>
+			<!-- /wp:paragraph -->
+
+			<!-- wp:heading {"level":3,"className":"om-step__title"} -->
+			<h3 class="wp-block-heading om-step__title">Publish Fast Storefront</h3>
+			<!-- /wp:heading -->
+
+			<!-- wp:paragraph {"className":"om-step__body"} -->
+			<p class="om-step__body">Place storefront shortcodes or patterns on any page. Shoppers get instant search, filters, and friction-free checkout.</p>
+			<!-- /wp:paragraph -->
+		</div>
+		<!-- /wp:column -->
+
+		<!-- Step 4 -->
+		<!-- wp:column {"className":"om-step-card"} -->
+		<div class="wp-block-column om-step-card">
+			<!-- wp:paragraph {"className":"om-step__number"} -->
+			<p class="om-step__number">04</p>
+			<!-- /wp:paragraph -->
+
+			<!-- wp:heading {"level":3,"className":"om-step__title"} -->
+			<h3 class="wp-block-heading om-step__title">Fulfill &amp; Track Growth</h3>
+			<!-- /wp:heading -->
+
+			<!-- wp:paragraph {"className":"om-step__body"} -->
+			<p class="om-step__body">Track sales, view orders, handle refunds, and inspect download metrics in real-time from your WordPress dashboard.</p>
+			<!-- /wp:paragraph -->
+		</div>
+		<!-- /wp:column -->
 
 	</div>
+	<!-- /wp:columns -->
+
 </section>
-<!-- /wp:html -->
+<!-- /wp:group -->

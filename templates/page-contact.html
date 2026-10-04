@@ -69,39 +69,36 @@
 				<!-- wp:column {"width":"45%"} -->
 				<div class="wp-block-column" style="flex-basis:45%">
 
-					<!-- wp:html -->
-					<div style="border:1px solid #D4E8DC;border-radius:16px;background:#EFF8F2;padding:2rem">
+					<!-- wp:group {"style":{"border":{"width":"1px","color":"#D4E8DC","radius":"16px"},"spacing":{"padding":{"top":"2rem","bottom":"2rem","left":"2rem","right":"2rem"}}},"backgroundColor":"background-alt"} -->
+					<div class="wp-block-group has-background-alt-background-color has-background" style="border-color:#D4E8DC;border-width:1px;border-radius:16px;padding:2rem;">
 
-						<h3 style="font-size:1.15rem;font-weight:700;margin-top:0;margin-bottom:1.25rem;color:#1A3D2B">Before opening a support ticket</h3>
+						<!-- wp:heading {"level":3,"style":{"typography":{"fontSize":"1.15rem","fontWeight":"700"}},"textColor":"ink"} -->
+						<h3 class="wp-block-heading has-ink-color has-text-color" style="font-size:1.15rem;font-weight:700;margin-top:0;margin-bottom:1.25rem;">Before opening a support ticket</h3>
+						<!-- /wp:heading -->
 
-						<p style="font-size:0.95rem;color:#374151;margin-bottom:1rem">Running through this checklist first helps resolve most issues quickly and leads to faster responses from the support team.</p>
+						<!-- wp:paragraph {"style":{"typography":{"fontSize":"0.95rem"}},"textColor":"slate"} -->
+						<p class="has-slate-color has-text-color" style="font-size:0.95rem;margin-bottom:1rem;">Running through this checklist first helps resolve most issues quickly and leads to faster responses from the support team.</p>
+						<!-- /wp:paragraph -->
 
-						<ul style="list-style:none;padding:0;margin:0;font-size:0.95rem;color:#374151">
-
-							<li style="display:flex;align-items:flex-start;gap:0.65rem;margin-bottom:0.85rem">
-								<span style="color:#1A7A4A;font-weight:700;flex-shrink:0">✓</span>
-								<span><strong>Check the FAQ</strong> — common questions are answered on our <a href="/#faq" style="color:#1A7A4A">Homepage FAQ</a> and in the documentation.</span>
-							</li>
-
-							<li style="display:flex;align-items:flex-start;gap:0.65rem;margin-bottom:0.85rem">
-								<span style="color:#1A7A4A;font-weight:700;flex-shrink:0">✓</span>
-								<span><strong>Search existing forum threads</strong> — your question may already be answered on the <a href="https://wordpress.org/support/plugin/omnifywp-ecommerce/" target="_blank" rel="noopener noreferrer" style="color:#1A7A4A">WordPress.org support forum</a>.</span>
-							</li>
-
-							<li style="display:flex;align-items:flex-start;gap:0.65rem;margin-bottom:0.85rem">
-								<span style="color:#1A7A4A;font-weight:700;flex-shrink:0">✓</span>
-								<span><strong>Review the documentation</strong> — visit the <a href="https://omnifywp.com/doc/" target="_blank" rel="noopener noreferrer" style="color:#1A7A4A">Documentation</a> page for step-by-step guides.</span>
-							</li>
-
-							<li style="display:flex;align-items:flex-start;gap:0.65rem;margin-bottom:0">
-								<span style="color:#1A7A4A;font-weight:700;flex-shrink:0">✓</span>
-								<span><strong>Note your WordPress and PHP versions</strong> — include these in your support request. Find them under <em>Dashboard → Updates</em> and <em>Tools → Site Health</em>.</span>
-							</li>
-
+						<!-- wp:list {"style":{"typography":{"fontSize":"0.95rem"},"spacing":{"blockGap":"0.85rem"}},"className":"om-check-list"} -->
+						<ul class="wp-block-list om-check-list" style="font-size:0.95rem;">
+							<!-- wp:list-item -->
+							<li><strong>Check the FAQ</strong> — common questions are answered on our <a href="/#faq">Homepage FAQ</a> and in the documentation.</li>
+							<!-- /wp:list-item -->
+							<!-- wp:list-item -->
+							<li><strong>Search existing forum threads</strong> — your question may already be answered on the <a href="https://wordpress.org/support/plugin/omnifywp-ecommerce/" target="_blank" rel="noopener noreferrer">WordPress.org support forum</a>.</li>
+							<!-- /wp:list-item -->
+							<!-- wp:list-item -->
+							<li><strong>Review the documentation</strong> — visit the <a href="https://omnifywp.com/doc/" target="_blank" rel="noopener noreferrer">Documentation</a> page for step-by-step guides.</li>
+							<!-- /wp:list-item -->
+							<!-- wp:list-item -->
+							<li><strong>Note your WordPress and PHP versions</strong> — include these in your support request under <em>Dashboard → Updates</em> and <em>Tools → Site Health</em>.</li>
+							<!-- /wp:list-item -->
 						</ul>
+						<!-- /wp:list -->
 
 					</div>
-					<!-- /wp:html -->
+					<!-- /wp:group -->
 
 				</div>
 				<!-- /wp:column -->

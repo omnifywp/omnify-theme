@@ -4,306 +4,480 @@
 <main class="wp-block-group om-features-page">
 
   <!-- Features Hero Section -->
-  <!-- wp:html -->
-  <section class="om-hero" style="position:relative;background:linear-gradient(180deg, #F0FAF4 0%, #FFFFFF 100%);padding-top:clamp(4rem, 7vw, 6.5rem);padding-bottom:clamp(3rem, 6vw, 4.5rem);border-bottom:1px solid #E6F4EC;overflow:hidden;">
-    <div style="position:absolute;top:-20%;left:50%;transform:translateX(-50%);width:1000px;height:500px;background:radial-gradient(50% 50% at 50% 0%, rgba(34,160,107,0.14) 0%, transparent 100%);pointer-events:none;z-index:0;"></div>
+  <!-- wp:group {"className":"om-hero om-hero-saas om-text-center","style":{"spacing":{"padding":{"top":"clamp(4rem, 7vw, 6.5rem)","bottom":"clamp(3rem, 6vw, 4.5rem)"}}},"layout":{"type":"constrained","contentSize":"980px"}} -->
+  <div class="wp-block-group om-hero om-hero-saas om-text-center">
+    <!-- wp:paragraph {"className":"om-badge om-badge--neutral","style":{"typography":{"fontSize":"0.8125rem","fontWeight":"700","letterSpacing":"0.04em","textTransform":"uppercase"},"spacing":{"margin":{"bottom":"1.25rem"}}}} -->
+    <p class="om-badge om-badge--neutral" style="font-size:0.8125rem;font-weight:700;letter-spacing:0.04em;text-transform:uppercase;margin-bottom:1.25rem;display:inline-flex;align-items:center;gap:6px;">● Complete Architectural Feature Index</p>
+    <!-- /wp:paragraph -->
 
-    <div class="om-container om-text-center" style="position:relative;z-index:1;max-width:980px;margin-inline:auto;padding-inline:clamp(1rem,4vw,2.5rem);">
-      <div style="display:inline-flex;align-items:center;gap:0.5rem;padding:0.4rem 1rem;background:rgba(34,160,107,0.1);border:1px solid rgba(34,160,107,0.25);border-radius:9999px;font-size:0.8125rem;font-weight:700;letter-spacing:0.04em;text-transform:uppercase;color:#0B5135;margin-bottom:1.25rem;">
-        <span style="display:inline-block;width:7px;height:7px;border-radius:50%;background:#22A06B;"></span>
-        Complete Architectural Feature Index
-      </div>
+    <!-- wp:heading {"level":1,"style":{"typography":{"fontSize":"clamp(2.4rem, 5vw, 3.8rem)","fontWeight":"800","letterSpacing":"-0.035em","lineHeight":"1.15"}},"textColor":"ink","className":"om-hero-title"} -->
+    <h1 class="wp-block-heading has-ink-color has-text-color om-hero-title" style="font-size:clamp(2.4rem, 5vw, 3.8rem);font-weight:800;letter-spacing:-0.035em;line-height:1.15;margin:0 0 1.25rem;">Everything you need to run high-speed eCommerce on WordPress.</h1>
+    <!-- /wp:heading -->
 
-      <h1 style="font-family:var(--om-font-heading);font-size:clamp(2.4rem, 5vw, 3.8rem);font-weight:800;letter-spacing:-0.035em;color:#0D1B12;line-height:1.15;margin:0 0 1.25rem;">
-        Everything you need to run high-speed eCommerce on WordPress.
-      </h1>
-      <p style="font-family:var(--om-font-body);font-size:clamp(1.05rem, 1.8vw, 1.25rem);line-height:1.65;color:#3D5147;max-width:760px;margin-inline:auto;margin-bottom:2rem;">
-        From purpose-built SQL database tables to cryptographic download lockers, pre-order management, and built-in fraud scoring — explore every native feature built directly into OmnifyWP.
-      </p>
+    <!-- wp:paragraph {"style":{"typography":{"fontSize":"clamp(1.05rem, 1.8vw, 1.25rem)","lineHeight":"1.65"}},"textColor":"slate","className":"om-hero-desc"} -->
+    <p class="has-slate-color has-text-color om-hero-desc" style="font-size:clamp(1.05rem, 1.8vw, 1.25rem);line-height:1.65;max-width:760px;margin-inline:auto;margin-bottom:2rem;">From purpose-built SQL database tables to cryptographic download lockers, pre-order management, and built-in fraud scoring — explore every native feature built directly into OmnifyWP.</p>
+    <!-- /wp:paragraph -->
 
-      <!-- Quick Metrics Strip -->
-      <div style="display:flex;justify-content:center;gap:1.5rem;flex-wrap:wrap;font-size:0.875rem;font-weight:600;color:#6B7F74;">
-        <span style="display:inline-flex;align-items:center;gap:0.4rem;"><span style="color:#22A06B;">✓</span> 20+ Dedicated SQL Tables</span>
-        <span style="display:inline-flex;align-items:center;gap:0.4rem;"><span style="color:#22A06B;">✓</span> 10 Payment Gateways Included</span>
-        <span style="display:inline-flex;align-items:center;gap:0.4rem;"><span style="color:#22A06B;">✓</span> 0% Platform Commission</span>
-        <span style="display:inline-flex;align-items:center;gap:0.4rem;"><span style="color:#22A06B;">✓</span> Native FSE &amp; Shortcodes</span>
-      </div>
+    <!-- Quick Metrics Strip -->
+    <!-- wp:group {"layout":{"type":"flex","justifyContent":"center","flexWrap":"wrap"},"style":{"spacing":{"blockGap":"1.5rem"}}} -->
+    <div class="wp-block-group" style="font-size:0.875rem;font-weight:600;color:var(--om-slate);">
+      <!-- wp:paragraph -->
+      <p style="margin:0;"><span style="color:#22A06B;">✓</span> 20+ Dedicated SQL Tables</p>
+      <!-- /wp:paragraph -->
+      <!-- wp:paragraph -->
+      <p style="margin:0;"><span style="color:#22A06B;">✓</span> 10 Payment Gateways Included</p>
+      <!-- /wp:paragraph -->
+      <!-- wp:paragraph -->
+      <p style="margin:0;"><span style="color:#22A06B;">✓</span> 0% Platform Commission</p>
+      <!-- /wp:paragraph -->
+      <!-- wp:paragraph -->
+      <p style="margin:0;"><span style="color:#22A06B;">✓</span> Native FSE &amp; Shortcodes</p>
+      <!-- /wp:paragraph -->
     </div>
-  </section>
-  <!-- /wp:html -->
+    <!-- /wp:group -->
+  </div>
+  <!-- /wp:group -->
 
   <!-- Feature Pillar 1: Product Catalog & Merchandising -->
-  <!-- wp:html -->
-  <section class="om-section" style="background:#ffffff;padding-top:clamp(4rem, 6vw, 5.5rem);padding-bottom:clamp(3.5rem, 6vw, 5rem);">
-    <div class="om-container" style="max-width:1200px;margin-inline:auto;padding-inline:clamp(1rem,4vw,2.5rem);">
-      
-      <div style="margin-bottom:2.5rem;">
-        <div style="display:inline-flex;align-items:center;gap:0.5rem;font-family:var(--om-font-mono);font-size:0.75rem;font-weight:700;letter-spacing:0.08em;text-transform:uppercase;color:#18794E;background:#ECFDF5;padding:4px 10px;border-radius:6px;margin-bottom:0.75rem;">
-          Catalog Engine
-        </div>
-        <h2 style="font-family:var(--om-font-heading);font-size:clamp(1.75rem, 3.5vw, 2.5rem);font-weight:800;letter-spacing:-0.03em;color:var(--om-ink);margin:0 0 0.75rem;">
-          1. Multi-Format Product Catalog &amp; Merchandising
-        </h2>
-        <p class="om-text-muted" style="font-size:1.0625rem;line-height:1.65;max-width:760px;margin:0;">
-          Build, categorize, and cross-sell physical goods, downloadable files, licenses, and bundles through a streamlined 4-step product creator wizard.
-        </p>
-      </div>
+  <!-- wp:group {"className":"om-section","style":{"spacing":{"padding":{"top":"clamp(4rem, 6vw, 5.5rem)","bottom":"clamp(3.5rem, 6vw, 5rem)"}}},"layout":{"type":"constrained","contentSize":"1200px"}} -->
+  <div class="wp-block-group om-section">
+    <!-- wp:group {"style":{"spacing":{"margin":{"bottom":"2.5rem"}}},"layout":{"type":"default"}} -->
+    <div class="wp-block-group" style="margin-bottom:2.5rem;">
+      <!-- wp:paragraph {"className":"om-badge om-badge--neutral","style":{"typography":{"fontSize":"0.75rem","fontFamily":"var:preset|font-family|mono","fontWeight":"700","letterSpacing":"0.08em","textTransform":"uppercase"},"spacing":{"margin":{"bottom":"0.75rem"}}}} -->
+      <p class="om-badge om-badge--neutral" style="font-family:var(--om-font-mono);font-size:0.75rem;font-weight:700;letter-spacing:0.08em;text-transform:uppercase;margin-bottom:0.75rem;">Catalog Engine</p>
+      <!-- /wp:paragraph -->
 
-      <div style="display:grid;grid-template-columns:repeat(auto-fit, minmax(320px, 1fr));gap:1.75rem;">
+      <!-- wp:heading {"level":2,"style":{"typography":{"fontSize":"clamp(1.75rem, 3.5vw, 2.5rem)","fontWeight":"800","letterSpacing":"-0.03em"}},"textColor":"ink"} -->
+      <h2 class="wp-block-heading has-ink-color has-text-color" style="font-size:clamp(1.75rem, 3.5vw, 2.5rem);font-weight:800;letter-spacing:-0.03em;margin:0 0 0.75rem;">1. Multi-Format Product Catalog &amp; Merchandising</h2>
+      <!-- /wp:heading -->
 
-        <!-- Feature 1.1 -->
-        <div style="background:#FBFDFB;border:1px solid #E2E8F0;border-radius:14px;padding:1.75rem;box-shadow:0 2px 6px rgba(0,0,0,0.02);">
-          <div style="font-size:1.5rem;margin-bottom:0.75rem;">📦</div>
-          <h3 style="font-size:1.15rem;font-weight:700;color:var(--om-ink);margin-bottom:0.5rem;">Physical Products &amp; Shipping</h3>
-          <p style="font-size:0.9rem;color:var(--om-slate);line-height:1.6;margin-bottom:1rem;">
-            Track inventory quantities, backorders, parcel dimensions (L&times;W&times;H), weight, shipping classes, and delivery instructions with automated stock reduction on checkout.
-          </p>
-          <span style="font-family:var(--om-font-mono);font-size:0.75rem;background:#E6F4EC;color:#0B5135;padding:2px 8px;border-radius:4px;font-weight:600;">Custom delivery &amp; return policies</span>
-        </div>
-
-        <!-- Feature 1.2 -->
-        <div style="background:#FBFDFB;border:1px solid #E2E8F0;border-radius:14px;padding:1.75rem;box-shadow:0 2px 6px rgba(0,0,0,0.02);">
-          <div style="font-size:1.5rem;margin-bottom:0.75rem;">🔒</div>
-          <h3 style="font-size:1.15rem;font-weight:700;color:var(--om-ink);margin-bottom:0.5rem;">Digital Downloads &amp; Versioning</h3>
-          <p style="font-size:0.9rem;color:var(--om-slate);line-height:1.6;margin-bottom:1rem;">
-            Host software, audio, presets, or eBooks outside the public root. Attach multiple file assets per product, specify release versions (e.g. v2.1.0), and set file expiration dates.
-          </p>
-          <span style="font-family:var(--om-font-mono);font-size:0.75rem;background:#E6F4EC;color:#0B5135;padding:2px 8px;border-radius:4px;font-weight:600;">Multi-file versioning &amp; audit logging</span>
-        </div>
-
-        <!-- Feature 1.3 -->
-        <div style="background:#FBFDFB;border:1px solid #E2E8F0;border-radius:14px;padding:1.75rem;box-shadow:0 2px 6px rgba(0,0,0,0.02);">
-          <div style="font-size:1.5rem;margin-bottom:0.75rem;">🎨</div>
-          <h3 style="font-size:1.15rem;font-weight:700;color:var(--om-ink);margin-bottom:0.5rem;">Variable Attribute Swatches</h3>
-          <p style="font-size:0.9rem;color:var(--om-slate);line-height:1.6;margin-bottom:1rem;">
-            Create complex variations with individual SKUs, stock levels, sale prices, and attribute pills (size, color, format) in dedicated table <code>wp_omnify_product_variations</code>.
-          </p>
-          <span style="font-family:var(--om-font-mono);font-size:0.75rem;background:#E6F4EC;color:#0B5135;padding:2px 8px;border-radius:4px;font-weight:600;">Independent SKU &amp; stock per variant</span>
-        </div>
-
-        <!-- Feature 1.4 -->
-        <div style="background:#FBFDFB;border:1px solid #E2E8F0;border-radius:14px;padding:1.75rem;box-shadow:0 2px 6px rgba(0,0,0,0.02);">
-          <div style="font-size:1.5rem;margin-bottom:0.75rem;">🎁</div>
-          <h3 style="font-size:1.15rem;font-weight:700;color:var(--om-ink);margin-bottom:0.5rem;">Bundles, Upsells &amp; Cross-Sells</h3>
-          <p style="font-size:0.9rem;color:var(--om-slate);line-height:1.6;margin-bottom:1rem;">
-            Package multiple catalog items into high-converting kits with bundled pricing. Link recommended upsells and cross-sells directly in the product configuration panel.
-          </p>
-          <span style="font-family:var(--om-font-mono);font-size:0.75rem;background:#E6F4EC;color:#0B5135;padding:2px 8px;border-radius:4px;font-weight:600;">Automated inventory bundle sync</span>
-        </div>
-
-        <!-- Feature 1.5 -->
-        <div style="background:#FBFDFB;border:1px solid #E2E8F0;border-radius:14px;padding:1.75rem;box-shadow:0 2px 6px rgba(0,0,0,0.02);">
-          <div style="font-size:1.5rem;margin-bottom:0.75rem;">⏳</div>
-          <h3 style="font-size:1.15rem;font-weight:700;color:var(--om-ink);margin-bottom:0.5rem;">Native Pre-Orders Engine</h3>
-          <p style="font-size:0.9rem;color:var(--om-slate);line-height:1.6;margin-bottom:1rem;">
-            Accept early orders before product launch with release date scheduling, purchase caps, custom pre-order badges, and dedicated status messaging.
-          </p>
-          <span style="font-family:var(--om-font-mono);font-size:0.75rem;background:#E6F4EC;color:#0B5135;padding:2px 8px;border-radius:4px;font-weight:600;">Pre-order release date countdowns</span>
-        </div>
-
-        <!-- Feature 1.6 -->
-        <div style="background:#FBFDFB;border:1px solid #E2E8F0;border-radius:14px;padding:1.75rem;box-shadow:0 2px 6px rgba(0,0,0,0.02);">
-          <div style="font-size:1.5rem;margin-bottom:0.75rem;">🏷️</div>
-          <h3 style="font-size:1.15rem;font-weight:700;color:var(--om-ink);margin-bottom:0.5rem;">Categories, Tags &amp; Brands</h3>
-          <p style="font-size:0.9rem;color:var(--om-slate);line-height:1.6;margin-bottom:1rem;">
-            Multi-taxonomy organization with dedicated indexed tables for high-speed faceted navigation and SEO-friendly permalinks across large catalogs.
-          </p>
-          <span style="font-family:var(--om-font-mono);font-size:0.75rem;background:#E6F4EC;color:#0B5135;padding:2px 8px;border-radius:4px;font-weight:600;">Indexed taxonomy slug lookups</span>
-        </div>
-
-      </div>
+      <!-- wp:paragraph {"className":"om-text-muted","style":{"typography":{"fontSize":"1.0625rem","lineHeight":"1.65"}}} -->
+      <p class="om-text-muted" style="font-size:1.0625rem;line-height:1.65;max-width:760px;margin:0;">Build, categorize, and cross-sell physical goods, downloadable files, licenses, and bundles through a streamlined 4-step product creator wizard.</p>
+      <!-- /wp:paragraph -->
     </div>
-  </section>
-  <!-- /wp:html -->
+    <!-- /wp:group -->
+
+    <!-- wp:group {"className":"om-card-grid","layout":{"type":"default"}} -->
+    <div class="wp-block-group om-card-grid">
+
+      <!-- Feature 1.1 -->
+      <!-- wp:group {"className":"om-card","layout":{"type":"default"}} -->
+      <div class="wp-block-group om-card">
+        <!-- wp:paragraph {"className":"om-card__icon"} -->
+        <p class="om-card__icon">📦</p>
+        <!-- /wp:paragraph -->
+        <!-- wp:heading {"level":3,"className":"om-card__title"} -->
+        <h3 class="wp-block-heading om-card__title">Physical Products &amp; Shipping</h3>
+        <!-- /wp:heading -->
+        <!-- wp:paragraph {"className":"om-card__body"} -->
+        <p class="om-card__body">Track inventory quantities, backorders, parcel dimensions (L&times;W&times;H), weight, shipping classes, and delivery instructions with automated stock reduction on checkout.</p>
+        <!-- /wp:paragraph -->
+        <!-- wp:paragraph {"className":"om-badge om-badge--neutral","style":{"typography":{"fontSize":"0.75rem","fontFamily":"var:preset|font-family|mono"}}} -->
+        <p class="om-badge om-badge--neutral" style="font-size:0.75rem;margin-top:auto;">Custom delivery &amp; return policies</p>
+        <!-- /wp:paragraph -->
+      </div>
+      <!-- /wp:group -->
+
+      <!-- Feature 1.2 -->
+      <!-- wp:group {"className":"om-card","layout":{"type":"default"}} -->
+      <div class="wp-block-group om-card">
+        <!-- wp:paragraph {"className":"om-card__icon"} -->
+        <p class="om-card__icon">🔒</p>
+        <!-- /wp:paragraph -->
+        <!-- wp:heading {"level":3,"className":"om-card__title"} -->
+        <h3 class="wp-block-heading om-card__title">Digital Downloads &amp; Versioning</h3>
+        <!-- /wp:heading -->
+        <!-- wp:paragraph {"className":"om-card__body"} -->
+        <p class="om-card__body">Host software, audio, presets, or eBooks outside the public root. Attach multiple file assets per product, specify release versions (e.g. v2.1.0), and set file expiration dates.</p>
+        <!-- /wp:paragraph -->
+        <!-- wp:paragraph {"className":"om-badge om-badge--neutral","style":{"typography":{"fontSize":"0.75rem","fontFamily":"var:preset|font-family|mono"}}} -->
+        <p class="om-badge om-badge--neutral" style="font-size:0.75rem;margin-top:auto;">Multi-file versioning &amp; audit logging</p>
+        <!-- /wp:paragraph -->
+      </div>
+      <!-- /wp:group -->
+
+      <!-- Feature 1.3 -->
+      <!-- wp:group {"className":"om-card","layout":{"type":"default"}} -->
+      <div class="wp-block-group om-card">
+        <!-- wp:paragraph {"className":"om-card__icon"} -->
+        <p class="om-card__icon">🎨</p>
+        <!-- /wp:paragraph -->
+        <!-- wp:heading {"level":3,"className":"om-card__title"} -->
+        <h3 class="wp-block-heading om-card__title">Variable Attribute Swatches</h3>
+        <!-- /wp:heading -->
+        <!-- wp:paragraph {"className":"om-card__body"} -->
+        <p class="om-card__body">Create complex variations with individual SKUs, stock levels, sale prices, and attribute pills (size, color, format) in dedicated table <code>wp_omnify_product_variations</code>.</p>
+        <!-- /wp:paragraph -->
+        <!-- wp:paragraph {"className":"om-badge om-badge--neutral","style":{"typography":{"fontSize":"0.75rem","fontFamily":"var:preset|font-family|mono"}}} -->
+        <p class="om-badge om-badge--neutral" style="font-size:0.75rem;margin-top:auto;">Independent SKU &amp; stock per variant</p>
+        <!-- /wp:paragraph -->
+      </div>
+      <!-- /wp:group -->
+
+      <!-- Feature 1.4 -->
+      <!-- wp:group {"className":"om-card","layout":{"type":"default"}} -->
+      <div class="wp-block-group om-card">
+        <!-- wp:paragraph {"className":"om-card__icon"} -->
+        <p class="om-card__icon">🎁</p>
+        <!-- /wp:paragraph -->
+        <!-- wp:heading {"level":3,"className":"om-card__title"} -->
+        <h3 class="wp-block-heading om-card__title">Bundles, Upsells &amp; Cross-Sells</h3>
+        <!-- /wp:heading -->
+        <!-- wp:paragraph {"className":"om-card__body"} -->
+        <p class="om-card__body">Package multiple catalog items into high-converting kits with bundled pricing. Link recommended upsells and cross-sells directly in the product configuration panel.</p>
+        <!-- /wp:paragraph -->
+        <!-- wp:paragraph {"className":"om-badge om-badge--neutral","style":{"typography":{"fontSize":"0.75rem","fontFamily":"var:preset|font-family|mono"}}} -->
+        <p class="om-badge om-badge--neutral" style="font-size:0.75rem;margin-top:auto;">Automated inventory bundle sync</p>
+        <!-- /wp:paragraph -->
+      </div>
+      <!-- /wp:group -->
+
+      <!-- Feature 1.5 -->
+      <!-- wp:group {"className":"om-card","layout":{"type":"default"}} -->
+      <div class="wp-block-group om-card">
+        <!-- wp:paragraph {"className":"om-card__icon"} -->
+        <p class="om-card__icon">⏳</p>
+        <!-- /wp:paragraph -->
+        <!-- wp:heading {"level":3,"className":"om-card__title"} -->
+        <h3 class="wp-block-heading om-card__title">Native Pre-Orders Engine</h3>
+        <!-- /wp:heading -->
+        <!-- wp:paragraph {"className":"om-card__body"} -->
+        <p class="om-card__body">Accept early orders before product launch with release date scheduling, purchase caps, custom pre-order badges, and dedicated status messaging.</p>
+        <!-- /wp:paragraph -->
+        <!-- wp:paragraph {"className":"om-badge om-badge--neutral","style":{"typography":{"fontSize":"0.75rem","fontFamily":"var:preset|font-family|mono"}}} -->
+        <p class="om-badge om-badge--neutral" style="font-size:0.75rem;margin-top:auto;">Pre-order release date countdowns</p>
+        <!-- /wp:paragraph -->
+      </div>
+      <!-- /wp:group -->
+
+      <!-- Feature 1.6 -->
+      <!-- wp:group {"className":"om-card","layout":{"type":"default"}} -->
+      <div class="wp-block-group om-card">
+        <!-- wp:paragraph {"className":"om-card__icon"} -->
+        <p class="om-card__icon">🏷️</p>
+        <!-- /wp:paragraph -->
+        <!-- wp:heading {"level":3,"className":"om-card__title"} -->
+        <h3 class="wp-block-heading om-card__title">Categories, Tags &amp; Brands</h3>
+        <!-- /wp:heading -->
+        <!-- wp:paragraph {"className":"om-card__body"} -->
+        <p class="om-card__body">Multi-taxonomy organization with dedicated indexed tables for high-speed faceted navigation and SEO-friendly permalinks across large catalogs.</p>
+        <!-- /wp:paragraph -->
+        <!-- wp:paragraph {"className":"om-badge om-badge--neutral","style":{"typography":{"fontSize":"0.75rem","fontFamily":"var:preset|font-family|mono"}}} -->
+        <p class="om-badge om-badge--neutral" style="font-size:0.75rem;margin-top:auto;">Indexed taxonomy slug lookups</p>
+        <!-- /wp:paragraph -->
+      </div>
+      <!-- /wp:group -->
+
+    </div>
+    <!-- /wp:group -->
+  </div>
+  <!-- /wp:group -->
 
   <!-- Feature Pillar 2: Security & Digital Delivery -->
-  <!-- wp:html -->
-  <section class="om-section" style="background:#F7FCF9;border-top:1px solid #E6F4EC;border-bottom:1px solid #E6F4EC;padding-top:clamp(4rem, 6vw, 5.5rem);padding-bottom:clamp(3.5rem, 6vw, 5rem);">
-    <div class="om-container" style="max-width:1200px;margin-inline:auto;padding-inline:clamp(1rem,4vw,2.5rem);">
-      
-      <div style="margin-bottom:2.5rem;">
-        <div style="display:inline-flex;align-items:center;gap:0.5rem;font-family:var(--om-font-mono);font-size:0.75rem;font-weight:700;letter-spacing:0.08em;text-transform:uppercase;color:#18794E;background:#ECFDF5;padding:4px 10px;border-radius:6px;margin-bottom:0.75rem;">
-          Asset Protection
-        </div>
-        <h2 style="font-family:var(--om-font-heading);font-size:clamp(1.75rem, 3.5vw, 2.5rem);font-weight:800;letter-spacing:-0.03em;color:var(--om-ink);margin:0 0 0.75rem;">
-          2. Cryptographic Security &amp; Anti-Piracy Delivery
-        </h2>
-        <p class="om-text-muted" style="font-size:1.0625rem;line-height:1.65;max-width:760px;margin:0;">
-          Protect intellectual property with HMAC cryptographic signatures, strict expiration timestamps, and download attempt limiters.
-        </p>
-      </div>
+  <!-- wp:group {"className":"om-section","style":{"spacing":{"padding":{"top":"clamp(4rem, 6vw, 5.5rem)","bottom":"clamp(3.5rem, 6vw, 5rem)"}}},"backgroundColor":"background-alt","layout":{"type":"constrained","contentSize":"1200px"}} -->
+  <div class="wp-block-group om-section has-background-alt-background-color has-background" style="border-top:1px solid #E6F4EC;border-bottom:1px solid #E6F4EC;">
+    <!-- wp:group {"style":{"spacing":{"margin":{"bottom":"2.5rem"}}},"layout":{"type":"default"}} -->
+    <div class="wp-block-group" style="margin-bottom:2.5rem;">
+      <!-- wp:paragraph {"className":"om-badge om-badge--neutral","style":{"typography":{"fontSize":"0.75rem","fontFamily":"var:preset|font-family|mono","fontWeight":"700","letterSpacing":"0.08em","textTransform":"uppercase"},"spacing":{"margin":{"bottom":"0.75rem"}}}} -->
+      <p class="om-badge om-badge--neutral" style="font-family:var(--om-font-mono);font-size:0.75rem;font-weight:700;letter-spacing:0.08em;text-transform:uppercase;margin-bottom:0.75rem;">Asset Protection</p>
+      <!-- /wp:paragraph -->
 
-      <div style="display:grid;grid-template-columns:repeat(auto-fit, minmax(320px, 1fr));gap:1.75rem;">
+      <!-- wp:heading {"level":2,"style":{"typography":{"fontSize":"clamp(1.75rem, 3.5vw, 2.5rem)","fontWeight":"800","letterSpacing":"-0.03em"}},"textColor":"ink"} -->
+      <h2 class="wp-block-heading has-ink-color has-text-color" style="font-size:clamp(1.75rem, 3.5vw, 2.5rem);font-weight:800;letter-spacing:-0.03em;margin:0 0 0.75rem;">2. Cryptographic Security &amp; Anti-Piracy Delivery</h2>
+      <!-- /wp:heading -->
 
-        <div style="background:#ffffff;border:1px solid #D4E8DC;border-radius:14px;padding:1.75rem;">
-          <h3 style="font-size:1.15rem;font-weight:700;color:var(--om-ink);margin-bottom:0.5rem;">SHA-256 HMAC Signed URLs</h3>
-          <p style="font-size:0.9rem;color:var(--om-slate);line-height:1.6;margin:0;">
-            Download requests require a cryptographically verified hash parameter (<code>hash_hmac('sha256')</code>) based on unique customer access keys, order IDs, and timestamps. Direct file URLs are never exposed.
-          </p>
-        </div>
-
-        <div style="background:#ffffff;border:1px solid #D4E8DC;border-radius:14px;padding:1.75rem;">
-          <h3 style="font-size:1.15rem;font-weight:700;color:var(--om-ink);margin-bottom:0.5rem;">Configurable Expiry &amp; Attempt Caps</h3>
-          <p style="font-size:0.9rem;color:var(--om-slate);line-height:1.6;margin:0;">
-            Set global or per-product expiration windows (e.g. 48 hours) and maximum download attempts (e.g. 5 tries). Once exhausted, links automatically invalidate to prevent forum and link sharing.
-          </p>
-        </div>
-
-        <div style="background:#ffffff;border:1px solid #D4E8DC;border-radius:14px;padding:1.75rem;">
-          <h3 style="font-size:1.15rem;font-weight:700;color:var(--om-ink);margin-bottom:0.5rem;">Audit Logs &amp; IP Tracking</h3>
-          <p style="font-size:0.9rem;color:var(--om-slate);line-height:1.6;margin:0;">
-            Every single file download event is recorded in <code>wp_omnify_downloads</code> with exact timestamp, customer ID, IP address, and user-agent string for audit compliance.
-          </p>
-        </div>
-
-      </div>
+      <!-- wp:paragraph {"className":"om-text-muted","style":{"typography":{"fontSize":"1.0625rem","lineHeight":"1.65"}}} -->
+      <p class="om-text-muted" style="font-size:1.0625rem;line-height:1.65;max-width:760px;margin:0;">Protect intellectual property with HMAC cryptographic signatures, strict expiration timestamps, and download attempt limiters.</p>
+      <!-- /wp:paragraph -->
     </div>
-  </section>
-  <!-- /wp:html -->
+    <!-- /wp:group -->
 
-  <!-- Feature Pillar 3: Frictionless Checkout & Order Management -->
-  <!-- wp:html -->
-  <section class="om-section" style="background:#ffffff;padding-top:clamp(4rem, 6vw, 5.5rem);padding-bottom:clamp(3.5rem, 6vw, 5rem);">
-    <div class="om-container" style="max-width:1200px;margin-inline:auto;padding-inline:clamp(1rem,4vw,2.5rem);">
-      
-      <div style="margin-bottom:2.5rem;">
-        <div style="display:inline-flex;align-items:center;gap:0.5rem;font-family:var(--om-font-mono);font-size:0.75rem;font-weight:700;letter-spacing:0.08em;text-transform:uppercase;color:#18794E;background:#ECFDF5;padding:4px 10px;border-radius:6px;margin-bottom:0.75rem;">
-          Sales &amp; Conversions
-        </div>
-        <h2 style="font-family:var(--om-font-heading);font-size:clamp(1.75rem, 3.5vw, 2.5rem);font-weight:800;letter-spacing:-0.03em;color:var(--om-ink);margin:0 0 0.75rem;">
-          3. Frictionless Checkout &amp; Order Fulfillment
-        </h2>
-        <p class="om-text-muted" style="font-size:1.0625rem;line-height:1.65;max-width:760px;margin:0;">
-          Maximize checkout completion rates with 1-page modern checkout, automated abandoned cart recovery, and built-in fraud risk analysis.
-        </p>
+    <!-- wp:group {"className":"om-card-grid","layout":{"type":"default"}} -->
+    <div class="wp-block-group om-card-grid">
+
+      <!-- Feature 2.1 -->
+      <!-- wp:group {"className":"om-card","layout":{"type":"default"}} -->
+      <div class="wp-block-group om-card">
+        <!-- wp:paragraph {"className":"om-card__icon"} -->
+        <p class="om-card__icon">🔐</p>
+        <!-- /wp:paragraph -->
+        <!-- wp:heading {"level":3,"className":"om-card__title"} -->
+        <h3 class="wp-block-heading om-card__title">SHA-256 HMAC Signed URLs</h3>
+        <!-- /wp:heading -->
+        <!-- wp:paragraph {"className":"om-card__body"} -->
+        <p class="om-card__body">Download requests require a cryptographically verified hash parameter (<code>hash_hmac('sha256')</code>) based on unique customer access keys, order IDs, and timestamps. Direct file URLs are never exposed.</p>
+        <!-- /wp:paragraph -->
       </div>
+      <!-- /wp:group -->
 
-      <div style="display:grid;grid-template-columns:repeat(auto-fit, minmax(320px, 1fr));gap:1.75rem;">
-
-        <!-- Feature 3.1 -->
-        <div style="background:#FBFDFB;border:1px solid #E2E8F0;border-radius:14px;padding:1.75rem;">
-          <h3 style="font-size:1.15rem;font-weight:700;color:var(--om-ink);margin-bottom:0.5rem;">Guest Checkout &amp; Order Lookup</h3>
-          <p style="font-size:0.9rem;color:var(--om-slate);line-height:1.6;margin:0;">
-            Customers can checkout instantly without mandatory account creation. A dedicated guest lookup portal lets buyers track status, access digital download tokens, and view invoices with Order ID &amp; email.
-          </p>
-        </div>
-
-        <!-- Feature 3.2 -->
-        <div style="background:#FBFDFB;border:1px solid #E2E8F0;border-radius:14px;padding:1.75rem;">
-          <h3 style="font-size:1.15rem;font-weight:700;color:var(--om-ink);margin-bottom:0.5rem;">Automated Abandoned Cart Recovery</h3>
-          <p style="font-size:0.9rem;color:var(--om-slate);line-height:1.6;margin:0;">
-            Captures abandoned checkout sessions asynchronously via REST API. Configurable delay timers (default 60 mins), coupon incentives, and automated recovery email reminders win back lost sales.
-          </p>
-        </div>
-
-        <!-- Feature 3.3 -->
-        <div style="background:#FBFDFB;border:1px solid #E2E8F0;border-radius:14px;padding:1.75rem;">
-          <h3 style="font-size:1.15rem;font-weight:700;color:var(--om-ink);margin-bottom:0.5rem;">Built-in Fraud Risk Detection</h3>
-          <p style="font-size:0.9rem;color:var(--om-slate);line-height:1.6;margin:0;">
-            Automatic fraud status analysis detects IP country mismatches, disposable/temporary email domains, high-value transaction flags, and repeated checkout attempts.
-          </p>
-        </div>
-
-        <!-- Feature 3.4 -->
-        <div style="background:#FBFDFB;border:1px solid #E2E8F0;border-radius:14px;padding:1.75rem;">
-          <h3 style="font-size:1.15rem;font-weight:700;color:var(--om-ink);margin-bottom:0.5rem;">Advanced Coupon Engine</h3>
-          <p style="font-size:0.9rem;color:var(--om-slate);line-height:1.6;margin:0;">
-            Fixed cart discounts, percentage discounts, minimum spend thresholds, usage limits per user, category exclusions, and first-order-only promotion rules.
-          </p>
-        </div>
-
-        <!-- Feature 3.5 -->
-        <div style="background:#FBFDFB;border:1px solid #E2E8F0;border-radius:14px;padding:1.75rem;">
-          <h3 style="font-size:1.15rem;font-weight:700;color:var(--om-ink);margin-bottom:0.5rem;">Order Management &amp; In-App Refunds</h3>
-          <p style="font-size:0.9rem;color:var(--om-slate);line-height:1.6;margin:0;">
-            Update fulfillment states (processing, shipped, completed), attach carrier tracking numbers, and process full or partial Stripe/PayPal/Razorpay refunds directly within WordPress.
-          </p>
-        </div>
-
-        <!-- Feature 3.6 -->
-        <div style="background:#FBFDFB;border:1px solid #E2E8F0;border-radius:14px;padding:1.75rem;">
-          <h3 style="font-size:1.15rem;font-weight:700;color:var(--om-ink);margin-bottom:0.5rem;">Automated Customer Notifications</h3>
-          <p style="font-size:0.9rem;color:var(--om-slate);line-height:1.6;margin:0;">
-            Built-in HTML email triggers for order confirmations, receipts, payment pending notices, download link access, shipping tracking updates, and refund receipts with full email logging.
-          </p>
-        </div>
-
+      <!-- Feature 2.2 -->
+      <!-- wp:group {"className":"om-card","layout":{"type":"default"}} -->
+      <div class="wp-block-group om-card">
+        <!-- wp:paragraph {"className":"om-card__icon"} -->
+        <p class="om-card__icon">⏱️</p>
+        <!-- /wp:paragraph -->
+        <!-- wp:heading {"level":3,"className":"om-card__title"} -->
+        <h3 class="wp-block-heading om-card__title">Configurable Expiry &amp; Attempt Caps</h3>
+        <!-- /wp:heading -->
+        <!-- wp:paragraph {"className":"om-card__body"} -->
+        <p class="om-card__body">Set global or per-product expiration windows (e.g. 48 hours) and maximum download attempts (e.g. 5 tries). Once exhausted, links automatically invalidate to prevent forum and link sharing.</p>
+        <!-- /wp:paragraph -->
       </div>
+      <!-- /wp:group -->
+
+      <!-- Feature 2.3 -->
+      <!-- wp:group {"className":"om-card","layout":{"type":"default"}} -->
+      <div class="wp-block-group om-card">
+        <!-- wp:paragraph {"className":"om-card__icon"} -->
+        <p class="om-card__icon">📜</p>
+        <!-- /wp:paragraph -->
+        <!-- wp:heading {"level":3,"className":"om-card__title"} -->
+        <h3 class="wp-block-heading om-card__title">Audit Logs &amp; IP Tracking</h3>
+        <!-- /wp:heading -->
+        <!-- wp:paragraph {"className":"om-card__body"} -->
+        <p class="om-card__body">Every single file download event is recorded in <code>wp_omnify_downloads</code> with exact timestamp, customer ID, IP address, and user-agent string for audit compliance.</p>
+        <!-- /wp:paragraph -->
+      </div>
+      <!-- /wp:group -->
+
     </div>
-  </section>
-  <!-- /wp:html -->
+    <!-- /wp:group -->
+  </div>
+  <!-- /wp:group -->
+
+  <!-- Feature Pillar 3: Frictionless Checkout & Order Fulfillment -->
+  <!-- wp:group {"className":"om-section","style":{"spacing":{"padding":{"top":"clamp(4rem, 6vw, 5.5rem)","bottom":"clamp(3.5rem, 6vw, 5rem)"}}},"layout":{"type":"constrained","contentSize":"1200px"}} -->
+  <div class="wp-block-group om-section">
+    <!-- wp:group {"style":{"spacing":{"margin":{"bottom":"2.5rem"}}},"layout":{"type":"default"}} -->
+    <div class="wp-block-group" style="margin-bottom:2.5rem;">
+      <!-- wp:paragraph {"className":"om-badge om-badge--neutral","style":{"typography":{"fontSize":"0.75rem","fontFamily":"var:preset|font-family|mono","fontWeight":"700","letterSpacing":"0.08em","textTransform":"uppercase"},"spacing":{"margin":{"bottom":"0.75rem"}}}} -->
+      <p class="om-badge om-badge--neutral" style="font-family:var(--om-font-mono);font-size:0.75rem;font-weight:700;letter-spacing:0.08em;text-transform:uppercase;margin-bottom:0.75rem;">Sales &amp; Conversions</p>
+      <!-- /wp:paragraph -->
+
+      <!-- wp:heading {"level":2,"style":{"typography":{"fontSize":"clamp(1.75rem, 3.5vw, 2.5rem)","fontWeight":"800","letterSpacing":"-0.03em"}},"textColor":"ink"} -->
+      <h2 class="wp-block-heading has-ink-color has-text-color" style="font-size:clamp(1.75rem, 3.5vw, 2.5rem);font-weight:800;letter-spacing:-0.03em;margin:0 0 0.75rem;">3. Frictionless Checkout &amp; Order Fulfillment</h2>
+      <!-- /wp:heading -->
+
+      <!-- wp:paragraph {"className":"om-text-muted","style":{"typography":{"fontSize":"1.0625rem","lineHeight":"1.65"}}} -->
+      <p class="om-text-muted" style="font-size:1.0625rem;line-height:1.65;max-width:760px;margin:0;">Maximize checkout completion rates with 1-page modern checkout, automated abandoned cart recovery, and built-in fraud risk analysis.</p>
+      <!-- /wp:paragraph -->
+    </div>
+    <!-- /wp:group -->
+
+    <!-- wp:group {"className":"om-card-grid","layout":{"type":"default"}} -->
+    <div class="wp-block-group om-card-grid">
+
+      <!-- Feature 3.1 -->
+      <!-- wp:group {"className":"om-card","layout":{"type":"default"}} -->
+      <div class="wp-block-group om-card">
+        <!-- wp:paragraph {"className":"om-card__icon"} -->
+        <p class="om-card__icon">⚡</p>
+        <!-- /wp:paragraph -->
+        <!-- wp:heading {"level":3,"className":"om-card__title"} -->
+        <h3 class="wp-block-heading om-card__title">Guest Checkout &amp; Order Lookup</h3>
+        <!-- /wp:heading -->
+        <!-- wp:paragraph {"className":"om-card__body"} -->
+        <p class="om-card__body">Customers can checkout instantly without mandatory account creation. A dedicated guest lookup portal lets buyers track status, access digital download tokens, and view invoices with Order ID &amp; email.</p>
+        <!-- /wp:paragraph -->
+      </div>
+      <!-- /wp:group -->
+
+      <!-- Feature 3.2 -->
+      <!-- wp:group {"className":"om-card","layout":{"type":"default"}} -->
+      <div class="wp-block-group om-card">
+        <!-- wp:paragraph {"className":"om-card__icon"} -->
+        <p class="om-card__icon">🛒</p>
+        <!-- /wp:paragraph -->
+        <!-- wp:heading {"level":3,"className":"om-card__title"} -->
+        <h3 class="wp-block-heading om-card__title">Automated Abandoned Cart Recovery</h3>
+        <!-- /wp:heading -->
+        <!-- wp:paragraph {"className":"om-card__body"} -->
+        <p class="om-card__body">Captures abandoned checkout sessions asynchronously via REST API. Configurable delay timers (default 60 mins), coupon incentives, and automated recovery email reminders win back lost sales.</p>
+        <!-- /wp:paragraph -->
+      </div>
+      <!-- /wp:group -->
+
+      <!-- Feature 3.3 -->
+      <!-- wp:group {"className":"om-card","layout":{"type":"default"}} -->
+      <div class="wp-block-group om-card">
+        <!-- wp:paragraph {"className":"om-card__icon"} -->
+        <p class="om-card__icon">🛡️</p>
+        <!-- /wp:paragraph -->
+        <!-- wp:heading {"level":3,"className":"om-card__title"} -->
+        <h3 class="wp-block-heading om-card__title">Built-in Fraud Risk Detection</h3>
+        <!-- /wp:heading -->
+        <!-- wp:paragraph {"className":"om-card__body"} -->
+        <p class="om-card__body">Automatic fraud status analysis detects IP country mismatches, disposable/temporary email domains, high-value transaction flags, and repeated checkout attempts.</p>
+        <!-- /wp:paragraph -->
+      </div>
+      <!-- /wp:group -->
+
+      <!-- Feature 3.4 -->
+      <!-- wp:group {"className":"om-card","layout":{"type":"default"}} -->
+      <div class="wp-block-group om-card">
+        <!-- wp:paragraph {"className":"om-card__icon"} -->
+        <p class="om-card__icon">🏷️</p>
+        <!-- /wp:paragraph -->
+        <!-- wp:heading {"level":3,"className":"om-card__title"} -->
+        <h3 class="wp-block-heading om-card__title">Advanced Coupon Engine</h3>
+        <!-- /wp:heading -->
+        <!-- wp:paragraph {"className":"om-card__body"} -->
+        <p class="om-card__body">Fixed cart discounts, percentage discounts, minimum spend thresholds, usage limits per user, category exclusions, and first-order-only promotion rules.</p>
+        <!-- /wp:paragraph -->
+      </div>
+      <!-- /wp:group -->
+
+      <!-- Feature 3.5 -->
+      <!-- wp:group {"className":"om-card","layout":{"type":"default"}} -->
+      <div class="wp-block-group om-card">
+        <!-- wp:paragraph {"className":"om-card__icon"} -->
+        <p class="om-card__icon">💳</p>
+        <!-- /wp:paragraph -->
+        <!-- wp:heading {"level":3,"className":"om-card__title"} -->
+        <h3 class="wp-block-heading om-card__title">Order Management &amp; In-App Refunds</h3>
+        <!-- /wp:heading -->
+        <!-- wp:paragraph {"className":"om-card__body"} -->
+        <p class="om-card__body">Update fulfillment states (processing, shipped, completed), attach carrier tracking numbers, and process full or partial Stripe/PayPal/Razorpay refunds directly within WordPress.</p>
+        <!-- /wp:paragraph -->
+      </div>
+      <!-- /wp:group -->
+
+      <!-- Feature 3.6 -->
+      <!-- wp:group {"className":"om-card","layout":{"type":"default"}} -->
+      <div class="wp-block-group om-card">
+        <!-- wp:paragraph {"className":"om-card__icon"} -->
+        <p class="om-card__icon">📬</p>
+        <!-- /wp:paragraph -->
+        <!-- wp:heading {"level":3,"className":"om-card__title"} -->
+        <h3 class="wp-block-heading om-card__title">Automated Customer Notifications</h3>
+        <!-- /wp:heading -->
+        <!-- wp:paragraph {"className":"om-card__body"} -->
+        <p class="om-card__body">Built-in HTML email triggers for order confirmations, receipts, payment pending notices, download link access, shipping tracking updates, and refund receipts with full email logging.</p>
+        <!-- /wp:paragraph -->
+      </div>
+      <!-- /wp:group -->
+
+    </div>
+    <!-- /wp:group -->
+  </div>
+  <!-- /wp:group -->
 
   <!-- Feature Pillar 4: Analytics, Tax & Developer Infrastructure -->
-  <!-- wp:html -->
-  <section class="om-section" style="background:#FBFDFB;border-top:1px solid #E6F4EC;padding-top:clamp(4rem, 6vw, 5.5rem);padding-bottom:clamp(3.5rem, 6vw, 5rem);">
-    <div class="om-container" style="max-width:1200px;margin-inline:auto;padding-inline:clamp(1rem,4vw,2.5rem);">
-      
-      <div style="margin-bottom:2.5rem;">
-        <div style="display:inline-flex;align-items:center;gap:0.5rem;font-family:var(--om-font-mono);font-size:0.75rem;font-weight:700;letter-spacing:0.08em;text-transform:uppercase;color:#18794E;background:#ECFDF5;padding:4px 10px;border-radius:6px;margin-bottom:0.75rem;">
-          Operations &amp; Architecture
-        </div>
-        <h2 style="font-family:var(--om-font-heading);font-size:clamp(1.75rem, 3.5vw, 2.5rem);font-weight:800;letter-spacing:-0.03em;color:var(--om-ink);margin:0 0 0.75rem;">
-          4. Analytics, Taxation &amp; Developer Tools
-        </h2>
-        <p class="om-text-muted" style="font-size:1.0625rem;line-height:1.65;max-width:760px;margin:0;">
-          Real-time reporting, granular regional tax rules, activity audit logs, and REST API keys for modern store operations.
-        </p>
-      </div>
+  <!-- wp:group {"className":"om-section","style":{"spacing":{"padding":{"top":"clamp(4rem, 6vw, 5.5rem)","bottom":"clamp(3.5rem, 6vw, 5rem)"}}},"backgroundColor":"background-alt","layout":{"type":"constrained","contentSize":"1200px"}} -->
+  <div class="wp-block-group om-section has-background-alt-background-color has-background" style="border-top:1px solid #E6F4EC;">
+    <!-- wp:group {"style":{"spacing":{"margin":{"bottom":"2.5rem"}}},"layout":{"type":"default"}} -->
+    <div class="wp-block-group" style="margin-bottom:2.5rem;">
+      <!-- wp:paragraph {"className":"om-badge om-badge--neutral","style":{"typography":{"fontSize":"0.75rem","fontFamily":"var:preset|font-family|mono","fontWeight":"700","letterSpacing":"0.08em","textTransform":"uppercase"},"spacing":{"margin":{"bottom":"0.75rem"}}}} -->
+      <p class="om-badge om-badge--neutral" style="font-family:var(--om-font-mono);font-size:0.75rem;font-weight:700;letter-spacing:0.08em;text-transform:uppercase;margin-bottom:0.75rem;">Operations &amp; Architecture</p>
+      <!-- /wp:paragraph -->
 
-      <div style="display:grid;grid-template-columns:repeat(auto-fit, minmax(280px, 1fr));gap:1.5rem;">
+      <!-- wp:heading {"level":2,"style":{"typography":{"fontSize":"clamp(1.75rem, 3.5vw, 2.5rem)","fontWeight":"800","letterSpacing":"-0.03em"}},"textColor":"ink"} -->
+      <h2 class="wp-block-heading has-ink-color has-text-color" style="font-size:clamp(1.75rem, 3.5vw, 2.5rem);font-weight:800;letter-spacing:-0.03em;margin:0 0 0.75rem;">4. Analytics, Taxation &amp; Developer Tools</h2>
+      <!-- /wp:heading -->
 
-        <!-- Analytics -->
-        <div style="background:#ffffff;border:1px solid #E2E8F0;border-radius:12px;padding:1.5rem;">
-          <h3 style="font-size:1.05rem;font-weight:700;color:var(--om-ink);margin-bottom:0.5rem;">Real-Time Sales Analytics</h3>
-          <p style="font-size:0.875rem;color:var(--om-slate);line-height:1.6;margin:0;">
-            Track gross sales, net revenue, refund percentages, average order value (AOV), and digital asset delivery volume without slow third-party analytics trackers.
-          </p>
-        </div>
-
-        <!-- Regional Tax Engine -->
-        <div style="background:#ffffff;border:1px solid #E2E8F0;border-radius:12px;padding:1.5rem;">
-          <h3 style="font-size:1.05rem;font-weight:700;color:var(--om-ink);margin-bottom:0.5rem;">Flexible Tax &amp; Delivery Zones</h3>
-          <p style="font-size:0.875rem;color:var(--om-slate);line-height:1.6;margin:0;">
-            Configure country/state tax rates, tax-inclusive vs tax-exclusive pricing, tax-exempt customer flags, and customized delivery zone rate tables.
-          </p>
-        </div>
-
-        <!-- REST API -->
-        <div style="background:#ffffff;border:1px solid #E2E8F0;border-radius:12px;padding:1.5rem;">
-          <h3 style="font-size:1.05rem;font-weight:700;color:var(--om-ink);margin-bottom:0.5rem;">Headless REST API</h3>
-          <p style="font-size:0.875rem;color:var(--om-slate);line-height:1.6;margin:0;">
-            Full REST API namespace (<code>omnify/v1/*</code>) for connecting mobile apps, Jamstack storefronts, accounting ERPs, and external fulfillment tools.
-          </p>
-        </div>
-
-        <!-- API Keys -->
-        <div style="background:#ffffff;border:1px solid #E2E8F0;border-radius:12px;padding:1.5rem;">
-          <h3 style="font-size:1.05rem;font-weight:700;color:var(--om-ink);margin-bottom:0.5rem;">Granular API Key Management</h3>
-          <p style="font-size:0.875rem;color:var(--om-slate);line-height:1.6;margin:0;">
-            Generate consumer keys and secrets under Tools &gt; API Keys with Read, Write, or Read/Write permission scopes tied to WordPress user roles.
-          </p>
-        </div>
-
-        <!-- Activity Logs -->
-        <div style="background:#ffffff;border:1px solid #E2E8F0;border-radius:12px;padding:1.5rem;">
-          <h3 style="font-size:1.05rem;font-weight:700;color:var(--om-ink);margin-bottom:0.5rem;">Activity Audit Logs</h3>
-          <p style="font-size:0.875rem;color:var(--om-slate);line-height:1.6;margin:0;">
-            Every administrative action, stock modification, order refund, and status update is logged with user ID, IP address, and timestamp in <code>wp_omnify_admin_activities</code>.
-          </p>
-        </div>
-
-        <!-- CSV Portability -->
-        <div style="background:#ffffff;border:1px solid #E2E8F0;border-radius:12px;padding:1.5rem;">
-          <h3 style="font-size:1.05rem;font-weight:700;color:var(--om-ink);margin-bottom:0.5rem;">CSV Import &amp; Export</h3>
-          <p style="font-size:0.875rem;color:var(--om-slate);line-height:1.6;margin:0;">
-            Seamless migration with 1-click product catalog CSV import and instant order/customer dataset exports for accounting spreadsheets and bookkeeping.
-          </p>
-        </div>
-
-      </div>
+      <!-- wp:paragraph {"className":"om-text-muted","style":{"typography":{"fontSize":"1.0625rem","lineHeight":"1.65"}}} -->
+      <p class="om-text-muted" style="font-size:1.0625rem;line-height:1.65;max-width:760px;margin:0;">Real-time reporting, granular regional tax rules, activity audit logs, and REST API keys for modern store operations.</p>
+      <!-- /wp:paragraph -->
     </div>
-  </section>
-  <!-- /wp:html -->
+    <!-- /wp:group -->
+
+    <!-- wp:group {"className":"om-card-grid","layout":{"type":"default"}} -->
+    <div class="wp-block-group om-card-grid">
+
+      <!-- Analytics -->
+      <!-- wp:group {"className":"om-card","layout":{"type":"default"}} -->
+      <div class="wp-block-group om-card">
+        <!-- wp:paragraph {"className":"om-card__icon"} -->
+        <p class="om-card__icon">📊</p>
+        <!-- /wp:paragraph -->
+        <!-- wp:heading {"level":3,"className":"om-card__title"} -->
+        <h3 class="wp-block-heading om-card__title">Real-Time Sales Analytics</h3>
+        <!-- /wp:heading -->
+        <!-- wp:paragraph {"className":"om-card__body"} -->
+        <p class="om-card__body">Track gross sales, net revenue, refund percentages, average order value (AOV), and digital asset delivery volume without slow third-party analytics trackers.</p>
+        <!-- /wp:paragraph -->
+      </div>
+      <!-- /wp:group -->
+
+      <!-- Regional Tax Engine -->
+      <!-- wp:group {"className":"om-card","layout":{"type":"default"}} -->
+      <div class="wp-block-group om-card">
+        <!-- wp:paragraph {"className":"om-card__icon"} -->
+        <p class="om-card__icon">🌐</p>
+        <!-- /wp:paragraph -->
+        <!-- wp:heading {"level":3,"className":"om-card__title"} -->
+        <h3 class="wp-block-heading om-card__title">Flexible Tax &amp; Delivery Zones</h3>
+        <!-- /wp:heading -->
+        <!-- wp:paragraph {"className":"om-card__body"} -->
+        <p class="om-card__body">Configure country/state tax rates, tax-inclusive vs tax-exclusive pricing, tax-exempt customer flags, and customized delivery zone rate tables.</p>
+        <!-- /wp:paragraph -->
+      </div>
+      <!-- /wp:group -->
+
+      <!-- REST API -->
+      <!-- wp:group {"className":"om-card","layout":{"type":"default"}} -->
+      <div class="wp-block-group om-card">
+        <!-- wp:paragraph {"className":"om-card__icon"} -->
+        <p class="om-card__icon">🔌</p>
+        <!-- /wp:paragraph -->
+        <!-- wp:heading {"level":3,"className":"om-card__title"} -->
+        <h3 class="wp-block-heading om-card__title">Headless REST API</h3>
+        <!-- /wp:heading -->
+        <!-- wp:paragraph {"className":"om-card__body"} -->
+        <p class="om-card__body">Full REST API namespace (<code>omnify/v1/*</code>) for connecting mobile apps, Jamstack storefronts, accounting ERPs, and external fulfillment tools.</p>
+        <!-- /wp:paragraph -->
+      </div>
+      <!-- /wp:group -->
+
+      <!-- API Keys -->
+      <!-- wp:group {"className":"om-card","layout":{"type":"default"}} -->
+      <div class="wp-block-group om-card">
+        <!-- wp:paragraph {"className":"om-card__icon"} -->
+        <p class="om-card__icon">🔑</p>
+        <!-- /wp:paragraph -->
+        <!-- wp:heading {"level":3,"className":"om-card__title"} -->
+        <h3 class="wp-block-heading om-card__title">Granular API Key Management</h3>
+        <!-- /wp:heading -->
+        <!-- wp:paragraph {"className":"om-card__body"} -->
+        <p class="om-card__body">Generate consumer keys and secrets under Tools &gt; API Keys with Read, Write, or Read/Write permission scopes tied to WordPress user roles.</p>
+        <!-- /wp:paragraph -->
+      </div>
+      <!-- /wp:group -->
+
+      <!-- Activity Logs -->
+      <!-- wp:group {"className":"om-card","layout":{"type":"default"}} -->
+      <div class="wp-block-group om-card">
+        <!-- wp:paragraph {"className":"om-card__icon"} -->
+        <p class="om-card__icon">📝</p>
+        <!-- /wp:paragraph -->
+        <!-- wp:heading {"level":3,"className":"om-card__title"} -->
+        <h3 class="wp-block-heading om-card__title">Activity Audit Logs</h3>
+        <!-- /wp:heading -->
+        <!-- wp:paragraph {"className":"om-card__body"} -->
+        <p class="om-card__body">Every administrative action, stock modification, order refund, and status update is logged with user ID, IP address, and timestamp in <code>wp_omnify_admin_activities</code>.</p>
+        <!-- /wp:paragraph -->
+      </div>
+      <!-- /wp:group -->
+
+      <!-- CSV Portability -->
+      <!-- wp:group {"className":"om-card","layout":{"type":"default"}} -->
+      <div class="wp-block-group om-card">
+        <!-- wp:paragraph {"className":"om-card__icon"} -->
+        <p class="om-card__icon">📁</p>
+        <!-- /wp:paragraph -->
+        <!-- wp:heading {"level":3,"className":"om-card__title"} -->
+        <h3 class="wp-block-heading om-card__title">CSV Import &amp; Export</h3>
+        <!-- /wp:heading -->
+        <!-- wp:paragraph {"className":"om-card__body"} -->
+        <p class="om-card__body">Seamless migration with 1-click product catalog CSV import and instant order/customer dataset exports for accounting spreadsheets and bookkeeping.</p>
+        <!-- /wp:paragraph -->
+      </div>
+      <!-- /wp:group -->
+
+    </div>
+    <!-- /wp:group -->
+  </div>
+  <!-- /wp:group -->
 
   <!-- Live Mockup Feature Splits -->
   <!-- wp:pattern {"slug":"omnify/feature-split-catalog"} /-->

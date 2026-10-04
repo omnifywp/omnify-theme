@@ -1,15 +1,28 @@
 <!-- wp:template-part {"slug":"header","tagName":"header"} /-->
 
-<!-- wp:group {"tagName":"main","style":{"spacing":{"padding":{"top":"120px","bottom":"140px","left":"32px","right":"32px"}}},"layout":{"type":"constrained","contentSize":"700px"}} -->
-<main class="wp-block-group" style="text-align:center;">
-  <!-- wp:html -->
-  <div style="font-family:var(--omnify-font-mono);font-size:1rem;color:var(--omnify-brand-cyan);font-weight:700;margin-bottom:16px;">ERROR 404</div>
-  <h1 style="font-family:var(--omnify-font-heading);font-size:3.5rem;font-weight:800;letter-spacing:-0.035em;margin:0 0 16px;color:var(--omnify-text-main);">Page Not Found</h1>
-  <p style="color:var(--omnify-text-muted);font-size:1.1rem;line-height:1.6;margin-bottom:32px;">
-    The item or page you are looking for does not exist or has been moved to a different catalog category.
-  </p>
-  <a href="/storefront/" style="display:inline-block;background:var(--omnify-brand-gradient);color:#fff;font-family:var(--omnify-font-heading);font-weight:700;padding:12px 28px;border-radius:10px;text-decoration:none;box-shadow:0 6px 20px rgba(56,189,248,0.35);">Return to Storefront Catalog →</a>
-  <!-- /wp:html -->
+<!-- wp:group {"tagName":"main","className":"om-section om-text-center","style":{"spacing":{"padding":{"top":"clamp(5rem, 8vw, 8rem)","bottom":"clamp(5rem, 8vw, 8rem)"}}},"layout":{"type":"constrained","contentSize":"640px"}} -->
+<main class="wp-block-group om-section om-text-center">
+
+  <!-- wp:paragraph {"className":"om-eyebrow","style":{"typography":{"fontFamily":"var:preset|font-family|mono","fontWeight":"700"}}} -->
+  <p class="om-eyebrow" style="font-family:var(--om-font-mono);font-weight:700;">ERROR 404</p>
+  <!-- /wp:paragraph -->
+
+  <!-- wp:heading {"level":1,"style":{"typography":{"fontSize":"clamp(2.5rem, 5vw, 3.8rem)","fontWeight":"800","letterSpacing":"-0.035em"}},"className":"om-hero-title"} -->
+  <h1 class="wp-block-heading om-hero-title" style="font-size:clamp(2.5rem, 5vw, 3.8rem);font-weight:800;letter-spacing:-0.035em;">Page Not Found</h1>
+  <!-- /wp:heading -->
+
+  <!-- wp:paragraph {"className":"om-hero-desc","style":{"typography":{"fontSize":"1.125rem","lineHeight":"1.65"},"spacing":{"margin":{"bottom":"2rem"}}}} -->
+  <p class="om-hero-desc" style="font-size:1.125rem;line-height:1.65;margin-bottom:2rem;">The item or page you are looking for does not exist or has been moved to a different catalog category.</p>
+  <!-- /wp:paragraph -->
+
+  <!-- wp:buttons {"layout":{"type":"flex","justifyContent":"center"}} -->
+  <div class="wp-block-buttons">
+    <!-- wp:button {"className":"om-btn--primary"} -->
+    <div class="wp-block-button om-btn--primary"><a class="wp-block-button__link" href="/">Return to Home &rarr;</a></div>
+    <!-- /wp:button -->
+  </div>
+  <!-- /wp:buttons -->
+
 </main>
 <!-- /wp:group -->
 

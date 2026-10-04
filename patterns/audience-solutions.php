@@ -3,121 +3,155 @@
  * Title: Audience Solutions — Who OmnifyWP is For
  * Slug: omnify/audience-solutions
  * Categories: omnify-features
+ * Block Types: core/group
  */
 
 defined( 'ABSPATH' ) || exit;
 ?>
 
-<!-- wp:html -->
-<section class="om-section" style="background:#ffffff;padding-top:clamp(4rem, 6vw, 5.5rem);padding-bottom:clamp(4rem, 6vw, 5.5rem);border-top:1px solid #E6F4EC;">
-	<div class="om-container" style="max-width:1240px;margin-inline:auto;padding-inline:clamp(1rem,4vw,2.5rem);">
+<!-- wp:group {"tagName":"section","className":"om-section om-audience-section","style":{"spacing":{"padding":{"top":"clamp(4rem, 6vw, 5.5rem)","bottom":"clamp(4rem, 6vw, 5.5rem)"}}},"layout":{"type":"constrained","contentSize":"1240px"}} -->
+<section class="wp-block-group om-section om-audience-section">
 
-		<!-- Header -->
-		<div class="om-text-center" style="max-width:740px;margin-inline:auto;margin-bottom:3.5rem;">
-			<span class="om-eyebrow">Tailored Solutions</span>
-			<h2 style="font-size:clamp(2rem, 3.8vw, 2.75rem);font-weight:800;letter-spacing:-0.035em;color:var(--om-ink);margin-top:0.75rem;margin-bottom:1rem;line-height:1.2;text-wrap:balance;">
-				Built for creators, merchants, and developers
-			</h2>
-			<p class="om-text-muted" style="font-size:1.0625rem;line-height:1.7;">
-				Whether you sell downloadable assets, ship physical products, or build high-volume custom storefronts for clients.
-			</p>
+	<!-- Header Area -->
+	<!-- wp:group {"className":"om-text-center","style":{"spacing":{"margin":{"bottom":"3.5rem"}}},"layout":{"type":"constrained","contentSize":"740px"}} -->
+	<div class="wp-block-group om-text-center" style="margin-bottom:3.5rem">
+		<!-- wp:paragraph {"className":"om-eyebrow"} -->
+		<p class="om-eyebrow">Tailored Solutions</p>
+		<!-- /wp:paragraph -->
+
+		<!-- wp:heading {"level":2,"style":{"typography":{"fontSize":"clamp(2rem, 3.8vw, 2.75rem)","fontWeight":"800","letterSpacing":"-0.035em","lineHeight":"1.2"}}} -->
+		<h2 class="wp-block-heading" style="font-size:clamp(2rem, 3.8vw, 2.75rem);font-weight:800;letter-spacing:-0.035em;line-height:1.2">Built for creators, merchants, and developers</h2>
+		<!-- /wp:heading -->
+
+		<!-- wp:paragraph {"className":"om-text-muted","style":{"typography":{"fontSize":"1.0625rem","lineHeight":"1.7"}}} -->
+		<p class="om-text-muted" style="font-size:1.0625rem;line-height:1.7">Whether you sell downloadable assets, ship physical products, or build high-volume custom storefronts for clients.</p>
+		<!-- /wp:paragraph -->
+	</div>
+	<!-- /wp:group -->
+
+	<!-- 3 Columns -->
+	<!-- wp:columns {"className":"om-solutions-grid"} -->
+	<div class="wp-block-columns om-solutions-grid">
+
+		<!-- Column 1: Digital Creators -->
+		<!-- wp:column {"className":"om-solution-card"} -->
+		<div class="wp-block-column om-solution-card">
+			<!-- wp:paragraph {"className":"om-solution-badge"} -->
+			<p class="om-solution-badge">For Digital Creators</p>
+			<!-- /wp:paragraph -->
+
+			<!-- wp:heading {"level":3,"className":"om-solution-title"} -->
+			<h3 class="wp-block-heading om-solution-title">Sell software, courses &amp; digital files with zero piracy risk</h3>
+			<!-- /wp:heading -->
+
+			<!-- wp:paragraph {"className":"om-solution-desc"} -->
+			<p class="om-solution-desc">Stop paying hefty monthly percentages on Gumroad or Patreon. Host your files on your own cloud or server with automated HMAC download security and customer license management.</p>
+			<!-- /wp:paragraph -->
+
+			<!-- wp:list {"className":"om-check-list"} -->
+			<ul class="wp-block-list om-check-list">
+				<!-- wp:list-item -->
+				<li>Time-limited &amp; download-capped links</li>
+				<!-- /wp:list-item -->
+				<!-- wp:list-item -->
+				<li>Automated customer download portal</li>
+				<!-- /wp:list-item -->
+				<!-- wp:list-item -->
+				<li>License key generation &amp; validation</li>
+				<!-- /wp:list-item -->
+			</ul>
+			<!-- /wp:list -->
+
+			<!-- wp:buttons {"className":"om-solution-btn-wrap"} -->
+			<div class="wp-block-buttons om-solution-btn-wrap">
+				<!-- wp:button {"className":"om-btn--secondary"} -->
+				<div class="wp-block-button om-btn--secondary"><a class="wp-block-button__link" href="https://playground.wordpress.net/?blueprint-url=https%3A%2F%2Fraw.githubusercontent.com%2Fomnifywp%2Fomnifywp-ecommerce%2Fmain%2Fblueprint.json" target="_blank" rel="noopener noreferrer">Test Digital Store Demo &rarr;</a></div>
+				<!-- /wp:button -->
+			</div>
+			<!-- /wp:buttons -->
 		</div>
+		<!-- /wp:column -->
 
-		<!-- 3 Audience Columns Grid -->
-		<div class="om-solutions-grid">
+		<!-- Column 2: Physical Merchants -->
+		<!-- wp:column {"className":"om-solution-card"} -->
+		<div class="wp-block-column om-solution-card">
+			<!-- wp:paragraph {"className":"om-solution-badge"} -->
+			<p class="om-solution-badge">For Physical Merchants</p>
+			<!-- /wp:paragraph -->
 
-			<!-- Solution 1: Digital Creators & Educators -->
-			<div class="om-solution-card" style="background:#FBFDFB;border:1px solid #E2E8F0;border-radius:18px;padding:2.25rem;display:flex;flex-direction:column;justify-content:space-between;box-shadow:0 4px 16px rgba(11,81,53,0.04);transition:transform 0.2s ease, box-shadow 0.2s ease;">
-				<div>
-					<div style="display:inline-block;padding:4px 12px;background:#E6F4EC;color:#0B5135;border-radius:9999px;font-size:0.75rem;font-weight:700;letter-spacing:0.04em;text-transform:uppercase;margin-bottom:1.25rem;">
-						For Digital Creators
-					</div>
-					<h3 style="font-family:var(--om-font-heading);font-size:1.3rem;font-weight:700;color:var(--om-ink);margin-bottom:0.75rem;line-height:1.3;">
-						Sell software, courses &amp; digital files with zero piracy risk
-					</h3>
-					<p style="font-size:0.9375rem;color:var(--om-slate);line-height:1.65;margin-bottom:1.5rem;">
-						Stop paying hefty monthly percentages on Gumroad or Patreon. Host your files on your own cloud or server with automated HMAC download security and customer license management.
-					</p>
+			<!-- wp:heading {"level":3,"className":"om-solution-title"} -->
+			<h3 class="wp-block-heading om-solution-title">Run a fast, lightweight catalog without server crashes</h3>
+			<!-- /wp:heading -->
 
-					<ul style="list-style:none;padding:0;margin:0 0 1.5rem;display:flex;flex-direction:column;gap:0.75rem;">
-						<li style="display:flex;align-items:center;gap:0.5rem;font-size:0.875rem;color:var(--om-ink);font-weight:600;">
-							<span style="color:#22A06B;">✓</span> Time-limited &amp; download-capped links
-						</li>
-						<li style="display:flex;align-items:center;gap:0.5rem;font-size:0.875rem;color:var(--om-ink);font-weight:600;">
-							<span style="color:#22A06B;">✓</span> Automated customer download portal
-						</li>
-						<li style="display:flex;align-items:center;gap:0.5rem;font-size:0.875rem;color:var(--om-ink);font-weight:600;">
-							<span style="color:#22A06B;">✓</span> License key generation &amp; validation
-						</li>
-					</ul>
-				</div>
-				<a href="https://playground.wordpress.net/?blueprint-url=https%3A%2F%2Fraw.githubusercontent.com%2Fomnifywp%2Fomnifywp-ecommerce%2Fmain%2Fblueprint.json" class="om-btn om-btn--secondary" target="_blank" rel="noopener noreferrer" style="justify-content:center;background:#ffffff;font-size:0.875rem;padding:0.75rem 1.25rem;">
-					Test Digital Store Demo &rarr;
-				</a>
+			<!-- wp:paragraph {"className":"om-solution-desc"} -->
+			<p class="om-solution-desc">Say goodbye to heavy database tables crashing during Black Friday flash sales. Manage variable swatches, weight-based shipping rates, orders, and fulfillment effortlessly.</p>
+			<!-- /wp:paragraph -->
+
+			<!-- wp:list {"className":"om-check-list"} -->
+			<ul class="wp-block-list om-check-list">
+				<!-- wp:list-item -->
+				<li>Multi-attribute variable stock control</li>
+				<!-- /wp:list-item -->
+				<!-- wp:list-item -->
+				<li>Guest order tracking without logins</li>
+				<!-- /wp:list-item -->
+				<!-- wp:list-item -->
+				<li>Coupon promotions &amp; cart recovery</li>
+				<!-- /wp:list-item -->
+			</ul>
+			<!-- /wp:list -->
+
+			<!-- wp:buttons {"className":"om-solution-btn-wrap"} -->
+			<div class="wp-block-buttons om-solution-btn-wrap">
+				<!-- wp:button {"className":"om-btn--secondary"} -->
+				<div class="wp-block-button om-btn--secondary"><a class="wp-block-button__link" href="/features/">Explore Catalog Features &rarr;</a></div>
+				<!-- /wp:button -->
 			</div>
-
-			<!-- Solution 2: Physical Retailers & Brands -->
-			<div class="om-solution-card" style="background:#FBFDFB;border:1px solid #E2E8F0;border-radius:18px;padding:2.25rem;display:flex;flex-direction:column;justify-content:space-between;box-shadow:0 4px 16px rgba(11,81,53,0.04);transition:transform 0.2s ease, box-shadow 0.2s ease;">
-				<div>
-					<div style="display:inline-block;padding:4px 12px;background:#E6F4EC;color:#0B5135;border-radius:9999px;font-size:0.75rem;font-weight:700;letter-spacing:0.04em;text-transform:uppercase;margin-bottom:1.25rem;">
-						For Physical Merchants
-					</div>
-					<h3 style="font-family:var(--om-font-heading);font-size:1.3rem;font-weight:700;color:var(--om-ink);margin-bottom:0.75rem;line-height:1.3;">
-						Run a fast, lightweight catalog without server crashes
-					</h3>
-					<p style="font-size:0.9375rem;color:var(--om-slate);line-height:1.65;margin-bottom:1.5rem;">
-						Say goodbye to heavy database tables crashing during Black Friday flash sales. Manage variable swatches, weight-based shipping rates, orders, and fulfillment effortlessly.
-					</p>
-
-					<ul style="list-style:none;padding:0;margin:0 0 1.5rem;display:flex;flex-direction:column;gap:0.75rem;">
-						<li style="display:flex;align-items:center;gap:0.5rem;font-size:0.875rem;color:var(--om-ink);font-weight:600;">
-							<span style="color:#22A06B;">✓</span> Multi-attribute variable stock control
-						</li>
-						<li style="display:flex;align-items:center;gap:0.5rem;font-size:0.875rem;color:var(--om-ink);font-weight:600;">
-							<span style="color:#22A06B;">✓</span> Guest order tracking without logins
-						</li>
-						<li style="display:flex;align-items:center;gap:0.5rem;font-size:0.875rem;color:var(--om-ink);font-weight:600;">
-							<span style="color:#22A06B;">✓</span> Coupon promotions &amp; cart recovery
-						</li>
-					</ul>
-				</div>
-				<a href="/features/" class="om-btn om-btn--secondary" style="justify-content:center;background:#ffffff;font-size:0.875rem;padding:0.75rem 1.25rem;">
-					Explore Catalog Features &rarr;
-				</a>
-			</div>
-
-			<!-- Solution 3: Agencies & Developers -->
-			<div class="om-solution-card" style="background:#FBFDFB;border:1px solid #E2E8F0;border-radius:18px;padding:2.25rem;display:flex;flex-direction:column;justify-content:space-between;box-shadow:0 4px 16px rgba(11,81,53,0.04);transition:transform 0.2s ease, box-shadow 0.2s ease;">
-				<div>
-					<div style="display:inline-block;padding:4px 12px;background:#E6F4EC;color:#0B5135;border-radius:9999px;font-size:0.75rem;font-weight:700;letter-spacing:0.04em;text-transform:uppercase;margin-bottom:1.25rem;">
-						For Agencies &amp; Developers
-					</div>
-					<h3 style="font-family:var(--om-font-heading);font-size:1.3rem;font-weight:700;color:var(--om-ink);margin-bottom:0.75rem;line-height:1.3;">
-						Deliver lightning-fast client eCommerce with clean code
-					</h3>
-					<p style="font-size:0.9375rem;color:var(--om-slate);line-height:1.65;margin-bottom:1.5rem;">
-						No bloated plugin dependencies or conflicts with client caching stacks. Extend OmnifyWP using standard WordPress hooks, clean REST API endpoints, and webhook automation.
-					</p>
-
-					<ul style="list-style:none;padding:0;margin:0 0 1.5rem;display:flex;flex-direction:column;gap:0.75rem;">
-						<li style="display:flex;align-items:center;gap:0.5rem;font-size:0.875rem;color:var(--om-ink);font-weight:600;">
-							<span style="color:#22A06B;">✓</span> Granular Read/Write API keys
-						</li>
-						<li style="display:flex;align-items:center;gap:0.5rem;font-size:0.875rem;color:var(--om-ink);font-weight:600;">
-							<span style="color:#22A06B;">✓</span> Complete event &amp; activity audit logs
-						</li>
-						<li style="display:flex;align-items:center;gap:0.5rem;font-size:0.875rem;color:var(--om-ink);font-weight:600;">
-							<span style="color:#22A06B;">✓</span> 100% theme &amp; page builder compatible
-						</li>
-					</ul>
-				</div>
-				<a href="https://omnifywp.com/doc/" class="om-btn om-btn--secondary" target="_blank" rel="noopener noreferrer" style="justify-content:center;background:#ffffff;font-size:0.875rem;padding:0.75rem 1.25rem;">
-					View API Documentation &rarr;
-				</a>
-			</div>
-
+			<!-- /wp:buttons -->
 		</div>
+		<!-- /wp:column -->
+
+		<!-- Column 3: Agencies & Developers -->
+		<!-- wp:column {"className":"om-solution-card"} -->
+		<div class="wp-block-column om-solution-card">
+			<!-- wp:paragraph {"className":"om-solution-badge"} -->
+			<p class="om-solution-badge">For Agencies &amp; Developers</p>
+			<!-- /wp:paragraph -->
+
+			<!-- wp:heading {"level":3,"className":"om-solution-title"} -->
+			<h3 class="wp-block-heading om-solution-title">Deliver lightning-fast client eCommerce with clean code</h3>
+			<!-- /wp:heading -->
+
+			<!-- wp:paragraph {"className":"om-solution-desc"} -->
+			<p class="om-solution-desc">No bloated plugin dependencies or conflicts with client caching stacks. Extend OmnifyWP using standard WordPress hooks, clean REST API endpoints, and webhook automation.</p>
+			<!-- /wp:paragraph -->
+
+			<!-- wp:list {"className":"om-check-list"} -->
+			<ul class="wp-block-list om-check-list">
+				<!-- wp:list-item -->
+				<li>Granular Read/Write API keys</li>
+				<!-- /wp:list-item -->
+				<!-- wp:list-item -->
+				<li>Complete event &amp; activity audit logs</li>
+				<!-- /wp:list-item -->
+				<!-- wp:list-item -->
+				<li>100% theme &amp; page builder compatible</li>
+				<!-- /wp:list-item -->
+			</ul>
+			<!-- /wp:list -->
+
+			<!-- wp:buttons {"className":"om-solution-btn-wrap"} -->
+			<div class="wp-block-buttons om-solution-btn-wrap">
+				<!-- wp:button {"className":"om-btn--secondary"} -->
+				<div class="wp-block-button om-btn--secondary"><a class="wp-block-button__link" href="https://omnifywp.com/doc/" target="_blank" rel="noopener noreferrer">View API Documentation &rarr;</a></div>
+				<!-- /wp:button -->
+			</div>
+			<!-- /wp:buttons -->
+		</div>
+		<!-- /wp:column -->
 
 	</div>
+	<!-- /wp:columns -->
+
 </section>
-<!-- /wp:html -->
+<!-- /wp:group -->
