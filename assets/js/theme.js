@@ -405,14 +405,21 @@
     } catch ( _ ) {}
 
     if ( ! isDismissed ) {
-      window.addEventListener( 'scroll', function () {
-        if ( isDismissed ) return;
+      function checkFloatingBar() {
+        // Hide completely on mobile and tablet (<= 1024px)
+        if ( isDismissed || window.innerWidth <= 1024 ) {
+          floatingBar.classList.remove( 'is-visible' );
+          return;
+        }
         if ( window.scrollY > 550 ) {
           floatingBar.classList.add( 'is-visible' );
         } else {
           floatingBar.classList.remove( 'is-visible' );
         }
-      }, { passive: true } );
+      }
+
+      window.addEventListener( 'scroll', checkFloatingBar, { passive: true } );
+      window.addEventListener( 'resize', checkFloatingBar, { passive: true } );
 
       if ( floatingClose ) {
         floatingClose.addEventListener( 'click', function () {

@@ -4333,9 +4333,14 @@ footer:has(.om-site-footer) {
   color: #FFFFFF;
 }
 
-@media (max-width: 680px) {
-  .om-floating-bar__lead {
-    display: none;
+@media (max-width: 1024px) {
+  .om-floating-bar,
+  #om-floating-bar {
+    display: none !important;
+    visibility: hidden !important;
+    opacity: 0 !important;
+    pointer-events: none !important;
+    transform: translateY(200%) !important;
   }
 }
 
@@ -5805,30 +5810,14 @@ footer:has(.om-site-footer) {
     -webkit-overflow-scrolling: touch;
   }
 
-  /* Floating Conversion Bar */
-  .om-floating-bar {
-    padding: 0.6rem 1rem !important;
-  }
-
-  .om-floating-bar__inner {
-    flex-direction: column !important;
-    text-align: center !important;
-    gap: 0.6rem !important;
-  }
-
-  .om-floating-bar__lead {
-    justify-content: center !important;
-  }
-
-  .om-floating-bar__actions {
-    width: 100% !important;
-    justify-content: center !important;
-  }
-
-  .om-floating-bar__actions a {
-    flex: 1 !important;
-    text-align: center !important;
-    justify-content: center !important;
+  /* Hide Floating Conversion Bar / Popup on Mobile and Tablet */
+  .om-floating-bar,
+  #om-floating-bar {
+    display: none !important;
+    visibility: hidden !important;
+    opacity: 0 !important;
+    pointer-events: none !important;
+    transform: translateY(200%) !important;
   }
 }
 
