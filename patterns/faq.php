@@ -150,7 +150,7 @@ defined( 'ABSPATH' ) || exit;
 			<div class="wp-block-button om-btn--secondary"><a class="wp-block-button__link" href="https://omnifywp.com/doc/" target="_blank" rel="noopener noreferrer">Browse Documentation &rarr;</a></div>
 			<!-- /wp:button -->
 			<!-- wp:button {"className":"om-btn--primary"} -->
-			<div class="wp-block-button om-btn--primary"><a class="wp-block-button__link" href="/contact/">Contact Support &rarr;</a></div>
+			<div class="wp-block-button om-btn--primary"><a class="wp-block-button__link" href="https://wordpress.org/support/plugin/omnifywp-ecommerce/" target="_blank" rel="noopener noreferrer">Get Community Support &rarr;</a></div>
 			<!-- /wp:button -->
 		</div>
 		<!-- /wp:buttons -->
