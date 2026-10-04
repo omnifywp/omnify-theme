@@ -382,3 +382,8 @@ HTML;
     }
     return $html;
 }
+
+/* ============================================================
+ * Demo Content Importer & Updater
+ * ============================================================ */
+require_once get_template_directory() . '/inc/class-demo-content.php';

@@ -60,12 +60,40 @@ omnify/
 
 ---
 
-## 🚀 Installation & Setup
+## 📱 100% Mobile Responsive Design
 
-1. Copy or clone this folder into `wp-content/themes/omnify` on your WordPress installation (or install via the `omnify-marketing.zip` release).
+- **Adaptive Mobile Drawer:** Clean slide-in side navigation menu with backdrop blur, animated hamburger-to-close toggle icon, and keyboard accessibility (`Esc` close + ARIA state attributes).
+- **Responsive Fluid Typography & Spacing:** Clamped CSS typography scales down cleanly from 4K down to small 360px mobile viewports without horizontal overflow or awkward wrapping.
+- **Stacked Grids & Touch-Optimized Tables:** Interactive benchmark calculators, variant builders, feature grids, and comparison matrices collapse gracefully or offer smooth touch-scrolling (`-webkit-overflow-scrolling: touch`).
+
+---
+
+## 🚀 1-Click Demo Content Setup & Updates
+
+Omnify includes a built-in Demo Content Importer & Updater that allows you to configure your site to match the official live demo with zero manual configuration.
+
+1. **Theme Activation Notice:**
+   - Immediately upon activating Omnify, an admin notice will prompt you to import the official demo content with one click.
+2. **Dedicated Theme Settings:**
+   - Navigate to **Appearance > Demo Content** in your WordPress dashboard.
+   - Click **"Import Demo Content (1-Click)"** (or **"Update / Re-import Demo Content"**).
+   - What is automatically configured:
+     - **12 Core Pages:** Home, Features, Compare Matrix, Integrations, Documentation, Blog, Cart, Checkout, Customer Portal, Order Tracking, Privacy Policy, and License Terms.
+     - **Reading Settings:** Sets `Home` as the static front page and `Blog` as the engineering posts feed.
+     - **Navigation Menus:** Creates and maps the primary header navigation (`primary`), main footer links (`footer-main`), and legal links (`footer-legal`).
+     - **Engineering Articles:** Seeds 4 comprehensive technical deep dives with tags and categories.
+     - **Sample eCommerce Products:** If the OmnifyWP eCommerce plugin is active, seeds starter products into the high-speed SQL engine.
+   - You can re-run the importer at any time to update or sync newly released demo sections without breaking your custom modifications.
+
+---
+
+## 🛠️ Installation & Setup
+
+1. Copy or clone this folder into `wp-content/themes/omnify` on your WordPress installation (or upload the `omnify-theme.zip` package via **Appearance > Themes > Add New > Upload Theme**).
 2. Go to **Appearance > Themes** in your WordPress dashboard.
 3. Activate **OmnifyWP Marketing**.
-4. Navigate to **Appearance > Editor** to customize page layouts, patterns, or colors using Full Site Editing.
+4. Click **Import Demo Content** in the welcome notice or visit **Appearance > Demo Content**.
+5. Navigate to **Appearance > Editor** to customize page layouts, patterns, or colors using Full Site Editing.
 
 ---
 

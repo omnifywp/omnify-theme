@@ -34,7 +34,7 @@
 
 		<!-- PRIMARY NAVIGATION -->
 		<!-- wp:html -->
-		<nav class="om-nav wp-block-navigation" aria-label="Primary navigation">
+		<nav class="om-nav wp-block-navigation" id="om-primary-nav" aria-label="Primary navigation">
 			<a href="/features/" class="om-nav__link wp-block-navigation-item__content">
 				<svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"/></svg>
 				Features
@@ -70,6 +70,18 @@
 			<!-- /wp:button -->
 		</div>
 		<!-- /wp:buttons -->
+
+		<!-- Mobile Menu Toggle Button -->
+		<!-- wp:html -->
+		<button type="button" class="om-nav-toggle" aria-label="Open menu" aria-expanded="false" aria-controls="om-primary-nav">
+			<span class="om-nav-toggle-box">
+				<span class="om-nav-toggle-bar"></span>
+				<span class="om-nav-toggle-bar"></span>
+				<span class="om-nav-toggle-bar"></span>
+			</span>
+		</button>
+		<div class="om-nav-backdrop" aria-hidden="true"></div>
+		<!-- /wp:html -->
 
 	</div>
 	<!-- /wp:group -->

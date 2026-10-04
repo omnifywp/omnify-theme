@@ -105,7 +105,7 @@ defined( 'ABSPATH' ) || exit;
 						</div>
 					</div>
 
-					<div style="display:grid;grid-template-columns:2fr 1fr;gap:20px;">
+					<div class="om-dash-overview-grid" style="display:grid;grid-template-columns:2fr 1fr;gap:20px;">
 						<div style="background:#ffffff;border-radius:12px;border:1px solid #E2E8F0;padding:20px;box-shadow:0 1px 3px rgba(0,0,0,0.02);">
 							<div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:16px;">
 								<div>
@@ -281,7 +281,7 @@ defined( 'ABSPATH' ) || exit;
 				<!-- PANEL 3: PRODUCTS -->
 				<div class="om-mockup-panel" id="panel-products" style="display:none;">
 					<div style="background:#ffffff;border-radius:12px;border:1px solid #E2E8F0;padding:20px;box-shadow:0 1px 3px rgba(0,0,0,0.02);">
-						<div style="display:grid;grid-template-columns:1fr 1fr;gap:20px;">
+						<div class="om-dash-products-grid" style="display:grid;grid-template-columns:1fr 1fr;gap:20px;">
 							<div style="background:#F8FAFC;border:1px solid #E2E8F0;border-radius:10px;padding:16px;">
 								<div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:8px;">
 									<span style="font-size:0.75rem;font-weight:700;color:#18794E;text-transform:uppercase;">Interactive Product Switcher</span>
@@ -330,7 +330,7 @@ defined( 'ABSPATH' ) || exit;
 				<!-- PANEL 4: ANALYTICS -->
 				<div class="om-mockup-panel" id="panel-analytics" style="display:none;">
 					<div style="background:#ffffff;border-radius:12px;border:1px solid #E2E8F0;padding:20px;box-shadow:0 1px 3px rgba(0,0,0,0.02);">
-						<div style="display:grid;grid-template-columns:1fr 1fr;gap:16px;margin-bottom:16px;">
+						<div class="om-dash-analytics-grid" style="display:grid;grid-template-columns:1fr 1fr;gap:16px;margin-bottom:16px;">
 							<div style="background:#F8FAFC;border:1px solid #E2E8F0;border-radius:10px;padding:14px;">
 								<div style="font-size:0.72rem;font-weight:700;color:#64748B;text-transform:uppercase;">Net Sales (Rolling 30D)</div>
 								<div style="font-size:1.6rem;font-weight:800;color:#0F172A;margin-top:4px;">$14,892.40</div>
