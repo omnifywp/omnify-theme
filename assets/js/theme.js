@@ -1893,6 +1893,188 @@
     } );
   } )();
 
+  // ─── 17. Persona / Audience Switcher (Store Owner vs Developer) ───────────
+  ( function initPersonaSwitcher() {
+    const urlParams = new URLSearchParams( window.location.search );
+    const paramPersona = urlParams.get( 'persona' ) || urlParams.get( 'view' );
+    let currentPersona = 'user';
+
+    if ( paramPersona === 'developer' || paramPersona === 'dev' ) {
+      currentPersona = 'developer';
+    } else if ( paramPersona === 'user' || paramPersona === 'merchant' || paramPersona === 'store' ) {
+      currentPersona = 'user';
+    } else {
+      try {
+        const stored = localStorage.getItem( 'om_persona' );
+        if ( stored === 'developer' || stored === 'user' ) {
+          currentPersona = stored;
+        }
+      } catch ( e ) {}
+    }
+
+    function setPersona( persona, save ) {
+      if ( ! persona ) return;
+      currentPersona = persona;
+      document.body.setAttribute( 'data-om-persona', persona );
+      if ( save !== false ) {
+        try {
+          localStorage.setItem( 'om_persona', persona );
+        } catch ( e ) {}
+      }
+
+      // Sync all persona buttons across the page
+      document.querySelectorAll( '[data-persona]' ).forEach( function ( btn ) {
+        const p = btn.getAttribute( 'data-persona' );
+        const isActive = ( p === persona );
+        btn.classList.toggle( 'is-active', isActive );
+        if ( btn.hasAttribute( 'aria-selected' ) ) {
+          btn.setAttribute( 'aria-selected', isActive ? 'true' : 'false' );
+        }
+      } );
+    }
+
+    // Set initial persona
+    setPersona( currentPersona, false );
+
+    // Attach click listeners to all persona switcher buttons
+    document.addEventListener( 'click', function ( e ) {
+      const btn = e.target.closest( '[data-persona]' );
+      if ( ! btn ) return;
+      e.preventDefault();
+      const targetPersona = btn.getAttribute( 'data-persona' );
+      setPersona( targetPersona, true );
+
+      // If user clicked persona button in header or mobile menu, smooth scroll to top
+      if ( btn.classList.contains( 'om-header-persona-btn' ) || btn.classList.contains( 'om-persona-pill' ) ) {
+        window.scrollTo( { top: 0, behavior: 'smooth' } );
+      }
+    } );
+  } )();
+
+  // ─── 18. Store Owner Customer Storefront Simulator ────────────────────────
+  ( function initUserStoreSimulator() {
+    const couponInput = document.getElementById( 'om-sim-coupon-field' );
+    const couponBtn = document.getElementById( 'om-sim-coupon-apply' );
+    const couponNotice = document.getElementById( 'om-sim-discount-notice' );
+    const priceDisplay = document.getElementById( 'om-sim-price-display' );
+    const placeOrderBtn = document.getElementById( 'om-sim-place-order' );
+    const applePayBtn = document.getElementById( 'om-sim-btn-apple' );
+    const gpayBtn = document.getElementById( 'om-sim-btn-gpay' );
+    const resetBtn = document.getElementById( 'om-sim-reset-btn' );
+    const successPanel = document.getElementById( 'om-sim-success-panel' );
+
+    if ( ! placeOrderBtn ) return;
+
+    let basePrice = 49.00;
+    let discount = 9.80; // default SAVE20 is applied initially
+
+    function updatePrice() {
+      const finalPrice = Math.max( 0, basePrice - discount );
+      if ( priceDisplay ) {
+        priceDisplay.textContent = '$' + basePrice.toFixed( 2 );
+      }
+      if ( placeOrderBtn && ! placeOrderBtn.classList.contains( 'is-completed' ) ) {
+        placeOrderBtn.innerHTML = '<span>Complete Purchase ($' + finalPrice.toFixed( 2 ) + ')</span> &rarr;';
+      }
+    }
+
+    if ( couponBtn && couponInput ) {
+      couponBtn.addEventListener( 'click', function () {
+        const val = couponInput.value.trim().toUpperCase();
+        if ( val === 'SAVE20' ) {
+          discount = 9.80;
+          if ( couponNotice ) {
+            couponNotice.style.display = 'block';
+            couponNotice.style.color = '#15803D';
+            couponNotice.textContent = '🎉 Coupon SAVE20 applied: -$9.80 off!';
+          }
+        } else if ( val === 'FREE' ) {
+          discount = 49.00;
+          if ( couponNotice ) {
+            couponNotice.style.display = 'block';
+            couponNotice.style.color = '#15803D';
+            couponNotice.textContent = '🎁 100% Free VIP Access Coupon Applied!';
+          }
+        } else if ( val === '' ) {
+          discount = 0;
+          if ( couponNotice ) couponNotice.style.display = 'none';
+        } else {
+          discount = 0;
+          if ( couponNotice ) {
+            couponNotice.style.display = 'block';
+            couponNotice.style.color = '#DC2626';
+            couponNotice.textContent = '⚠️ Invalid promo code. Try "SAVE20"';
+          }
+        }
+        updatePrice();
+      } );
+    }
+
+    function triggerCompleteOrder( paymentMethod ) {
+      if ( ! placeOrderBtn ) return;
+      placeOrderBtn.disabled = true;
+      placeOrderBtn.innerHTML = '<span>⚡ Processing with ' + paymentMethod + '...</span>';
+
+      setTimeout( function () {
+        placeOrderBtn.disabled = false;
+        placeOrderBtn.classList.add( 'is-completed' );
+        placeOrderBtn.innerHTML = '<span>✓ Order Placed ($' + ( basePrice - discount ).toFixed( 2 ) + ')</span>';
+        placeOrderBtn.style.background = '#0B5135';
+
+        if ( successPanel ) {
+          successPanel.style.boxShadow = '0 0 0 3px #22A06B, 0 10px 30px rgba(34, 160, 107, 0.25)';
+          successPanel.style.transform = 'scale(1.02)';
+          successPanel.style.transition = 'all 0.3s ease';
+          setTimeout( function () {
+            successPanel.style.transform = 'none';
+          }, 400 );
+        }
+      }, 450 );
+    }
+
+    if ( placeOrderBtn ) {
+      placeOrderBtn.addEventListener( 'click', function () {
+        triggerCompleteOrder( 'Card' );
+      } );
+    }
+
+    if ( applePayBtn ) {
+      applePayBtn.addEventListener( 'click', function () {
+        triggerCompleteOrder( 'Pay Touch ID' );
+      } );
+    }
+
+    if ( gpayBtn ) {
+      gpayBtn.addEventListener( 'click', function () {
+        triggerCompleteOrder( 'Google Pay' );
+      } );
+    }
+
+    if ( resetBtn ) {
+      resetBtn.addEventListener( 'click', function () {
+        if ( placeOrderBtn ) {
+          placeOrderBtn.disabled = false;
+          placeOrderBtn.classList.remove( 'is-completed' );
+          placeOrderBtn.style.background = '';
+        }
+        if ( couponInput ) couponInput.value = 'SAVE20';
+        discount = 9.80;
+        if ( couponNotice ) {
+          couponNotice.style.display = 'block';
+          couponNotice.style.color = '#15803D';
+          couponNotice.textContent = '🎉 Coupon SAVE20 applied: -$9.80 off!';
+        }
+        if ( successPanel ) {
+          successPanel.style.boxShadow = '';
+          successPanel.style.transform = '';
+        }
+        updatePrice();
+      } );
+    }
+
+    updatePrice();
+  } )();
+
 } )();
 
 

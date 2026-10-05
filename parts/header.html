@@ -66,6 +66,18 @@
 				Blog
 			</a>
 
+			<div class="om-nav-mobile-persona">
+				<span class="om-nav-mobile-persona-title">View site as:</span>
+				<div class="om-nav-mobile-persona-btns">
+					<button type="button" class="om-persona-pill is-active" data-persona="user">
+						<span>🏪 Store Owner</span>
+					</button>
+					<button type="button" class="om-persona-pill" data-persona="developer">
+						<span>⚡ Developer</span>
+					</button>
+				</div>
+			</div>
+
 			<div class="om-nav-mobile-footer">
 				<a href="https://wordpress.org/plugins/omnifywp-ecommerce/" target="_blank" rel="noopener noreferrer" class="om-btn om-btn--primary om-btn--full">
 					Get on wp.org &rarr;
@@ -76,6 +88,20 @@
 				<div class="om-nav-mobile-meta">OmnifyWP v1.2 • GPLv2 Open Source</div>
 			</div>
 		</nav>
+		<!-- /wp:html -->
+
+		<!-- HEADER PERSONA TOGGLE -->
+		<!-- wp:html -->
+		<div class="om-header-persona-toggle" role="tablist" aria-label="Perspective selector">
+			<button type="button" class="om-header-persona-btn is-active" data-persona="user" role="tab" aria-selected="true" title="Switch to Store Owner view">
+				<span class="om-header-persona-icon">🏪</span>
+				<span class="om-header-persona-txt">Merchant</span>
+			</button>
+			<button type="button" class="om-header-persona-btn" data-persona="developer" role="tab" aria-selected="false" title="Switch to Developer view">
+				<span class="om-header-persona-icon">⚡</span>
+				<span class="om-header-persona-txt">Developer</span>
+			</button>
+		</div>
 		<!-- /wp:html -->
 
 		<!-- HEADER CTAs -->
