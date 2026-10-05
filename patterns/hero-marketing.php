@@ -131,50 +131,106 @@ defined( 'ABSPATH' ) || exit;
 				</div>
 
 				<!-- Panel 2: Automated Customer Delivery & Merchant Confirmation -->
-				<div class="om-sim-panel" id="om-sim-success-panel" style="background:#FFFFFF;">
-					<div class="om-sim-panel__title" style="color:#0B5135;">
-						<span style="display:inline-flex;align-items:center;gap:6px;"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg> 2. Automated Thank-You &amp; Instant Delivery</span>
-					</div>
-
-					<div style="background:#EFF8F2;border:1px solid #D4E8DC;border-radius:12px;padding:16px;margin-bottom:14px;text-align:center;">
-						<div style="width:40px;height:40px;background:#22A06B;color:#FFFFFF;border-radius:50%;display:inline-flex;align-items:center;justify-content:center;margin-bottom:6px;">
-							<svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#FFFFFF" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg>
-						</div>
-						<div style="font-weight:800;font-size:1.05rem;color:#063D26;">Payment Confirmed in 0.38s!</div>
-						<div style="font-size:0.8rem;color:#18794E;">Order #OM-8921 • Funds direct to your Stripe</div>
-					</div>
-
-					<!-- Digital Download Vault -->
-					<div style="background:#F8FAFC;border:1px solid #E2E8F0;border-radius:10px;padding:12px;margin-bottom:12px;">
-						<div style="font-size:0.75rem;font-weight:700;color:#64748B;text-transform:uppercase;margin-bottom:8px;">Instant Download Access:</div>
-						<div style="display:flex;align-items:center;justify-content:space-between;gap:8px;">
-							<div>
-								<div style="font-weight:700;font-size:0.85rem;color:#0F172A;display:flex;align-items:center;gap:5px;">
-									<svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z"/><polyline points="3.27 6.96 12 12.01 20.73 6.96"/><line x1="12" y1="22.08" x2="12" y2="12"/></svg>
-									Creator_Bundle_v2.4.zip
-								</div>
-								<div style="font-size:0.72rem;color:#64748B;">148 MB • 3 downloads remaining</div>
+				<div class="om-sim-panel" id="om-sim-success-panel" style="background:#FFFFFF;display:flex;flex-direction:column;justify-content:space-between;">
+					
+					<!-- Awaiting / Standby State -->
+					<div id="om-sim-idle-state" style="display:flex;flex-direction:column;height:100%;justify-content:space-between;">
+						<div>
+							<div class="om-sim-panel__title" style="color:#0B5135;">
+								<span style="display:inline-flex;align-items:center;gap:6px;"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg> 2. Automated Delivery Engine</span>
 							</div>
-							<a href="#download" onclick="alert('Demo simulator: File download starts instantly on your real store!');return false;" style="background:#0B5135;color:#FFFFFF;padding:6px 14px;border-radius:6px;font-size:0.78rem;font-weight:700;text-decoration:none;">Download</a>
+
+							<div style="background:#F8FAFC;border:1.5px dashed #CBD5E1;border-radius:12px;padding:20px 16px;margin-bottom:16px;text-align:center;">
+								<div style="width:44px;height:44px;background:#EFF8F2;border:1px solid #D4E8DC;color:#18794E;border-radius:50%;display:inline-flex;align-items:center;justify-content:center;margin-bottom:10px;">
+									<svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+								</div>
+								<div style="font-weight:800;font-size:1rem;color:#0F172A;margin-bottom:4px;">Ready for Live Checkout</div>
+								<div style="font-size:0.8rem;color:#64748B;line-height:1.45;max-width:320px;margin:0 auto;">
+									Click <strong style="color:#0B5135;">Complete Purchase</strong> on the left to watch instant delivery and key generation execute live.
+								</div>
+							</div>
+
+							<!-- Fulfillment Pipeline Indicators -->
+							<div style="display:flex;flex-direction:column;gap:8px;margin-bottom:16px;">
+								<div id="om-sim-pipe-1" style="display:flex;align-items:center;justify-content:space-between;background:#FFFFFF;border:1px solid #E2E8F0;border-radius:8px;padding:10px 12px;font-size:0.8rem;color:#475569;transition:all 0.25s ease;">
+									<span style="display:inline-flex;align-items:center;gap:8px;">
+										<span class="om-pipe-dot" style="width:8px;height:8px;border-radius:50%;background:#CBD5E1;display:inline-block;transition:background 0.25s ease;"></span>
+										Direct Stripe / Apple Pay Auth
+									</span>
+									<span style="font-family:var(--om-font-mono);font-size:0.75rem;font-weight:700;color:#64748B;">0.12s</span>
+								</div>
+								<div id="om-sim-pipe-2" style="display:flex;align-items:center;justify-content:space-between;background:#FFFFFF;border:1px solid #E2E8F0;border-radius:8px;padding:10px 12px;font-size:0.8rem;color:#475569;transition:all 0.25s ease;">
+									<span style="display:inline-flex;align-items:center;gap:8px;">
+										<span class="om-pipe-dot" style="width:8px;height:8px;border-radius:50%;background:#CBD5E1;display:inline-block;transition:background 0.25s ease;"></span>
+										0% Fee Settlement to Merchant
+									</span>
+									<span style="font-family:var(--om-font-mono);font-size:0.75rem;font-weight:700;color:#64748B;">0.22s</span>
+								</div>
+								<div id="om-sim-pipe-3" style="display:flex;align-items:center;justify-content:space-between;background:#FFFFFF;border:1px solid #E2E8F0;border-radius:8px;padding:10px 12px;font-size:0.8rem;color:#475569;transition:all 0.25s ease;">
+									<span style="display:inline-flex;align-items:center;gap:8px;">
+										<span class="om-pipe-dot" style="width:8px;height:8px;border-radius:50%;background:#CBD5E1;display:inline-block;transition:background 0.25s ease;"></span>
+										Secure Vault Decrypt &amp; License Issue
+									</span>
+									<span style="font-family:var(--om-font-mono);font-size:0.75rem;font-weight:700;color:#64748B;">0.38s</span>
+								</div>
+							</div>
+						</div>
+
+						<div style="display:flex;align-items:center;justify-content:center;gap:6px;font-size:0.75rem;color:#64748B;padding-top:10px;border-top:1px solid #F1F5F9;">
+							<span style="width:7px;height:7px;border-radius:50%;background:#10B981;display:inline-block;"></span>
+							Sub-second fulfillment pipeline online
 						</div>
 					</div>
 
-					<!-- Automatic License Key -->
-					<div style="background:#F8FAFC;border:1px solid #E2E8F0;border-radius:10px;padding:12px;margin-bottom:16px;">
-						<div style="font-size:0.75rem;font-weight:700;color:#64748B;text-transform:uppercase;margin-bottom:4px;">Software License Key:</div>
-						<div style="font-family:var(--om-font-mono);font-size:0.85rem;font-weight:700;color:#0B5135;background:#EFF8F2;padding:6px 10px;border-radius:4px;display:flex;justify-content:space-between;align-items:center;">
-							<span>OM-VIP-8921-KEY</span>
-							<span style="font-size:0.72rem;color:#18794E;">Active</span>
+					<!-- Completed / Fulfilled State (Hidden until trigger) -->
+					<div id="om-sim-completed-state" style="display:none;flex-direction:column;height:100%;justify-content:space-between;">
+						<div>
+							<div class="om-sim-panel__title" style="color:#0B5135;">
+								<span style="display:inline-flex;align-items:center;gap:6px;"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg> 2. Automated Thank-You &amp; Instant Delivery</span>
+							</div>
+
+							<div style="background:#EFF8F2;border:1px solid #D4E8DC;border-radius:12px;padding:16px;margin-bottom:14px;text-align:center;">
+								<div style="width:40px;height:40px;background:#22A06B;color:#FFFFFF;border-radius:50%;display:inline-flex;align-items:center;justify-content:center;margin-bottom:6px;">
+									<svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#FFFFFF" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg>
+								</div>
+								<div style="font-weight:800;font-size:1.05rem;color:#063D26;">Payment Confirmed in 0.38s!</div>
+								<div style="font-size:0.8rem;color:#18794E;">Order #OM-8921 • Funds direct to your Stripe</div>
+							</div>
+
+							<!-- Digital Download Vault -->
+							<div style="background:#F8FAFC;border:1px solid #E2E8F0;border-radius:10px;padding:12px;margin-bottom:12px;">
+								<div style="font-size:0.75rem;font-weight:700;color:#64748B;text-transform:uppercase;margin-bottom:8px;">Instant Download Access:</div>
+								<div style="display:flex;align-items:center;justify-content:space-between;gap:8px;">
+									<div>
+										<div style="font-weight:700;font-size:0.85rem;color:#0F172A;display:flex;align-items:center;gap:5px;">
+											<svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z"/><polyline points="3.27 6.96 12 12.01 20.73 6.96"/><line x1="12" y1="22.08" x2="12" y2="12"/></svg>
+											Creator_Bundle_v2.4.zip
+										</div>
+										<div style="font-size:0.72rem;color:#64748B;">148 MB • 3 downloads remaining</div>
+									</div>
+									<a href="#download" onclick="alert('Demo simulator: File download starts instantly on your real store!');return false;" style="background:#0B5135;color:#FFFFFF;padding:6px 14px;border-radius:6px;font-size:0.78rem;font-weight:700;text-decoration:none;">Download</a>
+								</div>
+							</div>
+
+							<!-- Automatic License Key -->
+							<div style="background:#F8FAFC;border:1px solid #E2E8F0;border-radius:10px;padding:12px;margin-bottom:16px;">
+								<div style="font-size:0.75rem;font-weight:700;color:#64748B;text-transform:uppercase;margin-bottom:4px;">Software License Key:</div>
+								<div style="font-family:var(--om-font-mono);font-size:0.85rem;font-weight:700;color:#0B5135;background:#EFF8F2;padding:6px 10px;border-radius:4px;display:flex;justify-content:space-between;align-items:center;">
+									<span>OM-VIP-8921-KEY</span>
+									<span style="font-size:0.72rem;color:#18794E;">Active</span>
+								</div>
+							</div>
+						</div>
+
+						<div style="display:flex;justify-content:space-between;align-items:center;margin-top:auto;padding-top:10px;border-top:1px solid #E2E8F0;">
+							<span style="font-size:0.75rem;color:#15803D;font-weight:700;display:inline-flex;align-items:center;gap:4px;">
+								<svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg>
+								Automated Email Receipt Sent
+							</span>
+							<button type="button" id="om-sim-reset-btn" style="background:#F1F5F9;border:1px solid #CBD5E1;padding:5px 12px;border-radius:6px;font-size:0.75rem;font-weight:600;cursor:pointer;">Reset Demo</button>
 						</div>
 					</div>
 
-					<div style="display:flex;justify-content:space-between;align-items:center;margin-top:auto;padding-top:10px;border-top:1px solid #E2E8F0;">
-						<span style="font-size:0.75rem;color:#15803D;font-weight:700;display:flex;align-items:center;gap:4px;">
-							<svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg>
-							Automated Email Receipt Sent
-						</span>
-						<button type="button" id="om-sim-reset-btn" style="background:#F1F5F9;border:1px solid #CBD5E1;padding:5px 12px;border-radius:6px;font-size:0.75rem;font-weight:600;cursor:pointer;">Reset Demo</button>
-					</div>
 				</div>
 			</div>
 		</div>

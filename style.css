@@ -661,6 +661,12 @@ button.om-btn--sm,
   width: 100%;
 }
 
+@media (min-width: 901px) {
+  .om-persona-bar {
+    display: none !important;
+  }
+}
+
 .om-persona-bar__inner {
   display: inline-flex;
   flex-direction: column;
@@ -2241,11 +2247,12 @@ details.om-faq-item[open] summary,
 }
 
 .om-footer-cta-btn--ghost {
-  background: rgba(255, 255, 255, 0.12);
+  background: rgba(255, 255, 255, 0.16);
   color: #FFFFFF;
-  border: 1.5px solid rgba(255, 255, 255, 0.4);
+  border: 1.5px solid rgba(255, 255, 255, 0.6);
   backdrop-filter: blur(8px);
   -webkit-backdrop-filter: blur(8px);
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.12);
 }
 
 .om-footer-cta-btn--ghost:hover {

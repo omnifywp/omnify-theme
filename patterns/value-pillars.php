@@ -64,7 +64,7 @@ defined( 'ABSPATH' ) || exit;
 				<h3 class="wp-block-heading om-bento-card__title">Apple Pay &amp; Google Pay</h3>
 				<p class="om-bento-card__text">Eliminate tedious checkout forms. Buyers complete orders with a single thumb tap using Touch ID or Face ID on mobile phones.</p>
 
-				<div style="display:flex;gap:6px;padding:8px 0;">
+				<div style="display:flex;gap:6px;padding:8px 0;margin-top:auto;">
 					<span style="background:#000;color:#fff;padding:6px 14px;border-radius:6px;font-size:0.8rem;font-weight:700;display:inline-flex;align-items:center;">Pay</span>
 					<span style="background:#F1F5F9;border:1px solid #CBD5E1;color:#1E293B;padding:6px 14px;border-radius:6px;font-size:0.8rem;font-weight:700;">GPay</span>
 				</div>
@@ -76,7 +76,7 @@ defined( 'ABSPATH' ) || exit;
 				<h3 class="wp-block-heading om-bento-card__title">Works with Any Theme</h3>
 				<p class="om-bento-card__text">Design your product pages using the native WordPress Block Editor (Gutenberg), Elementor, Divi, Bricks, or any classic theme effortlessly.</p>
 
-				<div style="font-size:0.78rem;font-weight:700;color:#0B5135;background:#EFF8F2;padding:8px 12px;border-radius:8px;">
+				<div style="font-size:0.78rem;font-weight:700;color:#0B5135;background:#EFF8F2;padding:8px 12px;border-radius:8px;margin-top:auto;">
 					✓ Visual Drag-and-Drop &bull; Zero CSS or PHP Required
 				</div>
 			</div>
@@ -87,7 +87,7 @@ defined( 'ABSPATH' ) || exit;
 				<h3 class="wp-block-heading om-bento-card__title">Sub-0.1s Page Loads</h3>
 				<p class="om-bento-card__text">Slow stores lose customers. OmnifyWP is so lightweight that your checkout loads instantly, boosting conversion rates by up to 30%.</p>
 
-				<div style="font-size:0.78rem;font-weight:700;color:#15803D;background:#EFF8F2;padding:8px 12px;border-radius:8px;">
+				<div style="font-size:0.78rem;font-weight:700;color:#15803D;background:#EFF8F2;padding:8px 12px;border-radius:8px;margin-top:auto;">
 					3x Faster Than Bulky Legacy Plugins
 				</div>
 			</div>

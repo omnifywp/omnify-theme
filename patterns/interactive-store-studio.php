@@ -10,8 +10,8 @@
 defined( 'ABSPATH' ) || exit;
 ?>
 
-<!-- wp:group {"tagName":"section","className":"om-section om-studio-section","style":{"spacing":{"padding":{"top":"clamp(4.5rem, 8vw, 6.5rem)","bottom":"clamp(4.5rem, 8vw, 6.5rem)"}}},"layout":{"type":"constrained","contentSize":"1240px"}} -->
-<section class="wp-block-group om-section om-studio-section" id="live-store-studio" style="border-top:1px solid #E6F4EC;border-bottom:1px solid #E6F4EC;background:linear-gradient(180deg, #FFFFFF 0%, #F7FCF9 100%);">
+<!-- wp:group {"tagName":"section","className":"om-section om-studio-section om-for-developer","style":{"spacing":{"padding":{"top":"clamp(4.5rem, 8vw, 6.5rem)","bottom":"clamp(4.5rem, 8vw, 6.5rem)"}}},"layout":{"type":"constrained","contentSize":"1240px"}} -->
+<section class="wp-block-group om-section om-studio-section om-for-developer" id="live-store-studio" style="border-top:1px solid #E6F4EC;border-bottom:1px solid #E6F4EC;background:linear-gradient(180deg, #FFFFFF 0%, #F7FCF9 100%);">
 
 	<!-- Header Area -->
 	<div class="om-text-center" style="max-width:800px;margin:0 auto 3.5rem auto;">

@@ -411,7 +411,13 @@
           floatingBar.classList.remove( 'is-visible' );
           return;
         }
-        if ( window.scrollY > 550 ) {
+
+        // Avoid overlapping footer when scrolled near the bottom
+        const scrollBottom = window.scrollY + window.innerHeight;
+        const footerElem   = document.querySelector( '.om-site-footer' ) || document.querySelector( 'footer' );
+        const footerTop    = footerElem ? footerElem.getBoundingClientRect().top + window.scrollY : ( document.documentElement.scrollHeight - 350 );
+
+        if ( window.scrollY > 550 && scrollBottom < footerTop + 60 ) {
           floatingBar.classList.add( 'is-visible' );
         } else {
           floatingBar.classList.remove( 'is-visible' );
@@ -1953,15 +1959,20 @@
 
   // ─── 18. Store Owner Customer Storefront Simulator ────────────────────────
   ( function initUserStoreSimulator() {
-    const couponInput = document.getElementById( 'om-sim-coupon-field' );
-    const couponBtn = document.getElementById( 'om-sim-coupon-apply' );
-    const couponNotice = document.getElementById( 'om-sim-discount-notice' );
-    const priceDisplay = document.getElementById( 'om-sim-price-display' );
-    const placeOrderBtn = document.getElementById( 'om-sim-place-order' );
-    const applePayBtn = document.getElementById( 'om-sim-btn-apple' );
-    const gpayBtn = document.getElementById( 'om-sim-btn-gpay' );
-    const resetBtn = document.getElementById( 'om-sim-reset-btn' );
-    const successPanel = document.getElementById( 'om-sim-success-panel' );
+    const couponInput    = document.getElementById( 'om-sim-coupon-field' );
+    const couponBtn      = document.getElementById( 'om-sim-coupon-apply' );
+    const couponNotice   = document.getElementById( 'om-sim-discount-notice' );
+    const priceDisplay   = document.getElementById( 'om-sim-price-display' );
+    const placeOrderBtn  = document.getElementById( 'om-sim-place-order' );
+    const applePayBtn    = document.getElementById( 'om-sim-btn-apple' );
+    const gpayBtn        = document.getElementById( 'om-sim-btn-gpay' );
+    const resetBtn       = document.getElementById( 'om-sim-reset-btn' );
+    const successPanel   = document.getElementById( 'om-sim-success-panel' );
+    const idleState      = document.getElementById( 'om-sim-idle-state' );
+    const completedState = document.getElementById( 'om-sim-completed-state' );
+    const pipe1          = document.getElementById( 'om-sim-pipe-1' );
+    const pipe2          = document.getElementById( 'om-sim-pipe-2' );
+    const pipe3          = document.getElementById( 'om-sim-pipe-3' );
 
     if ( ! placeOrderBtn ) return;
 
@@ -2011,15 +2022,56 @@
     }
 
     function triggerCompleteOrder( paymentMethod ) {
-      if ( ! placeOrderBtn ) return;
+      if ( ! placeOrderBtn || placeOrderBtn.disabled ) return;
       placeOrderBtn.disabled = true;
       placeOrderBtn.innerHTML = '<span style="display:inline-flex;align-items:center;gap:6px;"><svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M13 2L3 14h9l-1 8 10-12h-9l1-8z"/></svg>Processing with ' + paymentMethod + '...</span>';
 
+      // Step 1: Stripe/Apple Pay Auth
+      if ( pipe1 ) {
+        const dot1 = pipe1.querySelector( '.om-pipe-dot' );
+        if ( dot1 ) dot1.style.background = '#10B981';
+        pipe1.style.borderColor = '#86EFAC';
+        pipe1.style.background = '#EFF8F2';
+      }
+
+      // Step 2: 0% Fee Settlement
+      setTimeout( function () {
+        if ( pipe2 ) {
+          const dot2 = pipe2.querySelector( '.om-pipe-dot' );
+          if ( dot2 ) dot2.style.background = '#10B981';
+          pipe2.style.borderColor = '#86EFAC';
+          pipe2.style.background = '#EFF8F2';
+        }
+      }, 150 );
+
+      // Step 3: Vault Decrypt & License Key Issue
+      setTimeout( function () {
+        if ( pipe3 ) {
+          const dot3 = pipe3.querySelector( '.om-pipe-dot' );
+          if ( dot3 ) dot3.style.background = '#10B981';
+          pipe3.style.borderColor = '#86EFAC';
+          pipe3.style.background = '#EFF8F2';
+        }
+      }, 300 );
+
+      // Complete order & switch to Success Receipt
       setTimeout( function () {
         placeOrderBtn.disabled = false;
         placeOrderBtn.classList.add( 'is-completed' );
         placeOrderBtn.innerHTML = '<span>✓ Order Placed ($' + ( basePrice - discount ).toFixed( 2 ) + ')</span>';
         placeOrderBtn.style.background = '#0B5135';
+
+        if ( idleState ) idleState.style.display = 'none';
+        if ( completedState ) {
+          completedState.style.display = 'flex';
+          completedState.style.opacity = '0';
+          completedState.style.transform = 'translateY(6px)';
+          completedState.style.transition = 'all 0.35s cubic-bezier(0.16, 1, 0.3, 1)';
+          requestAnimationFrame( function () {
+            completedState.style.opacity = '1';
+            completedState.style.transform = 'none';
+          } );
+        }
 
         if ( successPanel ) {
           successPanel.style.boxShadow = '0 0 0 3px #22A06B, 0 10px 30px rgba(34, 160, 107, 0.25)';
@@ -2027,9 +2079,9 @@
           successPanel.style.transition = 'all 0.3s ease';
           setTimeout( function () {
             successPanel.style.transform = 'none';
-          }, 400 );
+          }, 350 );
         }
-      }, 450 );
+      }, 480 );
     }
 
     if ( placeOrderBtn ) {
@@ -2057,6 +2109,18 @@
           placeOrderBtn.classList.remove( 'is-completed' );
           placeOrderBtn.style.background = '';
         }
+        if ( idleState ) idleState.style.display = 'flex';
+        if ( completedState ) completedState.style.display = 'none';
+
+        [ pipe1, pipe2, pipe3 ].forEach( function ( p ) {
+          if ( p ) {
+            p.style.borderColor = '#E2E8F0';
+            p.style.background = '#FFFFFF';
+            const dot = p.querySelector( '.om-pipe-dot' );
+            if ( dot ) dot.style.background = '#CBD5E1';
+          }
+        } );
+
         if ( couponInput ) couponInput.value = 'SAVE20';
         discount = 9.80;
         if ( couponNotice ) {
