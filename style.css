@@ -661,11 +661,6 @@ button.om-btn--sm,
   width: 100%;
 }
 
-@media (min-width: 901px) {
-  .om-persona-bar {
-    display: none !important;
-  }
-}
 
 .om-persona-bar__inner {
   display: inline-flex;
