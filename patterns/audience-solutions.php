@@ -36,7 +36,9 @@ defined( 'ABSPATH' ) || exit;
 		<!-- Column 1: Digital Creators -->
 		<!-- wp:column {"className":"om-solution-card"} -->
 		<div class="wp-block-column om-solution-card">
-			<div class="om-solution-icon">💾</div>
+			<div class="om-solution-icon">
+				<svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
+			</div>
 			<!-- wp:paragraph {"className":"om-solution-badge"} -->
 			<p class="om-solution-badge">For Digital Creators</p>
 			<!-- /wp:paragraph -->
@@ -76,7 +78,9 @@ defined( 'ABSPATH' ) || exit;
 		<!-- Column 2: Physical Merchants -->
 		<!-- wp:column {"className":"om-solution-card"} -->
 		<div class="wp-block-column om-solution-card">
-			<div class="om-solution-icon">📦</div>
+			<div class="om-solution-icon">
+				<svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z"/><polyline points="3.27 6.96 12 12.01 20.73 6.96"/><line x1="12" y1="22.08" x2="12" y2="12"/></svg>
+			</div>
 			<!-- wp:paragraph {"className":"om-solution-badge"} -->
 			<p class="om-solution-badge">For Physical Merchants</p>
 			<!-- /wp:paragraph -->
@@ -116,7 +120,9 @@ defined( 'ABSPATH' ) || exit;
 		<!-- Column 3: Agencies & Developers -->
 		<!-- wp:column {"className":"om-solution-card"} -->
 		<div class="wp-block-column om-solution-card">
-			<div class="om-solution-icon">💻</div>
+			<div class="om-solution-icon">
+				<svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="16 18 22 12 16 6"/><polyline points="8 6 2 12 8 18"/></svg>
+			</div>
 			<!-- wp:paragraph {"className":"om-solution-badge"} -->
 			<p class="om-solution-badge">For Agencies &amp; Developers</p>
 			<!-- /wp:paragraph -->

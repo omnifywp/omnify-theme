@@ -748,7 +748,7 @@ button.om-btn--sm,
   font-weight: 500;
 }
 
-/* Header Compact Toggle */
+/* Header Compact Toggle (Desktop Header) */
 .om-header-persona-toggle {
   display: inline-flex;
   align-items: center;
@@ -757,6 +757,12 @@ button.om-btn--sm,
   border: 1px solid var(--om-border);
   padding: 3px;
   border-radius: 9999px;
+}
+
+@media (max-width: 900px) {
+  .om-header-persona-toggle {
+    display: none !important;
+  }
 }
 
 .om-header-persona-btn {
@@ -770,8 +776,15 @@ button.om-btn--sm,
   cursor: pointer;
   display: inline-flex;
   align-items: center;
-  gap: 5px;
+  gap: 6px;
   transition: all 0.2s ease;
+}
+
+.om-header-persona-btn svg {
+  width: 14px;
+  height: 14px;
+  stroke: currentColor;
+  flex-shrink: 0;
 }
 
 .om-header-persona-btn.is-active {
@@ -781,15 +794,25 @@ button.om-btn--sm,
   font-weight: 700;
 }
 
-/* Mobile Nav Drawer Persona Switcher */
+.om-header-persona-btn.is-active svg {
+  stroke: var(--om-forest);
+}
+
+/* Mobile Nav Drawer Persona Switcher (Hidden on desktop) */
 .om-nav-mobile-persona {
-  display: flex;
-  flex-direction: column;
-  gap: 8px;
-  padding: 1rem 0;
-  border-top: 1px solid var(--om-border-light);
-  border-bottom: 1px solid var(--om-border-light);
-  margin-top: 0.5rem;
+  display: none !important;
+}
+
+@media (max-width: 900px) {
+  .om-nav-mobile-persona {
+    display: flex !important;
+    flex-direction: column;
+    gap: 8px;
+    padding: 1rem 0;
+    border-top: 1px solid var(--om-border-light);
+    border-bottom: 1px solid var(--om-border-light);
+    margin-top: 0.5rem;
+  }
 }
 
 .om-nav-mobile-persona-title {
@@ -807,7 +830,7 @@ button.om-btn--sm,
 
 .om-nav-mobile-persona-btns .om-persona-pill {
   flex: 1;
-  padding: 8px 10px;
+  padding: 8px 12px;
   font-size: 0.8125rem;
   font-weight: 600;
   border-radius: 8px;
@@ -815,12 +838,27 @@ button.om-btn--sm,
   background: #FFFFFF;
   color: var(--om-ink);
   cursor: pointer;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 6px;
+}
+
+.om-nav-mobile-persona-btns .om-persona-pill svg {
+  width: 15px;
+  height: 15px;
+  stroke: currentColor;
+  flex-shrink: 0;
 }
 
 .om-nav-mobile-persona-btns .om-persona-pill.is-active {
   background: #0B5135;
   color: #FFFFFF;
   border-color: #0B5135;
+}
+
+.om-nav-mobile-persona-btns .om-persona-pill.is-active svg {
+  stroke: #FFFFFF;
 }
 
 /* Content Visibility Filters */
@@ -2203,14 +2241,27 @@ details.om-faq-item[open] summary,
 }
 
 .om-footer-cta-btn--ghost {
-  background: rgba(255,255,255,0.1);
-  color: rgba(255,255,255,0.85);
-  border: 1px solid rgba(255,255,255,0.2);
+  background: rgba(255, 255, 255, 0.12);
+  color: #FFFFFF;
+  border: 1.5px solid rgba(255, 255, 255, 0.4);
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
 }
 
 .om-footer-cta-btn--ghost:hover {
-  background: rgba(255,255,255,0.18);
-  color: #FFFFFF;
+  background: #FFFFFF;
+  color: #063D26;
+  border-color: #FFFFFF;
+  transform: translateY(-2px);
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.22);
+}
+
+.om-footer-cta-btn--ghost svg {
+  fill: currentColor;
+}
+
+.om-footer-cta-btn--ghost:hover svg {
+  fill: #063D26;
 }
 
 /* ─── Main footer body ─── */

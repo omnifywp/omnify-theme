@@ -78,7 +78,7 @@ defined( 'ABSPATH' ) || exit;
 					</div>
 
 					<div style="background:#F0FDF4;border:1px solid #DCFCE7;border-radius:8px;padding:10px 14px;display:flex;justify-content:space-between;align-items:center;font-size:0.75rem;">
-						<span style="color:#166534;font-weight:600;">⚡ 142 Active Download Sessions</span>
+						<span style="color:#166534;font-weight:600;display:inline-flex;align-items:center;gap:4px;"><svg width="12" height="12" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M13 2L3 14h9l-1 8 10-12h-9l1-8z"/></svg> 142 Active Download Sessions</span>
 						<span style="color:#15803D;font-weight:700;">Average latency: 0.08s</span>
 					</div>
 				</div>

@@ -28,7 +28,7 @@ defined( 'ABSPATH' ) || exit;
 
 			<!-- Bento Card 1: 0% Platform Commission & 100% Profits (Wide 7 cols) -->
 			<div class="wp-block-group om-bento-card om-bento-card--wide-7">
-				<p class="om-bento-card__badge">💰 100% Direct Profit</p>
+				<p class="om-bento-card__badge"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><line x1="12" y1="1" x2="12" y2="23"/><path d="M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"/></svg> 100% Direct Profit</p>
 				<h3 class="wp-block-heading om-bento-card__title">Zero Monthly Subscriptions &amp; 0% Commission</h3>
 				<p class="om-bento-card__text">Unlike Shopify ($39+/mo + 2% transaction fee) or Gumroad (10% cut), OmnifyWP is 100% free and self-hosted. Every single dollar from your customers lands directly in your Stripe or PayPal account.</p>
 
@@ -45,13 +45,13 @@ defined( 'ABSPATH' ) || exit;
 
 			<!-- Bento Card 2: Instant Automated Delivery (Wide 5 cols) -->
 			<div class="wp-block-group om-bento-card om-bento-card--wide-5">
-				<p class="om-bento-card__badge">⚡ Hands-Off Automation</p>
+				<p class="om-bento-card__badge"><svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"/></svg> Hands-Off Automation</p>
 				<h3 class="wp-block-heading om-bento-card__title">Instant File &amp; License Delivery</h3>
 				<p class="om-bento-card__text">Sell eBooks, presets, plugins, courses, or printables. The second a customer pays, their download button and license key appear on screen and in their confirmation email.</p>
 
 				<div style="background:#F8FAFC;border:1px solid #E2E8F0;border-radius:10px;padding:12px 14px;">
 					<div style="display:flex;align-items:center;justify-content:space-between;margin-bottom:6px;">
-						<span style="font-size:0.8rem;font-weight:700;color:#0F172A;">📦 Digital Locker Ready</span>
+						<span style="font-size:0.8rem;font-weight:700;color:#0F172A;display:flex;align-items:center;gap:5px;"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z"/><polyline points="3.27 6.96 12 12.01 20.73 6.96"/><line x1="12" y1="22.08" x2="12" y2="12"/></svg> Digital Locker Ready</span>
 						<span style="font-size:0.7rem;background:#DCFCE7;color:#15803D;padding:2px 8px;border-radius:4px;font-weight:700;">Delivered in 0.4s</span>
 					</div>
 					<div style="font-size:0.75rem;color:#64748B;">Automated download links with time-expiration security &amp; customer self-service portal.</div>
@@ -60,7 +60,7 @@ defined( 'ABSPATH' ) || exit;
 
 			<!-- Bento Card 3: 1-Click Mobile Checkout (Wide 4 cols) -->
 			<div class="wp-block-group om-bento-card om-bento-card--wide-4">
-				<p class="om-bento-card__badge">📱 1-Click Express</p>
+				<p class="om-bento-card__badge"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="5" y="2" width="14" height="20" rx="2" ry="2"/><line x1="12" y1="18" x2="12.01" y2="18"/></svg> 1-Click Express</p>
 				<h3 class="wp-block-heading om-bento-card__title">Apple Pay &amp; Google Pay</h3>
 				<p class="om-bento-card__text">Eliminate tedious checkout forms. Buyers complete orders with a single thumb tap using Touch ID or Face ID on mobile phones.</p>
 
@@ -72,7 +72,7 @@ defined( 'ABSPATH' ) || exit;
 
 			<!-- Bento Card 4: 100% No-Code Design (Wide 4 cols) -->
 			<div class="wp-block-group om-bento-card om-bento-card--wide-4">
-				<p class="om-bento-card__badge">🎨 100% No-Code</p>
+				<p class="om-bento-card__badge"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="3" width="18" height="18" rx="2"/><path d="M3 9h18"/><path d="M9 21V9"/></svg> 100% No-Code</p>
 				<h3 class="wp-block-heading om-bento-card__title">Works with Any Theme</h3>
 				<p class="om-bento-card__text">Design your product pages using the native WordPress Block Editor (Gutenberg), Elementor, Divi, Bricks, or any classic theme effortlessly.</p>
 
@@ -83,12 +83,12 @@ defined( 'ABSPATH' ) || exit;
 
 			<!-- Bento Card 5: Instant Lightning Speed (Wide 4 cols) -->
 			<div class="wp-block-group om-bento-card om-bento-card--wide-4">
-				<p class="om-bento-card__badge">🚀 High-Converting</p>
+				<p class="om-bento-card__badge"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 14 14"/></svg> High-Converting</p>
 				<h3 class="wp-block-heading om-bento-card__title">Sub-0.1s Page Loads</h3>
 				<p class="om-bento-card__text">Slow stores lose customers. OmnifyWP is so lightweight that your checkout loads instantly, boosting conversion rates by up to 30%.</p>
 
 				<div style="font-size:0.78rem;font-weight:700;color:#15803D;background:#EFF8F2;padding:8px 12px;border-radius:8px;">
-					⚡ 3x Faster Than Bulky Legacy Plugins
+					3x Faster Than Bulky Legacy Plugins
 				</div>
 			</div>
 
@@ -139,14 +139,15 @@ defined( 'ABSPATH' ) || exit;
 				<div class="wp-block-group om-benchmark-box" id="om-bento-benchmark-box">
 					<div style="font-size:0.75rem;font-weight:700;color:#0B5135;text-transform:uppercase;letter-spacing:0.04em;margin-bottom:12px;display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:8px;">
 						<span>Page Generation Latency Benchmark</span>
-						<button type="button" id="om-bento-race-btn" class="om-btn-sm" style="background:#0B5135;color:#fff;border:none;padding:4px 12px;border-radius:6px;font-size:0.75rem;font-weight:700;cursor:pointer;display:inline-flex;align-items:center;gap:4px;box-shadow:0 2px 6px rgba(11,81,53,0.2);">
-							<span>⚡ Race Live Queries</span>
+						<button type="button" id="om-bento-race-btn" class="om-btn-sm" style="background:#0B5135;color:#fff;border:none;padding:4px 12px;border-radius:6px;font-size:0.75rem;font-weight:700;cursor:pointer;display:inline-flex;align-items:center;gap:5px;box-shadow:0 2px 6px rgba(11,81,53,0.2);">
+							<svg width="12" height="12" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"/></svg>
+							<span>Race Live Queries</span>
 						</button>
 					</div>
 
 					<div style="margin-bottom:10px;">
-						<div style="display:flex;justify-content:space-between;font-size:0.8rem;font-weight:700;margin-bottom:4px;color:#0B5135;">
-							<span>⚡ OmnifyWP (Custom SQL Tables)</span>
+						<div style="display:flex;justify-content:space-between;align-items:center;font-size:0.8rem;font-weight:700;margin-bottom:4px;color:#0B5135;">
+							<span style="display:inline-flex;align-items:center;gap:5px;"><svg width="13" height="13" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"/></svg> OmnifyWP (Custom SQL Tables)</span>
 							<span id="om-bento-omni-ms">0.08s (Sub-100ms)</span>
 						</div>
 						<div style="height:10px;background:#E2E8F0;border-radius:5px;overflow:hidden;">
@@ -189,8 +190,8 @@ defined( 'ABSPATH' ) || exit;
 				<!-- wp:group {"className":"om-file-security-box","style":{"spacing":{"padding":{"top":"16px","bottom":"16px","left":"16px","right":"16px"}}},"layout":{"type":"default"}} -->
 				<div class="wp-block-group om-file-security-box">
 					<div style="display:flex;align-items:center;gap:12px;margin-bottom:10px;">
-						<div style="width:38px;height:38px;border-radius:8px;background:#EFF8F2;display:flex;align-items:center;justify-content:center;font-size:1.1rem;flex-shrink:0;">
-							🔒
+						<div style="width:38px;height:38px;border-radius:8px;background:#EFF8F2;display:flex;align-items:center;justify-content:center;color:#0B5135;flex-shrink:0;">
+							<svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="11" width="18" height="11" rx="2" ry="2"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/></svg>
 						</div>
 						<div style="overflow:hidden;flex:1;">
 							<div style="font-size:0.85rem;font-weight:700;color:#0F172A;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;">masterclass-complete-v2.zip</div>
@@ -201,8 +202,9 @@ defined( 'ABSPATH' ) || exit;
 						<span style="color:#64748B;">Expires: <strong id="om-bento-token-expires" style="color:#0F172A;">47h 59m 59s</strong></span>
 						<span id="om-bento-token-badge" style="background:#ECFDF5;color:#065F46;padding:2px 8px;border-radius:4px;font-weight:700;">Max 5 Downloads</span>
 					</div>
-					<button type="button" id="om-bento-token-gen-btn" style="width:100%;background:#EFF8F2;color:#0B5135;border:1px solid #D4E8DC;padding:6px;border-radius:6px;font-size:0.75rem;font-weight:700;cursor:pointer;transition:all 0.15s ease;">
-						🔑 Generate &amp; Verify New HMAC Token
+					<button type="button" id="om-bento-token-gen-btn" style="width:100%;background:#EFF8F2;color:#0B5135;border:1px solid #D4E8DC;padding:6px;border-radius:6px;font-size:0.75rem;font-weight:700;cursor:pointer;transition:all 0.15s ease;display:inline-flex;align-items:center;justify-content:center;gap:6px;">
+						<svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="7.5" cy="15.5" r="5.5"/><path d="m21 2-9.6 9.6"/><path d="m15.5 7.5 3 3L22 7l-3-3"/></svg>
+						<span>Generate &amp; Verify New HMAC Token</span>
 					</button>
 				</div>
 				<!-- /wp:group -->

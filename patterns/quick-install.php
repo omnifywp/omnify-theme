@@ -18,7 +18,7 @@ defined( 'ABSPATH' ) || exit;
 	<div class="om-for-user">
 		<div class="om-user-onboarding-wrap">
 			<div class="om-terminal-intro om-text-center">
-				<span class="om-badge om-badge--neutral" style="font-size:0.75rem;font-weight:700;padding:3px 10px;margin-bottom:0.75rem;display:inline-flex;">🚀 3-Minute Store Setup</span>
+				<span class="om-badge om-badge--neutral" style="font-size:0.75rem;font-weight:700;padding:3px 10px;margin-bottom:0.75rem;display:inline-flex;align-items:center;"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" style="margin-right:5px;"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg> 3-Minute Store Setup</span>
 				<h2 style="font-family:var(--om-font-heading);font-size:clamp(1.75rem, 3.5vw, 2.4rem);font-weight:800;letter-spacing:-0.035em;color:#0D1B12;margin:0 0 0.75rem 0;">Launch your store in 3 easy steps.</h2>
 				<p style="font-size:1.05rem;color:#475569;max-width:620px;margin:0 auto 2rem auto;line-height:1.6;">No coding, no complicated settings, and no server configuration. If you can click a button in WordPress, you can launch your store today.</p>
 			</div>
@@ -62,7 +62,7 @@ defined( 'ABSPATH' ) || exit;
 					<a class="wp-block-button__link" href="https://wordpress.org/plugins/omnifywp-ecommerce/" target="_blank" rel="noopener noreferrer">Download Free on wp.org &rarr;</a>
 				</div>
 				<div class="wp-block-button om-btn--secondary">
-					<a class="wp-block-button__link" href="https://playground.wordpress.net/?blueprint-url=https%3A%2F%2Fraw.githubusercontent.com%2Fomnifywp%2Fomnifywp-ecommerce%2Fmain%2Fblueprint.json" target="_blank" rel="noopener noreferrer"><span class="om-btn-badge-icon">▶</span> Try Interactive Live Demo</a>
+					<a class="wp-block-button__link" href="https://playground.wordpress.net/?blueprint-url=https%3A%2F%2Fraw.githubusercontent.com%2Fomnifywp%2Fomnifywp-ecommerce%2Fmain%2Fblueprint.json" target="_blank" rel="noopener noreferrer" style="display:inline-flex;align-items:center;gap:6px;"><svg width="13" height="13" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><polygon points="5 3 19 12 5 21 5 3"/></svg> Try Interactive Live Demo</a>
 				</div>
 			</div>
 		</div>
@@ -74,7 +74,7 @@ defined( 'ABSPATH' ) || exit;
 	<div class="om-for-developer">
 		<div class="om-terminal-wrap">
 			<div class="om-terminal-intro om-text-center">
-				<span class="om-badge om-badge--neutral" style="font-size:0.75rem;font-weight:700;padding:3px 10px;margin-bottom:0.75rem;display:inline-flex;">⚡ 60-Second Developer Onboarding</span>
+				<span class="om-badge om-badge--neutral" style="font-size:0.75rem;font-weight:700;padding:3px 10px;margin-bottom:0.75rem;display:inline-flex;align-items:center;"><svg width="12" height="12" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true" style="margin-right:5px;"><polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"/></svg> 60-Second Developer Onboarding</span>
 				<h2 style="font-family:var(--om-font-heading);font-size:clamp(1.75rem, 3.5vw, 2.4rem);font-weight:800;letter-spacing:-0.035em;color:#0D1B12;margin:0 0 0.75rem 0;">Ready in your terminal right now.</h2>
 				<p style="font-size:1.05rem;color:#475569;max-width:620px;margin:0 auto 2rem auto;line-height:1.6;">Deploy OmnifyWP locally or on staging with your standard toolchain. No complex provisioning or API licenses required.</p>
 			</div>

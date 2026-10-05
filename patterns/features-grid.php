@@ -37,7 +37,7 @@ defined( 'ABSPATH' ) || exit;
 		<!-- wp:group {"className":"om-card","layout":{"type":"default"}} -->
 		<div class="wp-block-group om-card">
 			<!-- wp:paragraph {"className":"om-card__icon"} -->
-			<p class="om-card__icon">📦</p>
+			<p class="om-card__icon"><svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" style="color:#22A06B;"><path d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z"></path><polyline points="3.27 6.96 12 12.01 20.73 6.96"></polyline><line x1="12" y1="22.08" x2="12" y2="12"></line></svg></p>
 			<!-- /wp:paragraph -->
 
 			<!-- wp:heading {"level":3,"className":"om-card__title"} -->
@@ -54,7 +54,7 @@ defined( 'ABSPATH' ) || exit;
 		<!-- wp:group {"className":"om-card","layout":{"type":"default"}} -->
 		<div class="wp-block-group om-card">
 			<!-- wp:paragraph {"className":"om-card__icon"} -->
-			<p class="om-card__icon">🔒</p>
+			<p class="om-card__icon"><svg width="28" height="28" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true" style="color:#22A06B;"><path d="M18 8h-1V6c0-2.76-2.24-5-5-5S7 3.24 7 6v2H6c-1.1 0-2 .9-2 2v10c0 1.1.9 2 2 2h12c1.1 0 2-.9 2-2V10c0-1.1-.9-2-2-2zm-6 9c-1.1 0-2-.9-2-2s.9-2 2-2 2 .9 2 2-.9 2-2 2zm3.1-9H8.9V6c0-1.71 1.39-3.1 3.1-3.1 1.71 0 3.1 1.39 3.1 3.1v2z"/></svg></p>
 			<!-- /wp:paragraph -->
 
 			<!-- wp:heading {"level":3,"className":"om-card__title"} -->
@@ -71,7 +71,7 @@ defined( 'ABSPATH' ) || exit;
 		<!-- wp:group {"className":"om-card","layout":{"type":"default"}} -->
 		<div class="wp-block-group om-card">
 			<!-- wp:paragraph {"className":"om-card__icon"} -->
-			<p class="om-card__icon">📊</p>
+			<p class="om-card__icon"><svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" style="color:#22A06B;"><line x1="18" y1="20" x2="18" y2="10"></line><line x1="12" y1="20" x2="12" y2="4"></line><line x1="6" y1="20" x2="6" y2="14"></line></svg></p>
 			<!-- /wp:paragraph -->
 
 			<!-- wp:heading {"level":3,"className":"om-card__title"} -->
@@ -88,7 +88,7 @@ defined( 'ABSPATH' ) || exit;
 		<!-- wp:group {"className":"om-card","layout":{"type":"default"}} -->
 		<div class="wp-block-group om-card">
 			<!-- wp:paragraph {"className":"om-card__icon"} -->
-			<p class="om-card__icon">🛒</p>
+			<p class="om-card__icon"><svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" style="color:#22A06B;"><circle cx="9" cy="21" r="1"></circle><circle cx="20" cy="21" r="1"></circle><path d="M1 1h4l2.68 13.39a2 2 0 0 0 2 1.61h9.72a2 2 0 0 0 2-1.61L23 6H6"></path></svg></p>
 			<!-- /wp:paragraph -->
 
 			<!-- wp:heading {"level":3,"className":"om-card__title"} -->
@@ -105,7 +105,7 @@ defined( 'ABSPATH' ) || exit;
 		<!-- wp:group {"className":"om-card","layout":{"type":"default"}} -->
 		<div class="wp-block-group om-card">
 			<!-- wp:paragraph {"className":"om-card__icon"} -->
-			<p class="om-card__icon">🏷️</p>
+			<p class="om-card__icon"><svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" style="color:#22A06B;"><path d="M20.59 13.41l-7.17 7.17a2 2 0 0 1-2.83 0L2 12V2h10l8.59 8.59a2 2 0 0 1 0 2.82z"></path><line x1="7" y1="7" x2="7.01" y2="7"></line></svg></p>
 			<!-- /wp:paragraph -->
 
 			<!-- wp:heading {"level":3,"className":"om-card__title"} -->
@@ -122,7 +122,7 @@ defined( 'ABSPATH' ) || exit;
 		<!-- wp:group {"className":"om-card","layout":{"type":"default"}} -->
 		<div class="wp-block-group om-card">
 			<!-- wp:paragraph {"className":"om-card__icon"} -->
-			<p class="om-card__icon">⚡</p>
+			<p class="om-card__icon"><svg width="28" height="28" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true" style="color:#22A06B;"><path d="M13 2L3 14h9l-1 8 10-12h-9l1-8z"/></svg></p>
 			<!-- /wp:paragraph -->
 
 			<!-- wp:heading {"level":3,"className":"om-card__title"} -->

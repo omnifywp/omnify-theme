@@ -863,7 +863,7 @@
         runSimBtn.addEventListener( 'click', function () {
           runSimBtn.disabled = true;
           runSimBtn.textContent = 'Simulating 500 concurrent checkout sessions...';
-          simResultStatus.innerHTML = '<span style="color:#D97706;font-weight:600;">⚡ Dispatching concurrent requests across MySQL threads...</span>';
+          simResultStatus.innerHTML = '<span style="color:#D97706;font-weight:600;">Dispatching concurrent requests across MySQL threads...</span>';
 
           setTimeout( function () {
             simResultStatus.innerHTML = '<span style="color:#15803D;font-weight:700;">✓ OmnifyWP: 500/500 requests OK (21.4ms avg)</span> &bull; 0% packet loss &bull; 0 lock waits';
@@ -1004,16 +1004,16 @@
       simCheckoutBtn.addEventListener( 'click', function () {
         simCheckoutBtn.disabled = true;
         simFeedback.style.display = 'block';
-        simTitle.innerHTML = '⚡ Step 1/3: Validating Cart &amp; Inventory (2.4ms)...';
+        simTitle.innerHTML = 'Step 1/3: Validating Cart &amp; Inventory (2.4ms)...';
         simDesc.textContent = 'Checking dedicated wp_omnify_products table...';
 
         setTimeout( function () {
-          simTitle.innerHTML = '⚡ Step 2/3: Dispatching Stripe Elements Webhook (8.1ms)...';
+          simTitle.innerHTML = 'Step 2/3: Dispatching Stripe Elements Webhook (8.1ms)...';
           simDesc.textContent = 'Direct merchant settlement • 0% platform take fee';
         }, 300 );
 
         setTimeout( function () {
-          simTitle.innerHTML = '⚡ Step 3/3: Generating Cryptographic HMAC Token (3.7ms)...';
+          simTitle.innerHTML = 'Step 3/3: Generating Cryptographic HMAC Token (3.7ms)...';
           simDesc.textContent = 'Token sha256_e891f4 signed with 48h expiration';
         }, 650 );
 
@@ -1043,7 +1043,7 @@
 
           simulatedOrderId++;
           simCheckoutBtn.disabled = false;
-          simCheckoutBtn.innerHTML = '<span>⚡ Test Another 1-Click Order</span>';
+          simCheckoutBtn.innerHTML = '<span style="display:inline-flex;align-items:center;gap:6px;"><svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M13 2L3 14h9l-1 8 10-12h-9l1-8z"/></svg>Test Another 1-Click Order</span>';
         }, 1100 );
       } );
     }
@@ -1092,25 +1092,25 @@
     const prodData = {
       digital: {
         title: 'WordPress Masterclass & Design Assets',
-        badge1: '⚡ Digital Download',
+        badge1: 'Digital Download',
         badge2: 'Custom License Key',
-        file: '📦 masterclass-complete-v2.zip (384 MB)',
+        file: 'masterclass-complete-v2.zip (384 MB)',
         desc: 'HMAC SHA-256 Link • Max 5 downloads • 48h validity',
         price: '$89.00'
       },
       physical: {
         title: 'Pro Sensor Controller (Hardware Kit)',
-        badge1: '📦 Physical Merchandise',
+        badge1: 'Physical Merchandise',
         badge2: 'USPS Carrier Tracking',
-        file: '🚚 In Stock: 420 units • Ships within 24h',
+        file: 'In Stock: 420 units • Ships within 24h',
         desc: 'Automated weight calculation & shipping zone rules',
         price: '$189.00'
       },
       bundle: {
         title: 'Creator Studio Ultimate Suite',
-        badge1: '🎁 Digital + Physical Bundle',
+        badge1: 'Digital + Physical Bundle',
         badge2: 'Hybrid Fulfillment',
-        file: '📦 Physical Gear + 3x HMAC Masterclass Downloads',
+        file: 'Physical Gear + 3x HMAC Masterclass Downloads',
         desc: '1-click order fulfillment handles warehouse & instant downloads',
         price: '$249.00'
       }
@@ -1172,7 +1172,7 @@
     if ( raceBtn && omniBar && wooBar ) {
       raceBtn.addEventListener( 'click', function () {
         raceBtn.disabled = true;
-        raceBtn.innerHTML = '<span>⚡ Racing...</span>';
+        raceBtn.innerHTML = '<span style="display:inline-flex;align-items:center;gap:6px;"><svg width="13" height="13" viewBox="0 0 24 24" fill="currentColor"><path d="M13 2L3 14h9l-1 8 10-12h-9l1-8z"/></svg>Racing...</span>';
 
         // Reset
         omniBar.style.width = '0%';
@@ -1193,7 +1193,7 @@
           if ( wooMs ) wooMs.textContent = '1.42s (84+ queries)';
           if ( raceRes ) raceRes.style.display = 'block';
           raceBtn.disabled = false;
-          raceBtn.innerHTML = '<span>⚡ Re-Run Query Race</span>';
+          raceBtn.innerHTML = '<span style="display:inline-flex;align-items:center;gap:6px;"><svg width="13" height="13" viewBox="0 0 24 24" fill="currentColor"><path d="M13 2L3 14h9l-1 8 10-12h-9l1-8z"/></svg>Re-Run Query Race</span>';
         }, 650 );
       } );
     }
@@ -1216,7 +1216,7 @@
         }
         hmacBtn.textContent = '✓ Token Generated & Cryptographically Verified!';
         setTimeout( function () {
-          hmacBtn.textContent = '🔑 Generate & Verify New HMAC Token';
+          hmacBtn.textContent = 'Generate & Verify New HMAC Token';
         }, 1400 );
       } );
     }
@@ -1462,11 +1462,11 @@
         if ( modalTestPing && modalSimStatus ) {
           modalTestPing.addEventListener( 'click', function () {
             modalTestPing.disabled = true;
-            modalSimStatus.innerHTML = '<span style="color:#D97706;font-weight:600;">⚡ Dispatching webhook ping payload to local endpoint...</span>';
+            modalSimStatus.innerHTML = '<span style="color:#D97706;font-weight:600;">Dispatching webhook ping payload to local endpoint...</span>';
             setTimeout( function () {
               modalSimStatus.innerHTML = '<span style="color:#15803D;font-weight:700;">✓ HTTP 200 OK:</span> Order state verified &bull; HMAC download token generated &bull; Merchant balance updated.';
               modalTestPing.disabled = false;
-              modalTestPing.textContent = '⚡ Re-Send Test Webhook';
+              modalTestPing.textContent = 'Re-Send Test Webhook';
             }, 600 );
           } );
         }
@@ -1734,11 +1734,11 @@
         if ( prodTitle ) prodTitle.textContent = activeVarName;
         if ( prodSub ) {
           if ( activeVarType === 'digital' ) {
-            prodSub.textContent = '🔒 Automated HMAC Signed Token Delivery';
+            prodSub.textContent = 'Automated HMAC Signed Token Delivery';
           } else if ( activeVarType === 'physical' ) {
-            prodSub.textContent = '📦 Tracked Carrier Shipment • In Stock';
+            prodSub.textContent = 'Tracked Carrier Shipment • In Stock';
           } else {
-            prodSub.textContent = '🎁 Hybrid Delivery: Physical Gear + Digital Locker';
+            prodSub.textContent = 'Hybrid Delivery: Physical Gear + Digital Locker';
           }
         }
 
@@ -1784,7 +1784,7 @@
           appliedDiscountFixed = 0;
           couponStatus.style.display = 'block';
           couponStatus.style.color = '#DC2626';
-          couponStatus.textContent = '✗ Invalid promo code. Try "SPEED20" or "FREE".';
+          couponStatus.textContent = 'Invalid promo code. Try "SPEED20" or "FREE".';
         }
         recalculateStudio();
       } );
@@ -1821,7 +1821,7 @@
         setTimeout( function () {
           activeStream.innerHTML += '<div style="color:#34D399;font-weight:700;margin-top:6px;">[13.84ms] ✓ ORDER #' + orderNum + ' CREATED SUCCESSFULLY!</div>' +
             '<div style="color:#DCFCE7;background:rgba(16,185,129,0.15);padding:8px;border-radius:6px;margin-top:8px;">' +
-            '🎉 Customer Locker Access Unlocked &bull; Latency: 13.84ms &bull; Zero Postmeta Bloat' +
+            'Customer Locker Access Unlocked &bull; Latency: 13.84ms &bull; Zero Postmeta Bloat' +
             '</div>';
 
           if ( statusPill ) {
@@ -1831,7 +1831,7 @@
           }
 
           triggerBtn.disabled = false;
-          triggerBtn.innerHTML = '<span>⚡ Re-Run Live Checkout Flow</span>';
+          triggerBtn.innerHTML = '<span style="display:inline-flex;align-items:center;gap:6px;"><svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M13 2L3 14h9l-1 8 10-12h-9l1-8z"/></svg>Re-Run Live Checkout Flow</span>';
           orderNum++;
 
           // Auto-scroll terminal to bottom
@@ -1986,14 +1986,14 @@
           if ( couponNotice ) {
             couponNotice.style.display = 'block';
             couponNotice.style.color = '#15803D';
-            couponNotice.textContent = '🎉 Coupon SAVE20 applied: -$9.80 off!';
+            couponNotice.textContent = 'Coupon SAVE20 applied: -$9.80 off!';
           }
         } else if ( val === 'FREE' ) {
           discount = 49.00;
           if ( couponNotice ) {
             couponNotice.style.display = 'block';
             couponNotice.style.color = '#15803D';
-            couponNotice.textContent = '🎁 100% Free VIP Access Coupon Applied!';
+            couponNotice.textContent = '100% Free VIP Access Coupon Applied!';
           }
         } else if ( val === '' ) {
           discount = 0;
@@ -2003,7 +2003,7 @@
           if ( couponNotice ) {
             couponNotice.style.display = 'block';
             couponNotice.style.color = '#DC2626';
-            couponNotice.textContent = '⚠️ Invalid promo code. Try "SAVE20"';
+            couponNotice.textContent = 'Invalid promo code. Try "SAVE20"';
           }
         }
         updatePrice();
@@ -2013,7 +2013,7 @@
     function triggerCompleteOrder( paymentMethod ) {
       if ( ! placeOrderBtn ) return;
       placeOrderBtn.disabled = true;
-      placeOrderBtn.innerHTML = '<span>⚡ Processing with ' + paymentMethod + '...</span>';
+      placeOrderBtn.innerHTML = '<span style="display:inline-flex;align-items:center;gap:6px;"><svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M13 2L3 14h9l-1 8 10-12h-9l1-8z"/></svg>Processing with ' + paymentMethod + '...</span>';
 
       setTimeout( function () {
         placeOrderBtn.disabled = false;
@@ -2062,7 +2062,7 @@
         if ( couponNotice ) {
           couponNotice.style.display = 'block';
           couponNotice.style.color = '#15803D';
-          couponNotice.textContent = '🎉 Coupon SAVE20 applied: -$9.80 off!';
+          couponNotice.textContent = 'Coupon SAVE20 applied: -$9.80 off!';
         }
         if ( successPanel ) {
           successPanel.style.boxShadow = '';

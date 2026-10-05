@@ -15,7 +15,7 @@ defined( 'ABSPATH' ) || exit;
 
 	<!-- Header Area -->
 	<div class="om-text-center" style="max-width:800px;margin:0 auto 3.5rem auto;">
-		<span class="om-badge om-badge--neutral" style="font-size:0.75rem;font-weight:700;padding:4px 12px;margin-bottom:0.75rem;display:inline-flex;">⚡ Interactive Live Studio</span>
+		<span class="om-badge om-badge--neutral" style="font-size:0.75rem;font-weight:700;padding:4px 12px;margin-bottom:0.75rem;display:inline-flex;align-items:center;gap:6px;"><svg width="13" height="13" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M13 2L3 14h9l-1 8 10-12h-9l1-8z"/></svg> Interactive Live Studio</span>
 		<h2 style="font-size:clamp(2rem, 3.8vw, 2.85rem);font-weight:800;letter-spacing:-0.035em;line-height:1.2;color:#0D1B12;margin:0 0 1rem 0;">Test the storefront and checkout engine in real time.</h2>
 		<p style="font-size:1.0625rem;line-height:1.7;color:#475569;margin:0;">Pick your product variant, toggle add-ons, test promo codes, and run a live checkout flow to watch our sub-15ms SQL queries and HMAC token security execute.</p>
 	</div>
@@ -44,15 +44,15 @@ defined( 'ABSPATH' ) || exit;
 				<label style="display:block;font-size:0.75rem;font-weight:700;color:#64748B;text-transform:uppercase;margin-bottom:8px;">Choose Variant</label>
 				<div class="om-studio-variant-group" style="display:grid;grid-template-columns:1fr 1fr 1fr;gap:8px;">
 					<button type="button" class="om-studio-var-btn is-active" data-base-price="49" data-name="Digital Creator License" data-type="digital" style="background:#EFF8F2;border:2px solid #22A06B;border-radius:8px;padding:10px 8px;text-align:center;cursor:pointer;transition:all 0.15s ease;">
-						<div style="font-size:0.85rem;font-weight:800;color:#0B5135;">⚡ Digital</div>
+						<div style="font-size:0.85rem;font-weight:800;color:#0B5135;"><svg width="13" height="13" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true" style="vertical-align:-1px;margin-right:4px;"><path d="M13 2L3 14h9l-1 8 10-12h-9l1-8z"/></svg>Digital</div>
 						<div class="om-var-price" style="font-size:0.8rem;color:#18794E;font-weight:700;margin-top:2px;">$49</div>
 					</button>
 					<button type="button" class="om-studio-var-btn" data-base-price="129" data-name="Physical Box + Hardware" data-type="physical" style="background:#FFFFFF;border:1px solid #E2E8F0;border-radius:8px;padding:10px 8px;text-align:center;cursor:pointer;transition:all 0.15s ease;">
-						<div style="font-size:0.85rem;font-weight:700;color:#475569;">📦 Physical</div>
+						<div style="font-size:0.85rem;font-weight:700;color:#475569;"><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" style="vertical-align:-2px;margin-right:4px;"><path d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z"></path><polyline points="3.27 6.96 12 12.01 20.73 6.96"></polyline><line x1="12" y1="22.08" x2="12" y2="12"></line></svg>Physical</div>
 						<div class="om-var-price" style="font-size:0.8rem;color:#64748B;font-weight:600;margin-top:2px;">$129</div>
 					</button>
 					<button type="button" class="om-studio-var-btn" data-base-price="249" data-name="Agency Studio Bundle" data-type="bundle" style="background:#FFFFFF;border:1px solid #E2E8F0;border-radius:8px;padding:10px 8px;text-align:center;cursor:pointer;transition:all 0.15s ease;">
-						<div style="font-size:0.85rem;font-weight:700;color:#475569;">🎁 Bundle</div>
+						<div style="font-size:0.85rem;font-weight:700;color:#475569;"><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" style="vertical-align:-2px;margin-right:4px;"><polyline points="20 12 20 22 4 22 4 12"></polyline><rect x="2" y="7" width="20" height="5"></rect><line x1="12" y1="22.08" x2="12" y2="12"></line><path d="M12 7H7.5a2.5 2.5 0 0 1 0-5C11 2 12 7 12 7z"></path><path d="M12 7h4.5a2.5 2.5 0 0 0 0-5C13 2 12 7 12 7z"></path></svg>Bundle</div>
 						<div class="om-var-price" style="font-size:0.8rem;color:#64748B;font-weight:600;margin-top:2px;">$249</div>
 					</button>
 				</div>
@@ -63,7 +63,7 @@ defined( 'ABSPATH' ) || exit;
 				<div style="display:flex;justify-content:space-between;align-items:flex-start;margin-bottom:8px;">
 					<div>
 						<h4 id="om-studio-prod-title" style="margin:0 0 4px;font-size:1rem;color:#0F172A;font-weight:700;">Digital Creator License</h4>
-						<span id="om-studio-prod-sub" style="font-size:0.75rem;color:#18794E;font-weight:600;">🔒 Automated HMAC Signed Token Delivery</span>
+						<span id="om-studio-prod-sub" style="font-size:0.75rem;color:#18794E;font-weight:600;display:inline-flex;align-items:center;gap:4px;"><svg width="12" height="12" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M18 8h-1V6c0-2.76-2.24-5-5-5S7 3.24 7 6v2H6c-1.1 0-2 .9-2 2v10c0 1.1.9 2 2 2h12c1.1 0 2-.9 2-2V10c0-1.1-.9-2-2-2zm-6 9c-1.1 0-2-.9-2-2s.9-2 2-2 2 .9 2 2-.9 2-2 2zm3.1-9H8.9V6c0-1.71 1.39-3.1 3.1-3.1 1.71 0 3.1 1.39 3.1 3.1v2z"/></svg>Automated HMAC Signed Token Delivery</span>
 					</div>
 					<div id="om-studio-prod-price" style="font-size:1.35rem;font-weight:800;color:#0F172A;">$49.00</div>
 				</div>
@@ -75,7 +75,7 @@ defined( 'ABSPATH' ) || exit;
 				<label style="display:flex;align-items:flex-start;gap:10px;cursor:pointer;">
 					<input type="checkbox" id="om-studio-upsell-check" style="width:16px;height:16px;margin-top:2px;accent-color:#18794E;cursor:pointer;">
 					<div>
-						<span style="font-size:0.825rem;font-weight:700;color:#0B5135;">⚡ 1-Click Order Bump: Add Priority Cloud Backup (+<span id="om-studio-upsell-price">$19</span>)</span>
+						<span style="font-size:0.825rem;font-weight:700;color:#0B5135;display:inline-flex;align-items:center;gap:4px;"><svg width="13" height="13" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M13 2L3 14h9l-1 8 10-12h-9l1-8z"/></svg> 1-Click Order Bump: Add Priority Cloud Backup (+<span id="om-studio-upsell-price">$19</span>)</span>
 						<p style="margin:2px 0 0;font-size:0.72rem;color:#15803D;">Automated encrypted offsite backups for customer download locker assets.</p>
 					</div>
 				</label>
@@ -112,7 +112,7 @@ defined( 'ABSPATH' ) || exit;
 
 			<!-- Trigger Checkout Button -->
 			<button type="button" id="om-studio-trigger-checkout" class="om-btn om-btn--primary" style="width:100%;justify-content:center;padding:0.85rem;font-size:0.95rem;border-radius:10px;cursor:pointer;border:none;box-shadow:0 4px 14px rgba(11,81,53,0.2);">
-				<span>⚡ Trigger Live 1-Click Checkout Flow &rarr;</span>
+				<span style="display:inline-flex;align-items:center;gap:6px;"><svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M13 2L3 14h9l-1 8 10-12h-9l1-8z"/></svg> Trigger Live 1-Click Checkout Flow &rarr;</span>
 			</button>
 
 		</div>

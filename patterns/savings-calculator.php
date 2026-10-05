@@ -16,7 +16,7 @@ defined( 'ABSPATH' ) || exit;
 		
 		<!-- Section Header -->
 		<div class="om-calc-header om-text-center">
-			<span class="om-calc-badge">⚡ Profit &amp; Fee Estimator</span>
+			<span class="om-calc-badge" style="display:inline-flex;align-items:center;gap:5px;"><svg width="12" height="12" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"/></svg> Profit &amp; Fee Estimator</span>
 			<h2 class="om-calc-title">Stop paying platform rent. See your annual savings.</h2>
 			<p class="om-calc-subhead">SaaS eCommerce platforms and bloated paid plugin stacks quietly siphon 3% to 8% of your gross revenue. Calculate how much you keep with OmnifyWP’s zero-commission architecture.</p>
 		</div>

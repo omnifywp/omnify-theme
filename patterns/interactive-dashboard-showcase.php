@@ -15,7 +15,7 @@ defined( 'ABSPATH' ) || exit;
 
 	<!-- Header Area -->
 	<div class="om-text-center" style="max-width:820px;margin:0 auto 3.5rem auto;">
-		<span class="om-badge om-badge--neutral" style="font-size:0.75rem;font-weight:700;padding:4px 12px;margin-bottom:0.75rem;display:inline-flex;text-transform:uppercase;letter-spacing:0.04em;">⚡ Native WordPress Control Center</span>
+		<span class="om-badge om-badge--neutral" style="font-size:0.75rem;font-weight:700;padding:4px 12px;margin-bottom:0.75rem;display:inline-flex;align-items:center;gap:6px;text-transform:uppercase;letter-spacing:0.04em;"><svg width="13" height="13" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M13 2L3 14h9l-1 8 10-12h-9l1-8z"/></svg>Native WordPress Control Center</span>
 		<h2 style="font-size:clamp(2rem, 3.8vw, 2.85rem);font-weight:800;letter-spacing:-0.035em;line-height:1.2;color:#0D1B12;margin:0 0 1rem 0;">Run your entire store without leaving WordPress admin.</h2>
 		<p style="font-size:1.0625rem;line-height:1.7;color:#475569;margin:0;">Experience the intuitive, bloat-free merchant interface. Test live tabs, filter timeframe metrics, explore product models, and simulate instantaneous order webhook processing below.</p>
 	</div>
@@ -48,7 +48,7 @@ defined( 'ABSPATH' ) || exit;
 				<div style="display:flex;justify-content:space-between;align-items:center;background:#ffffff;padding:12px 18px;border-radius:12px;border:1px solid #E2E8F0;margin-bottom:20px;box-shadow:0 1px 3px rgba(0,0,0,0.03);flex-wrap:wrap;gap:12px;">
 					<div style="display:flex;align-items:center;gap:12px;flex-wrap:wrap;">
 						<div style="width:34px;height:34px;border-radius:8px;background:linear-gradient(135deg, #18794E, #22A06B);color:#fff;display:flex;align-items:center;justify-content:center;font-weight:800;font-size:0.9rem;">
-							⚡
+							<svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M13 2L3 14h9l-1 8 10-12h-9l1-8z"/></svg>
 						</div>
 						<div class="om-mockup-tabs-bar" style="display:flex;gap:6px;">
 							<button type="button" class="om-mockup-tab is-active" data-tab-target="panel-overview" style="background:#EFF8F2;color:#0B5135;border:1px solid #D4E8DC;padding:6px 14px;border-radius:6px;font-size:0.85rem;font-weight:700;cursor:pointer;transition:all 0.15s ease;">Dashboard</button>
@@ -193,13 +193,13 @@ defined( 'ABSPATH' ) || exit;
 
 								<!-- Live Simulation Feedback Tray -->
 								<div id="om-hero-sim-feedback" style="display:none;background:#EFF8F2;border:1px solid #86EFAC;border-radius:8px;padding:10px;margin-bottom:12px;font-size:0.75rem;color:#166534;line-height:1.4;">
-									<div style="font-weight:700;margin-bottom:2px;" id="om-sim-title">⚡ Simulating 1-Click Order...</div>
+									<div style="font-weight:700;margin-bottom:2px;" id="om-sim-title">Simulating 1-Click Order...</div>
 									<div id="om-sim-desc" style="color:#15803D;">Executing custom SQL transaction...</div>
 								</div>
 							</div>
 							<div>
 								<button type="button" id="om-hero-sim-btn" class="om-btn om-btn--primary" style="width:100%;justify-content:center;padding:0.75rem;font-size:0.875rem;border-radius:8px;cursor:pointer;border:none;font-weight:700;box-shadow:0 4px 12px rgba(11,81,53,0.15);">
-									<span>⚡ Test 1-Click Checkout Flow</span>
+									<span style="display:inline-flex;align-items:center;gap:6px;"><svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M13 2L3 14h9l-1 8 10-12h-9l1-8z"/></svg>Test 1-Click Checkout Flow</span>
 								</button>
 								<div style="text-align:center;font-size:0.72rem;color:#94A3B8;margin-top:6px;">Simulates sub-15ms webhook execution</div>
 							</div>
@@ -217,7 +217,7 @@ defined( 'ABSPATH' ) || exit;
 								<button type="button" class="om-hero-order-pill" data-filter="processing" style="padding:5px 12px;background:#F8FAFC;color:#64748B;border:1px solid transparent;border-radius:6px;font-size:0.78rem;font-weight:600;cursor:pointer;">Processing (2)</button>
 								<button type="button" class="om-hero-order-pill" data-filter="refunded" style="padding:5px 12px;background:#F8FAFC;color:#64748B;border:1px solid transparent;border-radius:6px;font-size:0.78rem;font-weight:600;cursor:pointer;">Refunded (1)</button>
 							</div>
-							<div style="font-size:0.78rem;color:#18794E;font-weight:700;">⚡ Instant In-Memory Filter</div>
+							<div style="font-size:0.78rem;color:#18794E;font-weight:700;display:inline-flex;align-items:center;gap:4px;"><svg width="12" height="12" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M13 2L3 14h9l-1 8 10-12h-9l1-8z"/></svg>Instant In-Memory Filter</div>
 						</div>
 						<div style="overflow-x:auto;">
 							<table style="width:100%;border-collapse:collapse;font-size:0.825rem;text-align:left;">
@@ -236,7 +236,7 @@ defined( 'ABSPATH' ) || exit;
 										<td style="padding:12px 10px;font-family:var(--om-font-mono);font-weight:700;color:#18794E;">#1042</td>
 										<td style="padding:12px 10px;font-weight:600;">sarah.j@designco.com</td>
 										<td style="padding:12px 10px;"><span style="background:#F1F5F9;padding:2px 8px;border-radius:4px;font-size:0.72rem;font-weight:700;">Stripe Elements</span></td>
-										<td style="padding:12px 10px;"><span style="color:#10B981;font-weight:700;font-size:0.75rem;">🔒 HMAC Token Active (48h)</span></td>
+										<td style="padding:12px 10px;"><span style="color:#10B981;font-weight:700;font-size:0.75rem;display:inline-flex;align-items:center;gap:4px;"><svg width="12" height="12" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M18 8h-1V6c0-2.76-2.24-5-5-5S7 3.24 7 6v2H6c-1.1 0-2 .9-2 2v10c0 1.1.9 2 2 2h12c1.1 0 2-.9 2-2V10c0-1.1-.9-2-2-2zm-6 9c-1.1 0-2-.9-2-2s.9-2 2-2 2 .9 2 2-.9 2-2 2zm3.1-9H8.9V6c0-1.71 1.39-3.1 3.1-3.1 1.71 0 3.1 1.39 3.1 3.1v2z"/></svg>HMAC Token Active (48h)</span></td>
 										<td style="padding:12px 10px;font-weight:700;">$89.00</td>
 										<td style="padding:12px 10px;"><span style="background:#ECFDF5;color:#065F46;padding:3px 8px;border-radius:9999px;font-size:0.72rem;font-weight:700;">Instant Delivered</span></td>
 									</tr>
@@ -252,7 +252,7 @@ defined( 'ABSPATH' ) || exit;
 										<td style="padding:12px 10px;font-family:var(--om-font-mono);font-weight:700;color:#18794E;">#1040</td>
 										<td style="padding:12px 10px;font-weight:600;">emma.w@audiobeats.io</td>
 										<td style="padding:12px 10px;"><span style="background:#F1F5F9;padding:2px 8px;border-radius:4px;font-size:0.72rem;font-weight:700;">Stripe (Apple Pay)</span></td>
-										<td style="padding:12px 10px;"><span style="color:#10B981;font-weight:700;font-size:0.75rem;">🔒 HMAC Token Active (48h)</span></td>
+										<td style="padding:12px 10px;"><span style="color:#10B981;font-weight:700;font-size:0.75rem;display:inline-flex;align-items:center;gap:4px;"><svg width="12" height="12" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M18 8h-1V6c0-2.76-2.24-5-5-5S7 3.24 7 6v2H6c-1.1 0-2 .9-2 2v10c0 1.1.9 2 2 2h12c1.1 0 2-.9 2-2V10c0-1.1-.9-2-2-2zm-6 9c-1.1 0-2-.9-2-2s.9-2 2-2 2 .9 2 2-.9 2-2 2zm3.1-9H8.9V6c0-1.71 1.39-3.1 3.1-3.1 1.71 0 3.1 1.39 3.1 3.1v2z"/></svg>HMAC Token Active (48h)</span></td>
 										<td style="padding:12px 10px;font-weight:700;">$129.00</td>
 										<td style="padding:12px 10px;"><span style="background:#ECFDF5;color:#065F46;padding:3px 8px;border-radius:9999px;font-size:0.72rem;font-weight:700;">Instant Delivered</span></td>
 									</tr>
@@ -260,7 +260,7 @@ defined( 'ABSPATH' ) || exit;
 										<td style="padding:12px 10px;font-family:var(--om-font-mono);font-weight:700;color:#18794E;">#1039</td>
 										<td style="padding:12px 10px;font-weight:600;">alex.r@studio.net</td>
 										<td style="padding:12px 10px;"><span style="background:#F1F5F9;padding:2px 8px;border-radius:4px;font-size:0.72rem;font-weight:700;">Mollie (iDEAL)</span></td>
-										<td style="padding:12px 10px;"><span style="color:#10B981;font-weight:700;font-size:0.75rem;">🔒 HMAC Token Active (48h)</span></td>
+										<td style="padding:12px 10px;"><span style="color:#10B981;font-weight:700;font-size:0.75rem;display:inline-flex;align-items:center;gap:4px;"><svg width="12" height="12" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M18 8h-1V6c0-2.76-2.24-5-5-5S7 3.24 7 6v2H6c-1.1 0-2 .9-2 2v10c0 1.1.9 2 2 2h12c1.1 0 2-.9 2-2V10c0-1.1-.9-2-2-2zm-6 9c-1.1 0-2-.9-2-2s.9-2 2-2 2 .9 2 2-.9 2-2 2zm3.1-9H8.9V6c0-1.71 1.39-3.1 3.1-3.1 1.71 0 3.1 1.39 3.1 3.1v2z"/></svg>HMAC Token Active (48h)</span></td>
 										<td style="padding:12px 10px;font-weight:700;">$38.00</td>
 										<td style="padding:12px 10px;"><span style="background:#ECFDF5;color:#065F46;padding:3px 8px;border-radius:9999px;font-size:0.72rem;font-weight:700;">Instant Delivered</span></td>
 									</tr>
@@ -289,18 +289,18 @@ defined( 'ABSPATH' ) || exit;
 								</div>
 								<!-- Product Type Switcher Buttons -->
 								<div class="om-hero-prod-type-bar" style="display:flex;gap:6px;margin-bottom:12px;">
-									<button type="button" class="om-hero-prod-type-btn is-active" data-type="digital" style="flex:1;padding:6px;background:#EFF8F2;color:#0B5135;border:1px solid #22A06B;border-radius:6px;font-size:0.75rem;font-weight:700;cursor:pointer;">⚡ Digital</button>
-									<button type="button" class="om-hero-prod-type-btn" data-type="physical" style="flex:1;padding:6px;background:#fff;color:#64748B;border:1px solid #E2E8F0;border-radius:6px;font-size:0.75rem;font-weight:600;cursor:pointer;">📦 Physical</button>
-									<button type="button" class="om-hero-prod-type-btn" data-type="bundle" style="flex:1;padding:6px;background:#fff;color:#64748B;border:1px solid #E2E8F0;border-radius:6px;font-size:0.75rem;font-weight:600;cursor:pointer;">🎁 Bundle</button>
+									<button type="button" class="om-hero-prod-type-btn is-active" data-type="digital" style="flex:1;padding:6px;background:#EFF8F2;color:#0B5135;border:1px solid #22A06B;border-radius:6px;font-size:0.75rem;font-weight:700;cursor:pointer;"><svg width="12" height="12" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true" style="vertical-align:-1px;margin-right:3px;"><path d="M13 2L3 14h9l-1 8 10-12h-9l1-8z"/></svg>Digital</button>
+									<button type="button" class="om-hero-prod-type-btn" data-type="physical" style="flex:1;padding:6px;background:#fff;color:#64748B;border:1px solid #E2E8F0;border-radius:6px;font-size:0.75rem;font-weight:600;cursor:pointer;"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" style="vertical-align:-1px;margin-right:3px;"><path d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z"></path><polyline points="3.27 6.96 12 12.01 20.73 6.96"></polyline><line x1="12" y1="22.08" x2="12" y2="12"></line></svg>Physical</button>
+									<button type="button" class="om-hero-prod-type-btn" data-type="bundle" style="flex:1;padding:6px;background:#fff;color:#64748B;border:1px solid #E2E8F0;border-radius:6px;font-size:0.75rem;font-weight:600;cursor:pointer;"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" style="vertical-align:-1px;margin-right:3px;"><polyline points="20 12 20 22 4 22 4 12"></polyline><rect x="2" y="7" width="20" height="5"></rect><line x1="12" y1="22.08" x2="12" y2="7"></line><path d="M12 7H7.5a2.5 2.5 0 0 1 0-5C11 2 12 7 12 7z"></path><path d="M12 7h4.5a2.5 2.5 0 0 0 0-5C13 2 12 7 12 7z"></path></svg>Bundle</button>
 								</div>
 
 								<h4 id="om-hero-prod-title" style="margin:0 0 8px;font-size:1.05rem;color:#0F172A;">WordPress Masterclass &amp; Design Assets</h4>
 								<div id="om-hero-prod-badge-wrap" style="display:flex;gap:6px;margin-bottom:12px;">
-									<span id="om-hero-prod-badge-1" style="background:#EFF8F2;color:#0B5135;border:1px solid #D4E8DC;padding:2px 8px;border-radius:4px;font-size:0.72rem;font-weight:700;">⚡ Digital Download</span>
+									<span id="om-hero-prod-badge-1" style="background:#EFF8F2;color:#0B5135;border:1px solid #D4E8DC;padding:2px 8px;border-radius:4px;font-size:0.72rem;font-weight:700;">Digital Download</span>
 									<span id="om-hero-prod-badge-2" style="background:#F1F5F9;color:#475569;padding:2px 8px;border-radius:4px;font-size:0.72rem;font-weight:600;">Custom License Key</span>
 								</div>
 								<div id="om-hero-prod-box" style="background:#FFFFFF;border:1px dashed #86EFAC;border-radius:8px;padding:12px;margin-bottom:12px;">
-									<div id="om-hero-prod-file" style="font-size:0.8rem;font-weight:700;color:#166534;">📦 masterclass-complete-v2.zip (384 MB)</div>
+									<div id="om-hero-prod-file" style="font-size:0.8rem;font-weight:700;color:#166534;">masterclass-complete-v2.zip (384 MB)</div>
 									<div id="om-hero-prod-desc" style="font-size:0.72rem;color:#15803D;margin-top:2px;">HMAC SHA-256 Link &bull; Max 5 downloads &bull; 48h validity</div>
 								</div>
 								<div style="display:flex;justify-content:space-between;align-items:center;">
