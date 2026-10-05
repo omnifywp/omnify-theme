@@ -908,6 +908,8 @@ body[data-om-persona="developer"] .om-for-developer.om-grid {
   box-shadow: 0 25px 65px -15px rgba(11, 81, 53, 0.16), 0 0 0 1px rgba(11, 81, 53, 0.04);
   padding: clamp(1.5rem, 3.5vw, 2.75rem);
   margin-top: 2.5rem;
+  max-width: 980px;
+  margin-inline: auto;
   width: 100%;
   box-sizing: border-box;
   text-align: left;
@@ -2908,6 +2910,11 @@ footer:has(.om-site-footer) {
 /* ============================================================
  * SAAS BENTO GRID (SureCart & FluentCart Inspired)
  * ============================================================ */
+.om-pillars-section {
+  max-width: 1060px;
+  margin-inline: auto;
+}
+
 .om-bento-grid {
   display: grid;
   grid-template-columns: repeat(12, 1fr);

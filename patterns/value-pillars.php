@@ -9,7 +9,7 @@
 defined( 'ABSPATH' ) || exit;
 ?>
 
-<!-- wp:group {"tagName":"section","className":"om-section om-pillars-section","style":{"spacing":{"padding":{"top":"clamp(4.5rem, 7vw, 6.5rem)","bottom":"clamp(4.5rem, 7vw, 6.5rem)"}}},"layout":{"type":"constrained","contentSize":"1240px"}} -->
+<!-- wp:group {"tagName":"section","className":"om-section om-pillars-section","style":{"spacing":{"padding":{"top":"clamp(4.5rem, 7vw, 6.5rem)","bottom":"clamp(4.5rem, 7vw, 6.5rem)"}}},"layout":{"type":"constrained","contentSize":"1060px"}} -->
 <section class="wp-block-group om-section om-pillars-section">
 
 	<!-- ============================================================
@@ -17,7 +17,7 @@ defined( 'ABSPATH' ) || exit;
 	     ============================================================ -->
 	<div class="om-for-user">
 		<!-- Header Area -->
-		<div class="wp-block-group om-text-center" style="margin-bottom:3.5rem">
+		<div class="wp-block-group om-text-center" style="max-width:760px;margin-inline:auto;margin-bottom:3.5rem;">
 			<p class="om-eyebrow">Zero Headaches • Maximum Profits</p>
 			<h2 class="wp-block-heading" style="font-size:clamp(2rem, 3.8vw, 2.85rem);font-weight:800;letter-spacing:-0.035em;line-height:1.2">Everything you need to sell online. None of the complexity.</h2>
 			<p class="om-text-muted" style="font-size:1.0625rem;line-height:1.7">Stop losing 2% to 10% of your earnings to hosted eCommerce platforms. OmnifyWP makes running your WordPress store effortless, beautiful, and completely free of middleman commissions.</p>
