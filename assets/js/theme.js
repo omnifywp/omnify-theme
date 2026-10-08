@@ -228,47 +228,6 @@
     } );
   } );
 
-  // ─── 4. Theme (Dark/Light) Toggle ────────────────────────────────────────
-  const themeToggle = document.getElementById( 'om-theme-toggle' );
-  const STORAGE_KEY = 'omnify-theme-pref';
-
-  function applyTheme( theme ) {
-    document.documentElement.setAttribute( 'data-theme', theme );
-    if ( themeToggle ) {
-      const label = theme === 'dark' ? 'Switch to light mode' : 'Switch to dark mode';
-      themeToggle.setAttribute( 'aria-label', label );
-    }
-  }
-
-  function getPreference() {
-    try {
-      const stored = localStorage.getItem( STORAGE_KEY );
-      if ( stored ) return stored;
-    } catch ( _ ) {}
-    return window.matchMedia( '(prefers-color-scheme: dark)' ).matches ? 'dark' : 'light';
-  }
-
-  applyTheme( getPreference() );
-
-  if ( themeToggle ) {
-    themeToggle.addEventListener( 'click', function () {
-      const current = document.documentElement.getAttribute( 'data-theme' );
-      const next    = current === 'dark' ? 'light' : 'dark';
-      applyTheme( next );
-      try { localStorage.setItem( STORAGE_KEY, next ); } catch ( _ ) {}
-    } );
-  }
-
-  // Listen for OS preference changes
-  window.matchMedia( '(prefers-color-scheme: dark)' ).addEventListener( 'change', function ( e ) {
-    try {
-      if ( ! localStorage.getItem( STORAGE_KEY ) ) {
-        applyTheme( e.matches ? 'dark' : 'light' );
-      }
-    } catch ( _ ) {
-      applyTheme( e.matches ? 'dark' : 'light' );
-    }
-  } );
 
   // ─── 5. Smooth scroll for on-page anchor links ───────────────────────────
   document.querySelectorAll( 'a[href^="#"]' ).forEach( function ( anchor ) {
@@ -424,8 +383,19 @@
         }
       }
 
-      window.addEventListener( 'scroll', checkFloatingBar, { passive: true } );
-      window.addEventListener( 'resize', checkFloatingBar, { passive: true } );
+      let floatingBarTicking = false;
+      function throttledCheckFloatingBar() {
+        if ( ! floatingBarTicking ) {
+          window.requestAnimationFrame( function () {
+            checkFloatingBar();
+            floatingBarTicking = false;
+          } );
+          floatingBarTicking = true;
+        }
+      }
+
+      window.addEventListener( 'scroll', throttledCheckFloatingBar, { passive: true } );
+      window.addEventListener( 'resize', throttledCheckFloatingBar, { passive: true } );
 
       if ( floatingClose ) {
         floatingClose.addEventListener( 'click', function () {
@@ -1888,7 +1858,18 @@
       }
     }
 
-    window.addEventListener( 'scroll', updateScrollProgress, { passive: true } );
+    let bttTicking = false;
+    function throttledScrollProgress() {
+      if ( ! bttTicking ) {
+        window.requestAnimationFrame( function () {
+          updateScrollProgress();
+          bttTicking = false;
+        } );
+        bttTicking = true;
+      }
+    }
+
+    window.addEventListener( 'scroll', throttledScrollProgress, { passive: true } );
     updateScrollProgress();
 
     bttBtn.addEventListener( 'click', function () {
@@ -1973,49 +1954,90 @@
     const pipe1          = document.getElementById( 'om-sim-pipe-1' );
     const pipe2          = document.getElementById( 'om-sim-pipe-2' );
     const pipe3          = document.getElementById( 'om-sim-pipe-3' );
+    const qtyMinusBtn    = document.getElementById( 'om-sim-qty-minus' );
+    const qtyPlusBtn     = document.getElementById( 'om-sim-qty-plus' );
+    const qtyValEl       = document.getElementById( 'om-sim-qty-val' );
 
     if ( ! placeOrderBtn ) return;
 
-    let basePrice = 49.00;
-    let discount = 9.80; // default SAVE20 is applied initially
+    const unitPrice = 49.00;
+    let quantity    = 1;
+    let appliedCoupon = 'SAVE20'; // default coupon active
+
+    function calculateDiscount( subtotal, coupon ) {
+      if ( coupon === 'SAVE20' ) {
+        return subtotal * 0.20;
+      } else if ( coupon === 'FREE' ) {
+        return subtotal;
+      }
+      return 0;
+    }
 
     function updatePrice() {
-      const finalPrice = Math.max( 0, basePrice - discount );
-      if ( priceDisplay ) {
-        priceDisplay.textContent = '$' + basePrice.toFixed( 2 );
+      const subtotal   = unitPrice * quantity;
+      const discount   = calculateDiscount( subtotal, appliedCoupon );
+      const finalPrice = Math.max( 0, subtotal - discount );
+
+      if ( qtyValEl ) {
+        qtyValEl.textContent = quantity;
       }
+
+      if ( priceDisplay ) {
+        priceDisplay.textContent = '$' + subtotal.toFixed( 2 );
+      }
+
+      if ( couponNotice ) {
+        if ( appliedCoupon === 'SAVE20' ) {
+          couponNotice.style.display = 'flex';
+          couponNotice.style.color = '#15803D';
+          couponNotice.innerHTML = '<svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg> Coupon SAVE20 applied: -$' + discount.toFixed( 2 ) + ' off!';
+        } else if ( appliedCoupon === 'FREE' ) {
+          couponNotice.style.display = 'flex';
+          couponNotice.style.color = '#15803D';
+          couponNotice.innerHTML = '<svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg> 100% Free VIP Access Coupon Applied!';
+        } else if ( appliedCoupon === 'INVALID' ) {
+          couponNotice.style.display = 'flex';
+          couponNotice.style.color = '#DC2626';
+          couponNotice.textContent = 'Invalid promo code. Try "SAVE20"';
+        } else {
+          couponNotice.style.display = 'none';
+        }
+      }
+
       if ( placeOrderBtn && ! placeOrderBtn.classList.contains( 'is-completed' ) ) {
         placeOrderBtn.innerHTML = '<span>Complete Purchase ($' + finalPrice.toFixed( 2 ) + ')</span> &rarr;';
       }
+    }
+
+    if ( qtyMinusBtn ) {
+      qtyMinusBtn.addEventListener( 'click', function () {
+        if ( quantity > 1 ) {
+          quantity--;
+          updatePrice();
+        }
+      } );
+    }
+
+    if ( qtyPlusBtn ) {
+      qtyPlusBtn.addEventListener( 'click', function () {
+        if ( quantity < 99 ) {
+          quantity++;
+          updatePrice();
+        }
+      } );
     }
 
     if ( couponBtn && couponInput ) {
       couponBtn.addEventListener( 'click', function () {
         const val = couponInput.value.trim().toUpperCase();
         if ( val === 'SAVE20' ) {
-          discount = 9.80;
-          if ( couponNotice ) {
-            couponNotice.style.display = 'block';
-            couponNotice.style.color = '#15803D';
-            couponNotice.textContent = 'Coupon SAVE20 applied: -$9.80 off!';
-          }
+          appliedCoupon = 'SAVE20';
         } else if ( val === 'FREE' ) {
-          discount = 49.00;
-          if ( couponNotice ) {
-            couponNotice.style.display = 'block';
-            couponNotice.style.color = '#15803D';
-            couponNotice.textContent = '100% Free VIP Access Coupon Applied!';
-          }
+          appliedCoupon = 'FREE';
         } else if ( val === '' ) {
-          discount = 0;
-          if ( couponNotice ) couponNotice.style.display = 'none';
+          appliedCoupon = '';
         } else {
-          discount = 0;
-          if ( couponNotice ) {
-            couponNotice.style.display = 'block';
-            couponNotice.style.color = '#DC2626';
-            couponNotice.textContent = 'Invalid promo code. Try "SAVE20"';
-          }
+          appliedCoupon = 'INVALID';
         }
         updatePrice();
       } );
@@ -2025,6 +2047,10 @@
       if ( ! placeOrderBtn || placeOrderBtn.disabled ) return;
       placeOrderBtn.disabled = true;
       placeOrderBtn.innerHTML = '<span style="display:inline-flex;align-items:center;gap:6px;"><svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M13 2L3 14h9l-1 8 10-12h-9l1-8z"/></svg>Processing with ' + paymentMethod + '...</span>';
+
+      const subtotal   = unitPrice * quantity;
+      const discount   = calculateDiscount( subtotal, appliedCoupon );
+      const finalPrice = Math.max( 0, subtotal - discount );
 
       // Step 1: Stripe/Apple Pay Auth
       if ( pipe1 ) {
@@ -2058,7 +2084,7 @@
       setTimeout( function () {
         placeOrderBtn.disabled = false;
         placeOrderBtn.classList.add( 'is-completed' );
-        placeOrderBtn.innerHTML = '<span>✓ Order Placed ($' + ( basePrice - discount ).toFixed( 2 ) + ')</span>';
+        placeOrderBtn.innerHTML = '<span>✓ Order Placed ($' + finalPrice.toFixed( 2 ) + ')</span>';
         placeOrderBtn.style.background = '#0B5135';
 
         if ( idleState ) idleState.style.display = 'none';
@@ -2121,13 +2147,10 @@
           }
         } );
 
+        quantity = 1;
+        appliedCoupon = 'SAVE20';
         if ( couponInput ) couponInput.value = 'SAVE20';
-        discount = 9.80;
-        if ( couponNotice ) {
-          couponNotice.style.display = 'block';
-          couponNotice.style.color = '#15803D';
-          couponNotice.textContent = 'Coupon SAVE20 applied: -$9.80 off!';
-        }
+
         if ( successPanel ) {
           successPanel.style.boxShadow = '';
           successPanel.style.transform = '';

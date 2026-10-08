@@ -52,17 +52,26 @@ add_action( 'wp_head', 'omnify_marketing_favicon', 2 );
 add_action( 'login_head', 'omnify_marketing_favicon', 2 );
 
 /* ============================================================
- * Enqueue Google Fonts (display=swap, preconnect)
+ * Preconnect Resource Hints for Web Fonts
+ * ============================================================ */
+function omnify_marketing_resource_hints( array $urls, string $relation_type ): array {
+    if ( 'preconnect' === $relation_type ) {
+        $urls[] = [
+            'href' => 'https://fonts.googleapis.com',
+        ];
+        $urls[] = [
+            'href'        => 'https://fonts.gstatic.com',
+            'crossorigin' => 'anonymous',
+        ];
+    }
+    return $urls;
+}
+add_filter( 'wp_resource_hints', 'omnify_marketing_resource_hints', 10, 2 );
+
+/* ============================================================
+ * Enqueue Google Fonts (display=swap)
  * ============================================================ */
 function omnify_marketing_google_fonts(): void {
-    // Preconnect
-    wp_enqueue_style(
-        'omnify-preconnect-fonts',
-        'https://fonts.googleapis.com',
-        [],
-        null
-    );
-
     $fonts_url = add_query_arg( [
         'family'  => implode( '&family=', [
             'Plus+Jakarta+Sans:wght@400;500;600;700;800',
@@ -180,8 +189,6 @@ add_action( 'after_setup_theme', function(): void {
 function omnify_marketing_seo_aio_geo_head(): void {
     // 1. Robots directive optimized for Google AI Overviews & SearchGPT
     echo '<meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1">' . "\n";
-    echo '<meta name="geo.region" content="US-CA">' . "\n";
-    echo '<meta name="geo.placename" content="San Francisco">' . "\n";
     echo '<meta name="rating" content="General">' . "\n";
 
     // 2. Open Graph & Twitter Cards + Schema for Single Posts

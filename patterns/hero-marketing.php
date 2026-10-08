@@ -96,7 +96,14 @@ defined( 'ABSPATH' ) || exit;
 						<div style="flex:1;">
 							<div class="om-sim-prod-name">Creator Pro Digital Asset Bundle</div>
 							<div style="font-size:0.78rem;color:#64748B;">Includes 420+ templates, presets &amp; commercial rights</div>
-							<div class="om-sim-prod-price" id="om-sim-price-display">$49.00</div>
+							<div style="display:flex;align-items:center;justify-content:space-between;margin-top:6px;">
+								<div class="om-sim-prod-price" id="om-sim-price-display">$49.00</div>
+								<div class="om-sim-qty-stepper" style="display:inline-flex;align-items:center;background:#F8FAFC;border:1px solid #CBD5E1;border-radius:6px;overflow:hidden;">
+									<button type="button" id="om-sim-qty-minus" aria-label="Decrease quantity" style="border:none;background:transparent;padding:3px 9px;font-size:0.85rem;font-weight:700;color:#475569;cursor:pointer;line-height:1;transition:background 0.15s ease;">−</button>
+									<span id="om-sim-qty-val" style="min-width:22px;text-align:center;font-size:0.8rem;font-weight:700;color:#0F172A;font-family:var(--om-font-mono);">1</span>
+									<button type="button" id="om-sim-qty-plus" aria-label="Increase quantity" style="border:none;background:transparent;padding:3px 9px;font-size:0.85rem;font-weight:700;color:#475569;cursor:pointer;line-height:1;transition:background 0.15s ease;">+</button>
+								</div>
+							</div>
 						</div>
 					</div>
 

@@ -39,6 +39,7 @@ class Omnify_Demo_Content {
 		add_action( 'admin_menu', [ $this, 'register_admin_page' ] );
 		add_action( 'admin_notices', [ $this, 'render_activation_notice' ] );
 		add_action( 'admin_post_omnify_import_demo', [ $this, 'handle_import_action' ] );
+		add_action( 'admin_post_omnify_reset_demo', [ $this, 'handle_reset_action' ] );
 		add_action( 'admin_post_omnify_dismiss_demo_notice', [ $this, 'handle_dismiss_notice' ] );
 		add_action( 'after_switch_theme', [ $this, 'on_theme_activation' ] );
 	}
@@ -158,6 +159,115 @@ class Omnify_Demo_Content {
 
 		wp_safe_redirect( admin_url( 'themes.php?page=omnify-demo-content&status=success' ) );
 		exit;
+	}
+
+	/**
+	 * Handle the reset demo content POST action.
+	 */
+	public function handle_reset_action(): void {
+		check_admin_referer( 'omnify_reset_demo_action', 'omnify_reset_nonce' );
+
+		if ( ! current_user_can( 'manage_options' ) ) {
+			wp_die( esc_html__( 'You do not have permission to perform this action.', 'omnifywp-marketing' ) );
+		}
+
+		$results = $this->run_reset();
+
+		set_transient( 'omnify_demo_reset_results', $results, 60 );
+
+		wp_safe_redirect( admin_url( 'themes.php?page=omnify-demo-content&status=reset_success' ) );
+		exit;
+	}
+
+	/**
+	 * Reset and remove demo pages, menus, sample posts and reading configuration.
+	 *
+	 * @return array Summary of reset actions performed.
+	 */
+	public function run_reset(): array {
+		$results = [
+			'pages_deleted' => 0,
+			'posts_deleted' => 0,
+			'menus_deleted' => 0,
+			'reading_reset' => false,
+			'messages'      => [],
+		];
+
+		// 1. Delete demo pages
+		$pages_data = $this->get_demo_pages_data();
+		foreach ( array_keys( $pages_data ) as $slug ) {
+			$page = get_page_by_path( $slug );
+			if ( ! $page && isset( $pages_data[ $slug ]['post_title'] ) ) {
+				$page = get_page_by_title( $pages_data[ $slug ]['post_title'] );
+			}
+			if ( $page ) {
+				wp_delete_post( $page->ID, true );
+				$results['pages_deleted']++;
+			}
+		}
+		if ( $results['pages_deleted'] > 0 ) {
+			$results['messages'][] = sprintf(
+				/* translators: %d: count */
+				__( '%d demo pages removed.', 'omnifywp-marketing' ),
+				$results['pages_deleted']
+			);
+		}
+
+		// 2. Reset front page reading setting
+		update_option( 'show_on_front', 'posts' );
+		delete_option( 'page_on_front' );
+		delete_option( 'page_for_posts' );
+		$results['reading_reset'] = true;
+		$results['messages'][] = __( 'Homepage display reset to default latest blog posts feed.', 'omnifywp-marketing' );
+
+		// 3. Delete demo navigation menus
+		$demo_menus = [
+			'Omnify Primary Menu',
+			'Omnify Footer Links',
+			'Omnify Legal Links',
+		];
+		foreach ( $demo_menus as $menu_name ) {
+			$menu_obj = wp_get_nav_menu_object( $menu_name );
+			if ( $menu_obj ) {
+				wp_delete_nav_menu( $menu_obj->term_id );
+				$results['menus_deleted']++;
+			}
+		}
+		if ( $results['menus_deleted'] > 0 ) {
+			$results['messages'][] = sprintf(
+				/* translators: %d: count */
+				__( '%d demo navigation menus removed.', 'omnifywp-marketing' ),
+				$results['menus_deleted']
+			);
+		}
+
+		// 4. Delete demo sample blog posts
+		$demo_post_slugs = [
+			'architecture-deep-dive-custom-sql-tables',
+			'benchmarking-50000-concurrent-checkouts',
+			'zero-bloat-digital-fulfillment-pipeline',
+			'migrating-from-legacy-cart-systems-to-omnifywp',
+		];
+		foreach ( $demo_post_slugs as $slug ) {
+			$post = get_page_by_path( $slug, OBJECT, 'post' );
+			if ( $post ) {
+				wp_delete_post( $post->ID, true );
+				$results['posts_deleted']++;
+			}
+		}
+		if ( $results['posts_deleted'] > 0 ) {
+			$results['messages'][] = sprintf(
+				/* translators: %d: count */
+				__( '%d demo blog posts removed.', 'omnifywp-marketing' ),
+				$results['posts_deleted']
+			);
+		}
+
+		// 5. Clean up tracking options
+		delete_option( 'omnify_demo_content_imported_at' );
+		delete_option( 'omnify_demo_notice_dismissed' );
+
+		return $results;
 	}
 
 	/**
@@ -810,7 +920,7 @@ class Omnify_Demo_Content {
 		$plugin_active= is_plugin_active( 'omnifywp-ecommerce/omnifywp-ecommerce.php' ) || class_exists( '\Omnify\eCommerce\Omnify_eCommerce' );
 
 		?>
-		<div class="wrap omnify-demo-wrap" style="max-width: 980px; margin-top: 24px; font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen-Sans, Ubuntu, Cantarell, 'Helvetica Neue', sans-serif;">
+		<div class="wrap omnify-demo-wrap" style="max-width: 1060px; margin-top: 24px; font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen-Sans, Ubuntu, Cantarell, 'Helvetica Neue', sans-serif;">
 			
 			<!-- Header Banner -->
 			<div style="background: linear-gradient(135deg, #063d26 0%, #126343 100%); color: #ffffff; padding: 32px 36px; border-radius: 12px; margin-bottom: 24px; box-shadow: 0 4px 14px rgba(6,61,38,0.15); display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 20px;">
@@ -854,6 +964,28 @@ class Omnify_Demo_Content {
 					<?php else : ?>
 						<p style="margin: 0; color: #1e3728; font-size: 13.5px;">
 							<?php esc_html_e( 'All selected pages, navigation menus, and articles are up to date.', 'omnifywp-marketing' ); ?>
+						</p>
+					<?php endif; ?>
+				</div>
+			<?php elseif ( isset( $_GET['status'] ) && 'reset_success' === $_GET['status'] ) : 
+				$reset_results = get_transient( 'omnify_demo_reset_results' );
+				if ( $reset_results ) {
+					delete_transient( 'omnify_demo_reset_results' );
+				}
+			?>
+				<div class="notice notice-warning" style="border-left-color: #d97706; background: #fffbeb; padding: 16px 20px; border-radius: 8px; margin-bottom: 24px; box-shadow: 0 2px 6px rgba(0,0,0,0.04);">
+					<h3 style="margin: 0 0 8px 0; color: #92400e; font-size: 16px; font-weight: 700;">
+						&#9888; <?php esc_html_e( 'Demo Content Successfully Reset &amp; Removed', 'omnifywp-marketing' ); ?>
+					</h3>
+					<?php if ( ! empty( $reset_results['messages'] ) ) : ?>
+						<ul style="margin: 0; padding-left: 18px; color: #78350f; font-size: 13.5px; line-height: 1.6;">
+							<?php foreach ( $reset_results['messages'] as $msg ) : ?>
+								<li><?php echo esc_html( $msg ); ?></li>
+							<?php endforeach; ?>
+						</ul>
+					<?php else : ?>
+						<p style="margin: 0; color: #78350f; font-size: 13.5px;">
+							<?php esc_html_e( 'All demo pages, navigation menus, and sample articles have been cleanly removed.', 'omnifywp-marketing' ); ?>
 						</p>
 					<?php endif; ?>
 				</div>
@@ -1002,6 +1134,27 @@ class Omnify_Demo_Content {
 						<?php endif; ?>
 					</div>
 				</form>
+			</div>
+
+			<!-- Reset & Remove Demo Content Card -->
+			<div style="background: #ffffff; border: 1px solid #fee2e2; border-radius: 12px; padding: 24px 28px; box-shadow: 0 2px 8px rgba(0,0,0,0.02); margin-bottom: 24px;">
+				<div style="display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 16px;">
+					<div>
+						<h3 style="margin: 0 0 6px 0; font-size: 16px; font-weight: 700; color: #991b1b;">
+							<?php esc_html_e( 'Reset &amp; Remove Demo Content', 'omnifywp-marketing' ); ?>
+						</h3>
+						<p style="margin: 0; color: #64748b; font-size: 13px; line-height: 1.5; max-width: 650px;">
+							<?php esc_html_e( 'Need a clean slate? This will safely remove the 12 demo pages, sample blog posts, and navigation menus created by the demo importer and reset the front page setting.', 'omnifywp-marketing' ); ?>
+						</p>
+					</div>
+					<form method="post" action="<?php echo esc_url( admin_url( 'admin-post.php' ) ); ?>" onsubmit="return confirm('<?php echo esc_js( __( 'Are you sure you want to remove all demo pages, menus, and sample posts? This action cannot be undone.', 'omnifywp-marketing' ) ); ?>');">
+						<input type="hidden" name="action" value="omnify_reset_demo">
+						<?php wp_nonce_field( 'omnify_reset_demo_action', 'omnify_reset_nonce' ); ?>
+						<button type="submit" class="button button-secondary" style="color: #b91c1c; border-color: #fca5a5; background: #fff5f5; font-size: 13.5px; font-weight: 600; padding: 7px 18px; height: auto; text-shadow: none; border-radius: 6px; cursor: pointer;">
+							<?php esc_html_e( 'Reset / Remove Demo Content', 'omnifywp-marketing' ); ?>
+						</button>
+					</form>
+				</div>
 			</div>
 
 			<!-- Documentation / Help Card -->
