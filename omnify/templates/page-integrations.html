@@ -1,0 +1,655 @@
+<!-- wp:template-part {"slug":"header","tagName":"header"} /-->
+
+<!-- wp:group {"tagName":"main","className":"site-main","layout":{"type":"default"}} -->
+<main class="wp-block-group site-main">
+
+	<!-- Integrations Hero Section -->
+	<!-- wp:group {"className":"om-section om-hero-saas om-text-center","style":{"spacing":{"padding":{"top":"clamp(4rem, 7vw, 6.5rem)","bottom":"clamp(3rem, 6vw, 4.5rem)"}}},"layout":{"type":"constrained","contentSize":"960px"}} -->
+	<div class="wp-block-group om-section om-hero-saas om-text-center" style="border-bottom:1px solid #E6F4EC;">
+		<!-- wp:paragraph {"className":"om-eyebrow","style":{"spacing":{"margin":{"bottom":"1rem"}}}} -->
+		<p class="om-eyebrow" style="margin-bottom:1rem;">Ecosystem &amp; Connectivity</p>
+		<!-- /wp:paragraph -->
+
+		<!-- wp:heading {"level":1,"style":{"typography":{"fontSize":"clamp(2.5rem, 5vw, 3.75rem)","fontWeight":"800","letterSpacing":"-0.035em","lineHeight":"1.15"}},"textColor":"ink","className":"om-hero-title"} -->
+		<h1 class="wp-block-heading has-ink-color has-text-color om-hero-title" style="font-size:clamp(2.5rem, 5vw, 3.75rem);font-weight:800;letter-spacing:-0.035em;line-height:1.15;margin-bottom:1.25rem;">Connect your store with the tools you already use.</h1>
+		<!-- /wp:heading -->
+
+		<!-- wp:paragraph {"className":"om-text-muted om-hero-desc","style":{"typography":{"fontSize":"clamp(1.0625rem, 2vw, 1.25rem)","lineHeight":"1.65"}}} -->
+		<p class="om-text-muted om-hero-desc" style="font-size:clamp(1.0625rem, 2vw, 1.25rem);line-height:1.65;max-width:760px;margin-inline:auto;margin-bottom:2rem;">OmnifyWP includes built-in configurations for leading payment gateways worldwide, analytics &amp; conversion tracking, page builders, and developer REST APIs — zero expensive 3rd-party SaaS add-ons required.</p>
+		<!-- /wp:paragraph -->
+
+		<!-- Quick Metric Badges -->
+		<!-- wp:group {"layout":{"type":"flex","justifyContent":"center","flexWrap":"wrap"},"style":{"spacing":{"blockGap":"1.5rem"}}} -->
+		<div class="wp-block-group" style="font-size:0.875rem;font-weight:600;color:var(--om-slate);">
+			<!-- wp:paragraph -->
+			<p style="margin:0;"><span style="color:#22A06B;">✓</span> 12 Global &amp; Regional Payment Gateways</p>
+			<!-- /wp:paragraph -->
+			<!-- wp:paragraph -->
+			<p style="margin:0;"><span style="color:#22A06B;">✓</span> Native GA4 &amp; Meta Pixel Tracking</p>
+			<!-- /wp:paragraph -->
+			<!-- wp:paragraph -->
+			<p style="margin:0;"><span style="color:#22A06B;">✓</span> 100% Page Builder Compatible</p>
+			<!-- /wp:paragraph -->
+		</div>
+		<!-- /wp:group -->
+
+		<!-- Interactive Search & Category Filter Controls -->
+		<div class="om-integrations-toolbar" style="margin-top:2.5rem;max-width:820px;margin-inline:auto;">
+			<!-- Live Search Input -->
+			<div style="position:relative;margin-bottom:1.25rem;">
+				<input type="text" id="om-integ-search" placeholder="Search gateways, builders, analytics, or currencies (e.g. Stripe, UPI, Apple Pay, GA4)..." style="width:100%;padding:14px 20px 14px 44px;border:1.5px solid #D4E8DC;border-radius:12px;font-size:0.95rem;background:#FFFFFF;box-shadow:0 4px 16px rgba(11,81,53,0.06);outline:none;font-family:inherit;">
+				<svg style="position:absolute;left:16px;top:50%;transform:translateY(-50%);color:#22A06B;" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg>
+			</div>
+
+			<!-- Category Filter Pills -->
+			<div style="display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:10px;">
+				<div class="om-integ-cat-pills" style="display:flex;gap:6px;flex-wrap:wrap;">
+					<button type="button" class="om-integ-pill is-active" data-filter="all" style="padding:6px 14px;border-radius:9999px;border:1px solid #D4E8DC;background:#EFF8F2;color:#0B5135;font-size:0.8rem;font-weight:700;cursor:pointer;">All (22)</button>
+					<button type="button" class="om-integ-pill" data-filter="gateways" style="padding:6px 14px;border-radius:9999px;border:1px solid #E2E8F0;background:#FFFFFF;color:#64748B;font-size:0.8rem;font-weight:600;cursor:pointer;">Gateways (12)</button>
+					<button type="button" class="om-integ-pill" data-filter="marketing" style="padding:6px 14px;border-radius:9999px;border:1px solid #E2E8F0;background:#FFFFFF;color:#64748B;font-size:0.8rem;font-weight:600;cursor:pointer;">Marketing &amp; Pixels (2)</button>
+					<button type="button" class="om-integ-pill" data-filter="builders" style="padding:6px 14px;border-radius:9999px;border:1px solid #E2E8F0;background:#FFFFFF;color:#64748B;font-size:0.8rem;font-weight:600;cursor:pointer;">Page Builders (4)</button>
+					<button type="button" class="om-integ-pill" data-filter="developer" style="padding:6px 14px;border-radius:9999px;border:1px solid #E2E8F0;background:#FFFFFF;color:#64748B;font-size:0.8rem;font-weight:600;cursor:pointer;">Developer API (4)</button>
+				</div>
+				<span id="om-integ-count-badge" style="font-size:0.8rem;font-weight:700;color:#18794E;background:#DCFCE7;padding:4px 10px;border-radius:6px;">Showing 22 of 22</span>
+			</div>
+		</div>
+
+	</div>
+	<!-- /wp:group -->
+
+	<!-- Interactive Gateway Inspector / Webhook Test Drawer Modal -->
+	<div id="om-gateway-modal" style="display:none;position:fixed;inset:0;background:rgba(13,27,18,0.6);z-index:9999;backdrop-filter:blur(4px);align-items:center;justify-content:center;padding:20px;">
+		<div style="background:#FFFFFF;border-radius:16px;max-width:560px;width:100%;box-shadow:0 25px 60px -15px rgba(0,0,0,0.3);border:1px solid #D4E8DC;overflow:hidden;animation:omFadeInUp 0.25s ease;">
+			<div style="background:#F7FCF9;padding:16px 20px;border-bottom:1px solid #E6F4EC;display:flex;justify-content:space-between;align-items:center;">
+				<div style="display:flex;align-items:center;gap:10px;">
+					<div style="width:32px;height:32px;border-radius:8px;background:#EFF8F2;display:flex;align-items:center;justify-content:center;color:#22A06B;" id="om-modal-icon"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="1" y="4" width="22" height="16" rx="2" ry="2"></rect><line x1="1" y1="10" x2="23" y2="10"></line></svg></div>
+					<div>
+						<h3 id="om-modal-title" style="margin:0;font-size:1.05rem;font-weight:800;color:#0D1B12;">Stripe Configuration</h3>
+						<span id="om-modal-subtitle" style="font-size:0.75rem;color:#64748B;">Global Payments &bull; Webhooks Enabled</span>
+					</div>
+				</div>
+				<button type="button" id="om-modal-close" style="background:none;border:none;font-size:1.25rem;color:#64748B;cursor:pointer;padding:4px;">&times;</button>
+			</div>
+			<div style="padding:20px;">
+				<div style="margin-bottom:14px;">
+					<label style="display:block;font-size:0.72rem;font-weight:700;color:#475569;margin-bottom:4px;text-transform:uppercase;">Webhook Callback URL</label>
+					<div style="background:#F8FAFC;border:1px solid #E2E8F0;border-radius:6px;padding:8px 12px;font-family:var(--om-font-mono);font-size:0.78rem;color:#0F172A;word-break:break-all;" id="om-modal-webhook-url">https://mystore.local/wp-json/omnify/v1/gateways/stripe/webhook</div>
+				</div>
+				<div style="display:grid;grid-template-columns:1fr 1fr;gap:12px;margin-bottom:14px;">
+					<div>
+						<label style="display:block;font-size:0.72rem;font-weight:700;color:#475569;margin-bottom:4px;text-transform:uppercase;">Settlement</label>
+						<span style="font-size:0.8rem;font-weight:700;color:#10B981;background:#ECFDF5;padding:3px 8px;border-radius:4px;display:inline-block;">Direct to Merchant</span>
+					</div>
+					<div>
+						<label style="display:block;font-size:0.72rem;font-weight:700;color:#475569;margin-bottom:4px;text-transform:uppercase;">Platform Fee</label>
+						<span style="font-size:0.8rem;font-weight:800;color:#18794E;background:#EFF8F2;padding:3px 8px;border-radius:4px;display:inline-block;">0% Commission</span>
+					</div>
+				</div>
+				<div style="background:#F0FDF4;border:1px dashed #86EFAC;border-radius:8px;padding:12px;margin-bottom:16px;">
+					<div style="font-size:0.78rem;font-weight:700;color:#166534;margin-bottom:4px;">Webhook Simulation Sandbox</div>
+					<div id="om-modal-sim-status" style="font-size:0.75rem;color:#15803D;">Ready to dispatch test payment payload across local sandbox.</div>
+				</div>
+				<div style="display:flex;gap:10px;">
+					<button type="button" id="om-modal-test-ping-btn" class="om-btn om-btn--primary" style="flex:1;justify-content:center;padding:0.7rem;font-size:0.85rem;border-radius:8px;cursor:pointer;border:none;">
+						<span style="display:inline-flex;align-items:center;gap:6px;"><svg width="13" height="13" viewBox="0 0 24 24" fill="currentColor"><path d="M13 2L3 14h9l-1 8 10-12h-9l1-8z"/></svg> Send Test Webhook Ping</span>
+					</button>
+					<button type="button" id="om-modal-done-btn" style="background:#E2E8F0;border:none;padding:0.7rem 16px;border-radius:8px;font-size:0.85rem;font-weight:600;color:#475569;cursor:pointer;">Close</button>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<!-- Category 1: Global & Regional Payment Gateways -->
+	<!-- wp:group {"className":"om-section","style":{"spacing":{"padding":{"top":"clamp(4rem, 6vw, 5.5rem)","bottom":"clamp(3.5rem, 6vw, 5rem)"}}},"layout":{"type":"constrained","contentSize":"1200px"}} -->
+	<div class="wp-block-group om-section">
+		<!-- wp:group {"style":{"spacing":{"margin":{"bottom":"2.5rem"}}},"layout":{"type":"default"}} -->
+		<div class="wp-block-group" style="margin-bottom:2.5rem;">
+			<!-- wp:paragraph {"className":"om-badge om-badge--neutral","style":{"typography":{"fontSize":"0.75rem","fontFamily":"var:preset|font-family|mono","fontWeight":"700","letterSpacing":"0.08em","textTransform":"uppercase"},"spacing":{"margin":{"bottom":"0.75rem"}}}} -->
+			<p class="om-badge om-badge--neutral" style="font-family:var(--om-font-mono);font-size:0.75rem;font-weight:700;letter-spacing:0.08em;text-transform:uppercase;margin-bottom:0.75rem;">Payment Infrastructure</p>
+			<!-- /wp:paragraph -->
+
+			<!-- wp:heading {"level":2,"style":{"typography":{"fontSize":"clamp(1.75rem, 3.5vw, 2.5rem)","fontWeight":"800","letterSpacing":"-0.03em"}},"textColor":"ink"} -->
+			<h2 class="wp-block-heading has-ink-color has-text-color" style="font-size:clamp(1.75rem, 3.5vw, 2.5rem);font-weight:800;letter-spacing:-0.03em;margin:0 0 0.75rem;">Global &amp; Regional Payment Gateways</h2>
+			<!-- /wp:heading -->
+
+			<!-- wp:paragraph {"className":"om-text-muted","style":{"typography":{"fontSize":"1.0625rem","lineHeight":"1.65"}}} -->
+			<p class="om-text-muted" style="font-size:1.0625rem;line-height:1.65;max-width:760px;margin:0;">Collect payments securely with direct gateway settlements. Zero platform commission fees, automated webhook callbacks, and native in-app refund management.</p>
+			<!-- /wp:paragraph -->
+		</div>
+		<!-- /wp:group -->
+
+		<!-- wp:group {"className":"om-card-grid","layout":{"type":"default"}} -->
+		<div class="wp-block-group om-card-grid">
+
+			<!-- Gateway: Stripe -->
+			<!-- wp:group {"className":"om-card","layout":{"type":"default"}} -->
+			<div class="wp-block-group om-card">
+				<!-- wp:paragraph {"className":"om-card__icon"} -->
+				<p class="om-card__icon"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" style="color:#22A06B;"><rect x="1" y="4" width="22" height="16" rx="2" ry="2"></rect><line x1="1" y1="10" x2="23" y2="10"></line></svg></p>
+				<!-- /wp:paragraph -->
+				<!-- wp:heading {"level":3,"className":"om-card__title"} -->
+				<h3 class="wp-block-heading om-card__title">Stripe <span class="om-badge om-badge--neutral" style="font-size:0.72rem;font-family:var(--om-font-mono);">Global (47+ Countries)</span></h3>
+				<!-- /wp:heading -->
+				<!-- wp:paragraph {"className":"om-card__body"} -->
+				<p class="om-card__body">Accept Visa, Mastercard, American Express, Apple Pay, Google Pay, and localized European rails. Supports Webhooks, Test/Live mode toggles, and direct refund processing.</p>
+				<!-- /wp:paragraph -->
+				<!-- wp:paragraph {"className":"om-text-muted","style":{"typography":{"fontSize":"0.75rem","fontWeight":"600"}}} -->
+				<p class="om-text-muted" style="font-size:0.75rem;margin-top:auto;color:#18794E;">✓ Apple Pay &bull; Google Pay &bull; Webhooks</p>
+				<!-- /wp:paragraph -->
+			</div>
+			<!-- /wp:group -->
+
+			<!-- Gateway: PayPal -->
+			<!-- wp:group {"className":"om-card","layout":{"type":"default"}} -->
+			<div class="wp-block-group om-card">
+				<!-- wp:paragraph {"className":"om-card__icon"} -->
+				<p class="om-card__icon"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" style="color:#22A06B;"><path d="M20 12V8H6a2 2 0 0 1-2-2c0-1.1.9-2 2-2h12v4"></path><path d="M4 6v12a2 2 0 0 0 2 2h14v-4"></path><circle cx="18" cy="14" r="2"></circle></svg></p>
+				<!-- /wp:paragraph -->
+				<!-- wp:heading {"level":3,"className":"om-card__title"} -->
+				<h3 class="wp-block-heading om-card__title">PayPal Commerce <span class="om-badge om-badge--neutral" style="font-size:0.72rem;font-family:var(--om-font-mono);">Worldwide (200+ Markets)</span></h3>
+				<!-- /wp:heading -->
+				<!-- wp:paragraph {"className":"om-card__body"} -->
+				<p class="om-card__body">Frictionless PayPal wallet checkout and Pay Later financing. Includes automated IPN/webhook listeners, Sandbox testing, and in-dashboard refund triggers.</p>
+				<!-- /wp:paragraph -->
+				<!-- wp:paragraph {"className":"om-text-muted","style":{"typography":{"fontSize":"0.75rem","fontWeight":"600"}}} -->
+				<p class="om-text-muted" style="font-size:0.75rem;margin-top:auto;color:#18794E;">✓ PayPal Smart Buttons &bull; Pay Later &bull; Sandbox</p>
+				<!-- /wp:paragraph -->
+			</div>
+			<!-- /wp:group -->
+
+			<!-- Gateway: Razorpay -->
+			<!-- wp:group {"className":"om-card","layout":{"type":"default"}} -->
+			<div class="wp-block-group om-card">
+				<!-- wp:paragraph {"className":"om-card__icon"} -->
+				<p class="om-card__icon"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" style="color:#22A06B;"><circle cx="12" cy="12" r="10"></circle><line x1="2" y1="12" x2="22" y2="12"></line><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"></path></svg></p>
+				<!-- /wp:paragraph -->
+				<!-- wp:heading {"level":3,"className":"om-card__title"} -->
+				<h3 class="wp-block-heading om-card__title">Razorpay <span class="om-badge om-badge--neutral" style="font-size:0.72rem;font-family:var(--om-font-mono);">India (UPI / NetBanking)</span></h3>
+				<!-- /wp:heading -->
+				<!-- wp:paragraph {"className":"om-card__body"} -->
+				<p class="om-card__body">High-conversion Indian checkout supporting UPI (Google Pay, PhonePe, Paytm), RuPay cards, NetBanking, and mobile wallets with webhook order fulfillment.</p>
+				<!-- /wp:paragraph -->
+				<!-- wp:paragraph {"className":"om-text-muted","style":{"typography":{"fontSize":"0.75rem","fontWeight":"600"}}} -->
+				<p class="om-text-muted" style="font-size:0.75rem;margin-top:auto;color:#18794E;">✓ UPI QR &bull; RuPay &bull; NetBanking &bull; Instant Refunds</p>
+				<!-- /wp:paragraph -->
+			</div>
+			<!-- /wp:group -->
+
+			<!-- Gateway: Mollie -->
+			<!-- wp:group {"className":"om-card","layout":{"type":"default"}} -->
+			<div class="wp-block-group om-card">
+				<!-- wp:paragraph {"className":"om-card__icon"} -->
+				<p class="om-card__icon"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" style="color:#22A06B;"><circle cx="12" cy="12" r="10"></circle><line x1="2" y1="12" x2="22" y2="12"></line><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"></path></svg></p>
+				<!-- /wp:paragraph -->
+				<!-- wp:heading {"level":3,"className":"om-card__title"} -->
+				<h3 class="wp-block-heading om-card__title">Mollie <span class="om-badge om-badge--neutral" style="font-size:0.72rem;font-family:var(--om-font-mono);">European Union</span></h3>
+				<!-- /wp:heading -->
+				<!-- wp:paragraph {"className":"om-card__body"} -->
+				<p class="om-card__body">The premier payment platform for European merchants. Support iDEAL (Netherlands), Bancontact (Belgium), SEPA Direct Debit, SOFORT, and Klarna.</p>
+				<!-- /wp:paragraph -->
+				<!-- wp:paragraph {"className":"om-text-muted","style":{"typography":{"fontSize":"0.75rem","fontWeight":"600"}}} -->
+				<p class="om-text-muted" style="font-size:0.75rem;margin-top:auto;color:#18794E;">✓ iDEAL &bull; Bancontact &bull; SEPA &bull; Webhooks</p>
+				<!-- /wp:paragraph -->
+			</div>
+			<!-- /wp:group -->
+
+			<!-- Gateway: Paystack -->
+			<!-- wp:group {"className":"om-card","layout":{"type":"default"}} -->
+			<div class="wp-block-group om-card">
+				<!-- wp:paragraph {"className":"om-card__icon"} -->
+				<p class="om-card__icon"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" style="color:#22A06B;"><circle cx="12" cy="12" r="10"></circle><line x1="2" y1="12" x2="22" y2="12"></line><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"></path></svg></p>
+				<!-- /wp:paragraph -->
+				<!-- wp:heading {"level":3,"className":"om-card__title"} -->
+				<h3 class="wp-block-heading om-card__title">Paystack <span class="om-badge om-badge--neutral" style="font-size:0.72rem;font-family:var(--om-font-mono);">Africa (Nigeria, Ghana, SA)</span></h3>
+				<!-- /wp:heading -->
+				<!-- wp:paragraph {"className":"om-card__body"} -->
+				<p class="om-card__body">Streamlined checkout for emerging African economies. Accept local cards, mobile money, USSD, and bank transfers with cryptographic HMAC signature verification.</p>
+				<!-- /wp:paragraph -->
+				<!-- wp:paragraph {"className":"om-text-muted","style":{"typography":{"fontSize":"0.75rem","fontWeight":"600"}}} -->
+				<p class="om-text-muted" style="font-size:0.75rem;margin-top:auto;color:#18794E;">✓ Cards &bull; Mobile Money &bull; USSD &bull; Bank Transfer</p>
+				<!-- /wp:paragraph -->
+			</div>
+			<!-- /wp:group -->
+
+			<!-- Gateway: Tap Payments -->
+			<!-- wp:group {"className":"om-card","layout":{"type":"default"}} -->
+			<div class="wp-block-group om-card">
+				<!-- wp:paragraph {"className":"om-card__icon"} -->
+				<p class="om-card__icon"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" style="color:#22A06B;"><circle cx="12" cy="12" r="10"></circle><line x1="2" y1="12" x2="22" y2="12"></line><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"></path></svg></p>
+				<!-- /wp:paragraph -->
+				<!-- wp:heading {"level":3,"className":"om-card__title"} -->
+				<h3 class="wp-block-heading om-card__title">Tap Payments <span class="om-badge om-badge--neutral" style="font-size:0.72rem;font-family:var(--om-font-mono);">Middle East &amp; GCC</span></h3>
+				<!-- /wp:heading -->
+				<!-- wp:paragraph {"className":"om-card__body"} -->
+				<p class="om-card__body">Tailored payment rails for UAE, Saudi Arabia, Kuwait, Bahrain, and Qatar. Supports KNET, mada, Benefit, and regional debit systems with charge webhooks.</p>
+				<!-- /wp:paragraph -->
+				<!-- wp:paragraph {"className":"om-text-muted","style":{"typography":{"fontSize":"0.75rem","fontWeight":"600"}}} -->
+				<p class="om-text-muted" style="font-size:0.75rem;margin-top:auto;color:#18794E;">✓ mada &bull; KNET &bull; GCC Debit &bull; Apple Pay</p>
+				<!-- /wp:paragraph -->
+			</div>
+			<!-- /wp:group -->
+
+			<!-- Gateway: Alipay -->
+			<!-- wp:group {"className":"om-card","layout":{"type":"default"}} -->
+			<div class="wp-block-group om-card">
+				<!-- wp:paragraph {"className":"om-card__icon"} -->
+				<p class="om-card__icon"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" style="color:#22A06B;"><line x1="12" y1="1" x2="12" y2="23"></line><path d="M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"></path></svg></p>
+				<!-- /wp:paragraph -->
+				<!-- wp:heading {"level":3,"className":"om-card__title"} -->
+				<h3 class="wp-block-heading om-card__title">Alipay <span class="om-badge om-badge--neutral" style="font-size:0.72rem;font-family:var(--om-font-mono);">China &amp; APAC</span></h3>
+				<!-- /wp:heading -->
+				<!-- wp:paragraph {"className":"om-card__body"} -->
+				<p class="om-card__body">Reach over 1 billion consumers across China and cross-border APAC shoppers. Configurable RSA private/public key encryption and sandbox test modes.</p>
+				<!-- /wp:paragraph -->
+				<!-- wp:paragraph {"className":"om-text-muted","style":{"typography":{"fontSize":"0.75rem","fontWeight":"600"}}} -->
+				<p class="om-text-muted" style="font-size:0.75rem;margin-top:auto;color:#18794E;">✓ Cross-Border QR &bull; RSA2 Security &bull; CNY Support</p>
+				<!-- /wp:paragraph -->
+			</div>
+			<!-- /wp:group -->
+
+			<!-- Gateway: WeChat Pay -->
+			<!-- wp:group {"className":"om-card","layout":{"type":"default"}} -->
+			<div class="wp-block-group om-card">
+				<!-- wp:paragraph {"className":"om-card__icon"} -->
+				<p class="om-card__icon"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" style="color:#22A06B;"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"></path></svg></p>
+				<!-- /wp:paragraph -->
+				<!-- wp:heading {"level":3,"className":"om-card__title"} -->
+				<h3 class="wp-block-heading om-card__title">WeChat Pay <span class="om-badge om-badge--neutral" style="font-size:0.72rem;font-family:var(--om-font-mono);">China &amp; APAC</span></h3>
+				<!-- /wp:heading -->
+				<!-- wp:paragraph {"className":"om-card__body"} -->
+				<p class="om-card__body">Native mobile QR code scanning and wallet checkout for WeChat users. Configurable AppID, Merchant MCHID, and API signature secret tokens.</p>
+				<!-- /wp:paragraph -->
+				<!-- wp:paragraph {"className":"om-text-muted","style":{"typography":{"fontSize":"0.75rem","fontWeight":"600"}}} -->
+				<p class="om-text-muted" style="font-size:0.75rem;margin-top:auto;color:#18794E;">✓ Native QR Pay &bull; Sandbox Mode &bull; Async Notifications</p>
+				<!-- /wp:paragraph -->
+			</div>
+			<!-- /wp:group -->
+
+			<!-- Gateway: SSLCommerz -->
+			<!-- wp:group {"className":"om-card","layout":{"type":"default"}} -->
+			<div class="wp-block-group om-card">
+				<!-- wp:paragraph {"className":"om-card__icon"} -->
+				<p class="om-card__icon">🇧🇩</p>
+				<!-- /wp:paragraph -->
+				<!-- wp:heading {"level":3,"className":"om-card__title"} -->
+				<h3 class="wp-block-heading om-card__title">SSLCommerz <span class="om-badge om-badge--neutral" style="font-size:0.72rem;font-family:var(--om-font-mono);">Bangladesh (bKash / Nagad)</span></h3>
+				<!-- /wp:heading -->
+				<!-- wp:paragraph {"className":"om-card__body"} -->
+				<p class="om-card__body">The leading gateway in Bangladesh. Accept bKash, Nagad, Rocket, Upay, local VISA/Mastercard cards, and internet banking with instant IPN order reconciliation.</p>
+				<!-- /wp:paragraph -->
+				<!-- wp:paragraph {"className":"om-text-muted","style":{"typography":{"fontSize":"0.75rem","fontWeight":"600"}}} -->
+				<p class="om-text-muted" style="font-size:0.75rem;margin-top:auto;color:#18794E;">✓ bKash &bull; Nagad &bull; Local Cards &bull; IPN Callbacks</p>
+				<!-- /wp:paragraph -->
+			</div>
+			<!-- /wp:group -->
+
+			<!-- Gateway: Khalti & eSewa -->
+			<!-- wp:group {"className":"om-card","layout":{"type":"default"}} -->
+			<div class="wp-block-group om-card">
+				<!-- wp:paragraph {"className":"om-card__icon"} -->
+				<p class="om-card__icon">🇳🇵</p>
+				<!-- /wp:paragraph -->
+				<!-- wp:heading {"level":3,"className":"om-card__title"} -->
+				<h3 class="wp-block-heading om-card__title">Khalti &amp; eSewa <span class="om-badge om-badge--neutral" style="font-size:0.72rem;font-family:var(--om-font-mono);">Nepal (NPR)</span></h3>
+				<!-- /wp:heading -->
+				<!-- wp:paragraph {"className":"om-card__body"} -->
+				<p class="om-card__body">Built-in integration for Nepal's dominant digital wallets. Accept instant payments in Nepali Rupee (NPR) via eSewa EPAY and Khalti payment SDKs.</p>
+				<!-- /wp:paragraph -->
+				<!-- wp:paragraph {"className":"om-text-muted","style":{"typography":{"fontSize":"0.75rem","fontWeight":"600"}}} -->
+				<p class="om-text-muted" style="font-size:0.75rem;margin-top:auto;color:#18794E;">✓ eSewa ePay &bull; Khalti Wallet &bull; Sandbox Mode</p>
+				<!-- /wp:paragraph -->
+			</div>
+			<!-- /wp:group -->
+
+			<!-- Offline Methods -->
+			<!-- wp:group {"className":"om-card","layout":{"type":"default"}} -->
+			<div class="wp-block-group om-card">
+				<!-- wp:paragraph {"className":"om-card__icon"} -->
+				<p class="om-card__icon"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" style="color:#22A06B;"><line x1="3" y1="21" x2="21" y2="21"></line><line x1="3" y1="10" x2="21" y2="10"></line><polyline points="5 6 12 3 19 6"></polyline><line x1="4" y1="10" x2="4" y2="21"></line><line x1="20" y1="10" x2="20" y2="21"></line><line x1="8" y1="14" x2="8" y2="17"></line><line x1="12" y1="14" x2="12" y2="17"></line><line x1="16" y1="14" x2="16" y2="17"></line></svg></p>
+				<!-- /wp:paragraph -->
+				<!-- wp:heading {"level":3,"className":"om-card__title"} -->
+				<h3 class="wp-block-heading om-card__title">Offline Payment Methods <span class="om-badge om-badge--neutral" style="font-size:0.72rem;font-family:var(--om-font-mono);">Zero Fee / Offline</span></h3>
+				<!-- /wp:heading -->
+				<!-- wp:paragraph {"className":"om-card__body"} -->
+				<p class="om-card__body">Built-in support for Bank Transfer (BACS), Cash on Delivery (COD), and Cheque payments with custom checkout instructions and manual order confirmation.</p>
+				<!-- /wp:paragraph -->
+				<!-- wp:paragraph {"className":"om-text-muted","style":{"typography":{"fontSize":"0.75rem","fontWeight":"600"}}} -->
+				<p class="om-text-muted" style="font-size:0.75rem;margin-top:auto;color:#18794E;">✓ Bank Wire (BACS) &bull; Cash on Delivery &bull; Cheque</p>
+				<!-- /wp:paragraph -->
+			</div>
+			<!-- /wp:group -->
+
+		</div>
+		<!-- /wp:group -->
+	</div>
+	<!-- /wp:group -->
+
+	<!-- Category 2: Marketing, Analytics & Pixel Tracking -->
+	<!-- wp:group {"className":"om-section","style":{"spacing":{"padding":{"top":"clamp(4rem, 6vw, 5.5rem)","bottom":"clamp(3.5rem, 6vw, 5rem)"}}},"backgroundColor":"background-alt","layout":{"type":"constrained","contentSize":"1200px"}} -->
+	<div class="wp-block-group om-section has-background-alt-background-color has-background" style="border-top:1px solid #E6F4EC;border-bottom:1px solid #E6F4EC;">
+		<!-- wp:group {"style":{"spacing":{"margin":{"bottom":"2.5rem"}}},"layout":{"type":"default"}} -->
+		<div class="wp-block-group" style="margin-bottom:2.5rem;">
+			<!-- wp:paragraph {"className":"om-badge om-badge--neutral","style":{"typography":{"fontSize":"0.75rem","fontFamily":"var:preset|font-family|mono","fontWeight":"700","letterSpacing":"0.08em","textTransform":"uppercase"},"spacing":{"margin":{"bottom":"0.75rem"}}}} -->
+			<p class="om-badge om-badge--neutral" style="font-family:var(--om-font-mono);font-size:0.75rem;font-weight:700;letter-spacing:0.08em;text-transform:uppercase;margin-bottom:0.75rem;">Marketing &amp; Attribution</p>
+			<!-- /wp:paragraph -->
+
+			<!-- wp:heading {"level":2,"style":{"typography":{"fontSize":"clamp(1.75rem, 3.5vw, 2.5rem)","fontWeight":"800","letterSpacing":"-0.03em"}},"textColor":"ink"} -->
+			<h2 class="wp-block-heading has-ink-color has-text-color" style="font-size:clamp(1.75rem, 3.5vw, 2.5rem);font-weight:800;letter-spacing:-0.03em;margin:0 0 0.75rem;">Native Conversion &amp; Ad Tracking</h2>
+			<!-- /wp:heading -->
+
+			<!-- wp:paragraph {"className":"om-text-muted","style":{"typography":{"fontSize":"1.0625rem","lineHeight":"1.65"}}} -->
+			<p class="om-text-muted" style="font-size:1.0625rem;line-height:1.65;max-width:760px;margin:0;">Measure advertising ROI and customer journeys without bloated external tracking plugins or complex Google Tag Manager containers.</p>
+			<!-- /wp:paragraph -->
+		</div>
+		<!-- /wp:group -->
+
+		<!-- wp:group {"className":"om-card-grid","layout":{"type":"default"}} -->
+		<div class="wp-block-group om-card-grid">
+
+			<!-- GA4 -->
+			<!-- wp:group {"className":"om-card","layout":{"type":"default"}} -->
+			<div class="wp-block-group om-card">
+				<!-- wp:paragraph {"className":"om-card__icon"} -->
+				<p class="om-card__icon"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" style="color:#22A06B;"><line x1="18" y1="20" x2="18" y2="10"></line><line x1="12" y1="20" x2="12" y2="4"></line><line x1="6" y1="20" x2="6" y2="14"></line></svg></p>
+				<!-- /wp:paragraph -->
+				<!-- wp:heading {"level":3,"className":"om-card__title"} -->
+				<h3 class="wp-block-heading om-card__title">Google Analytics 4 (GA4)</h3>
+				<!-- /wp:heading -->
+				<!-- wp:paragraph {"className":"om-card__body"} -->
+				<p class="om-card__body">Simply input your Measurement ID (<code>G-XXXXXXXXXX</code>) under Store Settings &gt; Tracking. OmnifyWP automatically injects asynchronous gtag.js tags, supports Google Debug Mode, and tracks page views and checkout conversions cleanly.</p>
+				<!-- /wp:paragraph -->
+				<!-- wp:list {"style":{"typography":{"fontSize":"0.8125rem"}}} -->
+				<ul class="wp-block-list" style="font-size:0.8125rem;">
+					<!-- wp:list-item -->
+					<li>✓ Zero external plugin dependencies</li>
+					<!-- /wp:list-item -->
+					<!-- wp:list-item -->
+					<li>✓ Asynchronous non-blocking loading strategy</li>
+					<!-- /wp:list-item -->
+					<!-- wp:list-item -->
+					<li>✓ Built-in Debug Mode toggle for testing</li>
+					<!-- /wp:list-item -->
+				</ul>
+				<!-- /wp:list -->
+			</div>
+			<!-- /wp:group -->
+
+			<!-- Meta Pixel -->
+			<!-- wp:group {"className":"om-card","layout":{"type":"default"}} -->
+			<div class="wp-block-group om-card">
+				<!-- wp:paragraph {"className":"om-card__icon"} -->
+				<p class="om-card__icon"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" style="color:#22A06B;"><circle cx="12" cy="12" r="10"></circle><circle cx="12" cy="12" r="6"></circle><circle cx="12" cy="12" r="2"></circle></svg></p>
+				<!-- /wp:paragraph -->
+				<!-- wp:heading {"level":3,"className":"om-card__title"} -->
+				<h3 class="wp-block-heading om-card__title">Meta Pixel (Facebook &amp; Instagram)</h3>
+				<!-- /wp:heading -->
+				<!-- wp:paragraph {"className":"om-card__body"} -->
+				<p class="om-card__body">Direct browser-side tracking for Meta advertising campaigns. Paste your Pixel ID to fire PageView, InitiateCheckout, and Purchase events without expensive tag manager consultants.</p>
+				<!-- /wp:paragraph -->
+				<!-- wp:list {"style":{"typography":{"fontSize":"0.8125rem"}}} -->
+				<ul class="wp-block-list" style="font-size:0.8125rem;">
+					<!-- wp:list-item -->
+					<li>✓ Automatic purchase value and currency attribution</li>
+					<!-- /wp:list-item -->
+					<!-- wp:list-item -->
+					<li>✓ Prevents duplicate conversion event triggers</li>
+					<!-- /wp:list-item -->
+					<!-- wp:list-item -->
+					<li>✓ 1-field setup in Store Settings</li>
+					<!-- /wp:list-item -->
+				</ul>
+				<!-- /wp:list -->
+			</div>
+			<!-- /wp:group -->
+
+		</div>
+		<!-- /wp:group -->
+	</div>
+	<!-- /wp:group -->
+
+	<!-- Category 3: WordPress Ecosystem & Page Builders -->
+	<!-- wp:group {"className":"om-section","style":{"spacing":{"padding":{"top":"clamp(4rem, 6vw, 5.5rem)","bottom":"clamp(3.5rem, 6vw, 5rem)"}}},"layout":{"type":"constrained","contentSize":"1200px"}} -->
+	<div class="wp-block-group om-section">
+		<!-- wp:group {"style":{"spacing":{"margin":{"bottom":"2.5rem"}}},"layout":{"type":"default"}} -->
+		<div class="wp-block-group" style="margin-bottom:2.5rem;">
+			<!-- wp:paragraph {"className":"om-badge om-badge--neutral","style":{"typography":{"fontSize":"0.75rem","fontFamily":"var:preset|font-family|mono","fontWeight":"700","letterSpacing":"0.08em","textTransform":"uppercase"},"spacing":{"margin":{"bottom":"0.75rem"}}}} -->
+			<p class="om-badge om-badge--neutral" style="font-family:var(--om-font-mono);font-size:0.75rem;font-weight:700;letter-spacing:0.08em;text-transform:uppercase;margin-bottom:0.75rem;">WordPress Compatibility</p>
+			<!-- /wp:paragraph -->
+
+			<!-- wp:heading {"level":2,"style":{"typography":{"fontSize":"clamp(1.75rem, 3.5vw, 2.5rem)","fontWeight":"800","letterSpacing":"-0.03em"}},"textColor":"ink"} -->
+			<h2 class="wp-block-heading has-ink-color has-text-color" style="font-size:clamp(1.75rem, 3.5vw, 2.5rem);font-weight:800;letter-spacing:-0.03em;margin:0 0 0.75rem;">Works with every modern builder &amp; theme</h2>
+			<!-- /wp:heading -->
+
+			<!-- wp:paragraph {"className":"om-text-muted","style":{"typography":{"fontSize":"1.0625rem","lineHeight":"1.65"}}} -->
+			<p class="om-text-muted" style="font-size:1.0625rem;line-height:1.65;max-width:760px;margin:0;">OmnifyWP does not force rigid storefront templates or lock you into a proprietary theme. Embed buy buttons, catalogs, and checkout modals into any design stack.</p>
+			<!-- /wp:paragraph -->
+		</div>
+		<!-- /wp:group -->
+
+		<!-- wp:group {"className":"om-card-grid","layout":{"type":"default"}} -->
+		<div class="wp-block-group om-card-grid">
+
+			<!-- FSE & Block Editor -->
+			<!-- wp:group {"className":"om-card","layout":{"type":"default"}} -->
+			<div class="wp-block-group om-card">
+				<!-- wp:heading {"level":3,"className":"om-card__title"} -->
+				<h3 class="wp-block-heading om-card__title">WordPress Block Editor (Gutenberg)</h3>
+				<!-- /wp:heading -->
+				<!-- wp:paragraph {"className":"om-card__body"} -->
+				<p class="om-card__body">Full Site Editing (FSE) native. Insert blocks, customize templates, and style checkout flows directly within the modern WordPress Site Editor.</p>
+				<!-- /wp:paragraph -->
+			</div>
+			<!-- /wp:group -->
+
+			<!-- Elementor -->
+			<!-- wp:group {"className":"om-card","layout":{"type":"default"}} -->
+			<div class="wp-block-group om-card">
+				<!-- wp:heading {"level":3,"className":"om-card__title"} -->
+				<h3 class="wp-block-heading om-card__title">Elementor &amp; Elementor Pro</h3>
+				<!-- /wp:heading -->
+				<!-- wp:paragraph {"className":"om-card__body"} -->
+				<p class="om-card__body">Drop OmnifyWP shortcodes or Gutenberg blocks directly into Elementor pages, popups, and custom landing page templates without styling clashes.</p>
+				<!-- /wp:paragraph -->
+			</div>
+			<!-- /wp:group -->
+
+			<!-- Bricks & Divi -->
+			<!-- wp:group {"className":"om-card","layout":{"type":"default"}} -->
+			<div class="wp-block-group om-card">
+				<!-- wp:heading {"level":3,"className":"om-card__title"} -->
+				<h3 class="wp-block-heading om-card__title">Bricks Builder &amp; Divi</h3>
+				<!-- /wp:heading -->
+				<!-- wp:paragraph {"className":"om-card__body"} -->
+				<p class="om-card__body">Fully compatible with high-performance visual builders like Bricks, Oxygen, Beaver Builder, and Elegant Themes Divi.</p>
+				<!-- /wp:paragraph -->
+			</div>
+			<!-- /wp:group -->
+
+			<!-- Classic & Modern Themes -->
+			<!-- wp:group {"className":"om-card","layout":{"type":"default"}} -->
+			<div class="wp-block-group om-card">
+				<!-- wp:heading {"level":3,"className":"om-card__title"} -->
+				<h3 class="wp-block-heading om-card__title">Astra, GeneratePress &amp; Kadence</h3>
+				<!-- /wp:heading -->
+				<!-- wp:paragraph {"className":"om-card__body"} -->
+				<p class="om-card__body">Lightweight CSS structure integrates seamlessly with classic and modern block-ready themes without overriding custom typography or colors.</p>
+				<!-- /wp:paragraph -->
+			</div>
+			<!-- /wp:group -->
+
+		</div>
+		<!-- /wp:group -->
+	</div>
+	<!-- /wp:group -->
+
+	<!-- Category 4: Developer Tools, REST API & Webhooks -->
+	<!-- wp:group {"className":"om-section","style":{"spacing":{"padding":{"top":"clamp(4rem, 6vw, 5.5rem)","bottom":"clamp(3.5rem, 6vw, 5rem)"}}},"backgroundColor":"background-alt","layout":{"type":"constrained","contentSize":"1200px"}} -->
+	<div class="wp-block-group om-section has-background-alt-background-color has-background" style="border-top:1px solid #E6F4EC;">
+		<!-- wp:group {"style":{"spacing":{"margin":{"bottom":"2.5rem"}}},"layout":{"type":"default"}} -->
+		<div class="wp-block-group" style="margin-bottom:2.5rem;">
+			<!-- wp:paragraph {"className":"om-badge om-badge--neutral","style":{"typography":{"fontSize":"0.75rem","fontFamily":"var:preset|font-family|mono","fontWeight":"700","letterSpacing":"0.08em","textTransform":"uppercase"},"spacing":{"margin":{"bottom":"0.75rem"}}}} -->
+			<p class="om-badge om-badge--neutral" style="font-family:var(--om-font-mono);font-size:0.75rem;font-weight:700;letter-spacing:0.08em;text-transform:uppercase;margin-bottom:0.75rem;">Developer Extensibility</p>
+			<!-- /wp:paragraph -->
+
+			<!-- wp:heading {"level":2,"style":{"typography":{"fontSize":"clamp(1.75rem, 3.5vw, 2.5rem)","fontWeight":"800","letterSpacing":"-0.03em"}},"textColor":"ink"} -->
+			<h2 class="wp-block-heading has-ink-color has-text-color" style="font-size:clamp(1.75rem, 3.5vw, 2.5rem);font-weight:800;letter-spacing:-0.03em;margin:0 0 0.75rem;">Developer Tools, REST API &amp; Webhooks</h2>
+			<!-- /wp:heading -->
+
+			<!-- wp:paragraph {"className":"om-text-muted","style":{"typography":{"fontSize":"1.0625rem","lineHeight":"1.65"}}} -->
+			<p class="om-text-muted" style="font-size:1.0625rem;line-height:1.65;max-width:760px;margin:0;">Built with headless architectures, custom micro-services, and mobile app backends in mind. Complete data ownership and open standards.</p>
+			<!-- /wp:paragraph -->
+		</div>
+		<!-- /wp:group -->
+
+		<!-- wp:group {"className":"om-card-grid","layout":{"type":"default"}} -->
+		<div class="wp-block-group om-card-grid">
+
+			<!-- Tool 1: REST API -->
+			<!-- wp:group {"className":"om-card","layout":{"type":"default"}} -->
+			<div class="wp-block-group om-card">
+				<!-- wp:paragraph {"className":"om-badge om-badge--neutral","style":{"typography":{"fontSize":"0.75rem","fontFamily":"var:preset|font-family|mono"}}} -->
+				<p class="om-badge om-badge--neutral" style="font-size:0.75rem;margin-bottom:0.5rem;">omnify/v1/*</p>
+				<!-- /wp:paragraph -->
+				<!-- wp:heading {"level":3,"className":"om-card__title"} -->
+				<h3 class="wp-block-heading om-card__title">Headless REST API</h3>
+				<!-- /wp:heading -->
+				<!-- wp:paragraph {"className":"om-card__body"} -->
+				<p class="om-card__body">Comprehensive REST routes for listing products, managing customers, reading orders, validating coupons, and tracking downloads from mobile apps or Jamstack frontends.</p>
+				<!-- /wp:paragraph -->
+				<!-- wp:paragraph {"style":{"typography":{"fontSize":"0.8125rem","fontWeight":"700"}},"textColor":"forest"} -->
+				<p class="has-forest-color has-text-color" style="font-size:0.8125rem;font-weight:700;margin-top:auto;"><a href="https://omnifywp.com/doc/" target="_blank" rel="noopener noreferrer">Read API Documentation &rarr;</a></p>
+				<!-- /wp:paragraph -->
+			</div>
+			<!-- /wp:group -->
+
+			<!-- Tool 2: Granular API Keys -->
+			<!-- wp:group {"className":"om-card","layout":{"type":"default"}} -->
+			<div class="wp-block-group om-card">
+				<!-- wp:paragraph {"className":"om-badge om-badge--neutral","style":{"typography":{"fontSize":"0.75rem","fontFamily":"var:preset|font-family|mono"}}} -->
+				<p class="om-badge om-badge--neutral" style="font-size:0.75rem;margin-bottom:0.5rem;">Tools &gt; API Keys</p>
+				<!-- /wp:paragraph -->
+				<!-- wp:heading {"level":3,"className":"om-card__title"} -->
+				<h3 class="wp-block-heading om-card__title">API Key Management</h3>
+				<!-- /wp:heading -->
+				<!-- wp:paragraph {"className":"om-card__body"} -->
+				<p class="om-card__body">Issue cryptographic API keys directly inside WordPress admin. Assign Read, Write, or Read/Write permissions with user-scoped capabilities.</p>
+				<!-- /wp:paragraph -->
+				<!-- wp:paragraph {"style":{"typography":{"fontSize":"0.8125rem","fontWeight":"600"}},"textColor":"emerald"} -->
+				<p class="has-emerald-color has-text-color" style="font-size:0.8125rem;font-weight:600;margin-top:auto;">✓ Scoped Read / Write Tokens</p>
+				<!-- /wp:paragraph -->
+			</div>
+			<!-- /wp:group -->
+
+			<!-- Tool 3: Webhooks -->
+			<!-- wp:group {"className":"om-card","layout":{"type":"default"}} -->
+			<div class="wp-block-group om-card">
+				<!-- wp:paragraph {"className":"om-badge om-badge--neutral","style":{"typography":{"fontSize":"0.75rem","fontFamily":"var:preset|font-family|mono"}}} -->
+				<p class="om-badge om-badge--neutral" style="font-size:0.75rem;margin-bottom:0.5rem;">Asynchronous Callbacks</p>
+				<!-- /wp:paragraph -->
+				<!-- wp:heading {"level":3,"className":"om-card__title"} -->
+				<h3 class="wp-block-heading om-card__title">Payment Webhooks</h3>
+				<!-- /wp:heading -->
+				<!-- wp:paragraph {"className":"om-card__body"} -->
+				<p class="om-card__body">Pre-configured webhook receivers for Stripe, PayPal, Razorpay, Paystack, Tap, Mollie, and SSLCommerz ensure transactions update instantly in the background.</p>
+				<!-- /wp:paragraph -->
+				<!-- wp:paragraph {"style":{"typography":{"fontSize":"0.8125rem","fontWeight":"600"}},"textColor":"emerald"} -->
+				<p class="has-emerald-color has-text-color" style="font-size:0.8125rem;font-weight:600;margin-top:auto;">✓ Instant background status updates</p>
+				<!-- /wp:paragraph -->
+			</div>
+			<!-- /wp:group -->
+
+			<!-- Tool 4: CSV Import & Export -->
+			<!-- wp:group {"className":"om-card","layout":{"type":"default"}} -->
+			<div class="wp-block-group om-card">
+				<!-- wp:paragraph {"className":"om-badge om-badge--neutral","style":{"typography":{"fontSize":"0.75rem","fontFamily":"var:preset|font-family|mono"}}} -->
+				<p class="om-badge om-badge--neutral" style="font-size:0.75rem;margin-bottom:0.5rem;">Tools &gt; Import / Export</p>
+				<!-- /wp:paragraph -->
+				<!-- wp:heading {"level":3,"className":"om-card__title"} -->
+				<h3 class="wp-block-heading om-card__title">CSV Import &amp; Export</h3>
+				<!-- /wp:heading -->
+				<!-- wp:paragraph {"className":"om-card__body"} -->
+				<p class="om-card__body">Easily migrate catalog items, pricing tiers, and inventory into OmnifyWP using standard CSV formats. Export orders and customer datasets anytime.</p>
+				<!-- /wp:paragraph -->
+				<!-- wp:paragraph {"style":{"typography":{"fontSize":"0.8125rem","fontWeight":"600"}},"textColor":"emerald"} -->
+				<p class="has-emerald-color has-text-color" style="font-size:0.8125rem;font-weight:600;margin-top:auto;">✓ One-click CSV reporting</p>
+				<!-- /wp:paragraph -->
+			</div>
+			<!-- /wp:group -->
+
+		</div>
+		<!-- /wp:group -->
+	</div>
+	<!-- /wp:group -->
+
+	<!-- Hosting & System Requirements Section -->
+	<!-- wp:group {"className":"om-section om-text-center","style":{"spacing":{"padding":{"top":"clamp(4rem, 6vw, 5.5rem)","bottom":"clamp(4rem, 6vw, 5.5rem)"}}},"layout":{"type":"constrained","contentSize":"960px"}} -->
+	<div class="wp-block-group om-section om-text-center" style="border-top:1px solid #EBF5EE;">
+		<!-- wp:paragraph {"className":"om-eyebrow"} -->
+		<p class="om-eyebrow">Environment</p>
+		<!-- /wp:paragraph -->
+
+		<!-- wp:heading {"level":2,"style":{"typography":{"fontSize":"clamp(1.75rem, 3.5vw, 2.5rem)","fontWeight":"800","letterSpacing":"-0.03em"}},"textColor":"ink"} -->
+		<h2 class="wp-block-heading has-ink-color has-text-color" style="font-size:clamp(1.75rem, 3.5vw, 2.5rem);font-weight:800;letter-spacing:-0.03em;margin-top:0.5rem;margin-bottom:0.75rem;">System &amp; Server Requirements</h2>
+		<!-- /wp:heading -->
+
+		<!-- wp:paragraph {"className":"om-text-muted","style":{"typography":{"fontSize":"1.0625rem","lineHeight":"1.65"}}} -->
+		<p class="om-text-muted" style="font-size:1.0625rem;line-height:1.65;max-width:680px;margin-inline:auto;margin-bottom:2.5rem;">Engineered for optimal compatibility with 99.9% of standard WordPress web hosts.</p>
+		<!-- /wp:paragraph -->
+
+		<!-- wp:columns {"style":{"spacing":{"blockGap":"1.5rem"}}} -->
+		<div class="wp-block-columns">
+			<!-- Requirement 1 -->
+			<!-- wp:column {"style":{"border":{"width":"1px","color":"#D4E8DC","radius":"12px"},"spacing":{"padding":{"top":"1.5rem","bottom":"1.5rem","left":"1.5rem","right":"1.5rem"}}},"backgroundColor":"background-alt"} -->
+			<div class="wp-block-column has-background-alt-background-color has-background" style="border-color:#D4E8DC;border-width:1px;border-radius:12px;padding:1.5rem;">
+				<!-- wp:paragraph {"style":{"typography":{"fontSize":"2rem"}}} -->
+				<p style="margin-bottom:0.5rem;color:#22A06B;"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" style="color:#22A06B;"><polyline points="4 17 10 11 4 5"></polyline><line x1="12" y1="19" x2="20" y2="19"></line></svg></p>
+				<!-- /wp:paragraph -->
+				<!-- wp:heading {"level":3,"style":{"typography":{"fontSize":"1.1rem","fontWeight":"700"}},"textColor":"ink"} -->
+				<h3 class="wp-block-heading has-ink-color has-text-color" style="font-size:1.1rem;font-weight:700;margin-bottom:0.25rem;">WordPress 6.5+</h3>
+				<!-- /wp:heading -->
+				<!-- wp:paragraph {"style":{"typography":{"fontSize":"0.85rem","lineHeight":"1.5"}},"textColor":"slate"} -->
+				<p class="has-slate-color has-text-color" style="font-size:0.85rem;line-height:1.5;margin:0;">Fully tested on modern WordPress releases with Full Site Editing support.</p>
+				<!-- /wp:paragraph -->
+			</div>
+			<!-- /wp:column -->
+
+			<!-- Requirement 2 -->
+			<!-- wp:column {"style":{"border":{"width":"1px","color":"#D4E8DC","radius":"12px"},"spacing":{"padding":{"top":"1.5rem","bottom":"1.5rem","left":"1.5rem","right":"1.5rem"}}},"backgroundColor":"background-alt"} -->
+			<div class="wp-block-column has-background-alt-background-color has-background" style="border-color:#D4E8DC;border-width:1px;border-radius:12px;padding:1.5rem;">
+				<!-- wp:paragraph {"style":{"typography":{"fontSize":"2rem"}}} -->
+				<p style="margin-bottom:0.5rem;color:#22A06B;"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" style="color:#22A06B;"><polyline points="4 17 10 11 4 5"></polyline><line x1="12" y1="19" x2="20" y2="19"></line></svg></p>
+				<!-- /wp:paragraph -->
+				<!-- wp:heading {"level":3,"style":{"typography":{"fontSize":"1.1rem","fontWeight":"700"}},"textColor":"ink"} -->
+				<h3 class="wp-block-heading has-ink-color has-text-color" style="font-size:1.1rem;font-weight:700;margin-bottom:0.25rem;">PHP 8.1 / 8.2+</h3>
+				<!-- /wp:heading -->
+				<!-- wp:paragraph {"style":{"typography":{"fontSize":"0.85rem","lineHeight":"1.5"}},"textColor":"slate"} -->
+				<p class="has-slate-color has-text-color" style="font-size:0.85rem;line-height:1.5;margin:0;">Requires modern PHP runtime for strict type safety and high-speed execution.</p>
+				<!-- /wp:paragraph -->
+			</div>
+			<!-- /wp:column -->
+
+			<!-- Requirement 3 -->
+			<!-- wp:column {"style":{"border":{"width":"1px","color":"#D4E8DC","radius":"12px"},"spacing":{"padding":{"top":"1.5rem","bottom":"1.5rem","left":"1.5rem","right":"1.5rem"}}},"backgroundColor":"background-alt"} -->
+			<div class="wp-block-column has-background-alt-background-color has-background" style="border-color:#D4E8DC;border-width:1px;border-radius:12px;padding:1.5rem;">
+				<!-- wp:paragraph {"style":{"typography":{"fontSize":"2rem"}}} -->
+				<p style="margin-bottom:0.5rem;color:#22A06B;"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" style="color:#22A06B;"><ellipse cx="12" cy="5" rx="9" ry="3"></ellipse><path d="M21 12c0 1.66-4 3-9 3s-9-1.34-9-3"></path><path d="M3 5v14c0 1.66 4 3 9 3s9-1.34 9-3V5"></path></svg></p>
+				<!-- /wp:paragraph -->
+				<!-- wp:heading {"level":3,"style":{"typography":{"fontSize":"1.1rem","fontWeight":"700"}},"textColor":"ink"} -->
+				<h3 class="wp-block-heading has-ink-color has-text-color" style="font-size:1.1rem;font-weight:700;margin-bottom:0.25rem;">MySQL 5.7+ / MariaDB 10.3+</h3>
+				<!-- /wp:heading -->
+				<!-- wp:paragraph {"style":{"typography":{"fontSize":"0.85rem","lineHeight":"1.5"}},"textColor":"slate"} -->
+				<p class="has-slate-color has-text-color" style="font-size:0.85rem;line-height:1.5;margin:0;">Supports InnoDB storage engine for dedicated custom SQL ecommerce tables.</p>
+				<!-- /wp:paragraph -->
+			</div>
+			<!-- /wp:column -->
+		</div>
+		<!-- /wp:columns -->
+	</div>
+	<!-- /wp:group -->
+
+
+
+</main>
+<!-- /wp:group -->
+
+<!-- wp:template-part {"slug":"footer","tagName":"footer"} /-->

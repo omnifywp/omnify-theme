@@ -1,0 +1,11 @@
+# WordPress / Local / OS files
+.DS_Store
+Thumbs.db
+*.log
+*.tmp
+*.bak
+desktop.ini
+
+# Build artifacts
+*.zip
+*.tar.gz

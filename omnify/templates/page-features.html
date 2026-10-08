@@ -1,0 +1,1035 @@
+<!-- wp:template-part {"slug":"header","tagName":"header"} /-->
+
+<!-- wp:group {"tagName":"main","className":"om-features-page","layout":{"type":"default"}} -->
+<main class="wp-block-group om-features-page">
+
+  <!-- Features Hero Section -->
+  <!-- wp:group {"className":"om-hero om-hero-saas om-text-center","style":{"spacing":{"padding":{"top":"clamp(4rem, 7vw, 6.5rem)","bottom":"clamp(2.5rem, 5vw, 4rem)"}}},"layout":{"type":"constrained","contentSize":"1180px"}} -->
+  <div class="wp-block-group om-hero om-hero-saas om-text-center">
+    <!-- wp:paragraph {"className":"om-badge om-badge--neutral","style":{"typography":{"fontSize":"0.8125rem","fontWeight":"700","letterSpacing":"0.04em","textTransform":"uppercase"},"spacing":{"margin":{"bottom":"1.25rem"}}}} -->
+    <p class="om-badge om-badge--neutral" style="font-size:0.8125rem;font-weight:700;letter-spacing:0.04em;text-transform:uppercase;margin-bottom:1.25rem;display:inline-flex;align-items:center;gap:6px;">● Complete Architectural Feature Index</p>
+    <!-- /wp:paragraph -->
+
+    <!-- wp:heading {"level":1,"style":{"typography":{"fontSize":"clamp(2.4rem, 5vw, 3.8rem)","fontWeight":"800","letterSpacing":"-0.035em","lineHeight":"1.15"}},"textColor":"ink","className":"om-hero-title"} -->
+    <h1 class="wp-block-heading has-ink-color has-text-color om-hero-title" style="font-size:clamp(2.4rem, 5vw, 3.8rem);font-weight:800;letter-spacing:-0.035em;line-height:1.15;margin:0 0 1.25rem;">Everything you need to run high-speed eCommerce on WordPress.</h1>
+    <!-- /wp:heading -->
+
+    <!-- wp:paragraph {"style":{"typography":{"fontSize":"clamp(1.05rem, 1.8vw, 1.25rem)","lineHeight":"1.65"}},"textColor":"slate","className":"om-hero-desc"} -->
+    <p class="has-slate-color has-text-color om-hero-desc" style="font-size:clamp(1.05rem, 1.8vw, 1.25rem);line-height:1.65;max-width:820px;margin-inline:auto;margin-bottom:2rem;">From 27 purpose-built SQL database tables to cryptographic download lockers, 14 payment adapters with 0% platform commission, and native Full Site Editing — explore every capability built directly into OmnifyWP.</p>
+    <!-- /wp:paragraph -->
+
+    <!-- Quick Metrics Strip -->
+    <!-- wp:group {"layout":{"type":"flex","justifyContent":"center","flexWrap":"wrap"},"style":{"spacing":{"blockGap":"1.5rem"}}} -->
+    <div class="wp-block-group" style="font-size:0.875rem;font-weight:600;color:var(--om-slate);">
+      <p style="margin:0;"><span style="color:#22A06B;">✓</span> 27 Dedicated SQL Tables</p>
+      <p style="margin:0;"><span style="color:#22A06B;">✓</span> 14 Payment Gateways Included</p>
+      <p style="margin:0;"><span style="color:#22A06B;">✓</span> 0% Platform Commission</p>
+      <p style="margin:0;"><span style="color:#22A06B;">✓</span> HMAC-SHA256 Cryptography</p>
+      <p style="margin:0;"><span style="color:#22A06B;">✓</span> Native FSE &amp; WP-CLI</p>
+    </div>
+    <!-- /wp:group -->
+
+    <!-- Interactive Hero Architectural Playground -->
+    <div class="om-features-playground">
+      <div class="om-playground-header">
+        <div class="om-playground-badge">
+          <span style="display:inline-flex;align-items:center;gap:4px;"><svg width="12" height="12" viewBox="0 0 24 24" fill="currentColor"><path d="M13 2L3 14h9l-1 8 10-12h-9l1-8z"/></svg> Live Interactive System Explorer</span>
+        </div>
+        <div class="om-playground-tabs">
+          <button type="button" class="om-playground-tab is-active" data-target="panel-benchmark">
+            <span style="display:inline-flex;align-items:center;gap:4px;"><svg width="12" height="12" viewBox="0 0 24 24" fill="currentColor"><path d="M13 2L3 14h9l-1 8 10-12h-9l1-8z"/></svg> Database Benchmark</span>
+          </button>
+          <button type="button" class="om-playground-tab" data-target="panel-gateways">
+            <span style="display:inline-flex;align-items:center;gap:4px;"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="1" y="4" width="22" height="16" rx="2" ry="2"></rect><line x1="1" y1="10" x2="23" y2="10"></line></svg> 14 Gateways (0% Fees)</span>
+          </button>
+          <button type="button" class="om-playground-tab" data-target="panel-crypto">
+            <span style="display:inline-flex;align-items:center;gap:4px;"><svg width="12" height="12" viewBox="0 0 24 24" fill="currentColor"><path d="M18 8h-1V6c0-2.76-2.24-5-5-5S7 3.24 7 6v2H6c-1.1 0-2 .9-2 2v10c0 1.1.9 2 2 2h12c1.1 0 2-.9 2-2V10c0-1.1-.9-2-2-2zm-6 9c-1.1 0-2-.9-2-2s.9-2 2-2 2 .9 2 2-.9 2-2 2zm3.1-9H8.9V6c0-1.71 1.39-3.1 3.1-3.1 1.71 0 3.1 1.39 3.1 3.1v2z"/></svg> HMAC Token Simulator</span>
+          </button>
+        </div>
+      </div>
+
+      <!-- Tab 1: Database Benchmark -->
+      <div id="panel-benchmark" class="om-playground-panel is-active">
+        <div class="om-benchmark-grid">
+          <div class="om-bench-box om-bench-box--omnify">
+            <div>
+              <div class="om-bench-head">
+                <h3 class="om-bench-title" style="color:#34D399;">OmnifyWP (Dedicated Relational Schema)</h3>
+                <span class="om-badge" style="background:rgba(52,211,153,0.2);color:#34D399;font-size:0.75rem;">10x Faster</span>
+              </div>
+              <p style="color:rgba(255,255,255,0.7);font-size:0.875rem;margin:0 0 1rem;">Single direct row select from indexed table <code>wp_omnify_products</code> with strict typing.</p>
+              <div class="om-bench-stat-row">
+                <div>
+                  <div id="om-sim-omnify-time" class="om-bench-stat-val om-bench-stat-val--green">3.4 ms</div>
+                  <div class="om-bench-stat-lbl">Query Exec Time</div>
+                </div>
+                <div>
+                  <div class="om-bench-stat-val om-bench-stat-val--green">1</div>
+                  <div class="om-bench-stat-lbl">SQL Queries</div>
+                </div>
+                <div>
+                  <div class="om-bench-stat-val om-bench-stat-val--green">0</div>
+                  <div class="om-bench-stat-lbl">JOIN Operations</div>
+                </div>
+              </div>
+            </div>
+            <div class="om-bench-code">
+              <code>SELECT * FROM wp_omnify_products WHERE slug = 'omni-pro' AND status = 'publish' LIMIT 1;</code>
+            </div>
+          </div>
+
+          <div class="om-bench-box">
+            <div>
+              <div class="om-bench-head">
+                <h3 class="om-bench-title" style="color:#F87171;">Legacy WooCommerce (Postmeta Model)</h3>
+                <span class="om-badge" style="background:rgba(248,113,113,0.15);color:#F87171;font-size:0.75rem;">Heavy Bottleneck</span>
+              </div>
+              <p style="color:rgba(255,255,255,0.7);font-size:0.875rem;margin:0 0 1rem;">Iterates 40+ EAV rows across unindexed <code>wp_postmeta</code> with nested subqueries and JOIN bloat.</p>
+              <div class="om-bench-stat-row">
+                <div>
+                  <div id="om-sim-woo-time" class="om-bench-stat-val om-bench-stat-val--red">184.2 ms</div>
+                  <div class="om-bench-stat-lbl">Query Exec Time</div>
+                </div>
+                <div>
+                  <div class="om-bench-stat-val om-bench-stat-val--red">28+</div>
+                  <div class="om-bench-stat-lbl">SQL Queries</div>
+                </div>
+                <div>
+                  <div class="om-bench-stat-val om-bench-stat-val--red">42</div>
+                  <div class="om-bench-stat-lbl">Postmeta JOINs</div>
+                </div>
+              </div>
+            </div>
+            <div class="om-bench-code">
+              <span style="color:#F87171;">SELECT pm.meta_key, pm.meta_value FROM wp_posts p LEFT JOIN wp_postmeta pm ON p.ID = pm.post_id WHERE ...</span>
+            </div>
+          </div>
+        </div>
+        <div style="display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:1rem;">
+          <button type="button" id="om-bench-run-sim" class="om-btn om-btn--primary" style="font-size:0.875rem;height:42px;padding:0 1.25rem;">
+            Run Benchmark Simulation
+          </button>
+          <span style="font-size:0.8125rem;color:rgba(255,255,255,0.6);">Tested on MySQL 8.0 &amp; MariaDB 10.6 with 50,000 catalog items.</span>
+        </div>
+      </div>
+
+      <!-- Tab 2: 14 Payment Gateways Explorer -->
+      <div id="panel-gateways" class="om-playground-panel">
+        <p style="font-size:0.9375rem;color:rgba(255,255,255,0.8);margin:0 0 1.25rem;">Click any gateway to inspect its currency coverage, settlement mode, webhook architecture, and 0% platform fee guarantee:</p>
+        <div class="om-gw-selector">
+          <button type="button" class="om-gw-btn is-active" data-gateway="stripe">Stripe (Apple &amp; Google Pay)</button>
+          <button type="button" class="om-gw-btn" data-gateway="paypal">🅿️ PayPal Commerce</button>
+          <button type="button" class="om-gw-btn" data-gateway="razorpay">🇮🇳 Razorpay (UPI &amp; NetBanking)</button>
+          <button type="button" class="om-gw-btn" data-gateway="mollie">🇪🇺 Mollie (iDEAL &amp; Bancontact)</button>
+          <button type="button" class="om-gw-btn" data-gateway="paystack">Paystack (Pan-Africa)</button>
+          <button type="button" class="om-gw-btn" data-gateway="tap">🇦🇪 Tap Payments (GCC &amp; Mada)</button>
+          <button type="button" class="om-gw-btn" data-gateway="alipay">Alipay Cross-Border</button>
+          <button type="button" class="om-gw-btn" data-gateway="wechat">WeChat Pay</button>
+          <button type="button" class="om-gw-btn" data-gateway="sslcommerz">🇧🇩 SSLCommerz</button>
+          <button type="button" class="om-gw-btn" data-gateway="khalti">🇳🇵 Khalti Digital Wallet</button>
+          <button type="button" class="om-gw-btn" data-gateway="esewa">🇳🇵 eSewa Nepal</button>
+          <button type="button" class="om-gw-btn" data-gateway="bacs">Bank Wire (BACS)</button>
+          <button type="button" class="om-gw-btn" data-gateway="cod">Cash on Delivery</button>
+          <button type="button" class="om-gw-btn" data-gateway="cheque">Cheque / Mail-in</button>
+        </div>
+
+        <div id="om-gw-active-display" class="om-gw-card">
+          <div style="display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:0.75rem;border-bottom:1px solid rgba(255,255,255,0.08);padding-bottom:1rem;margin-bottom:1rem;">
+            <div>
+              <h3 id="om-gw-active-title" style="margin:0 0 4px;font-size:1.25rem;color:#FFFFFF;font-family:var(--om-font-heading);">Stripe Elements &amp; Digital Wallets</h3>
+              <span id="om-gw-active-badge" style="font-size:0.78rem;color:#34D399;font-weight:700;font-family:var(--om-font-mono);">Global Credit &amp; Debit Cards</span>
+            </div>
+            <div style="text-align:right;">
+              <span id="om-gw-active-commission" class="om-badge" style="background:#22A06B;color:#FFFFFF;font-size:0.78rem;font-weight:700;">0% OmnifyWP Commission (You keep 100%)</span>
+            </div>
+          </div>
+
+          <div class="om-gw-grid">
+            <div class="om-gw-detail-box">
+              <div class="om-gw-detail-lbl">Supported Currencies</div>
+              <div id="om-gw-active-currencies" class="om-gw-detail-val">135+ Global Currencies (USD, EUR, GBP, AUD, CAD, etc.)</div>
+            </div>
+            <div class="om-gw-detail-box">
+              <div class="om-gw-detail-lbl">Payment Methods</div>
+              <div id="om-gw-active-methods" class="om-gw-detail-val">Visa, Mastercard, Amex, Apple Pay, Google Pay, 3D Secure 2</div>
+            </div>
+            <div class="om-gw-detail-box">
+              <div class="om-gw-detail-lbl">In-App Refunds</div>
+              <div id="om-gw-active-refunds" class="om-gw-detail-val">Instant In-App Full &amp; Partial Refunds via REST API</div>
+            </div>
+            <div class="om-gw-detail-box">
+              <div class="om-gw-detail-lbl">Webhook Support</div>
+              <div id="om-gw-active-webhooks" class="om-gw-detail-val">Automated Webhooks with HMAC Secret Signature Validation</div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Tab 3: HMAC Cryptographic Simulator -->
+      <div id="panel-crypto" class="om-playground-panel">
+        <p style="font-size:0.9375rem;color:rgba(255,255,255,0.8);margin:0 0 1.25rem;">Simulate real-time generation and cryptographic verification of tamper-proof download tokens:</p>
+        <div class="om-hmac-sim-grid">
+          <div class="om-hmac-form">
+            <div class="om-sim-group">
+              <label for="om-sim-file-id">Product File ID:</label>
+              <input type="text" id="om-sim-file-id" value="402" />
+            </div>
+            <div class="om-sim-group">
+              <label for="om-sim-email">Customer Email / User Token:</label>
+              <input type="text" id="om-sim-email" value="alex@agency.com" />
+            </div>
+            <div class="om-sim-group">
+              <label for="om-sim-expiry">Link Expiration Lifespan:</label>
+              <select id="om-sim-expiry">
+                <option value="24">24 Hours</option>
+                <option value="48" selected>48 Hours (Recommended)</option>
+                <option value="168">7 Days</option>
+              </select>
+            </div>
+          </div>
+
+          <div class="om-hmac-result-card">
+            <div>
+              <div style="font-size:0.75rem;color:rgba(255,255,255,0.6);text-transform:uppercase;letter-spacing:0.04em;">Computed HMAC-SHA256 Token (64-char hex)</div>
+              <div id="om-sim-hmac-sig" class="om-hmac-sig-box">e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855</div>
+              <div style="font-size:0.75rem;color:rgba(255,255,255,0.6);text-transform:uppercase;letter-spacing:0.04em;">Generated Signed Download URL</div>
+              <div id="om-sim-full-url" style="font-family:var(--om-font-mono);font-size:0.75rem;color:#9BB0A5;word-break:break-all;margin-top:4px;">https://yourstore.com/?omnify_download=1&amp;file=402&amp;exp=...</div>
+            </div>
+
+            <div style="margin-top:1.25rem;display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:0.75rem;">
+              <button type="button" id="om-sim-verify-btn" class="om-btn om-btn--primary" style="font-size:0.8125rem;height:38px;padding:0 1rem;">
+                Verify Token &amp; Simulate Stream
+              </button>
+              <div id="om-sim-verify-status">
+                <span class="om-hmac-verify-badge">Ready to verify</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- /wp:group -->
+
+  <!-- STICKY LIVE FEATURE FILTER & SEARCH TOOLBAR -->
+  <!-- wp:group {"layout":{"type":"constrained","contentSize":"1200px"}} -->
+  <div class="wp-block-group">
+    <div class="om-features-toolbar">
+      <div class="om-features-toolbar__inner">
+        <div class="om-search-bar-row">
+          <div class="om-search-input-wrap">
+            <span class="om-search-icon"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="11" cy="11" r="8"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line></svg></span>
+            <input type="text" id="om-feature-search" placeholder="Type to filter 48+ native features (e.g. HMAC, Stripe, pre-order, tax, webhook, SQL)..." />
+            <button type="button" id="om-feature-search-clear" class="om-search-clear" aria-label="Clear search"><svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" style="margin-right:3px;vertical-align:-1px;"><line x1="18" y1="6" x2="6" y2="18"></line><line x1="6" y1="6" x2="18" y2="18"></line></svg></button>
+          </div>
+          <div>
+            <span id="om-feature-count" class="om-feature-count-badge">Showing all 48 features</span>
+          </div>
+        </div>
+
+        <div class="om-category-pills">
+          <button type="button" class="om-cat-pill is-active" data-filter="all">
+            All Features <span class="om-cat-pill__count">48</span>
+          </button>
+          <button type="button" class="om-cat-pill" data-filter="database">
+            Database &amp; Architecture <span class="om-cat-pill__count">6</span>
+          </button>
+          <button type="button" class="om-cat-pill" data-filter="catalog">
+            Catalog &amp; Merchandising <span class="om-cat-pill__count">6</span>
+          </button>
+          <button type="button" class="om-cat-pill" data-filter="payments">
+            14 Gateways &amp; Payments <span class="om-cat-pill__count">6</span>
+          </button>
+          <button type="button" class="om-cat-pill" data-filter="security">
+            Cryptographic Security <span class="om-cat-pill__count">6</span>
+          </button>
+          <button type="button" class="om-cat-pill" data-filter="checkout">
+            Checkout, Cart &amp; Fraud <span class="om-cat-pill__count">6</span>
+          </button>
+          <button type="button" class="om-cat-pill" data-filter="shipping">
+            Shipping, Taxes &amp; Zones <span class="om-cat-pill__count">6</span>
+          </button>
+          <button type="button" class="om-cat-pill" data-filter="operations">
+            Operations &amp; CRM <span class="om-cat-pill__count">6</span>
+          </button>
+          <button type="button" class="om-cat-pill" data-filter="developer">
+            Developer REST &amp; API <span class="om-cat-pill__count">6</span>
+          </button>
+        </div>
+      </div>
+    </div>
+
+    <!-- Empty State for Search -->
+    <div id="om-features-empty" class="om-features-empty">
+      <div style="margin-bottom:0.75rem;color:#64748B;"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="11" cy="11" r="8"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line></svg></div>
+      <h3 style="margin:0 0 0.5rem;font-size:1.25rem;font-weight:800;color:var(--om-ink);">No matching features found</h3>
+      <p style="margin:0 0 1.25rem;font-size:0.9375rem;color:var(--om-slate);">We couldn't find any features matching your current search query or category filter.</p>
+      <button type="button" id="om-features-reset" class="om-btn om-btn--primary" style="font-size:0.875rem;height:40px;padding:0 1.25rem;">
+        Reset Search Filters
+      </button>
+    </div>
+  </div>
+  <!-- /wp:group -->
+
+  <!-- ============================================================
+       PILLAR 1: DATABASE ARCHITECTURE & HIGH-SPEED ENGINE
+       ============================================================ -->
+  <!-- wp:group {"className":"om-section","style":{"spacing":{"padding":{"top":"clamp(3rem, 5vw, 4.5rem)","bottom":"clamp(3rem, 5vw, 4.5rem)"}}},"layout":{"type":"constrained","contentSize":"1200px"}} -->
+  <div class="wp-block-group om-section" data-pillar="database">
+    <div style="margin-bottom:2.25rem;">
+      <p class="om-badge om-badge--neutral" style="font-family:var(--om-font-mono);font-size:0.75rem;font-weight:700;letter-spacing:0.08em;text-transform:uppercase;margin-bottom:0.75rem;">Architecture</p>
+      <h2 class="wp-block-heading has-ink-color has-text-color" style="font-size:clamp(1.75rem, 3.5vw, 2.35rem);font-weight:800;letter-spacing:-0.03em;margin:0 0 0.6rem;">1. Dedicated Database &amp; High-Performance Engine</h2>
+      <p class="om-text-muted" style="font-size:1.0625rem;line-height:1.65;max-width:780px;margin:0;">Purpose-built relational architecture that completely decouples store data from WordPress postmeta.</p>
+    </div>
+
+    <div class="om-card-grid">
+      <!-- 1.1: 27 Dedicated SQL Tables -->
+      <div class="om-card" data-category="database" data-keywords="tables relational schema database normalization mysql mariadb">
+        <p class="om-card__icon"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" style="color:#22A06B;"><ellipse cx="12" cy="5" rx="9" ry="3"></ellipse><path d="M21 12c0 1.66-4 3-9 3s-9-1.34-9-3"></path><path d="M3 5v14c0 1.66 4 3 9 3s9-1.34 9-3V5"></path></svg></p>
+        <h3 class="om-card__title">27 Dedicated Relational Tables</h3>
+        <p class="om-card__body">Every product, customer, order, file, variation, inventory movement, and coupon lives in dedicated SQL tables with proper indexes, foreign keys, and strict column typing.</p>
+        <p class="om-badge om-badge--neutral" style="font-size:0.75rem;margin-top:auto;">27 Tables &bull; Zero Postmeta Bloat</p>
+        <button type="button" class="om-card__spec-toggle" aria-expanded="false">Tech Specs &amp; SQL Mapping <span class="om-arrow">▾</span></button>
+        <div class="om-card__spec-drawer">
+          <div class="om-spec-row"><span class="om-spec-label">Primary:</span><span class="om-spec-val"><code>wp_omnify_products</code>, <code>wp_omnify_orders</code></span></div>
+          <div class="om-spec-row"><span class="om-spec-label">Engine:</span><span class="om-spec-val">InnoDB / utf8mb4_unicode_ci</span></div>
+          <div class="om-spec-row"><span class="om-spec-label">Source:</span><span class="om-spec-val"><code>includes/Database/Schema.php</code></span></div>
+        </div>
+      </div>
+
+      <!-- 1.2: Zero Postmeta Bloat -->
+      <div class="om-card" data-category="database" data-keywords="postmeta join query speed execution eav memory">
+        <p class="om-card__icon"><svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true" style="color:#22A06B;"><path d="M13 2L3 14h9l-1 8 10-12h-9l1-8z"/></svg></p>
+        <h3 class="om-card__title">Zero Postmeta Bloat</h3>
+        <p class="om-card__body">Standard WordPress eCommerce stores execute 40+ JOINs across <code>wp_postmeta</code> per product. OmnifyWP stores each item in a single normalized row, keeping your WordPress database clean.</p>
+        <p class="om-badge om-badge--neutral" style="font-size:0.75rem;margin-top:auto;">1 Row per Product View</p>
+        <button type="button" class="om-card__spec-toggle" aria-expanded="false">Tech Specs &amp; SQL Mapping <span class="om-arrow">▾</span></button>
+        <div class="om-card__spec-drawer">
+          <div class="om-spec-row"><span class="om-spec-label">Savings:</span><span class="om-spec-val">Eliminates 95% of wp_postmeta rows</span></div>
+          <div class="om-spec-row"><span class="om-spec-label">Impact:</span><span class="om-spec-val">Reduces RAM usage per PHP thread to &lt; 15MB</span></div>
+        </div>
+      </div>
+
+      <!-- 1.3: Sub-15ms Query Execution -->
+      <div class="om-card" data-category="database" data-keywords="speed benchmark milliseconds performance caching index">
+        <p class="om-card__icon"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" style="color:#22A06B;"><circle cx="12" cy="12" r="10"></circle><polyline points="12 6 12 12 16 14"></polyline></svg></p>
+        <h3 class="om-card__title">Sub-15ms Query Execution</h3>
+        <p class="om-card__body">Indexed slug lookups, compound indexes on <code>(status, type)</code>, and targeted primary key lookups ensure instant page generation even on stores with 100,000+ SKUs.</p>
+        <p class="om-badge om-badge--neutral" style="font-size:0.75rem;margin-top:auto;">Sub-15ms Query Latency</p>
+        <button type="button" class="om-card__spec-toggle" aria-expanded="false">Tech Specs &amp; SQL Mapping <span class="om-arrow">▾</span></button>
+        <div class="om-card__spec-drawer">
+          <div class="om-spec-row"><span class="om-spec-label">Indexes:</span><span class="om-spec-val"><code>KEY slug (slug)</code>, <code>KEY status_type</code></span></div>
+          <div class="om-spec-row"><span class="om-spec-label">Benchmark:</span><span class="om-spec-val">3.4ms on standard shared NVMe hosting</span></div>
+        </div>
+      </div>
+
+      <!-- 1.4: 100% Self-Hosted & No SaaS Lock-in -->
+      <div class="om-card" data-category="database" data-keywords="self-hosted saas privacy ownership data gdpr compliance">
+        <p class="om-card__icon"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" style="color:#22A06B;"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path></svg></p>
+        <h3 class="om-card__title">100% Self-Hosted &amp; Zero Lock-in</h3>
+        <p class="om-card__body">Your customer data, order records, and intellectual property remain 100% on your own server. No monthly per-transaction SaaS tax, no external cloud dependencies, and zero vendor lock-in.</p>
+        <p class="om-badge om-badge--neutral" style="font-size:0.75rem;margin-top:auto;">Full Data Sovereignty</p>
+        <button type="button" class="om-card__spec-toggle" aria-expanded="false">Tech Specs &amp; SQL Mapping <span class="om-arrow">▾</span></button>
+        <div class="om-card__spec-drawer">
+          <div class="om-spec-row"><span class="om-spec-label">Storage:</span><span class="om-spec-val">Local WordPress MySQL / MariaDB</span></div>
+          <div class="om-spec-row"><span class="om-spec-label">GDPR:</span><span class="om-spec-val">Built-in customer data anonymization &amp; export</span></div>
+        </div>
+      </div>
+
+      <!-- 1.5: Inventory Ledger -->
+      <div class="om-card" data-category="database" data-keywords="inventory logs stock tracking changes ledger quantities">
+        <p class="om-card__icon"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" style="color:#22A06B;"><line x1="18" y1="20" x2="18" y2="10"></line><line x1="12" y1="20" x2="12" y2="4"></line><line x1="6" y1="20" x2="6" y2="14"></line></svg></p>
+        <h3 class="om-card__title">Double-Entry Inventory Ledger</h3>
+        <p class="om-card__body">Every inventory adjustment, backorder, purchase reduction, or manual restock is captured in <code>wp_omnify_inventory_logs</code> with previous qty, new qty, reason, and user ID.</p>
+        <p class="om-badge om-badge--neutral" style="font-size:0.75rem;margin-top:auto;">Full Inventory Audit Trail</p>
+        <button type="button" class="om-card__spec-toggle" aria-expanded="false">Tech Specs &amp; SQL Mapping <span class="om-arrow">▾</span></button>
+        <div class="om-card__spec-drawer">
+          <div class="om-spec-row"><span class="om-spec-label">Table:</span><span class="om-spec-val"><code>wp_omnify_inventory_logs</code></span></div>
+          <div class="om-spec-row"><span class="om-spec-label">Fields:</span><span class="om-spec-val"><code>change_qty</code>, <code>new_qty</code>, <code>reason</code></span></div>
+        </div>
+      </div>
+
+      <!-- 1.6: Automated Migrations Engine -->
+      <div class="om-card" data-category="database" data-keywords="migrations updates schema version upgrade automatic">
+        <p class="om-card__icon"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" style="color:#22A06B;"><polyline points="23 4 23 10 17 10"></polyline><polyline points="1 20 1 14 7 14"></polyline><path d="M3.51 9a9 9 0 0 1 14.85-3.36L23 10M1 14l4.64 4.36A9 9 0 0 0 20.49 15"></path></svg></p>
+        <h3 class="om-card__title">Zero-Downtime Migration Engine</h3>
+        <p class="om-card__body">Database version upgrades run automatically in idempotent transactions recorded in <code>wp_omnify_migrations</code>, guaranteeing zero downtime and safe schema evolution.</p>
+        <p class="om-badge om-badge--neutral" style="font-size:0.75rem;margin-top:auto;">Automated Schema Upgrades</p>
+        <button type="button" class="om-card__spec-toggle" aria-expanded="false">Tech Specs &amp; SQL Mapping <span class="om-arrow">▾</span></button>
+        <div class="om-card__spec-drawer">
+          <div class="om-spec-row"><span class="om-spec-label">Table:</span><span class="om-spec-val"><code>wp_omnify_migrations</code></span></div>
+          <div class="om-spec-row"><span class="om-spec-label">Controller:</span><span class="om-spec-val"><code>includes/Database/Migrations.php</code></span></div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- /wp:group -->
+
+  <!-- ============================================================
+       PILLAR 2: PRODUCT CATALOG & MERCHANDISING
+       ============================================================ -->
+  <!-- wp:group {"className":"om-section","style":{"spacing":{"padding":{"top":"clamp(3rem, 5vw, 4.5rem)","bottom":"clamp(3rem, 5vw, 4.5rem)"}}},"backgroundColor":"background-alt","layout":{"type":"constrained","contentSize":"1200px"}} -->
+  <div class="wp-block-group om-section has-background-alt-background-color has-background" style="border-top:1px solid #E6F4EC;border-bottom:1px solid #E6F4EC;" data-pillar="catalog">
+    <div style="margin-bottom:2.25rem;">
+      <p class="om-badge om-badge--neutral" style="font-family:var(--om-font-mono);font-size:0.75rem;font-weight:700;letter-spacing:0.08em;text-transform:uppercase;margin-bottom:0.75rem;">Catalog Engine</p>
+      <h2 class="wp-block-heading has-ink-color has-text-color" style="font-size:clamp(1.75rem, 3.5vw, 2.35rem);font-weight:800;letter-spacing:-0.03em;margin:0 0 0.6rem;">2. Multi-Format Product Catalog &amp; Merchandising</h2>
+      <p class="om-text-muted" style="font-size:1.0625rem;line-height:1.65;max-width:780px;margin:0;">Physical goods, digital software, versioned assets, variable swatches, pre-orders, and bundled kits.</p>
+    </div>
+
+    <div class="om-card-grid">
+      <!-- 2.1: Physical Products -->
+      <div class="om-card" data-category="catalog" data-keywords="physical products shipping weight dimensions parcel inventory">
+        <p class="om-card__icon"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" style="color:#22A06B;"><path d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z"></path><polyline points="3.27 6.96 12 12.01 20.73 6.96"></polyline><line x1="12" y1="22.08" x2="12" y2="12"></line></svg></p>
+        <h3 class="om-card__title">Physical Goods &amp; Dimensions</h3>
+        <p class="om-card__body">Track real-time inventory, stock thresholds, backorders, parcel dimensions (L&times;W&times;H), weights, shipping classes, and delivery instructions with automated stock decrement on purchase.</p>
+        <p class="om-badge om-badge--neutral" style="font-size:0.75rem;margin-top:auto;">Dimension &amp; Weight Tracking</p>
+        <button type="button" class="om-card__spec-toggle" aria-expanded="false">Tech Specs &amp; SQL Mapping <span class="om-arrow">▾</span></button>
+        <div class="om-card__spec-drawer">
+          <div class="om-spec-row"><span class="om-spec-label">Columns:</span><span class="om-spec-val"><code>weight</code>, <code>length</code>, <code>width</code>, <code>height</code>, <code>shipping_class</code></span></div>
+          <div class="om-spec-row"><span class="om-spec-label">UI:</span><span class="om-spec-val">OmnifyWP &gt; Products &gt; Shipping &amp; Inventory</span></div>
+        </div>
+      </div>
+
+      <!-- 2.2: Digital Downloads -->
+      <div class="om-card" data-category="catalog" data-keywords="digital downloads versioning release assets files software ebook audio">
+        <p class="om-card__icon"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" style="color:#22A06B;"><line x1="22" y1="12" x2="2" y2="12"></line><path d="M5.45 5.11L2 12v6a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2v-6l-3.45-6.89A2 2 0 0 0 16.76 4H7.24a2 2 0 0 0-1.79 1.11z"></path><line x1="6" y1="16" x2="6.01" y2="16"></line><line x1="10" y1="16" x2="10.01" y2="16"></line></svg></p>
+        <h3 class="om-card__title">Digital Assets &amp; File Versioning</h3>
+        <p class="om-card__body">Host software, audio presets, video assets, or PDFs outside the public root. Attach multiple files per product, assign semantic release versions (e.g. v2.1.0), and specify file expiration dates.</p>
+        <p class="om-badge om-badge--neutral" style="font-size:0.75rem;margin-top:auto;">Semantic Versioning (v1.0.0)</p>
+        <button type="button" class="om-card__spec-toggle" aria-expanded="false">Tech Specs &amp; SQL Mapping <span class="om-arrow">▾</span></button>
+        <div class="om-card__spec-drawer">
+          <div class="om-spec-row"><span class="om-spec-label">Table:</span><span class="om-spec-val"><code>wp_omnify_product_files</code></span></div>
+          <div class="om-spec-row"><span class="om-spec-label">Fields:</span><span class="om-spec-val"><code>version</code>, <code>file_size</code>, <code>file_type</code>, <code>expires_at</code></span></div>
+        </div>
+      </div>
+
+      <!-- 2.3: Variable Swatches -->
+      <div class="om-card" data-category="catalog" data-keywords="variations variable swatches colors sizes attributes sku">
+        <p class="om-card__icon"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" style="color:#22A06B;"><circle cx="13.5" cy="6.5" r=".5"></circle><circle cx="17.5" cy="10.5" r=".5"></circle><circle cx="8.5" cy="7.5" r=".5"></circle><circle cx="6.5" cy="12.5" r=".5"></circle><path d="M12 2C6.5 2 2 6.5 2 12s4.5 10 10 10c.926 0 1.648-.746 1.648-1.688 0-.437-.18-.835-.437-1.125-.29-.289-.438-.652-.438-1.125a1.64 1.64 0 0 1 1.668-1.668h1.996c3.051 0 5.555-2.503 5.555-5.554C21.965 6.012 17.461 2 12 2z"></path></svg></p>
+        <h3 class="om-card__title">Variable Attributes &amp; Swatches</h3>
+        <p class="om-card__body">Create multi-attribute variations (e.g. Color, Size, License Type) with individual SKUs, stock levels, sale prices, and attribute swatches stored in <code>wp_omnify_product_variations</code>.</p>
+        <p class="om-badge om-badge--neutral" style="font-size:0.75rem;margin-top:auto;">Independent SKU per Variation</p>
+        <button type="button" class="om-card__spec-toggle" aria-expanded="false">Tech Specs &amp; SQL Mapping <span class="om-arrow">▾</span></button>
+        <div class="om-card__spec-drawer">
+          <div class="om-spec-row"><span class="om-spec-label">Table:</span><span class="om-spec-val"><code>wp_omnify_product_variations</code></span></div>
+          <div class="om-spec-row"><span class="om-spec-label">Fields:</span><span class="om-spec-val"><code>attributes</code> (JSON), <code>price</code>, <code>sale_price</code>, <code>sku</code></span></div>
+        </div>
+      </div>
+
+      <!-- 2.4: Bundles & Upsells -->
+      <div class="om-card" data-category="catalog" data-keywords="bundles kits upsells cross-sells packaging aov merchandising">
+        <p class="om-card__icon"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" style="color:#22A06B;"><polyline points="20 12 20 22 4 22 4 12"></polyline><rect x="2" y="7" width="20" height="5"></rect><line x1="12" y1="22" x2="12" y2="7"></line><path d="M12 7H7.5a2.5 2.5 0 0 1 0-5C11 2 12 7 12 7z"></path><path d="M12 7h4.5a2.5 2.5 0 0 0 0-5C13 2 12 7 12 7z"></path></svg></p>
+        <h3 class="om-card__title">Product Bundles, Upsells &amp; Kits</h3>
+        <p class="om-card__body">Combine multiple catalog items into high-margin kits with bundled pricing. Link recommended upsells and cross-sells directly in the product configuration wizard with synchronized stock deduction.</p>
+        <p class="om-badge om-badge--neutral" style="font-size:0.75rem;margin-top:auto;">Automated Multi-Item Stock Sync</p>
+        <button type="button" class="om-card__spec-toggle" aria-expanded="false">Tech Specs &amp; SQL Mapping <span class="om-arrow">▾</span></button>
+        <div class="om-card__spec-drawer">
+          <div class="om-spec-row"><span class="om-spec-label">Columns:</span><span class="om-spec-val"><code>bundled_ids</code>, <code>upsell_ids</code>, <code>cross_sell_ids</code></span></div>
+          <div class="om-spec-row"><span class="om-spec-label">Action:</span><span class="om-spec-val">Reduces inventory across all bundled item IDs simultaneously</span></div>
+        </div>
+      </div>
+
+      <!-- 2.5: Pre-Orders -->
+      <div class="om-card" data-category="catalog" data-keywords="pre-orders preorders countdown scheduled launch reservation">
+        <p class="om-card__icon"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" style="color:#22A06B;"><path d="M5 22h14"></path><path d="M5 2h14"></path><path d="M17 22v-4.172a2 2 0 0 0-.586-1.414L12 12l-4.414 4.414A2 2 0 0 0 7 17.828V22"></path><path d="M7 2v4.172a2 2 0 0 0 .586 1.414L12 12l4.414-4.414A2 2 0 0 0 17 6.172V2"></path></svg></p>
+        <h3 class="om-card__title">Native Pre-Orders Engine</h3>
+        <p class="om-card__body">Accept early reservations before a release date with scheduled launch timers, purchase limits, customized pre-order badges, and dedicated status notifications on fulfillment.</p>
+        <p class="om-badge om-badge--neutral" style="font-size:0.75rem;margin-top:auto;">Scheduled Launch Date Countdown</p>
+        <button type="button" class="om-card__spec-toggle" aria-expanded="false">Tech Specs &amp; SQL Mapping <span class="om-arrow">▾</span></button>
+        <div class="om-card__spec-drawer">
+          <div class="om-spec-row"><span class="om-spec-label">Columns:</span><span class="om-spec-val"><code>preorder_enabled</code>, <code>preorder_release_date</code>, <code>preorder_limit</code></span></div>
+          <div class="om-spec-row"><span class="om-spec-label">Badging:</span><span class="om-spec-val">Automatic "Pre-Order" checkout button substitution</span></div>
+        </div>
+      </div>
+
+      <!-- 2.6: Taxonomies & Media -->
+      <div class="om-card" data-category="catalog" data-keywords="taxonomies categories tags brands galleries video showcase">
+        <p class="om-card__icon"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" style="color:#22A06B;"><path d="M20.59 13.41l-7.17 7.17a2 2 0 0 1-2.83 0L2 12V2h10l8.59 8.59a2 2 0 0 1 0 2.82z"></path><line x1="7" y1="7" x2="7.01" y2="7"></line></svg></p>
+        <h3 class="om-card__title">Categories, Brands &amp; Video Media</h3>
+        <p class="om-card__body">Organize catalogs with indexed categories, tags, and brand taxonomies. Add interactive product image galleries and embed external product showcase videos with custom poster thumbnails.</p>
+        <p class="om-badge om-badge--neutral" style="font-size:0.75rem;margin-top:auto;">Video URL &amp; Poster Embeds</p>
+        <button type="button" class="om-card__spec-toggle" aria-expanded="false">Tech Specs &amp; SQL Mapping <span class="om-arrow">▾</span></button>
+        <div class="om-card__spec-drawer">
+          <div class="om-spec-row"><span class="om-spec-label">Tables:</span><span class="om-spec-val"><code>wp_omnify_product_categories</code>, <code>wp_omnify_product_brands</code></span></div>
+          <div class="om-spec-row"><span class="om-spec-label">Columns:</span><span class="om-spec-val"><code>video_url</code>, <code>video_poster_url</code>, <code>gallery_ids</code></span></div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- /wp:group -->
+
+  <!-- ============================================================
+       PILLAR 3: 14 PAYMENT GATEWAYS & ZERO COMMISSION
+       ============================================================ -->
+  <!-- wp:group {"className":"om-section","style":{"spacing":{"padding":{"top":"clamp(3rem, 5vw, 4.5rem)","bottom":"clamp(3rem, 5vw, 4.5rem)"}}},"layout":{"type":"constrained","contentSize":"1200px"}} -->
+  <div class="wp-block-group om-section" data-pillar="payments">
+    <div style="margin-bottom:2.25rem;">
+      <p class="om-badge om-badge--neutral" style="font-family:var(--om-font-mono);font-size:0.75rem;font-weight:700;letter-spacing:0.08em;text-transform:uppercase;margin-bottom:0.75rem;">Payment Engine</p>
+      <h2 class="wp-block-heading has-ink-color has-text-color" style="font-size:clamp(1.75rem, 3.5vw, 2.35rem);font-weight:800;letter-spacing:-0.03em;margin:0 0 0.6rem;">3. 14 Payment Gateways &amp; 0% Platform Commission</h2>
+      <p class="om-text-muted" style="font-size:1.0625rem;line-height:1.65;max-width:780px;margin:0;">Accept payments worldwide with zero extra transaction fees, built-in in-app refunds, and real-time webhook status sync.</p>
+    </div>
+
+    <div class="om-card-grid">
+      <!-- 3.1: Stripe -->
+      <div class="om-card" data-category="payments" data-keywords="stripe apple pay google pay elements cards 3d secure sca">
+        <p class="om-card__icon"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" style="color:#22A06B;"><rect x="1" y="4" width="22" height="16" rx="2" ry="2"></rect><line x1="1" y1="10" x2="23" y2="10"></line></svg></p>
+        <h3 class="om-card__title">Stripe Elements &amp; Express Wallets</h3>
+        <p class="om-card__body">Native Stripe Elements checkout with one-click Apple Pay, Google Pay, 3D Secure 2, and SCA compliance. Supports both test and live credentials with automated webhook secret verification.</p>
+        <p class="om-badge om-badge--neutral" style="font-size:0.75rem;margin-top:auto;">Apple Pay &amp; Google Pay Built-in</p>
+        <button type="button" class="om-card__spec-toggle" aria-expanded="false">Tech Specs &amp; SQL Mapping <span class="om-arrow">▾</span></button>
+        <div class="om-card__spec-drawer">
+          <div class="om-spec-row"><span class="om-spec-label">Service:</span><span class="om-spec-val"><code>includes/Support/Payment_Gateway_Service.php</code></span></div>
+          <div class="om-spec-row"><span class="om-spec-label">Refunds:</span><span class="om-spec-val">Direct Stripe Refund API (<code>/v1/refunds</code>)</span></div>
+        </div>
+      </div>
+
+      <!-- 3.2: PayPal Commerce -->
+      <div class="om-card" data-category="payments" data-keywords="paypal smart buttons venmo pay in 4 wallet installments">
+        <p class="om-card__icon"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" style="color:#22A06B;"><path d="M20 12V8H6a2 2 0 0 1-2-2c0-1.1.9-2 2-2h12v4"></path><path d="M4 6v12a2 2 0 0 0 2 2h14v-4"></path><circle cx="18" cy="14" r="2"></circle></svg></p>
+        <h3 class="om-card__title">PayPal Commerce &amp; Smart Buttons</h3>
+        <p class="om-card__body">Direct PayPal SDK integration featuring Smart Payment Buttons, Venmo, Pay in 4 installments, and card payments. Full sandbox/live toggle with automated OAuth2 token refresh.</p>
+        <p class="om-badge om-badge--neutral" style="font-size:0.75rem;margin-top:auto;">Smart Buttons &amp; Pay in 4</p>
+        <button type="button" class="om-card__spec-toggle" aria-expanded="false">Tech Specs &amp; SQL Mapping <span class="om-arrow">▾</span></button>
+        <div class="om-card__spec-drawer">
+          <div class="om-spec-row"><span class="om-spec-label">Endpoints:</span><span class="om-spec-val">PayPal v2 Orders &amp; Captures API</span></div>
+          <div class="om-spec-row"><span class="om-spec-label">Refunds:</span><span class="om-spec-val"><code>v2/payments/captures/{id}/refund</code></span></div>
+        </div>
+      </div>
+
+      <!-- 3.3: European Gateways -->
+      <div class="om-card" data-category="payments" data-keywords="mollie ideal bancontact sepa cartes bancaires europe">
+        <p class="om-card__icon"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" style="color:#22A06B;"><circle cx="12" cy="12" r="10"></circle><line x1="2" y1="12" x2="22" y2="12"></line><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"></path></svg></p>
+        <h3 class="om-card__title">Mollie European Payments Suite</h3>
+        <p class="om-card__body">Complete EU checkout adapter supporting iDEAL (Netherlands), Bancontact (Belgium), Cartes Bancaires (France), SEPA Direct Debit, EPS (Austria), and Przelewy24 (Poland).</p>
+        <p class="om-badge om-badge--neutral" style="font-size:0.75rem;margin-top:auto;">iDEAL, Bancontact &amp; SEPA</p>
+        <button type="button" class="om-card__spec-toggle" aria-expanded="false">Tech Specs &amp; SQL Mapping <span class="om-arrow">▾</span></button>
+        <div class="om-card__spec-drawer">
+          <div class="om-spec-row"><span class="om-spec-label">Settings:</span><span class="om-spec-val"><code>mollie_test_api_key</code>, <code>mollie_live_api_key</code></span></div>
+          <div class="om-spec-row"><span class="om-spec-label">Currencies:</span><span class="om-spec-val">EUR, GBP, CHF, DKK, NOK, PLN, SEK</span></div>
+        </div>
+      </div>
+
+      <!-- 3.4: Asian & Middle East -->
+      <div class="om-card" data-category="payments" data-keywords="razorpay tap alipay wechat sslcommerz khalti esewa upi mada">
+        <p class="om-card__icon"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" style="color:#22A06B;"><circle cx="12" cy="12" r="10"></circle><line x1="2" y1="12" x2="22" y2="12"></line><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"></path></svg></p>
+        <h3 class="om-card__title">Asia &amp; Middle East Regional Adapters</h3>
+        <p class="om-card__body">Native gateways for high-growth markets: Razorpay (India UPI), Tap Payments (GCC Mada/KNET), Alipay &amp; WeChat Pay (East Asia), SSLCommerz (Bangladesh), plus Khalti &amp; eSewa (Nepal).</p>
+        <p class="om-badge om-badge--neutral" style="font-size:0.75rem;margin-top:auto;">UPI, Mada, Alipay &amp; Wallets</p>
+        <button type="button" class="om-card__spec-toggle" aria-expanded="false">Tech Specs &amp; SQL Mapping <span class="om-arrow">▾</span></button>
+        <div class="om-card__spec-drawer">
+          <div class="om-spec-row"><span class="om-spec-label">Supported:</span><span class="om-spec-val">Razorpay, Tap, Alipay, WeChat, SSLCommerz, Khalti, eSewa</span></div>
+          <div class="om-spec-row"><span class="om-spec-label">Verification:</span><span class="om-spec-val">Cryptographic signatures &amp; IPN webhooks</span></div>
+        </div>
+      </div>
+
+      <!-- 3.5: Pan-African Gateways -->
+      <div class="om-card" data-category="payments" data-keywords="paystack africa nigeria ghana south africa kenya mobile money ussd">
+        <p class="om-card__icon"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" style="color:#22A06B;"><circle cx="12" cy="12" r="10"></circle><line x1="2" y1="12" x2="22" y2="12"></line><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"></path></svg></p>
+        <h3 class="om-card__title">Paystack African Payments Engine</h3>
+        <p class="om-card__body">Seamless checkout across Nigeria, Ghana, Kenya, and South Africa with cards, bank accounts, USSD codes, mobile money transfers, and EFT with instant SHA-512 webhook confirmation.</p>
+        <p class="om-badge om-badge--neutral" style="font-size:0.75rem;margin-top:auto;">Mobile Money &amp; USSD Checkout</p>
+        <button type="button" class="om-card__spec-toggle" aria-expanded="false">Tech Specs &amp; SQL Mapping <span class="om-arrow">▾</span></button>
+        <div class="om-card__spec-drawer">
+          <div class="om-spec-row"><span class="om-spec-label">Settings:</span><span class="om-spec-val"><code>paystack_public_key</code>, <code>paystack_secret_key</code></span></div>
+          <div class="om-spec-row"><span class="om-spec-label">Currencies:</span><span class="om-spec-val">NGN, GHS, ZAR, KES, USD</span></div>
+        </div>
+      </div>
+
+      <!-- 3.6: Offline Suite & 0% Fee -->
+      <div class="om-card" data-category="payments" data-keywords="bacs wire transfer cod cash on delivery cheque manual offline commission zero">
+        <p class="om-card__icon"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" style="color:#22A06B;"><line x1="3" y1="21" x2="21" y2="21"></line><line x1="3" y1="10" x2="21" y2="10"></line><polyline points="5 6 12 3 19 6"></polyline><line x1="4" y1="10" x2="4" y2="21"></line><line x1="20" y1="10" x2="20" y2="21"></line><line x1="8" y1="14" x2="8" y2="17"></line><line x1="12" y1="14" x2="12" y2="17"></line><line x1="16" y1="14" x2="16" y2="17"></line></svg></p>
+        <h3 class="om-card__title">Offline Suite &amp; 0% Platform Fee</h3>
+        <p class="om-card__body">Direct Bank Transfer (BACS/Wire), Cash on Delivery (COD), and Cheque payments with custom instructions. Most importantly: OmnifyWP charges 0% platform commission on every transaction.</p>
+        <p class="om-badge om-badge--neutral" style="font-size:0.75rem;margin-top:auto;">0% Commission Guaranteed</p>
+        <button type="button" class="om-card__spec-toggle" aria-expanded="false">Tech Specs &amp; SQL Mapping <span class="om-arrow">▾</span></button>
+        <div class="om-card__spec-drawer">
+          <div class="om-spec-row"><span class="om-spec-label">Methods:</span><span class="om-spec-val"><code>bank_transfer</code>, <code>cash_on_delivery</code>, <code>cheque</code></span></div>
+          <div class="om-spec-row"><span class="om-spec-label">Instructions:</span><span class="om-spec-val">Configurable rich HTML payment memo</span></div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- /wp:group -->
+
+  <!-- ============================================================
+       PILLAR 4: CRYPTOGRAPHIC SECURITY & ANTI-PIRACY DELIVERY
+       ============================================================ -->
+  <!-- wp:group {"className":"om-section","style":{"spacing":{"padding":{"top":"clamp(3rem, 5vw, 4.5rem)","bottom":"clamp(3rem, 5vw, 4.5rem)"}}},"backgroundColor":"background-alt","layout":{"type":"constrained","contentSize":"1200px"}} -->
+  <div class="wp-block-group om-section has-background-alt-background-color has-background" style="border-top:1px solid #E6F4EC;border-bottom:1px solid #E6F4EC;" data-pillar="security">
+    <div style="margin-bottom:2.25rem;">
+      <p class="om-badge om-badge--neutral" style="font-family:var(--om-font-mono);font-size:0.75rem;font-weight:700;letter-spacing:0.08em;text-transform:uppercase;margin-bottom:0.75rem;">Digital Security</p>
+      <h2 class="wp-block-heading has-ink-color has-text-color" style="font-size:clamp(1.75rem, 3.5vw, 2.35rem);font-weight:800;letter-spacing:-0.03em;margin:0 0 0.6rem;">4. Cryptographic Security &amp; Anti-Piracy Delivery</h2>
+      <p class="om-text-muted" style="font-size:1.0625rem;line-height:1.65;max-width:780px;margin:0;">Military-grade HMAC signatures, out-of-webroot binary streaming, and granular download attempt counters.</p>
+    </div>
+
+    <div class="om-card-grid">
+      <!-- 4.1: HMAC-SHA256 Signed URLs -->
+      <div class="om-card" data-category="security" data-keywords="hmac sha-256 signed urls cryptography hash tokens security">
+        <p class="om-card__icon"><svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true" style="color:#22A06B;"><path d="M18 8h-1V6c0-2.76-2.24-5-5-5S7 3.24 7 6v2H6c-1.1 0-2 .9-2 2v10c0 1.1.9 2 2 2h12c1.1 0 2-.9 2-2V10c0-1.1-.9-2-2-2zm-6 9c-1.1 0-2-.9-2-2s.9-2 2-2 2 .9 2 2-.9 2-2 2zm3.1-9H8.9V6c0-1.71 1.39-3.1 3.1-3.1 1.71 0 3.1 1.39 3.1 3.1v2z"/></svg></p>
+        <h3 class="om-card__title">HMAC-SHA256 Signed URLs</h3>
+        <p class="om-card__body">Every file access URL is cryptographically signed using <code>hash_hmac('sha256')</code> with an internal server salt, user token, file ID, and expiration timestamp. Tampered URLs are immediately rejected.</p>
+        <p class="om-badge om-badge--neutral" style="font-size:0.75rem;margin-top:auto;">SHA-256 Tamper Proofing</p>
+        <button type="button" class="om-card__spec-toggle" aria-expanded="false">Tech Specs &amp; SQL Mapping <span class="om-arrow">▾</span></button>
+        <div class="om-card__spec-drawer">
+          <div class="om-spec-row"><span class="om-spec-label">Service:</span><span class="om-spec-val"><code>includes/Downloads/Signed_Url_Service.php</code></span></div>
+          <div class="om-spec-row"><span class="om-spec-label">Algorithm:</span><span class="om-spec-val"><code>hash_hmac('sha256', $payload, $secret_key)</code></span></div>
+        </div>
+      </div>
+
+      <!-- 4.2: Expiry & Attempt Caps -->
+      <div class="om-card" data-category="security" data-keywords="expiry attempt caps limits link sharing anti-piracy leak protection">
+        <p class="om-card__icon"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" style="color:#22A06B;"><circle cx="12" cy="12" r="10"></circle><polyline points="12 6 12 12 16 14"></polyline></svg></p>
+        <h3 class="om-card__title">Configurable Expiry &amp; Attempt Caps</h3>
+        <p class="om-card__body">Prevent unauthorized link sharing on Discord and forums. Set strict download lifespans (e.g. 48 hours) and maximum attempt limits (e.g. 5 attempts). Once reached, the URL permanently invalidates.</p>
+        <p class="om-badge om-badge--neutral" style="font-size:0.75rem;margin-top:auto;">Strict Attempt &amp; Time Limiters</p>
+        <button type="button" class="om-card__spec-toggle" aria-expanded="false">Tech Specs &amp; SQL Mapping <span class="om-arrow">▾</span></button>
+        <div class="om-card__spec-drawer">
+          <div class="om-spec-row"><span class="om-spec-label">Settings:</span><span class="om-spec-val"><code>download_expiry_days</code>, <code>max_downloads_per_item</code></span></div>
+          <div class="om-spec-row"><span class="om-spec-label">Per-Product:</span><span class="om-spec-val">Granular overrides on individual product files</span></div>
+        </div>
+      </div>
+
+      <!-- 4.3: Out-of-Webroot Binary Streaming -->
+      <div class="om-card" data-category="security" data-keywords="binary streaming webroot direct url protection htaccess chunking">
+        <p class="om-card__icon"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" style="color:#22A06B;"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path></svg></p>
+        <h3 class="om-card__title">Out-of-Webroot Binary Streaming</h3>
+        <p class="om-card__body">Protected files are never stored in public <code>wp-content/uploads/</code> directories. PHP reads binary chunks into memory and streams headers directly to authorized buyers, masking server file paths.</p>
+        <p class="om-badge om-badge--neutral" style="font-size:0.75rem;margin-top:auto;">Zero Direct URL Exposure</p>
+        <button type="button" class="om-card__spec-toggle" aria-expanded="false">Tech Specs &amp; SQL Mapping <span class="om-arrow">▾</span></button>
+        <div class="om-card__spec-drawer">
+          <div class="om-spec-row"><span class="om-spec-label">Handler:</span><span class="om-spec-val"><code>includes/Downloads/Download_Controller.php</code></span></div>
+          <div class="om-spec-row"><span class="om-spec-label">Method:</span><span class="om-spec-val"><code>readfile()</code> with <code>Content-Disposition: attachment</code></span></div>
+        </div>
+      </div>
+
+      <!-- 4.4: Forensic IP Audit Trail -->
+      <div class="om-card" data-category="security" data-keywords="ip tracking user-agent audit trail dmca forensics logs downloads">
+        <p class="om-card__icon"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" style="color:#22A06B;"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path><polyline points="14 2 14 8 20 8"></polyline><line x1="16" y1="13" x2="8" y2="13"></line><line x1="16" y1="17" x2="8" y2="17"></line><polyline points="10 9 9 9 8 9"></polyline></svg></p>
+        <h3 class="om-card__title">Forensic IP &amp; User-Agent Audit Trail</h3>
+        <p class="om-card__body">Every single file download attempt is logged in <code>wp_omnify_downloads</code> with exact microsecond timestamp, customer ID, IP address, and client user-agent string for forensic DMCA compliance.</p>
+        <p class="om-badge om-badge--neutral" style="font-size:0.75rem;margin-top:auto;">Full Forensic Access Ledger</p>
+        <button type="button" class="om-card__spec-toggle" aria-expanded="false">Tech Specs &amp; SQL Mapping <span class="om-arrow">▾</span></button>
+        <div class="om-card__spec-drawer">
+          <div class="om-spec-row"><span class="om-spec-label">Table:</span><span class="om-spec-val"><code>wp_omnify_downloads</code></span></div>
+          <div class="om-spec-row"><span class="om-spec-label">Columns:</span><span class="om-spec-val"><code>ip_address</code>, <code>user_agent</code>, <code>downloaded_at</code></span></div>
+        </div>
+      </div>
+
+      <!-- 4.5: Automatic Access Revocation -->
+      <div class="om-card" data-category="security" data-keywords="revocation refund dispute cancellation chargeback license access">
+        <p class="om-card__icon"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" style="color:#22A06B;"><circle cx="12" cy="12" r="10"></circle><line x1="4.93" y1="4.93" x2="19.07" y2="19.07"></line></svg></p>
+        <h3 class="om-card__title">Automated Revocation on Refund</h3>
+        <p class="om-card__body">When an order status changes to refunded, disputed, or cancelled, OmnifyWP immediately flips the corresponding record in <code>wp_omnify_customer_access</code> to inactive, revoking download tokens instantly.</p>
+        <p class="om-badge om-badge--neutral" style="font-size:0.75rem;margin-top:auto;">Instant Access Invalidation</p>
+        <button type="button" class="om-card__spec-toggle" aria-expanded="false">Tech Specs &amp; SQL Mapping <span class="om-arrow">▾</span></button>
+        <div class="om-card__spec-drawer">
+          <div class="om-spec-row"><span class="om-spec-label">Table:</span><span class="om-spec-val"><code>wp_omnify_customer_access</code></span></div>
+          <div class="om-spec-row"><span class="om-spec-label">Status:</span><span class="om-spec-val"><code>active</code> &rarr; <code>revoked</code></span></div>
+        </div>
+      </div>
+
+      <!-- 4.6: Self-Service Customer Portal -->
+      <div class="om-card" data-category="security" data-keywords="self-service download portal token regeneration account customer locker">
+        <p class="om-card__icon"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" style="color:#22A06B;"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path><circle cx="12" cy="7" r="4"></circle></svg></p>
+        <h3 class="om-card__title">Customer Self-Service Asset Locker</h3>
+        <p class="om-card__body">Buyers can log in or use the secure guest order lookup tool to access their digital asset locker, check remaining download attempts, view release changelogs, and re-generate signed tokens.</p>
+        <p class="om-badge om-badge--neutral" style="font-size:0.75rem;margin-top:auto;">Self-Service Token Re-Issue</p>
+        <button type="button" class="om-card__spec-toggle" aria-expanded="false">Tech Specs &amp; SQL Mapping <span class="om-arrow">▾</span></button>
+        <div class="om-card__spec-drawer">
+          <div class="om-spec-row"><span class="om-spec-label">Portal:</span><span class="om-spec-val"><code>[omnify_order_lookup]</code> &amp; My Account Tab</span></div>
+          <div class="om-spec-row"><span class="om-spec-label">Security:</span><span class="om-spec-val">Encrypted magic login tokens sent to verified email</span></div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- /wp:group -->
+
+  <!-- ============================================================
+       PILLAR 5: CHECKOUT, CART & CONVERSIONS
+       ============================================================ -->
+  <!-- wp:group {"className":"om-section","style":{"spacing":{"padding":{"top":"clamp(3rem, 5vw, 4.5rem)","bottom":"clamp(3rem, 5vw, 4.5rem)"}}},"layout":{"type":"constrained","contentSize":"1200px"}} -->
+  <div class="wp-block-group om-section" data-pillar="checkout">
+    <div style="margin-bottom:2.25rem;">
+      <p class="om-badge om-badge--neutral" style="font-family:var(--om-font-mono);font-size:0.75rem;font-weight:700;letter-spacing:0.08em;text-transform:uppercase;margin-bottom:0.75rem;">Conversion Suite</p>
+      <h2 class="wp-block-heading has-ink-color has-text-color" style="font-size:clamp(1.75rem, 3.5vw, 2.35rem);font-weight:800;letter-spacing:-0.03em;margin:0 0 0.6rem;">5. Frictionless Checkout &amp; Conversion Engine</h2>
+      <p class="om-text-muted" style="font-size:1.0625rem;line-height:1.65;max-width:780px;margin:0;">1-step guest checkout, slide-out mini cart, automated abandoned recovery, and real-time fraud scoring.</p>
+    </div>
+
+    <div class="om-card-grid">
+      <!-- 5.1: 1-Step Guest Checkout -->
+      <div class="om-card" data-category="checkout" data-keywords="guest checkout 1-step frictionless conversion auto-login account">
+        <p class="om-card__icon"><svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true" style="color:#22A06B;"><path d="M13 2L3 14h9l-1 8 10-12h-9l1-8z"/></svg></p>
+        <h3 class="om-card__title">1-Step Frictionless Guest Checkout</h3>
+        <p class="om-card__body">Buyers purchase with zero mandatory account creation obstacles. Optional background account creation automatically generates a customer profile and auto-logs the buyer in after successful payment.</p>
+        <p class="om-badge om-badge--neutral" style="font-size:0.75rem;margin-top:auto;">Eliminates Account Friction</p>
+        <button type="button" class="om-card__spec-toggle" aria-expanded="false">Tech Specs &amp; SQL Mapping <span class="om-arrow">▾</span></button>
+        <div class="om-card__spec-drawer">
+          <div class="om-spec-row"><span class="om-spec-label">Settings:</span><span class="om-spec-val"><code>allow_guest_checkout</code>, <code>auto_login_created_accounts</code></span></div>
+          <div class="om-spec-row"><span class="om-spec-label">Table:</span><span class="om-spec-val"><code>wp_omnify_customers</code></span></div>
+        </div>
+      </div>
+
+      <!-- 5.2: Slide-Out Mini Cart -->
+      <div class="om-card" data-category="checkout" data-keywords="mini cart drawer slide-out ajax quick-view subtotal cart">
+        <p class="om-card__icon"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" style="color:#22A06B;"><circle cx="9" cy="21" r="1"></circle><circle cx="20" cy="21" r="1"></circle><path d="M1 1h4l2.68 13.39a2 2 0 0 0 2 1.61h9.72a2 2 0 0 0 2-1.61L23 6H6"></path></svg></p>
+        <h3 class="om-card__title">Slide-Out AJAX Mini Cart Drawer</h3>
+        <p class="om-card__body">Fly-out dynamic cart drawer updates quantities, discounts, and order subtotals via AJAX without refreshing the page, delivering a seamless modern app feel across all screen sizes.</p>
+        <p class="om-badge om-badge--neutral" style="font-size:0.75rem;margin-top:auto;">Instant AJAX Quantity Updates</p>
+        <button type="button" class="om-card__spec-toggle" aria-expanded="false">Tech Specs &amp; SQL Mapping <span class="om-arrow">▾</span></button>
+        <div class="om-card__spec-drawer">
+          <div class="om-spec-row"><span class="om-spec-label">Settings:</span><span class="om-spec-val"><code>mini_cart_menu_enabled</code></span></div>
+          <div class="om-spec-row"><span class="om-spec-label">Payload:</span><span class="om-spec-val">Client-side localStorage with server reconciliation</span></div>
+        </div>
+      </div>
+
+      <!-- 5.3: Abandoned Cart Recovery -->
+      <div class="om-card" data-category="checkout" data-keywords="abandoned cart recovery reminder emails recovery url revenue winback">
+        <p class="om-card__icon"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" style="color:#22A06B;"><polyline points="23 4 23 10 17 10"></polyline><polyline points="1 20 1 14 7 14"></polyline><path d="M3.51 9a9 9 0 0 1 14.85-3.36L23 10M1 14l4.64 4.36A9 9 0 0 0 20.49 15"></path></svg></p>
+        <h3 class="om-card__title">Automated Abandoned Cart Recovery</h3>
+        <p class="om-card__body">Captures email drafts asynchronously before checkout completion. Sends automated HTML reminders with 1-click recovery URLs and optional coupon incentives to win back lost sales.</p>
+        <p class="om-badge om-badge--neutral" style="font-size:0.75rem;margin-top:auto;">Configurable Delay Timers</p>
+        <button type="button" class="om-card__spec-toggle" aria-expanded="false">Tech Specs &amp; SQL Mapping <span class="om-arrow">▾</span></button>
+        <div class="om-card__spec-drawer">
+          <div class="om-spec-row"><span class="om-spec-label">Table:</span><span class="om-spec-val"><code>wp_omnify_abandoned_carts</code></span></div>
+          <div class="om-spec-row"><span class="om-spec-label">Service:</span><span class="om-spec-val"><code>includes/Support/Abandoned_Cart_Service.php</code></span></div>
+        </div>
+      </div>
+
+      <!-- 5.4: Advanced Coupon Engine -->
+      <div class="om-card" data-category="checkout" data-keywords="coupons discounts promotions percentage fixed spend limit first-order">
+        <p class="om-card__icon"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" style="color:#22A06B;"><path d="M20.59 13.41l-7.17 7.17a2 2 0 0 1-2.83 0L2 12V2h10l8.59 8.59a2 2 0 0 1 0 2.82z"></path><line x1="7" y1="7" x2="7.01" y2="7"></line></svg></p>
+        <h3 class="om-card__title">Advanced Coupon &amp; Promo Engine</h3>
+        <p class="om-card__body">Fixed amounts, percentage discounts, free shipping vouchers, minimum spend limits, maximum discount caps, per-user usage limits, product/category inclusions/exclusions, and first-order rules.</p>
+        <p class="om-badge om-badge--neutral" style="font-size:0.75rem;margin-top:auto;">Granular Exclusion Rules</p>
+        <button type="button" class="om-card__spec-toggle" aria-expanded="false">Tech Specs &amp; SQL Mapping <span class="om-arrow">▾</span></button>
+        <div class="om-card__spec-drawer">
+          <div class="om-spec-row"><span class="om-spec-label">Table:</span><span class="om-spec-val"><code>wp_omnify_coupons</code></span></div>
+          <div class="om-spec-row"><span class="om-spec-label">Fields:</span><span class="om-spec-val"><code>discount_type</code>, <code>usage_limit_per_customer</code>, <code>first_order_only</code></span></div>
+        </div>
+      </div>
+
+      <!-- 5.5: Anti-Fraud Risk Scoring -->
+      <div class="om-card" data-category="checkout" data-keywords="fraud detection risk score disposable email country mismatch ip protection">
+        <p class="om-card__icon"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" style="color:#22A06B;"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path></svg></p>
+        <h3 class="om-card__title">Built-in Fraud Risk Scoring</h3>
+        <p class="om-card__body">Real-time risk scoring flags IP country mismatches, disposable/throwaway email domains, repeated velocity checkout attempts, and unusually high order values in <code>wp_omnify_orders</code>.</p>
+        <p class="om-badge om-badge--neutral" style="font-size:0.75rem;margin-top:auto;">Automated Risk Flagging</p>
+        <button type="button" class="om-card__spec-toggle" aria-expanded="false">Tech Specs &amp; SQL Mapping <span class="om-arrow">▾</span></button>
+        <div class="om-card__spec-drawer">
+          <div class="om-spec-row"><span class="om-spec-label">Columns:</span><span class="om-spec-val"><code>fraud_status</code>, <code>fraud_score</code>, <code>fraud_flags</code></span></div>
+          <div class="om-spec-row"><span class="om-spec-label">Settings:</span><span class="om-spec-val"><code>fraud_country_mismatch_flag</code>, <code>fraud_disposable_email_flag</code></span></div>
+        </div>
+      </div>
+
+      <!-- 5.6: In-App Refunds -->
+      <div class="om-card" data-category="checkout" data-keywords="refunds in-app partial full stripe paypal razorpay charge reversal">
+        <p class="om-card__icon"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" style="color:#22A06B;"><polyline points="1 4 1 10 7 10"></polyline><path d="M3.51 15a9 9 0 1 0 2.13-9.36L1 10"></path></svg></p>
+        <h3 class="om-card__title">In-App Full &amp; Partial Refunds</h3>
+        <p class="om-card__body">Process full or itemized partial refunds directly from the WordPress Order dashboard. Automatically triggers gateway API calls to Stripe, PayPal, or Razorpay and adjusts inventory restock.</p>
+        <p class="om-badge om-badge--neutral" style="font-size:0.75rem;margin-top:auto;">Direct Gateway API Dispatch</p>
+        <button type="button" class="om-card__spec-toggle" aria-expanded="false">Tech Specs &amp; SQL Mapping <span class="om-arrow">▾</span></button>
+        <div class="om-card__spec-drawer">
+          <div class="om-spec-row"><span class="om-spec-label">Columns:</span><span class="om-spec-val"><code>orders.refunded_amount</code>, <code>order_items.refunded_qty</code></span></div>
+          <div class="om-spec-row"><span class="om-spec-label">Security:</span><span class="om-spec-val">Logs refund action into <code>wp_omnify_admin_activities</code></span></div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- /wp:group -->
+
+  <!-- ============================================================
+       PILLAR 6: SHIPPING, TAXES & REGIONAL OPERATIONS
+       ============================================================ -->
+  <!-- wp:group {"className":"om-section","style":{"spacing":{"padding":{"top":"clamp(3rem, 5vw, 4.5rem)","bottom":"clamp(3rem, 5vw, 4.5rem)"}}},"backgroundColor":"background-alt","layout":{"type":"constrained","contentSize":"1200px"}} -->
+  <div class="wp-block-group om-section has-background-alt-background-color has-background" style="border-top:1px solid #E6F4EC;border-bottom:1px solid #E6F4EC;" data-pillar="shipping">
+    <div style="margin-bottom:2.25rem;">
+      <p class="om-badge om-badge--neutral" style="font-family:var(--om-font-mono);font-size:0.75rem;font-weight:700;letter-spacing:0.08em;text-transform:uppercase;margin-bottom:0.75rem;">Fulfillment &amp; Tax</p>
+      <h2 class="wp-block-heading has-ink-color has-text-color" style="font-size:clamp(1.75rem, 3.5vw, 2.35rem);font-weight:800;letter-spacing:-0.03em;margin:0 0 0.6rem;">6. Shipping Zones, Regional Taxes &amp; Localization</h2>
+      <p class="om-text-muted" style="font-size:1.0625rem;line-height:1.65;max-width:780px;margin:0;">Multi-tier shipping rules, carrier tracking injection, flexible VAT/sales tax rules, and currency formatting.</p>
+    </div>
+
+    <div class="om-card-grid">
+      <!-- 6.1: Delivery Zones -->
+      <div class="om-card" data-category="shipping" data-keywords="shipping zones flat rate free delivery regional threshold">
+        <p class="om-card__icon"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" style="color:#22A06B;"><rect x="1" y="3" width="15" height="13"></rect><polygon points="16 8 20 8 23 11 23 16 16 16 16 8"></polygon><circle cx="5.5" cy="18.5" r="2.5"></circle><circle cx="18.5" cy="18.5" r="2.5"></circle></svg></p>
+        <h3 class="om-card__title">Multi-Tier Delivery Zones</h3>
+        <p class="om-card__body">Create localized delivery zones for domestic, regional, and international regions with customizable flat rates, free shipping order spend thresholds, and customized delivery estimates.</p>
+        <p class="om-badge om-badge--neutral" style="font-size:0.75rem;margin-top:auto;">Free Shipping Thresholds</p>
+        <button type="button" class="om-card__spec-toggle" aria-expanded="false">Tech Specs &amp; SQL Mapping <span class="om-arrow">▾</span></button>
+        <div class="om-card__spec-drawer">
+          <div class="om-spec-row"><span class="om-spec-label">Settings:</span><span class="om-spec-val"><code>delivery_zones</code> array repository</span></div>
+          <div class="om-spec-row"><span class="om-spec-label">UI:</span><span class="om-spec-val">OmnifyWP &gt; Settings &gt; Shipping &amp; Delivery</span></div>
+        </div>
+      </div>
+
+      <!-- 6.2: Carrier Tracking Injection -->
+      <div class="om-card" data-category="shipping" data-keywords="tracking number carrier fedex dhl ups usps shipping fulfillment">
+        <p class="om-card__icon"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" style="color:#22A06B;"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path><circle cx="12" cy="10" r="3"></circle></svg></p>
+        <h3 class="om-card__title">Carrier Tracking Injection</h3>
+        <p class="om-card__body">Attach shipping carriers (FedEx, DHL, UPS, USPS, Royal Mail) and parcel tracking numbers directly to orders. Injects clickable tracking URLs into automated customer shipping update emails.</p>
+        <p class="om-badge om-badge--neutral" style="font-size:0.75rem;margin-top:auto;">Clickable Parcel Tracking URLs</p>
+        <button type="button" class="om-card__spec-toggle" aria-expanded="false">Tech Specs &amp; SQL Mapping <span class="om-arrow">▾</span></button>
+        <div class="om-card__spec-drawer">
+          <div class="om-spec-row"><span class="om-spec-label">Columns:</span><span class="om-spec-val"><code>tracking_number</code>, <code>tracking_carrier</code>, <code>fulfillment_status</code></span></div>
+          <div class="om-spec-row"><span class="om-spec-label">Service:</span><span class="om-spec-val"><code>includes/Support/Tracking_Service.php</code></span></div>
+        </div>
+      </div>
+
+      <!-- 6.3: Regional Tax Engine -->
+      <div class="om-card" data-category="shipping" data-keywords="tax vat gst sales tax inclusive exclusive rounding reporting">
+        <p class="om-card__icon"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" style="color:#22A06B;"><circle cx="12" cy="12" r="10"></circle><line x1="2" y1="12" x2="22" y2="12"></line><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"></path></svg></p>
+        <h3 class="om-card__title">Regional Tax Engine &amp; VAT/GST</h3>
+        <p class="om-card__body">Configure country and state tax rates, tax-inclusive vs tax-exclusive pricing, optional tax on shipping charges, line-item vs cart rounding, and official tax reporting codes for bookkeeping.</p>
+        <p class="om-badge om-badge--neutral" style="font-size:0.75rem;margin-top:auto;">Inclusive &amp; Exclusive Modes</p>
+        <button type="button" class="om-card__spec-toggle" aria-expanded="false">Tech Specs &amp; SQL Mapping <span class="om-arrow">▾</span></button>
+        <div class="om-card__spec-drawer">
+          <div class="om-spec-row"><span class="om-spec-label">Columns:</span><span class="om-spec-val"><code>tax_rate</code>, <code>tax_label</code>, <code>tax_reporting_code</code></span></div>
+          <div class="om-spec-row"><span class="om-spec-label">Rounding:</span><span class="om-spec-val">Supports line-by-line or subtotal roundings</span></div>
+        </div>
+      </div>
+
+      <!-- 6.4: B2B Tax Exemption -->
+      <div class="om-card" data-category="shipping" data-keywords="b2b tax exemption wholesale non-profit vat zero-rating">
+        <p class="om-card__icon"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" style="color:#22A06B;"><rect x="4" y="2" width="16" height="20" rx="2" ry="2"></rect><line x1="9" y1="22" x2="9" y2="2"></line><line x1="8" y1="6" x2="10" y2="6"></line><line x1="14" y1="6" x2="16" y2="6"></line><line x1="8" y1="10" x2="10" y2="10"></line><line x1="14" y1="10" x2="16" y2="10"></line><line x1="8" y1="14" x2="10" y2="14"></line><line x1="14" y1="14" x2="16" y2="14"></line><line x1="8" y1="18" x2="10" y2="18"></line><line x1="14" y1="18" x2="16" y2="18"></line></svg></p>
+        <h3 class="om-card__title">B2B Tax Exemption Flags</h3>
+        <p class="om-card__body">Flag verified wholesale, government, or non-profit buyers with <code>tax_exempt = 1</code> in <code>wp_omnify_customers</code> to automatically zero-out sales tax on invoices.</p>
+        <p class="om-badge om-badge--neutral" style="font-size:0.75rem;margin-top:auto;">Automatic Wholesale Zero-Rating</p>
+        <button type="button" class="om-card__spec-toggle" aria-expanded="false">Tech Specs &amp; SQL Mapping <span class="om-arrow">▾</span></button>
+        <div class="om-card__spec-drawer">
+          <div class="om-spec-row"><span class="om-spec-label">Columns:</span><span class="om-spec-val"><code>customers.tax_exempt</code>, <code>orders.customer_tax_exempt</code></span></div>
+          <div class="om-spec-row"><span class="om-spec-label">Admin:</span><span class="om-spec-val">OmnifyWP &gt; Customers &gt; Customer Profile &gt; Tax Status</span></div>
+        </div>
+      </div>
+
+      <!-- 6.5: Multi-Currency Formatting -->
+      <div class="om-card" data-category="shipping" data-keywords="currency symbols formatting decimals separators position">
+        <p class="om-card__icon"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" style="color:#22A06B;"><line x1="12" y1="1" x2="12" y2="23"></line><path d="M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"></path></svg></p>
+        <h3 class="om-card__title">Multi-Currency Formatting</h3>
+        <p class="om-card__body">Support for 135+ world currencies with customized symbol positioning (before/after), customizable decimal precision (0, 2, 3), and localized thousand separators.</p>
+        <p class="om-badge om-badge--neutral" style="font-size:0.75rem;margin-top:auto;">135+ Currencies Supported</p>
+        <button type="button" class="om-card__spec-toggle" aria-expanded="false">Tech Specs &amp; SQL Mapping <span class="om-arrow">▾</span></button>
+        <div class="om-card__spec-drawer">
+          <div class="om-spec-row"><span class="om-spec-label">Settings:</span><span class="om-spec-val"><code>currency_position</code>, <code>price_decimals</code>, <code>thousand_separator</code></span></div>
+          <div class="om-spec-row"><span class="om-spec-label">Helper:</span><span class="om-spec-val"><code>includes/Support/Locations.php</code></span></div>
+        </div>
+      </div>
+
+      <!-- 6.6: Customer Address Book -->
+      <div class="om-card" data-category="shipping" data-keywords="address book billing shipping customer profile checkout fields">
+        <p class="om-card__icon"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" style="color:#22A06B;"><path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20"></path><path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z"></path></svg></p>
+        <h3 class="om-card__title">Dual Address Book &amp; Fast Fill</h3>
+        <p class="om-card__body">Maintains independent billing and shipping address records in <code>wp_omnify_customers</code> with optional "Billing same as shipping" toggle for rapid 1-click checkout completion.</p>
+        <p class="om-badge om-badge--neutral" style="font-size:0.75rem;margin-top:auto;">Pre-filled Repeat Purchases</p>
+        <button type="button" class="om-card__spec-toggle" aria-expanded="false">Tech Specs &amp; SQL Mapping <span class="om-arrow">▾</span></button>
+        <div class="om-card__spec-drawer">
+          <div class="om-spec-row"><span class="om-spec-label">Columns:</span><span class="om-spec-val"><code>billing_address_1</code>, <code>shipping_address_1</code>, etc.</span></div>
+          <div class="om-spec-row"><span class="om-spec-label">Repository:</span><span class="om-spec-val"><code>includes/Repositories/Customer_Repository.php</code></span></div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- /wp:group -->
+
+  <!-- ============================================================
+       PILLAR 7: OPERATIONS, CRM & STORE ADMINISTRATION
+       ============================================================ -->
+  <!-- wp:group {"className":"om-section","style":{"spacing":{"padding":{"top":"clamp(3rem, 5vw, 4.5rem)","bottom":"clamp(3rem, 5vw, 4.5rem)"}}},"layout":{"type":"constrained","contentSize":"1200px"}} -->
+  <div class="wp-block-group om-section" data-pillar="operations">
+    <div style="margin-bottom:2.25rem;">
+      <p class="om-badge om-badge--neutral" style="font-family:var(--om-font-mono);font-size:0.75rem;font-weight:700;letter-spacing:0.08em;text-transform:uppercase;margin-bottom:0.75rem;">Store Operations</p>
+      <h2 class="wp-block-heading has-ink-color has-text-color" style="font-size:clamp(1.75rem, 3.5vw, 2.35rem);font-weight:800;letter-spacing:-0.03em;margin:0 0 0.6rem;">7. Operations, CRM &amp; Store Administration</h2>
+      <p class="om-text-muted" style="font-size:1.0625rem;line-height:1.65;max-width:780px;margin:0;">Real-time executive analytics, customer lifetime value profiles, audit activity logs, wishlists, and reviews.</p>
+    </div>
+
+    <div class="om-card-grid">
+      <!-- 7.1: Executive Sales Analytics -->
+      <div class="om-card" data-category="operations" data-keywords="analytics reporting gross sales net revenue aov refunds dashboard">
+        <p class="om-card__icon"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" style="color:#22A06B;"><line x1="18" y1="20" x2="18" y2="10"></line><line x1="12" y1="20" x2="12" y2="4"></line><line x1="6" y1="20" x2="6" y2="14"></line></svg></p>
+        <h3 class="om-card__title">Real-Time Executive Analytics</h3>
+        <p class="om-card__body">Track gross sales, net revenue, refund rates, average order value (AOV), and digital asset delivery volume calculated instantly via dedicated SQL aggregations without slowing page loads.</p>
+        <p class="om-badge om-badge--neutral" style="font-size:0.75rem;margin-top:auto;">Instant SQL Revenue Aggregation</p>
+        <button type="button" class="om-card__spec-toggle" aria-expanded="false">Tech Specs &amp; SQL Mapping <span class="om-arrow">▾</span></button>
+        <div class="om-card__spec-drawer">
+          <div class="om-spec-row"><span class="om-spec-label">Admin:</span><span class="om-spec-val">OmnifyWP &gt; Analytics</span></div>
+          <div class="om-spec-row"><span class="om-spec-label">Metrics:</span><span class="om-spec-val">Gross, Net, Tax Collected, Shipping Total, Refunds</span></div>
+        </div>
+      </div>
+
+      <!-- 7.2: Customer CRM & LTV -->
+      <div class="om-card" data-category="operations" data-keywords="crm customer lifetime value ltv notes orders history profile">
+        <p class="om-card__icon"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" style="color:#22A06B;"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path><circle cx="9" cy="7" r="4"></circle><path d="M23 21v-2a4 4 0 0 0-3-3.87"></path><path d="M16 3.13a4 4 0 0 1 0 7.75"></path></svg></p>
+        <h3 class="om-card__title">Customer CRM &amp; Lifetime Value</h3>
+        <p class="om-card__body">Dedicated customer management with purchase history, lifetime value (LTV) metrics, order notes, and internal administrative activity tracking stored in <code>wp_omnify_customer_notes</code>.</p>
+        <p class="om-badge om-badge--neutral" style="font-size:0.75rem;margin-top:auto;">Private Admin Customer Notes</p>
+        <button type="button" class="om-card__spec-toggle" aria-expanded="false">Tech Specs &amp; SQL Mapping <span class="om-arrow">▾</span></button>
+        <div class="om-card__spec-drawer">
+          <div class="om-spec-row"><span class="om-spec-label">Tables:</span><span class="om-spec-val"><code>wp_omnify_customers</code>, <code>wp_omnify_customer_notes</code></span></div>
+          <div class="om-spec-row"><span class="om-spec-label">Fields:</span><span class="om-spec-val"><code>customer_visible</code>, <code>author_id</code>, <code>note</code></span></div>
+        </div>
+      </div>
+
+      <!-- 7.3: Customer Wishlists -->
+      <div class="om-card" data-category="operations" data-keywords="wishlists wishlist favorites saved items bookmarks customer">
+        <p class="om-card__icon"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" style="color:#22A06B;"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"></path></svg></p>
+        <h3 class="om-card__title">Integrated Customer Wishlists</h3>
+        <p class="om-card__body">Customers can bookmark favorite products for later purchase. Persistent wishlist items are stored in dedicated table <code>wp_omnify_wishlists</code> with unique user-product indexes.</p>
+        <p class="om-badge om-badge--neutral" style="font-size:0.75rem;margin-top:auto;">Dedicated Wishlist Database Table</p>
+        <button type="button" class="om-card__spec-toggle" aria-expanded="false">Tech Specs &amp; SQL Mapping <span class="om-arrow">▾</span></button>
+        <div class="om-card__spec-drawer">
+          <div class="om-spec-row"><span class="om-spec-label">Table:</span><span class="om-spec-val"><code>wp_omnify_wishlists</code></span></div>
+          <div class="om-spec-row"><span class="om-spec-label">Keys:</span><span class="om-spec-val"><code>UNIQUE KEY user_product (user_id, product_id)</code></span></div>
+        </div>
+      </div>
+
+      <!-- 7.4: Reviews & Ratings -->
+      <div class="om-card" data-category="operations" data-keywords="reviews ratings social proof moderation queue stars feedback">
+        <p class="om-card__icon"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" style="color:#22A06B;"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon></svg></p>
+        <h3 class="om-card__title">Product Reviews &amp; Moderation Queue</h3>
+        <p class="om-card__body">Built-in 5-star customer review system with buyer verification badge, customizable approval queue (pending &rarr; approved), and direct response capabilities in <code>wp_omnify_reviews</code>.</p>
+        <p class="om-badge om-badge--neutral" style="font-size:0.75rem;margin-top:auto;">Admin Approval Queue</p>
+        <button type="button" class="om-card__spec-toggle" aria-expanded="false">Tech Specs &amp; SQL Mapping <span class="om-arrow">▾</span></button>
+        <div class="om-card__spec-drawer">
+          <div class="om-spec-row"><span class="om-spec-label">Table:</span><span class="om-spec-val"><code>wp_omnify_reviews</code></span></div>
+          <div class="om-spec-row"><span class="om-spec-label">Fields:</span><span class="om-spec-val"><code>rating</code> (1-5), <code>review_title</code>, <code>review_content</code>, <code>status</code></span></div>
+        </div>
+      </div>
+
+      <!-- 7.5: Transactional HTML Emails -->
+      <div class="om-card" data-category="operations" data-keywords="emails notifications receipts templates email logs delivery">
+        <p class="om-card__icon"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" style="color:#22A06B;"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path><polyline points="22,6 12,13 2,6"></polyline></svg></p>
+        <h3 class="om-card__title">HTML Email Suite &amp; Email Logs</h3>
+        <p class="om-card__body">Modern responsive HTML email templates for order receipts, payment pending notices, shipping updates, refund receipts, and cart reminders with delivery logs in <code>wp_omnify_email_logs</code>.</p>
+        <p class="om-badge om-badge--neutral" style="font-size:0.75rem;margin-top:auto;">Full Email Delivery Ledger</p>
+        <button type="button" class="om-card__spec-toggle" aria-expanded="false">Tech Specs &amp; SQL Mapping <span class="om-arrow">▾</span></button>
+        <div class="om-card__spec-drawer">
+          <div class="om-spec-row"><span class="om-spec-label">Table:</span><span class="om-spec-val"><code>wp_omnify_email_logs</code></span></div>
+          <div class="om-spec-row"><span class="om-spec-label">Service:</span><span class="om-spec-val"><code>includes/Support/Email_Service.php</code></span></div>
+        </div>
+      </div>
+
+      <!-- 7.6: Admin Audit Logs & CSV -->
+      <div class="om-card" data-category="operations" data-keywords="admin activities audit logs security csv export import data portability">
+        <p class="om-card__icon"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" style="color:#22A06B;"><path d="M12 20h9"></path><path d="M16.5 3.5a2.121 2.121 0 0 1 3 3L7 19l-4 1 1-4L16.5 3.5z"></path></svg></p>
+        <h3 class="om-card__title">Admin Audit Logs &amp; CSV Portability</h3>
+        <p class="om-card__body">Every staff action, price modification, order status change, and refund is recorded in <code>wp_omnify_admin_activities</code>. Features 1-click catalog and order CSV import/export for accounting.</p>
+        <p class="om-badge om-badge--neutral" style="font-size:0.75rem;margin-top:auto;">1-Click CSV Import &amp; Export</p>
+        <button type="button" class="om-card__spec-toggle" aria-expanded="false">Tech Specs &amp; SQL Mapping <span class="om-arrow">▾</span></button>
+        <div class="om-card__spec-drawer">
+          <div class="om-spec-row"><span class="om-spec-label">Table:</span><span class="om-spec-val"><code>wp_omnify_admin_activities</code></span></div>
+          <div class="om-spec-row"><span class="om-spec-label">Columns:</span><span class="om-spec-val"><code>user_id</code>, <code>action</code>, <code>object_type</code>, <code>ip_address</code></span></div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- /wp:group -->
+
+  <!-- ============================================================
+       PILLAR 8: DEVELOPER REST API, WEBHOOKS & CLI
+       ============================================================ -->
+  <!-- wp:group {"className":"om-section","style":{"spacing":{"padding":{"top":"clamp(3rem, 5vw, 4.5rem)","bottom":"clamp(3rem, 5vw, 4.5rem)"}}},"backgroundColor":"background-alt","layout":{"type":"constrained","contentSize":"1200px"}} -->
+  <div class="wp-block-group om-section has-background-alt-background-color has-background" style="border-top:1px solid #E6F4EC;border-bottom:1px solid #E6F4EC;" data-pillar="developer">
+    <div style="margin-bottom:2.25rem;">
+      <p class="om-badge om-badge--neutral" style="font-family:var(--om-font-mono);font-size:0.75rem;font-weight:700;letter-spacing:0.08em;text-transform:uppercase;margin-bottom:0.75rem;">Developer Suite</p>
+      <h2 class="wp-block-heading has-ink-color has-text-color" style="font-size:clamp(1.75rem, 3.5vw, 2.35rem);font-weight:800;letter-spacing:-0.03em;margin:0 0 0.6rem;">8. Headless REST API, Webhooks &amp; CLI Tooling</h2>
+      <p class="om-text-muted" style="font-size:1.0625rem;line-height:1.65;max-width:780px;margin:0;">Connect mobile apps, ERPs, Jamstack frontends, and automated CI/CD pipelines with modern developer tools.</p>
+    </div>
+
+    <div class="om-card-grid">
+      <!-- 8.1: Headless REST API -->
+      <div class="om-card" data-category="developer" data-keywords="rest api headless endpoints json mobile app jamstack developer">
+        <p class="om-card__icon"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" style="color:#22A06B;"><path d="M12 2v6m0 0l-4 4m4-4l4 4m-4 10v-6"></path><circle cx="12" cy="12" r="3"></circle></svg></p>
+        <h3 class="om-card__title">Comprehensive REST API</h3>
+        <p class="om-card__body">Full REST API namespace (<code>omnify/v1/*</code>) for products, orders, customers, downloads, cart sessions, and coupons. Ideal for powering Next.js storefronts and mobile apps.</p>
+        <p class="om-badge om-badge--neutral" style="font-size:0.75rem;margin-top:auto;">omnify/v1/* Namespace</p>
+        <button type="button" class="om-card__spec-toggle" aria-expanded="false">Tech Specs &amp; SQL Mapping <span class="om-arrow">▾</span></button>
+        <div class="om-card__spec-drawer">
+          <div class="om-spec-row"><span class="om-spec-label">Namespace:</span><span class="om-spec-val"><code>/wp-json/omnify/v1</code></span></div>
+          <div class="om-spec-row"><span class="om-spec-label">Controller:</span><span class="om-spec-val"><code>includes/Api/Rest_Server.php</code></span></div>
+        </div>
+      </div>
+
+      <!-- 8.2: Granular API Keys -->
+      <div class="om-card" data-category="developer" data-keywords="api keys authentication permissions read write secret consumer scopes">
+        <p class="om-card__icon"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" style="color:#22A06B;"><path d="M21 2l-2 2m-1.5 1.5L14 9l-3 3-2-2-4 4 2 2-2 2 2 2 2-2 2 2 4-4-2-2 3.5-3.5"></path><circle cx="7.5" cy="16.5" r="1.5"></circle></svg></p>
+        <h3 class="om-card__title">Granular API Key Management</h3>
+        <p class="om-card__body">Generate secure consumer keys and secrets under Tools &gt; API Keys with Read, Write, or Read/Write permission scopes tied to WordPress user roles and IP access restrictions.</p>
+        <p class="om-badge om-badge--neutral" style="font-size:0.75rem;margin-top:auto;">Read / Write Permission Scopes</p>
+        <button type="button" class="om-card__spec-toggle" aria-expanded="false">Tech Specs &amp; SQL Mapping <span class="om-arrow">▾</span></button>
+        <div class="om-card__spec-drawer">
+          <div class="om-spec-row"><span class="om-spec-label">Table:</span><span class="om-spec-val"><code>wp_omnify_api_keys</code></span></div>
+          <div class="om-spec-row"><span class="om-spec-label">Columns:</span><span class="om-spec-val"><code>consumer_key</code>, <code>consumer_secret</code>, <code>permissions</code></span></div>
+        </div>
+      </div>
+
+      <!-- 8.3: Asynchronous Webhook Dispatcher -->
+      <div class="om-card" data-category="developer" data-keywords="webhooks events dispatch payload delivery logs retry zapier erp">
+        <p class="om-card__icon"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" style="color:#22A06B;"><circle cx="12" cy="12" r="2"></circle><path d="M16.24 7.76a6 6 0 0 1 0 8.49m-8.48-.01a6 6 0 0 1 0-8.49m11.31-2.82a10 10 0 0 1 0 14.14m-14.14 0a10 10 0 0 1 0-14.14"></path></svg></p>
+        <h3 class="om-card__title">Asynchronous Webhooks &amp; Delivery Logs</h3>
+        <p class="om-card__body">Publish real-time events (<code>order.created</code>, <code>order.completed</code>, <code>refund.processed</code>) with HMAC-SHA256 signatures. Track response status codes and latencies in <code>wp_omnify_webhook_delivery_logs</code>.</p>
+        <p class="om-badge om-badge--neutral" style="font-size:0.75rem;margin-top:auto;">HTTP Response &amp; Latency Auditing</p>
+        <button type="button" class="om-card__spec-toggle" aria-expanded="false">Tech Specs &amp; SQL Mapping <span class="om-arrow">▾</span></button>
+        <div class="om-card__spec-drawer">
+          <div class="om-spec-row"><span class="om-spec-label">Tables:</span><span class="om-spec-val"><code>wp_omnify_webhooks</code>, <code>wp_omnify_webhook_delivery_logs</code></span></div>
+          <div class="om-spec-row"><span class="om-spec-label">Metrics:</span><span class="om-spec-val"><code>response_code</code>, <code>duration</code>, <code>request_payload</code></span></div>
+        </div>
+      </div>
+
+      <!-- 8.4: Full Site Editing Gutenberg Blocks -->
+      <div class="om-card" data-category="developer" data-keywords="gutenberg blocks fse full site editing shortcodes patterns theme">
+        <p class="om-card__icon"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" style="color:#22A06B;"><path d="M19 11V7a2 2 0 0 0-2-2h-4a2 2 0 0 1-4 0H5a2 2 0 0 0-2 2v4a2 2 0 0 0 2 2h4a2 2 0 0 1 4 0v4a2 2 0 0 0 2 2h4a2 2 0 0 0 2-2v-4a2 2 0 0 1 0-4z"></path></svg></p>
+        <h3 class="om-card__title">Native FSE Blocks &amp; Shortcodes</h3>
+        <p class="om-card__body">Built specifically for the Gutenberg block editor with Full Site Editing block templates, responsive block patterns, and dynamic shortcodes for backwards compatibility with any classic theme.</p>
+        <p class="om-badge om-badge--neutral" style="font-size:0.75rem;margin-top:auto;">100% Gutenberg Block Compatible</p>
+        <button type="button" class="om-card__spec-toggle" aria-expanded="false">Tech Specs &amp; SQL Mapping <span class="om-arrow">▾</span></button>
+        <div class="om-card__spec-drawer">
+          <div class="om-spec-row"><span class="om-spec-label">Shortcodes:</span><span class="om-spec-val"><code>[omnify_products]</code>, <code>[omnify_checkout]</code>, <code>[omnify_order_lookup]</code></span></div>
+          <div class="om-spec-row"><span class="om-spec-label">Templates:</span><span class="om-spec-val">Native HTML block template hierarchy</span></div>
+        </div>
+      </div>
+
+      <!-- 8.5: Extensible Action & Filter Hooks -->
+      <div class="om-card" data-category="developer" data-keywords="hooks actions filters extensibility developer agency customization php">
+        <p class="om-card__icon"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" style="color:#22A06B;"><circle cx="12" cy="5" r="3"></circle><line x1="12" y1="22" x2="12" y2="8"></line><path d="M5 12H2a10 10 0 0 0 20 0h-3"></path></svg></p>
+        <h3 class="om-card__title">Extensible Action &amp; Filter Hooks</h3>
+        <p class="om-card__body">Custom developers can hook into every order lifecycle phase, fee calculation, checkout validation, and email dispatch with 60+ native action and filter hooks.</p>
+        <p class="om-badge om-badge--neutral" style="font-size:0.75rem;margin-top:auto;">60+ Lifecycle Hooks</p>
+        <button type="button" class="om-card__spec-toggle" aria-expanded="false">Tech Specs &amp; SQL Mapping <span class="om-arrow">▾</span></button>
+        <div class="om-card__spec-drawer">
+          <div class="om-spec-row"><span class="om-spec-label">Actions:</span><span class="om-spec-val"><code>omnify_order_placed</code>, <code>omnify_download_served</code>, <code>omnify_refund_processed</code></span></div>
+          <div class="om-spec-row"><span class="om-spec-label">Filters:</span><span class="om-spec-val"><code>omnify_tax_rates</code>, <code>omnify_order_subtotal</code>, <code>omnify_email_recipients</code></span></div>
+        </div>
+      </div>
+
+      <!-- 8.6: First-Class WP-CLI Support -->
+      <div class="om-card" data-category="developer" data-keywords="wp-cli command line automation devops terminal automation staging">
+        <p class="om-card__icon"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" style="color:#22A06B;"><polyline points="4 17 10 11 4 5"></polyline><line x1="12" y1="19" x2="20" y2="19"></line></svg></p>
+        <h3 class="om-card__title">First-Class WP-CLI Commands</h3>
+        <p class="om-card__body">Automate database seeding, demo content generation, customer resets, schema health checks, and batch product indexing directly through the terminal with custom WP-CLI command sets.</p>
+        <p class="om-badge om-badge--neutral" style="font-size:0.75rem;margin-top:auto;">Automated Terminal DevOps</p>
+        <button type="button" class="om-card__spec-toggle" aria-expanded="false">Tech Specs &amp; SQL Mapping <span class="om-arrow">▾</span></button>
+        <div class="om-card__spec-drawer">
+          <div class="om-spec-row"><span class="om-spec-label">Commands:</span><span class="om-spec-val"><code>wp omnify products seed</code>, <code>wp omnify db migrate</code></span></div>
+          <div class="om-spec-row"><span class="om-spec-label">DevOps:</span><span class="om-spec-val">Seamless staging &amp; automated CI/CD pipeline integration</span></div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- /wp:group -->
+
+  <!-- Live Mockup Feature Splits -->
+  <!-- wp:pattern {"slug":"omnify/feature-split-catalog"} /-->
+  <!-- wp:pattern {"slug":"omnify/feature-split-analytics"} /-->
+
+  <!-- Workflow Steps Pattern -->
+  <!-- wp:pattern {"slug":"omnify/workflow-steps"} /-->
+
+  <!-- FAQ Pattern -->
+  <!-- wp:pattern {"slug":"omnify/faq"} /-->
+
+  <!-- Final CTA Band -->
+
+
+</main>
+<!-- /wp:group -->
+
+<!-- wp:template-part {"slug":"footer","tagName":"footer"} /-->

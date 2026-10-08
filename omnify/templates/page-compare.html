@@ -1,0 +1,719 @@
+<!-- wp:template-part {"slug":"header","tagName":"header"} /-->
+
+<!-- wp:group {"tagName":"main","className":"om-compare-page","layout":{"type":"default"}} -->
+<main class="wp-block-group om-compare-page">
+
+  <!-- Hero Header Section -->
+  <!-- wp:group {"className":"om-hero om-hero-saas om-text-center","style":{"spacing":{"padding":{"top":"clamp(4rem, 7vw, 6.5rem)","bottom":"clamp(2.5rem, 5vw, 4rem)"}}},"layout":{"type":"constrained","contentSize":"1080px"}} -->
+  <div class="wp-block-group om-hero om-hero-saas om-text-center">
+    <!-- wp:paragraph {"className":"om-badge om-badge--neutral","style":{"typography":{"fontSize":"0.8125rem","fontWeight":"700","letterSpacing":"0.04em","textTransform":"uppercase"},"spacing":{"margin":{"bottom":"1.25rem"}}}} -->
+    <p class="om-badge om-badge--neutral" style="font-size:0.8125rem;font-weight:700;letter-spacing:0.04em;text-transform:uppercase;margin-bottom:1.25rem;display:inline-flex;align-items:center;gap:6px;">● Transparent Architectural &amp; Cost Comparison</p>
+    <!-- /wp:paragraph -->
+
+    <!-- wp:heading {"level":1,"style":{"typography":{"fontSize":"clamp(2.4rem, 5vw, 3.8rem)","fontWeight":"800","letterSpacing":"-0.035em","lineHeight":"1.15"}},"textColor":"ink","className":"om-hero-title"} -->
+    <h1 class="wp-block-heading has-ink-color has-text-color om-hero-title" style="font-size:clamp(2.4rem, 5vw, 3.8rem);font-weight:800;letter-spacing:-0.035em;line-height:1.15;margin:0 0 1.25rem;">OmnifyWP vs. The Competition</h1>
+    <!-- /wp:heading -->
+
+    <!-- wp:paragraph {"style":{"typography":{"fontSize":"clamp(1.05rem, 1.8vw, 1.25rem)","lineHeight":"1.65"}},"textColor":"slate","className":"om-hero-desc"} -->
+    <p class="has-slate-color has-text-color om-hero-desc" style="font-size:clamp(1.05rem, 1.8vw, 1.25rem);line-height:1.65;max-width:820px;margin-inline:auto;margin-bottom:2rem;">See how purpose-built relational SQL, zero platform commissions, and native cryptographic security outperform legacy WooCommerce, EDD, and external cloud checkouts.</p>
+    <!-- /wp:paragraph -->
+
+    <!-- Quick Pill Summary Strip -->
+    <!-- wp:group {"layout":{"type":"flex","justifyContent":"center","flexWrap":"wrap"},"style":{"spacing":{"blockGap":"1.5rem"}}} -->
+    <div class="wp-block-group" style="font-size:0.875rem;font-weight:600;color:var(--om-slate);">
+      <p style="margin:0;"><span style="color:#22A06B;">✓</span> 10x Faster Query Execution</p>
+      <p style="margin:0;"><span style="color:#22A06B;">✓</span> 27 Dedicated Relational Tables</p>
+      <p style="margin:0;"><span style="color:#22A06B;">✓</span> 0% Platform Commission</p>
+      <p style="margin:0;"><span style="color:#22A06B;">✓</span> 100% Self-Hosted Data Sovereignty</p>
+    </div>
+    <!-- /wp:group -->
+  </div>
+  <!-- /wp:group -->
+
+  <!-- ============================================================
+       INTERACTIVE PERFORMANCE COMPARATOR (HEADLINE FEATURE)
+       ============================================================ -->
+  <!-- wp:group {"layout":{"type":"constrained","contentSize":"1280px"}} -->
+  <div class="wp-block-group">
+    <div id="om-performance-comparator" class="om-perf-comparator">
+      <div class="om-perf-header">
+        <span class="om-badge om-badge--neutral" style="font-size:0.75rem;font-weight:700;text-transform:uppercase;font-family:var(--om-font-mono);color:var(--om-forest);margin-bottom:0.75rem;display:inline-block;"><svg width="12" height="12" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true" style="vertical-align:-1px;margin-right:4px;"><path d="M13 2L3 14h9l-1 8 10-12h-9l1-8z"/></svg>Interactive Benchmarks Under Load</span>
+        <h2 style="font-size:clamp(1.6rem, 3vw, 2.25rem);font-weight:800;color:var(--om-ink);margin:0 0 0.75rem;letter-spacing:-0.03em;">Simulate Real-World Store Performance</h2>
+        <p style="font-size:0.95rem;color:var(--om-slate-mid);line-height:1.6;margin:0;">Select a store catalog scale and traffic volume to compare latency, SQL query execution, memory footprint, and concurrent checkout capacities in real time.</p>
+      </div>
+
+      <!-- Scenario Selector -->
+      <div class="om-perf-scenario-picker">
+        <button type="button" class="om-perf-scenario-btn" data-scenario="starter">
+          <span>Starter Boutique</span>
+          <span class="om-scenario-sub">100 Products &bull; 50 Orders/Day</span>
+        </button>
+        <button type="button" class="om-perf-scenario-btn is-active" data-scenario="growth">
+          <span>Growing Brand (Default)</span>
+          <span class="om-scenario-sub">2,500 Products &bull; 600 Orders/Day</span>
+        </button>
+        <button type="button" class="om-perf-scenario-btn" data-scenario="enterprise">
+          <span>High-Volume Enterprise</span>
+          <span class="om-scenario-sub">50,000 Products &bull; 8,000 Orders/Day</span>
+        </button>
+      </div>
+
+      <!-- Live Metric Grid -->
+      <div class="om-perf-grid">
+        <!-- Metric 1: TTFB / Latency -->
+        <div class="om-perf-card">
+          <div>
+            <div class="om-perf-card-title">
+              <span>⏱️ Server Response Time (TTFB)</span>
+            </div>
+            <div class="om-perf-bars">
+              <!-- OmnifyWP -->
+              <div class="om-perf-bar-row">
+                <div class="om-perf-bar-meta">
+                  <span style="color:var(--om-forest);font-weight:700;">OmnifyWP</span>
+                  <span id="om-val-ttfb-omni" class="om-perf-bar-val" style="color:#15803D;">24 ms</span>
+                </div>
+                <div class="om-perf-bar-track">
+                  <div id="om-bar-ttfb-omni" class="om-perf-bar-fill om-perf-bar-fill--omnify" style="width:14%;"></div>
+                </div>
+              </div>
+
+              <!-- WooCommerce -->
+              <div class="om-perf-bar-row">
+                <div class="om-perf-bar-meta">
+                  <span>WooCommerce</span>
+                  <span id="om-val-ttfb-woo" class="om-perf-bar-val" style="color:#DC2626;">285 ms</span>
+                </div>
+                <div class="om-perf-bar-track">
+                  <div id="om-bar-ttfb-woo" class="om-perf-bar-fill om-perf-bar-fill--woo" style="width:82%;"></div>
+                </div>
+              </div>
+
+              <!-- EDD -->
+              <div class="om-perf-bar-row">
+                <div class="om-perf-bar-meta">
+                  <span>Easy Digital Downloads</span>
+                  <span id="om-val-ttfb-edd" class="om-perf-bar-val">140 ms</span>
+                </div>
+                <div class="om-perf-bar-track">
+                  <div id="om-bar-ttfb-edd" class="om-perf-bar-fill om-perf-bar-fill--edd" style="width:48%;"></div>
+                </div>
+              </div>
+
+              <!-- SureCart -->
+              <div class="om-perf-bar-row">
+                <div class="om-perf-bar-meta">
+                  <span>SureCart (Cloud)</span>
+                  <span id="om-val-ttfb-sure" class="om-perf-bar-val">195 ms</span>
+                </div>
+                <div class="om-perf-bar-track">
+                  <div id="om-bar-ttfb-sure" class="om-perf-bar-fill om-perf-bar-fill--surecart" style="width:60%;"></div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <p style="font-size:0.75rem;color:var(--om-slate-mid);margin:1.25rem 0 0;line-height:1.4;">OmnifyWP responds up to <strong>11.8x faster</strong> by eliminating postmeta table iteration.</p>
+        </div>
+
+        <!-- Metric 2: SQL Queries -->
+        <div class="om-perf-card">
+          <div>
+            <div class="om-perf-card-title">
+              <span>Database Queries / Product View</span>
+            </div>
+            <div class="om-perf-bars">
+              <!-- OmnifyWP -->
+              <div class="om-perf-bar-row">
+                <div class="om-perf-bar-meta">
+                  <span style="color:var(--om-forest);font-weight:700;">OmnifyWP</span>
+                  <span id="om-val-query-omni" class="om-perf-bar-val" style="color:#15803D;">1 query</span>
+                </div>
+                <div class="om-perf-bar-track">
+                  <div id="om-bar-query-omni" class="om-perf-bar-fill om-perf-bar-fill--omnify" style="width:4%;"></div>
+                </div>
+              </div>
+
+              <!-- WooCommerce -->
+              <div class="om-perf-bar-row">
+                <div class="om-perf-bar-meta">
+                  <span>WooCommerce</span>
+                  <span id="om-val-query-woo" class="om-perf-bar-val" style="color:#DC2626;">38 queries</span>
+                </div>
+                <div class="om-perf-bar-track">
+                  <div id="om-bar-query-woo" class="om-perf-bar-fill om-perf-bar-fill--woo" style="width:85%;"></div>
+                </div>
+              </div>
+
+              <!-- EDD -->
+              <div class="om-perf-bar-row">
+                <div class="om-perf-bar-meta">
+                  <span>Easy Digital Downloads</span>
+                  <span id="om-val-query-edd" class="om-perf-bar-val">18 queries</span>
+                </div>
+                <div class="om-perf-bar-track">
+                  <div id="om-bar-query-edd" class="om-perf-bar-fill om-perf-bar-fill--edd" style="width:45%;"></div>
+                </div>
+              </div>
+
+              <!-- SureCart -->
+              <div class="om-perf-bar-row">
+                <div class="om-perf-bar-meta">
+                  <span>SureCart (Cloud)</span>
+                  <span id="om-val-query-sure" class="om-perf-bar-val">8 queries + API</span>
+                </div>
+                <div class="om-perf-bar-track">
+                  <div id="om-bar-query-sure" class="om-perf-bar-fill om-perf-bar-fill--surecart" style="width:26%;"></div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <p style="font-size:0.75rem;color:var(--om-slate-mid);margin:1.25rem 0 0;line-height:1.4;">Direct relational select from indexed table <code>wp_omnify_products</code> with zero JOINs.</p>
+        </div>
+
+        <!-- Metric 3: RAM Memory Footprint -->
+        <div class="om-perf-card">
+          <div>
+            <div class="om-perf-card-title">
+              <span>Memory Footprint / PHP Request</span>
+            </div>
+            <div class="om-perf-bars">
+              <!-- OmnifyWP -->
+              <div class="om-perf-bar-row">
+                <div class="om-perf-bar-meta">
+                  <span style="color:var(--om-forest);font-weight:700;">OmnifyWP</span>
+                  <span id="om-val-mem-omni" class="om-perf-bar-val" style="color:#15803D;">8.2 MB</span>
+                </div>
+                <div class="om-perf-bar-track">
+                  <div id="om-bar-mem-omni" class="om-perf-bar-fill om-perf-bar-fill--omnify" style="width:18%;"></div>
+                </div>
+              </div>
+
+              <!-- WooCommerce -->
+              <div class="om-perf-bar-row">
+                <div class="om-perf-bar-meta">
+                  <span>WooCommerce</span>
+                  <span id="om-val-mem-woo" class="om-perf-bar-val" style="color:#DC2626;">44.6 MB</span>
+                </div>
+                <div class="om-perf-bar-track">
+                  <div id="om-bar-mem-woo" class="om-perf-bar-fill om-perf-bar-fill--woo" style="width:90%;"></div>
+                </div>
+              </div>
+
+              <!-- EDD -->
+              <div class="om-perf-bar-row">
+                <div class="om-perf-bar-meta">
+                  <span>Easy Digital Downloads</span>
+                  <span id="om-val-mem-edd" class="om-perf-bar-val">22.4 MB</span>
+                </div>
+                <div class="om-perf-bar-track">
+                  <div id="om-bar-mem-edd" class="om-perf-bar-fill om-perf-bar-fill--edd" style="width:50%;"></div>
+                </div>
+              </div>
+
+              <!-- SureCart -->
+              <div class="om-perf-bar-row">
+                <div class="om-perf-bar-meta">
+                  <span>SureCart (Cloud)</span>
+                  <span id="om-val-mem-sure" class="om-perf-bar-val">18.1 MB</span>
+                </div>
+                <div class="om-perf-bar-track">
+                  <div id="om-bar-mem-sure" class="om-perf-bar-fill om-perf-bar-fill--surecart" style="width:40%;"></div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <p style="font-size:0.75rem;color:var(--om-slate-mid);margin:1.25rem 0 0;line-height:1.4;">Allows <strong>5x more PHP worker threads</strong> to run concurrently on standard server tiers.</p>
+        </div>
+
+        <!-- Metric 4: Concurrency Checkouts -->
+        <div class="om-perf-card">
+          <div>
+            <div class="om-perf-card-title">
+              <span>Concurrent Checkouts ($20/mo VPS)</span>
+            </div>
+            <div class="om-perf-bars">
+              <!-- OmnifyWP -->
+              <div class="om-perf-bar-row">
+                <div class="om-perf-bar-meta">
+                  <span style="color:var(--om-forest);font-weight:700;">OmnifyWP</span>
+                  <span id="om-val-conc-omni" class="om-perf-bar-val" style="color:#15803D;">420 /min</span>
+                </div>
+                <div class="om-perf-bar-track">
+                  <div id="om-bar-conc-omni" class="om-perf-bar-fill om-perf-bar-fill--omnify" style="width:100%;"></div>
+                </div>
+              </div>
+
+              <!-- WooCommerce -->
+              <div class="om-perf-bar-row">
+                <div class="om-perf-bar-meta">
+                  <span>WooCommerce</span>
+                  <span id="om-val-conc-woo" class="om-perf-bar-val" style="color:#DC2626;">42 /min</span>
+                </div>
+                <div class="om-perf-bar-track">
+                  <div id="om-bar-conc-woo" class="om-perf-bar-fill om-perf-bar-fill--woo" style="width:10%;"></div>
+                </div>
+              </div>
+
+              <!-- EDD -->
+              <div class="om-perf-bar-row">
+                <div class="om-perf-bar-meta">
+                  <span>Easy Digital Downloads</span>
+                  <span id="om-val-conc-edd" class="om-perf-bar-val">115 /min</span>
+                </div>
+                <div class="om-perf-bar-track">
+                  <div id="om-bar-conc-edd" class="om-perf-bar-fill om-perf-bar-fill--edd" style="width:28%;"></div>
+                </div>
+              </div>
+
+              <!-- SureCart -->
+              <div class="om-perf-bar-row">
+                <div class="om-perf-bar-meta">
+                  <span>SureCart (Cloud)</span>
+                  <span id="om-val-conc-sure" class="om-perf-bar-val">90 /min</span>
+                </div>
+                <div class="om-perf-bar-track">
+                  <div id="om-bar-conc-sure" class="om-perf-bar-fill om-perf-bar-fill--surecart" style="width:22%;"></div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <p style="font-size:0.75rem;color:var(--om-slate-mid);margin:1.25rem 0 0;line-height:1.4;">Zero database deadlock during flash sales due to isolated order tables.</p>
+        </div>
+      </div>
+
+      <!-- Live Simulator Action Bar -->
+      <div class="om-perf-sim-action">
+        <button type="button" id="om-run-perf-sim-btn" class="om-btn om-btn--primary" style="font-size:0.875rem;height:42px;padding:0 1.25rem;">
+          Run Interactive Concurrency Test
+        </button>
+        <div id="om-perf-sim-status" style="font-size:0.8125rem;color:var(--om-slate-mid);">
+          <span>Ready to simulate 500 simultaneous checkout requests on simulated 2-core VPS.</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- ============================================================
+         INTERACTIVE 3-YEAR TCO SAVINGS CALCULATOR
+         ============================================================ -->
+    <div class="om-tco-calculator">
+      <div class="om-tco-grid">
+        <div>
+          <span class="om-badge" style="background:rgba(52,211,153,0.2);color:#34D399;font-size:0.75rem;font-weight:700;text-transform:uppercase;font-family:var(--om-font-mono);margin-bottom:0.75rem;display:inline-block;"><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" style="vertical-align:-2px;margin-right:4px;"><line x1="12" y1="1" x2="12" y2="23"></line><path d="M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"></path></svg>Cost of Ownership Analysis</span>
+          <h2 style="font-size:clamp(1.5rem, 3vw, 2.1rem);font-weight:800;color:#FFFFFF;margin:0 0 0.5rem;letter-spacing:-0.03em;">How much does WooCommerce actually cost?</h2>
+          <p style="font-size:0.9375rem;color:rgba(255,255,255,0.75);line-height:1.6;margin:0 0 1.25rem;">WooCommerce is advertised as "free", but building a modern store requires dozens of recurring annual extension licenses. Select your features to calculate what you save with OmnifyWP:</p>
+
+          <div style="font-size:0.78rem;text-transform:uppercase;letter-spacing:0.04em;color:rgba(255,255,255,0.6);font-weight:700;">Select Your Annual Store Gross Revenue:</div>
+          <div class="om-tco-revenue-selector">
+            <button type="button" class="om-tco-rev-btn" data-revenue="25000">$25,000 /yr</button>
+            <button type="button" class="om-tco-rev-btn is-active" data-revenue="100000">$100,000 /yr</button>
+            <button type="button" class="om-tco-rev-btn" data-revenue="500000">$500,000 /yr</button>
+          </div>
+
+          <div style="font-size:0.78rem;text-transform:uppercase;letter-spacing:0.04em;color:rgba(255,255,255,0.6);font-weight:700;margin-bottom:0.6rem;">Features Included Natively in OmnifyWP:</div>
+          <div class="om-tco-features-list">
+            <label class="om-tco-check-label">
+              <input type="checkbox" class="om-tco-feature-check" data-woo-cost="49" checked />
+              <span>Product Bundles &amp; Kits ($49/yr)</span>
+            </label>
+            <label class="om-tco-check-label">
+              <input type="checkbox" class="om-tco-feature-check" data-woo-cost="129" checked />
+              <span>Native Pre-Orders Engine ($129/yr)</span>
+            </label>
+            <label class="om-tco-check-label">
+              <input type="checkbox" class="om-tco-feature-check" data-woo-cost="199" checked />
+              <span>14 Bundled Payment Gateways ($199/yr)</span>
+            </label>
+            <label class="om-tco-check-label">
+              <input type="checkbox" class="om-tco-feature-check" data-woo-cost="149" checked />
+              <span>Abandoned Cart Recovery ($149/yr)</span>
+            </label>
+            <label class="om-tco-check-label">
+              <input type="checkbox" class="om-tco-feature-check" data-woo-cost="99" checked />
+              <span>Customer Wishlists &amp; Reviews ($99/yr)</span>
+            </label>
+            <label class="om-tco-check-label">
+              <input type="checkbox" class="om-tco-feature-check" data-woo-cost="299" checked />
+              <span>1-Page Frictionless Checkout ($299/yr)</span>
+            </label>
+          </div>
+        </div>
+
+        <div class="om-tco-result-box">
+          <div style="font-size:0.8125rem;text-transform:uppercase;letter-spacing:0.06em;color:rgba(255,255,255,0.7);font-weight:700;">Your Estimated 3-Year Savings</div>
+          <div id="om-tco-savings-val" class="om-tco-savings-val">$3,565</div>
+          <div style="font-size:0.875rem;color:#34D399;font-weight:700;margin-bottom:0.5rem;">0% Commission &bull; Keep 100% of Revenue</div>
+          <p id="om-tco-savings-breakdown" style="font-size:0.8125rem;color:rgba(255,255,255,0.65);line-height:1.5;margin:0 0 1.5rem;">Includes ~$2,775 in recurring WooCommerce paid addon license renewals + avoided platform take rates.</p>
+          <a href="https://wordpress.org/plugins/omnifywp-ecommerce/" target="_blank" rel="noopener noreferrer" class="om-btn om-btn--primary" style="width:100%;justify-content:center;font-size:0.875rem;height:42px;">
+            Get OmnifyWP Free on wp.org &rarr;
+          </a>
+        </div>
+      </div>
+    </div>
+
+    <!-- ============================================================
+         REDESIGNED COMPARISON MATRIX TABLE
+         ============================================================ -->
+    <div class="om-compare-table-wrapper">
+      <div class="om-compare-table-toolbar">
+        <div>
+          <span style="font-size:1.05rem;font-weight:800;color:var(--om-ink);font-family:var(--om-font-heading);">Feature Matrix &amp; Architectural Breakdown</span>
+          <div style="font-size:0.78rem;color:var(--om-slate);margin-top:2px;">Filter to a 1-on-1 head-to-head comparison or inspect all platforms:</div>
+        </div>
+        <div class="om-comp-filter-pills">
+          <button type="button" class="om-comp-filter-btn is-active" data-focus="all">Show All 4 Platforms</button>
+          <button type="button" class="om-comp-filter-btn" data-focus="woo">vs WooCommerce</button>
+          <button type="button" class="om-comp-filter-btn" data-focus="edd">vs Easy Digital Downloads</button>
+          <button type="button" class="om-comp-filter-btn" data-focus="surecart">vs SureCart (SaaS)</button>
+        </div>
+      </div>
+
+      <table id="om-master-compare-table" class="om-compare-table">
+        <thead>
+          <tr style="background:#F7FCF9;border-bottom:2px solid var(--om-border);">
+            <th class="om-th-feature" style="width:24%;font-family:var(--om-font-heading);font-size:1rem;font-weight:800;color:var(--om-ink);">Capability / Requirement</th>
+            
+            <!-- OmnifyWP (Highlighted Column) -->
+            <th class="om-th-omnify" style="width:22%;text-align:center;position:relative;">
+              <div style="position:absolute;top:0;left:0;right:0;height:4px;background:var(--om-emerald);"></div>
+              <div style="font-family:var(--om-font-heading);font-size:1.15rem;font-weight:800;color:var(--om-forest);"><svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true" style="vertical-align:-1px;margin-right:4px;"><path d="M13 2L3 14h9l-1 8 10-12h-9l1-8z"/></svg>OmnifyWP</div>
+              <div style="font-size:0.75rem;font-weight:700;color:var(--om-forest-light);text-transform:uppercase;letter-spacing:0.04em;margin-top:2px;">Decoupled Relational</div>
+              <span class="om-badge" style="background:var(--om-emerald);color:#FFFFFF;font-size:0.68rem;padding:2px 8px;margin-top:6px;display:inline-block;">100% Free Core</span>
+            </th>
+
+            <!-- WooCommerce -->
+            <th data-comp-col="woo" style="width:18%;text-align:center;">
+              <div style="font-family:var(--om-font-heading);font-size:1rem;font-weight:700;color:var(--om-slate);">WooCommerce</div>
+              <div style="font-size:0.72rem;font-weight:500;color:var(--om-slate-mid);margin-top:2px;">Postmeta Standard</div>
+            </th>
+
+            <!-- Easy Digital Downloads -->
+            <th data-comp-col="edd" style="width:18%;text-align:center;">
+              <div style="font-family:var(--om-font-heading);font-size:1rem;font-weight:700;color:var(--om-slate);">Easy Digital Downloads</div>
+              <div style="font-size:0.72rem;font-weight:500;color:var(--om-slate-mid);margin-top:2px;">Digital Files Focus</div>
+            </th>
+
+            <!-- SureCart -->
+            <th data-comp-col="surecart" style="width:18%;text-align:center;">
+              <div style="font-family:var(--om-font-heading);font-size:1rem;font-weight:700;color:var(--om-slate);">SureCart / Cloud</div>
+              <div style="font-size:0.72rem;font-weight:500;color:var(--om-slate-mid);margin-top:2px;">External SaaS Bridge</div>
+            </th>
+          </tr>
+        </thead>
+        <tbody>
+
+          <!-- GROUP 1: ARCHITECTURE & DATABASE -->
+          <tr class="om-section-row">
+            <td colspan="5">Architecture &amp; Database Design</td>
+          </tr>
+
+          <!-- Row 1.1 -->
+          <tr>
+            <td>
+              <strong style="color:var(--om-ink);display:block;">Database Storage Model</strong>
+              <span style="font-size:0.8rem;color:var(--om-slate-mid);">How products, orders, and metadata are indexed.</span>
+            </td>
+            <td class="om-td-omnify" style="text-align:center;">
+              <span class="om-status-badge om-status-badge--success">✓ 27 Relational SQL Tables</span>
+              <div style="font-size:0.75rem;color:var(--om-forest-light);font-weight:600;margin-top:4px;">0 postmeta bloat &bull; sub-15ms queries</div>
+            </td>
+            <td data-comp-col="woo" style="text-align:center;">
+              <span class="om-status-badge om-status-badge--danger"><svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" style="margin-right:3px;vertical-align:-1px;"><line x1="18" y1="6" x2="6" y2="18"></line><line x1="6" y1="6" x2="18" y2="18"></line></svg>wp_postmeta EAV</span>
+              <div style="font-size:0.75rem;color:#DC2626;margin-top:4px;">40+ JOINs per product view</div>
+            </td>
+            <td data-comp-col="edd" style="text-align:center;">
+              <span class="om-status-badge om-status-badge--success">✓ Custom Tables (v3.0+)</span>
+              <div style="font-size:0.75rem;color:var(--om-slate-mid);margin-top:4px;">Migrated in recent versions</div>
+            </td>
+            <td data-comp-col="surecart" style="text-align:center;">
+              <span class="om-status-badge om-status-badge--warning"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" style="margin-right:3px;vertical-align:-1px;"><path d="M10.29 3.86L1.82 18a2 2 0 0 0 1.71 3h16.94a2 2 0 0 0 1.71-3L13.71 3.86a2 2 0 0 0-3.42 0z"></path><line x1="12" y1="9" x2="12" y2="13"></line><line x1="12" y1="17" x2="12.01" y2="17"></line></svg>External Cloud Database</span>
+              <div style="font-size:0.75rem;color:#D97706;margin-top:4px;">Proprietary external servers</div>
+            </td>
+          </tr>
+
+          <!-- Row 1.2 -->
+          <tr>
+            <td>
+              <strong style="color:var(--om-ink);display:block;">Data Ownership &amp; GDPR</strong>
+              <span style="font-size:0.8rem;color:var(--om-slate-mid);">Where customer PII and sales records reside.</span>
+            </td>
+            <td class="om-td-omnify" style="text-align:center;">
+              <span class="om-status-badge om-status-badge--success">✓ 100% Self-Hosted</span>
+              <div style="font-size:0.75rem;color:var(--om-forest-light);font-weight:600;margin-top:4px;">Stored in your local MySQL</div>
+            </td>
+            <td data-comp-col="woo" style="text-align:center;">
+              <span class="om-status-badge om-status-badge--success">✓ 100% Self-Hosted</span>
+              <div style="font-size:0.75rem;color:var(--om-slate-mid);margin-top:4px;">Full data sovereignty</div>
+            </td>
+            <td data-comp-col="edd" style="text-align:center;">
+              <span class="om-status-badge om-status-badge--success">✓ 100% Self-Hosted</span>
+              <div style="font-size:0.75rem;color:var(--om-slate-mid);margin-top:4px;">Full data sovereignty</div>
+            </td>
+            <td data-comp-col="surecart" style="text-align:center;">
+              <span class="om-status-badge om-status-badge--danger"><svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" style="margin-right:3px;vertical-align:-1px;"><line x1="18" y1="6" x2="6" y2="18"></line><line x1="6" y1="6" x2="18" y2="18"></line></svg>Hosted on 3rd-Party SaaS</span>
+              <div style="font-size:0.75rem;color:#DC2626;margin-top:4px;">Cross-border data transit</div>
+            </td>
+          </tr>
+
+          <!-- GROUP 2: COSTS & COMMISSIONS -->
+          <tr class="om-section-row">
+            <td colspan="5">Platform Take Rates &amp; True Costs</td>
+          </tr>
+
+          <!-- Row 2.1 -->
+          <tr>
+            <td>
+              <strong style="color:var(--om-ink);display:block;">Platform Commission Fee</strong>
+              <span style="font-size:0.8rem;color:var(--om-slate-mid);">Cut taken by the software on your transaction volume.</span>
+            </td>
+            <td class="om-td-omnify" style="text-align:center;">
+              <span class="om-status-badge om-status-badge--success">✓ 0% Platform Commission</span>
+              <div style="font-size:0.75rem;color:var(--om-forest-light);font-weight:600;margin-top:4px;">Keep 100% of your earnings</div>
+            </td>
+            <td data-comp-col="woo" style="text-align:center;">
+              <span class="om-status-badge om-status-badge--success">✓ 0% Commission</span>
+              <div style="font-size:0.75rem;color:var(--om-slate-mid);margin-top:4px;">Direct payment gateway billing</div>
+            </td>
+            <td data-comp-col="edd" style="text-align:center;">
+              <span class="om-status-badge om-status-badge--danger"><svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" style="margin-right:3px;vertical-align:-1px;"><line x1="18" y1="6" x2="6" y2="18"></line><line x1="6" y1="6" x2="18" y2="18"></line></svg>Up to 2% Transaction Fee</span>
+              <div style="font-size:0.75rem;color:#DC2626;margin-top:4px;">Levied on free plan users</div>
+            </td>
+            <td data-comp-col="surecart" style="text-align:center;">
+              <span class="om-status-badge om-status-badge--warning"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" style="margin-right:3px;vertical-align:-1px;"><path d="M10.29 3.86L1.82 18a2 2 0 0 0 1.71 3h16.94a2 2 0 0 0 1.71-3L13.71 3.86a2 2 0 0 0-3.42 0z"></path><line x1="12" y1="9" x2="12" y2="13"></line><line x1="12" y1="17" x2="12.01" y2="17"></line></svg>0% or SaaS Subscription</span>
+              <div style="font-size:0.75rem;color:#D97706;margin-top:4px;">$199 to $799/yr plan tiers</div>
+            </td>
+          </tr>
+
+          <!-- Row 2.2 -->
+          <tr>
+            <td>
+              <strong style="color:var(--om-ink);display:block;">Core Feature Addon Costs</strong>
+              <span style="font-size:0.8rem;color:var(--om-slate-mid);">Bundles, pre-orders, and checkout addons.</span>
+            </td>
+            <td class="om-td-omnify" style="text-align:center;">
+              <span class="om-status-badge om-status-badge--success">✓ All Included Natively ($0)</span>
+              <div style="font-size:0.75rem;color:var(--om-forest-light);font-weight:600;margin-top:4px;">No expensive annual licenses</div>
+            </td>
+            <td data-comp-col="woo" style="text-align:center;">
+              <span class="om-status-badge om-status-badge--danger"><svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" style="margin-right:3px;vertical-align:-1px;"><line x1="18" y1="6" x2="6" y2="18"></line><line x1="6" y1="6" x2="18" y2="18"></line></svg>$500–$1,200+/yr in Addons</span>
+              <div style="font-size:0.75rem;color:#DC2626;margin-top:4px;">Bundles ($49), Pre-orders ($129)</div>
+            </td>
+            <td data-comp-col="edd" style="text-align:center;">
+              <span class="om-status-badge om-status-badge--warning"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" style="margin-right:3px;vertical-align:-1px;"><path d="M10.29 3.86L1.82 18a2 2 0 0 0 1.71 3h16.94a2 2 0 0 0 1.71-3L13.71 3.86a2 2 0 0 0-3.42 0z"></path><line x1="12" y1="9" x2="12" y2="13"></line><line x1="12" y1="17" x2="12.01" y2="17"></line></svg>$299–$499/yr Pass</span>
+              <div style="font-size:0.75rem;color:#D97706;margin-top:4px;">Required for essential gateways</div>
+            </td>
+            <td data-comp-col="surecart" style="text-align:center;">
+              <span class="om-status-badge om-status-badge--warning"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" style="margin-right:3px;vertical-align:-1px;"><path d="M10.29 3.86L1.82 18a2 2 0 0 0 1.71 3h16.94a2 2 0 0 0 1.71-3L13.71 3.86a2 2 0 0 0-3.42 0z"></path><line x1="12" y1="9" x2="12" y2="13"></line><line x1="12" y1="17" x2="12.01" y2="17"></line></svg>$199–$799/yr SaaS</span>
+              <div style="font-size:0.75rem;color:#D97706;margin-top:4px;">Recurring monthly or annual fee</div>
+            </td>
+          </tr>
+
+          <!-- GROUP 3: CATALOG & MERCHANDISING -->
+          <tr class="om-section-row">
+            <td colspan="5">Product Types &amp; Merchandising</td>
+          </tr>
+
+          <!-- Row 3.1 -->
+          <tr>
+            <td>
+              <strong style="color:var(--om-ink);display:block;">Supported Catalog Diversity</strong>
+              <span style="font-size:0.8rem;color:var(--om-slate-mid);">Physical goods, downloads, bundles, and pre-orders.</span>
+            </td>
+            <td class="om-td-omnify" style="text-align:center;">
+              <span class="om-status-badge om-status-badge--success">✓ Physical, Digital, Bundles, Pre-orders</span>
+              <div style="font-size:0.75rem;color:var(--om-forest-light);font-weight:600;margin-top:4px;">Unified 4-step wizard</div>
+            </td>
+            <td data-comp-col="woo" style="text-align:center;">
+              <span class="om-status-badge om-status-badge--neutral">Physical &amp; Digital</span>
+              <div style="font-size:0.75rem;color:var(--om-slate-mid);margin-top:4px;">Bundles require separate addon</div>
+            </td>
+            <td data-comp-col="edd" style="text-align:center;">
+              <span class="om-status-badge om-status-badge--danger"><svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" style="margin-right:3px;vertical-align:-1px;"><line x1="18" y1="6" x2="6" y2="18"></line><line x1="6" y1="6" x2="18" y2="18"></line></svg>Digital Only (Primarily)</span>
+              <div style="font-size:0.75rem;color:#DC2626;margin-top:4px;">Physical shipping requires addon</div>
+            </td>
+            <td data-comp-col="surecart" style="text-align:center;">
+              <span class="om-status-badge om-status-badge--neutral">Digital, Subscriptions, Physical</span>
+              <div style="font-size:0.75rem;color:var(--om-slate-mid);margin-top:4px;">Physical shipping recently added</div>
+            </td>
+          </tr>
+
+          <!-- GROUP 4: ASSET PROTECTION & ANTI-PIRACY -->
+          <tr class="om-section-row">
+            <td colspan="5">Asset Protection &amp; Anti-Piracy</td>
+          </tr>
+
+          <!-- Row 4.1 -->
+          <tr>
+            <td>
+              <strong style="color:var(--om-ink);display:block;">Cryptographic Download Security</strong>
+              <span style="font-size:0.8rem;color:var(--om-slate-mid);">Tamper-proof file links and anti-piracy controls.</span>
+            </td>
+            <td class="om-td-omnify" style="text-align:center;">
+              <span class="om-status-badge om-status-badge--success">✓ HMAC-SHA256 Signed URLs</span>
+              <div style="font-size:0.75rem;color:var(--om-forest-light);font-weight:600;margin-top:4px;">Out-of-webroot binary streaming</div>
+            </td>
+            <td data-comp-col="woo" style="text-align:center;">
+              <span class="om-status-badge om-status-badge--neutral">Force Download / X-Accel</span>
+              <div style="font-size:0.75rem;color:var(--om-slate-mid);margin-top:4px;">Basic .htaccess path masking</div>
+            </td>
+            <td data-comp-col="edd" style="text-align:center;">
+              <span class="om-status-badge om-status-badge--success">✓ Tokenized Redirect</span>
+              <div style="font-size:0.75rem;color:var(--om-slate-mid);margin-top:4px;">Good expiration limits</div>
+            </td>
+            <td data-comp-col="surecart" style="text-align:center;">
+              <span class="om-status-badge om-status-badge--warning"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" style="margin-right:3px;vertical-align:-1px;"><path d="M10.29 3.86L1.82 18a2 2 0 0 0 1.71 3h16.94a2 2 0 0 0 1.71-3L13.71 3.86a2 2 0 0 0-3.42 0z"></path><line x1="12" y1="9" x2="12" y2="13"></line><line x1="12" y1="17" x2="12.01" y2="17"></line></svg>Proprietary CDN Locker</span>
+              <div style="font-size:0.75rem;color:#D97706;margin-top:4px;">Files hosted on 3rd-party AWS/CDN</div>
+            </td>
+          </tr>
+
+          <!-- GROUP 5: PAYMENT GATEWAYS -->
+          <tr class="om-section-row">
+            <td colspan="5">Included Payment Gateways</td>
+          </tr>
+
+          <!-- Row 5.1 -->
+          <tr>
+            <td>
+              <strong style="color:var(--om-ink);display:block;">Native Bundled Gateways</strong>
+              <span style="font-size:0.8rem;color:var(--om-slate-mid);">Global, European, Asian, and African payment adapters.</span>
+            </td>
+            <td class="om-td-omnify" style="text-align:center;">
+              <span class="om-status-badge om-status-badge--success">✓ 14 Included Native Adapters</span>
+              <div style="font-size:0.75rem;color:var(--om-forest-light);font-weight:600;margin-top:4px;">Stripe, PayPal, Razorpay, Mollie, Paystack, Tap, Alipay, WeChat, SSLCommerz, Khalti</div>
+            </td>
+            <td data-comp-col="woo" style="text-align:center;">
+              <span class="om-status-badge om-status-badge--neutral">Stripe &amp; PayPal Core</span>
+              <div style="font-size:0.75rem;color:var(--om-slate-mid);margin-top:4px;">Regional gateways require 3rd-party plugins</div>
+            </td>
+            <td data-comp-col="edd" style="text-align:center;">
+              <span class="om-status-badge om-status-badge--danger"><svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" style="margin-right:3px;vertical-align:-1px;"><line x1="18" y1="6" x2="6" y2="18"></line><line x1="6" y1="6" x2="18" y2="18"></line></svg>Stripe &amp; PayPal Core</span>
+              <div style="font-size:0.75rem;color:#DC2626;margin-top:4px;">Mollie / Razorpay require paid addons</div>
+            </td>
+            <td data-comp-col="surecart" style="text-align:center;">
+              <span class="om-status-badge om-status-badge--neutral">Stripe, PayPal, Mollie</span>
+              <div style="font-size:0.75rem;color:var(--om-slate-mid);margin-top:4px;">Dependent on subscription plan tier</div>
+            </td>
+          </tr>
+
+          <!-- GROUP 6: CHECKOUT & ASSET FOOTPRINT -->
+          <tr class="om-section-row">
+            <td colspan="5">Site Speed &amp; Asset Footprint</td>
+          </tr>
+
+          <!-- Row 6.1 -->
+          <tr>
+            <td>
+              <strong style="color:var(--om-ink);display:block;">Asset Weight &amp; Core Web Vitals</strong>
+              <span style="font-size:0.8rem;color:var(--om-slate-mid);">Script weight, jQuery reliance, and mobile load speed.</span>
+            </td>
+            <td class="om-td-omnify" style="text-align:center;">
+              <span class="om-status-badge om-status-badge--success">✓ &lt; 35KB Vanilla Footprint</span>
+              <div style="font-size:0.75rem;color:var(--om-forest-light);font-weight:600;margin-top:4px;">Zero jQuery &bull; non-blocking defer</div>
+            </td>
+            <td data-comp-col="woo" style="text-align:center;">
+              <span class="om-status-badge om-status-badge--danger"><svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" style="margin-right:3px;vertical-align:-1px;"><line x1="18" y1="6" x2="6" y2="18"></line><line x1="6" y1="6" x2="18" y2="18"></line></svg>Heavy Asset Stack</span>
+              <div style="font-size:0.75rem;color:#DC2626;margin-top:4px;">Loads dozens of CSS/JS sitewide</div>
+            </td>
+            <td data-comp-col="edd" style="text-align:center;">
+              <span class="om-status-badge om-status-badge--neutral">Lightweight Core</span>
+              <div style="font-size:0.75rem;color:var(--om-slate-mid);margin-top:4px;">Clean assets, but requires jQuery</div>
+            </td>
+            <td data-comp-col="surecart" style="text-align:center;">
+              <span class="om-status-badge om-status-badge--warning"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" style="margin-right:3px;vertical-align:-1px;"><path d="M10.29 3.86L1.82 18a2 2 0 0 0 1.71 3h16.94a2 2 0 0 0 1.71-3L13.71 3.86a2 2 0 0 0-3.42 0z"></path><line x1="12" y1="9" x2="12" y2="13"></line><line x1="12" y1="17" x2="12.01" y2="17"></line></svg>External JavaScript</span>
+              <div style="font-size:0.75rem;color:#D97706;margin-top:4px;">Loads external cross-domain iframes</div>
+            </td>
+          </tr>
+
+        </tbody>
+      </table>
+    </div>
+  </div>
+  <!-- /wp:group -->
+
+  <!-- ============================================================
+       HEAD-TO-HEAD DEEP DIVE CARDS
+       ============================================================ -->
+  <!-- wp:group {"className":"om-section","style":{"spacing":{"padding":{"top":"clamp(2rem, 4vw, 3.5rem)","bottom":"clamp(4rem, 7vw, 6rem)"}}},"layout":{"type":"constrained","contentSize":"1280px"}} -->
+  <div class="wp-block-group om-section">
+    <div class="om-text-center" style="margin-bottom:2.5rem;">
+      <span class="om-badge om-badge--neutral" style="font-size:0.75rem;font-weight:700;text-transform:uppercase;">Head-to-Head Analysis</span>
+      <h2 class="wp-block-heading has-ink-color has-text-color" style="font-size:clamp(1.75rem, 3.5vw, 2.5rem);font-weight:800;letter-spacing:-0.03em;margin:0.5rem 0 0.75rem;">How OmnifyWP solves common pain points</h2>
+      <p style="font-size:1.05rem;color:var(--om-slate-mid);max-width:700px;margin-inline:auto;">Three core structural differences that make OmnifyWP the fastest modern eCommerce engine for WordPress.</p>
+    </div>
+
+    <!-- wp:columns {"style":{"spacing":{"blockGap":"24px"}}} -->
+    <div class="wp-block-columns">
+
+      <!-- Card 1: vs WooCommerce -->
+      <!-- wp:column {"style":{"border":{"width":"1px","color":"#D4E8DC","radius":"16px"},"spacing":{"padding":{"top":"32px","bottom":"32px","left":"32px","right":"32px"}}},"backgroundColor":"background-alt"} -->
+      <div class="wp-block-column has-background-alt-background-color has-background" style="border-color:#D4E8DC;border-width:1px;border-radius:16px;padding:32px;display:flex;flex-direction:column;justify-content:space-between;">
+        <div>
+          <span class="om-badge om-badge--neutral" style="font-size:0.72rem;font-weight:700;text-transform:uppercase;margin-bottom:12px;font-family:var(--om-font-mono);">VS WooCommerce</span>
+          <h3 style="font-size:1.35rem;font-weight:700;color:var(--om-forest);margin:0 0 12px;font-family:var(--om-font-heading);">Eliminate database bloat &amp; expensive extension fatigue</h3>
+          <p style="font-size:0.9375rem;line-height:1.65;color:var(--om-slate);margin-bottom:1.25rem;">WooCommerce treats products and orders as standard WordPress posts. Under moderate traffic, queries against millions of rows in <code>wp_postmeta</code> grind checkouts to a crawl. OmnifyWP stores everything in purpose-built custom relational SQL tables, delivering sub-15ms response times without paying hundreds of dollars annually for essential checkout addons.</p>
+          <ul style="font-size:0.875rem;font-weight:600;color:var(--om-forest);list-style:none;padding:0;margin:0 0 1.5rem;display:flex;flex-direction:column;gap:8px;">
+            <li>✓ Zero <code>wp_postmeta</code> table fragmentation</li>
+            <li>✓ Built-in coupons, reviews, abandoned carts &amp; analytics</li>
+            <li>✓ 100% theme-agnostic Gutenberg &amp; Elementor blocks</li>
+          </ul>
+        </div>
+        <div style="border-top:1px solid #D4E8DC;padding-top:1.25rem;">
+          <a class="om-btn om-btn--secondary" href="https://playground.wordpress.net/?blueprint-url=https%3A%2F%2Fraw.githubusercontent.com%2Fomnifywp%2Fomnifywp-ecommerce%2Fmain%2Fblueprint.json" target="_blank" rel="noopener noreferrer" style="width:100%;justify-content:center;font-size:0.875rem;height:40px;">
+            Test OmnifyWP Speed Live &rarr;
+          </a>
+        </div>
+      </div>
+      <!-- /wp:column -->
+
+      <!-- Card 2: vs EDD -->
+      <!-- wp:column {"style":{"border":{"width":"1px","color":"#D4E8DC","radius":"16px"},"spacing":{"padding":{"top":"32px","bottom":"32px","left":"32px","right":"32px"}}},"backgroundColor":"background-alt"} -->
+      <div class="wp-block-column has-background-alt-background-color has-background" style="border-color:#D4E8DC;border-width:1px;border-radius:16px;padding:32px;display:flex;flex-direction:column;justify-content:space-between;">
+        <div>
+          <span class="om-badge om-badge--neutral" style="font-size:0.72rem;font-weight:700;text-transform:uppercase;margin-bottom:12px;font-family:var(--om-font-mono);">VS Easy Digital Downloads</span>
+          <h3 style="font-size:1.35rem;font-weight:700;color:var(--om-forest);margin:0 0 12px;font-family:var(--om-font-heading);">Physical merchandise &amp; bundles without tiered surcharges</h3>
+          <p style="font-size:0.9375rem;line-height:1.65;color:var(--om-slate);margin-bottom:1.25rem;">While EDD is respected for downloadable goods, expanding into physical merchandise, complex variant attribute swatches, or product bundles requires expensive recurring licenses or separate addons. Furthermore, EDD's free version levies up to a 2% platform transaction fee. OmnifyWP natively handles both physical and digital inventories with zero commission take rates.</p>
+          <ul style="font-size:0.875rem;font-weight:600;color:var(--om-forest);list-style:none;padding:0;margin:0 0 1.5rem;display:flex;flex-direction:column;gap:8px;">
+            <li>✓ Native physical parcel shipping &amp; delivery zones</li>
+            <li>✓ True 0% commission &bull; keep 100% of your earnings</li>
+            <li>✓ 14 bundled multi-gateway adapters included in core</li>
+          </ul>
+        </div>
+        <div style="border-top:1px solid #D4E8DC;padding-top:1.25rem;">
+          <a class="om-btn om-btn--secondary" href="/features/" style="width:100%;justify-content:center;font-size:0.875rem;height:40px;">
+            Explore Product Catalog Features &rarr;
+          </a>
+        </div>
+      </div>
+      <!-- /wp:column -->
+
+      <!-- Card 3: vs SureCart -->
+      <!-- wp:column {"style":{"border":{"width":"1px","color":"#D4E8DC","radius":"16px"},"spacing":{"padding":{"top":"32px","bottom":"32px","left":"32px","right":"32px"}}},"backgroundColor":"background-alt"} -->
+      <div class="wp-block-column has-background-alt-background-color has-background" style="border-color:#D4E8DC;border-width:1px;border-radius:16px;padding:32px;display:flex;flex-direction:column;justify-content:space-between;">
+        <div>
+          <span class="om-badge om-badge--neutral" style="font-size:0.72rem;font-weight:700;text-transform:uppercase;margin-bottom:12px;font-family:var(--om-font-mono);">VS SureCart &amp; Cloud SaaS</span>
+          <h3 style="font-size:1.35rem;font-weight:700;color:var(--om-forest);margin:0 0 12px;font-family:var(--om-font-heading);">Full data sovereignty without third-party cloud lock-in</h3>
+          <p style="font-size:0.9375rem;line-height:1.65;color:var(--om-slate);margin-bottom:1.25rem;">Cloud checkouts decouple payments by routing customer orders and customer records through external proprietary servers. If their servers experience an outage or change pricing terms, your business is compromised. OmnifyWP gives you the sleek checkout UX of a SaaS with the uncompromising security and ownership of self-hosted WordPress.</p>
+          <ul style="font-size:0.875rem;font-weight:600;color:var(--om-forest);list-style:none;padding:0;margin:0 0 1.5rem;display:flex;flex-direction:column;gap:8px;">
+            <li>✓ Zero cross-border data transit or GDPR exposure</li>
+            <li>✓ No risk of 3rd-party SaaS subscription price hikes</li>
+            <li>✓ HMAC-signed digital files remain on your secured server</li>
+          </ul>
+        </div>
+        <div style="border-top:1px solid #D4E8DC;padding-top:1.25rem;">
+          <a class="om-btn om-btn--primary" href="https://wordpress.org/plugins/omnifywp-ecommerce/" target="_blank" rel="noopener noreferrer" style="width:100%;justify-content:center;font-size:0.875rem;height:40px;">
+            Download Free on wp.org &rarr;
+          </a>
+        </div>
+      </div>
+      <!-- /wp:column -->
+
+    </div>
+    <!-- /wp:columns -->
+  </div>
+  <!-- /wp:group -->
+
+
+
+</main>
+<!-- /wp:group -->
+
+<!-- wp:template-part {"slug":"footer","tagName":"footer"} /-->

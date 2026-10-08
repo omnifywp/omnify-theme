@@ -1,0 +1,217 @@
+{
+  "$schema": "https://schemas.wp.org/trunk/theme.json",
+  "version": 3,
+  "title": "OmnifyWP Marketing",
+  "settings": {
+    "appearanceTools": true,
+    "useRootPaddingAwareAlignments": true,
+    "layout": {
+      "contentSize": "1240px",
+      "wideSize":    "1540px"
+    },
+    "color": {
+      "custom": true,
+      "customGradient": true,
+      "defaultGradients": false,
+      "defaultPalette": false,
+      "palette": [
+        { "slug": "forest-dark",    "color": "#063d26", "name": "Forest Dark" },
+        { "slug": "forest",         "color": "#0B5135", "name": "Forest" },
+        { "slug": "forest-mid",     "color": "#126343", "name": "Forest Mid" },
+        { "slug": "forest-light",   "color": "#18794E", "name": "Forest Light" },
+        { "slug": "emerald",        "color": "#22A06B", "name": "Emerald" },
+        { "slug": "emerald-vivid",  "color": "#34D399", "name": "Emerald Vivid" },
+        { "slug": "mint-light",     "color": "#A8DFBF", "name": "Mint Light" },
+        { "slug": "mint-pale",      "color": "#EFF8F2", "name": "Mint Pale" },
+        { "slug": "mint-ultra",     "color": "#F7FCF9", "name": "Mint Ultra" },
+        { "slug": "ink",            "color": "#0D1B12", "name": "Ink" },
+        { "slug": "slate",          "color": "#3D5147", "name": "Slate" },
+        { "slug": "slate-mid",      "color": "#6B7F74", "name": "Slate Mid" },
+        { "slug": "slate-light",    "color": "#9BB0A5", "name": "Slate Light" },
+        { "slug": "border",         "color": "#D4E8DC", "name": "Border" },
+        { "slug": "white",          "color": "#FFFFFF", "name": "White" },
+        { "slug": "amber",          "color": "#D97706", "name": "Amber" },
+        { "slug": "rose",           "color": "#DC2626", "name": "Rose" }
+      ],
+      "gradients": [
+        {
+          "slug": "hero",
+          "gradient": "linear-gradient(160deg, #0B5135 0%, #18794E 40%, #22A06B 100%)",
+          "name": "Hero Forest"
+        },
+        {
+          "slug": "button",
+          "gradient": "linear-gradient(135deg, #18794E 0%, #22A06B 100%)",
+          "name": "Button Emerald"
+        },
+        {
+          "slug": "section",
+          "gradient": "linear-gradient(180deg, #EFF8F2 0%, #FFFFFF 100%)",
+          "name": "Section Fade"
+        },
+        {
+          "slug": "card",
+          "gradient": "linear-gradient(145deg, #FFFFFF 0%, #F0FAF4 100%)",
+          "name": "Card Sheen"
+        }
+      ]
+    },
+    "typography": {
+      "fluid": true,
+      "customFontSize": true,
+      "fontFamilies": [
+        {
+          "fontFamily": "'Plus Jakarta Sans', 'Inter', system-ui, -apple-system, sans-serif",
+          "slug": "heading",
+          "name": "Plus Jakarta Sans"
+        },
+        {
+          "fontFamily": "'Inter', 'Plus Jakarta Sans', system-ui, -apple-system, sans-serif",
+          "slug": "body",
+          "name": "Inter"
+        },
+        {
+          "fontFamily": "'JetBrains Mono', 'Fira Code', ui-monospace, monospace",
+          "slug": "mono",
+          "name": "JetBrains Mono"
+        }
+      ],
+      "fontSizes": [
+        { "slug": "xs",   "size": "0.75rem",  "name": "Extra Small" },
+        { "slug": "sm",   "size": "0.875rem", "name": "Small" },
+        { "slug": "base", "size": "1rem",     "name": "Base" },
+        { "slug": "lg",   "size": "1.125rem", "name": "Large" },
+        { "slug": "xl",   "size": "1.25rem",  "name": "X-Large" },
+        { "slug": "2xl",  "size": "1.5rem",   "name": "2X Large" },
+        {
+          "slug": "3xl",
+          "size": "clamp(1.75rem, 3vw, 2.25rem)",
+          "fluidTypography": { "minFontSize": "1.75rem", "maxFontSize": "2.25rem" },
+          "name": "3X Large"
+        },
+        {
+          "slug": "4xl",
+          "size": "clamp(2rem, 4vw, 3rem)",
+          "name": "4X Large"
+        },
+        {
+          "slug": "hero",
+          "size": "clamp(2.2rem, 5.5vw, 4rem)",
+          "name": "Hero"
+        }
+      ]
+    },
+    "spacing": {
+      "units": ["px", "em", "rem", "%", "vh", "vw"],
+      "spacingSizes": [
+        { "slug": "10", "size": "4px",   "name": "1" },
+        { "slug": "20", "size": "8px",   "name": "2" },
+        { "slug": "30", "size": "12px",  "name": "3" },
+        { "slug": "40", "size": "16px",  "name": "4" },
+        { "slug": "50", "size": "24px",  "name": "5" },
+        { "slug": "60", "size": "32px",  "name": "6" },
+        { "slug": "70", "size": "48px",  "name": "7" },
+        { "slug": "80", "size": "64px",  "name": "8" },
+        { "slug": "90", "size": "96px",  "name": "9" }
+      ]
+    },
+    "border": {
+      "color": true,
+      "radius": true,
+      "style": true,
+      "width": true
+    },
+    "shadow": {
+      "presets": [
+        { "name": "Small",  "slug": "sm", "shadow": "0 1px 3px rgba(11,81,53,0.08), 0 1px 2px rgba(11,81,53,0.04)" },
+        { "name": "Medium", "slug": "md", "shadow": "0 4px 16px rgba(11,81,53,0.10), 0 2px 6px rgba(11,81,53,0.06)" },
+        { "name": "Large",  "slug": "lg", "shadow": "0 12px 40px rgba(11,81,53,0.14), 0 4px 12px rgba(11,81,53,0.08)" }
+      ]
+    }
+  },
+  "styles": {
+    "spacing": {
+      "padding": {
+        "top": "0px",
+        "bottom": "0px",
+        "left": "clamp(1.15rem, 4vw, 2rem)",
+        "right": "clamp(1.15rem, 4vw, 2rem)"
+      }
+    },
+    "color": {
+      "background": "#FFFFFF",
+      "text": "#0D1B12"
+    },
+    "typography": {
+      "fontFamily": "var:preset|font-family|body",
+      "fontSize":   "var:preset|font-size|base",
+      "lineHeight": "1.65"
+    },
+    "elements": {
+      "h1": {
+        "typography": {
+          "fontFamily":    "var:preset|font-family|heading",
+          "fontWeight":    "800",
+          "letterSpacing": "-0.04em",
+          "lineHeight":    "1.1"
+        },
+        "color": { "text": "var:preset|color|ink" }
+      },
+      "h2": {
+        "typography": {
+          "fontFamily":    "var:preset|font-family|heading",
+          "fontWeight":    "800",
+          "letterSpacing": "-0.035em",
+          "lineHeight":    "1.15"
+        },
+        "color": { "text": "var:preset|color|ink" }
+      },
+      "h3": {
+        "typography": {
+          "fontFamily": "var:preset|font-family|heading",
+          "fontWeight": "700",
+          "lineHeight": "1.25"
+        },
+        "color": { "text": "var:preset|color|ink" }
+      },
+      "link": {
+        "color": { "text": "var:preset|color|forest-light" },
+        ":hover": { "color": { "text": "var:preset|color|emerald" } }
+      },
+      "button": {
+        "border": { "radius": "10px" },
+        "color": {
+          "background": "var:preset|color|forest-light",
+          "text": "#ffffff"
+        },
+        "typography": {
+          "fontFamily": "var:preset|font-family|heading",
+          "fontWeight": "600"
+        }
+      }
+    },
+    "blocks": {
+      "core/group": {
+        "spacing": { "margin": { "top": "0", "bottom": "0" } }
+      },
+      "core/button": {
+        "color": {
+          "background": "transparent"
+        }
+      }
+    }
+  },
+  "customTemplates": [
+    { "name": "page-home",          "title": "Home – Marketing Landing",      "postTypes": ["page"] },
+    { "name": "page-features",      "title": "Features",                       "postTypes": ["page"] },
+    { "name": "page-integrations",  "title": "Integrations",                   "postTypes": ["page"] },
+    { "name": "page-docs",          "title": "Documentation Landing",          "postTypes": ["page"] },
+    { "name": "page-compare",       "title": "Plugin Comparison Matrix",       "postTypes": ["page"] },
+    { "name": "page-wide",          "title": "Wide – No Sidebar",              "postTypes": ["page"] }
+  ],
+  "templateParts": [
+    { "name": "header",      "area": "header", "title": "Site Header" },
+    { "name": "footer",      "area": "footer", "title": "Site Footer" },
+    { "name": "post-meta",   "area": "general","title": "Post Meta" }
+  ]
+}

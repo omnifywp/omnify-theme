@@ -661,7 +661,6 @@ button.om-btn--sm,
   width: 100%;
 }
 
-
 .om-persona-bar__inner {
   display: inline-flex;
   flex-direction: column;
@@ -908,8 +907,6 @@ body[data-om-persona="developer"] .om-for-developer.om-grid {
   box-shadow: 0 25px 65px -15px rgba(11, 81, 53, 0.16), 0 0 0 1px rgba(11, 81, 53, 0.04);
   padding: clamp(1.5rem, 3.5vw, 2.75rem);
   margin-top: 2.5rem;
-  max-width: 1060px;
-  margin-inline: auto;
   width: 100%;
   box-sizing: border-box;
   text-align: left;
@@ -2244,12 +2241,11 @@ details.om-faq-item[open] summary,
 }
 
 .om-footer-cta-btn--ghost {
-  background: rgba(255, 255, 255, 0.16);
+  background: rgba(255, 255, 255, 0.12);
   color: #FFFFFF;
-  border: 1.5px solid rgba(255, 255, 255, 0.6);
+  border: 1.5px solid rgba(255, 255, 255, 0.4);
   backdrop-filter: blur(8px);
   -webkit-backdrop-filter: blur(8px);
-  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.12);
 }
 
 .om-footer-cta-btn--ghost:hover {
@@ -2910,11 +2906,6 @@ footer:has(.om-site-footer) {
 /* ============================================================
  * SAAS BENTO GRID (SureCart & FluentCart Inspired)
  * ============================================================ */
-.om-pillars-section {
-  max-width: 1060px;
-  margin-inline: auto;
-}
-
 .om-bento-grid {
   display: grid;
   grid-template-columns: repeat(12, 1fr);
